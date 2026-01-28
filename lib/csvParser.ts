@@ -51,8 +51,10 @@ export async function parseVocabularyCSV(csvContent: string): Promise<Vocabulary
  * Load vocabulary from CSV file
  */
 export async function loadVocabulary(): Promise<VocabularyWord[]> {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const csvUrl = `${basePath}/ENGLISH_CERF_WORDS.csv`;
     try {
-        const response = await fetch('/ENGLISH_CERF_WORDS.csv');
+        const response = await fetch(csvUrl);
         const csvContent = await response.text();
         return parseVocabularyCSV(csvContent);
     } catch (error) {
