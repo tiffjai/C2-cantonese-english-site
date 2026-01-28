@@ -37,6 +37,13 @@ const saveCache = (cache: EnrichmentCache) => {
     }
 };
 
+const makeFallbackExample = (headword: string, lang: 'en' | 'zh' = 'en') => {
+    if (lang === 'zh') {
+        return `試吓用「${headword}」造句：我今日會用「${headword}」去表達意思。`;
+    }
+    return `Try using "${headword}" in a simple sentence about your day.`;
+};
+
 async function fetchTranslation(headword: string): Promise<string | undefined> {
     try {
         // Use MyMemory free API (English -> Traditional Chinese). Good enough for Cantonese reading.
@@ -91,13 +98,13 @@ async function fetchExamples(headword: string): Promise<string[]> {
         }
 
         if (collected.length === 0) {
-            collected.push(`I am learning the word "${headword}" today.`);
+            collected.push(makeFallbackExample(headword, 'en'));
         }
 
         return collected.map(sanitize);
     } catch (error) {
         console.warn(`Example fetch failed for ${headword}`, error);
-        return [`I am learning the word "${headword}" today.`];
+        return [makeFallbackExample(headword, 'en')];
     }
 }
 
@@ -131,7 +138,10 @@ async function enrichSingle(word: VocabularyWord, cache: EnrichmentCache): Promi
             cantonese = '翻譯暫缺（稍後提供）';
         }
         if ((!examples || examples.length === 0) && needsFallback) {
-            examples = [`我正在學習「${word.headword}」這個單詞。`];
+            examples = [
+                makeFallbackExample(word.headword, 'zh'),
+                makeFallbackExample(word.headword, 'en'),
+            ];
         }
 
         const enrichment = { cantonese, examples };
