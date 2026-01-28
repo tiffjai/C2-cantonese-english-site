@@ -1,11 +1,12 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useProgress } from '@/contexts/ProgressContext';
 import { LEVEL_INFO } from '@/lib/types';
 import RequireAuth from '@/components/RequireAuth';
 import styles from './page.module.css';
 
-export default function ProgressPage() {
+function ProgressContent() {
     const { progress, getStatistics, resetProgress } = useProgress();
     const stats = getStatistics();
 
@@ -141,5 +142,17 @@ export default function ProgressPage() {
                 </div>
             </div>
         </RequireAuth>
+    );
+}
+
+export default function ProgressPage() {
+    return (
+        <Suspense fallback={
+            <div className={styles.container}>
+                <p>載入進度中…</p>
+            </div>
+        }>
+            <ProgressContent />
+        </Suspense>
     );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, type ReactNode } from 'react';
+import { Suspense, useState, useEffect, type ReactNode } from 'react';
 import { VocabularyWord, QuizQuestion, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel } from '@/lib/csvParser';
 import { generateQuiz, calculateScore } from '@/lib/quizGenerator';
@@ -9,7 +9,7 @@ import { useProgress } from '@/contexts/ProgressContext';
 import RequireAuth from '@/components/RequireAuth';
 import styles from './page.module.css';
 
-export default function QuizPage() {
+function QuizPageContent() {
     const [allWords, setAllWords] = useState<VocabularyWord[]>([]);
     const [quiz, setQuiz] = useState<QuizQuestion[]>([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -314,4 +314,19 @@ export default function QuizPage() {
     }
 
     return <RequireAuth>{content}</RequireAuth>;
+}
+
+export default function QuizPage() {
+    return (
+        <Suspense fallback={
+            <div className={styles.container}>
+                <div className={styles.loading}>
+                    <div className={styles.spinner}></div>
+                    <p>載入中...</p>
+                </div>
+            </div>
+        }>
+            <QuizPageContent />
+        </Suspense>
+    );
 }

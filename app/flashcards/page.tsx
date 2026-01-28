@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Flashcard from '@/components/Flashcard';
 import { VocabularyWord, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel, getRandomWords } from '@/lib/csvParser';
@@ -202,17 +201,17 @@ function FlashcardsPageContent() {
 
 export default function FlashcardsPage() {
     return (
-        <RequireAuth>
-            <Suspense fallback={
-                <div className={styles.container}>
-                    <div className={styles.loading}>
-                        <div className={styles.spinner}></div>
-                        <p>載入詞彙中...</p>
-                    </div>
+        <Suspense fallback={
+            <div className={styles.container}>
+                <div className={styles.loading}>
+                    <div className={styles.spinner}></div>
+                    <p>載入詞彙中...</p>
                 </div>
-            }>
+            </div>
+        }>
+            <RequireAuth>
                 <FlashcardsPageContent />
-            </Suspense>
-        </RequireAuth>
+            </RequireAuth>
+        </Suspense>
     );
 }
