@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Flashcard from '@/components/Flashcard';
 import { VocabularyWord, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
@@ -9,7 +9,7 @@ import { enrichWords } from '@/lib/enrichment';
 import { useProgress } from '@/contexts/ProgressContext';
 import styles from './page.module.css';
 
-export default function FlashcardsPage() {
+function FlashcardsPageContent() {
     const searchParams = useSearchParams();
     const initialLevel = (searchParams.get('level') as CEFRLevel) || 'C2';
 
@@ -188,5 +188,20 @@ export default function FlashcardsPage() {
                 </div>
             )}
         </div>
+    );
+}
+
+export default function FlashcardsPage() {
+    return (
+        <Suspense fallback={
+            <div className={styles.container}>
+                <div className={styles.loading}>
+                    <div className={styles.spinner}></div>
+                    <p>載入詞彙中...</p>
+                </div>
+            </div>
+        }>
+            <FlashcardsPageContent />
+        </Suspense>
     );
 }
