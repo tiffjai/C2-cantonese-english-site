@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { VocabularyWord } from '@/lib/types';
+import { CSSProperties, useMemo, useState } from 'react';
+import { VocabularyWord, LEVEL_INFO } from '@/lib/types';
 import styles from './Flashcard.module.css';
 
 interface FlashcardProps {
@@ -12,6 +12,10 @@ interface FlashcardProps {
 
 export default function Flashcard({ word, onMarkLearned, showControls = true }: FlashcardProps) {
     const [isFlipped, setIsFlipped] = useState(false);
+    const levelColor = useMemo(
+        () => LEVEL_INFO[word.level]?.color ?? 'var(--primary)',
+        [word.level]
+    );
 
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
@@ -22,6 +26,7 @@ export default function Flashcard({ word, onMarkLearned, showControls = true }: 
             <div
                 className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}
                 onClick={handleFlip}
+                style={{ '--level-color': levelColor } as CSSProperties}
             >
                 <div className={styles.cardInner}>
                     {/* Front Side - English Word */}

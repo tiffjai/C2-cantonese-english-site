@@ -13,6 +13,9 @@
     height: 400px;
     perspective: 1000px;
     cursor: pointer;
+    --level-color: var(--primary);
+    --card-front: linear-gradient(145deg, var(--level-color) 0%, var(--bg-tertiary) 70%);
+    --card-back: linear-gradient(145deg, var(--level-color) 0%, var(--bg-secondary) 75%);
 }
 
 .cardInner {
@@ -42,15 +45,15 @@
 }
 
 .cardFront {
-    background: linear-gradient(135deg,
-            var(--bg-secondary) 0%,
-            var(--bg-tertiary) 100%);
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 40%),
+        var(--card-front);
 }
 
 .cardBack {
-    background: linear-gradient(135deg,
-            hsl(var(--primary-hue), 50%, 15%) 0%,
-            var(--bg-secondary) 100%);
+    background:
+        radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.08), transparent 35%),
+        var(--card-back);
     transform: rotateY(180deg);
 }
 
@@ -58,7 +61,7 @@
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--level-color), var(--secondary));
     color: white;
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: var(--radius-md);

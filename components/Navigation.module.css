@@ -116,6 +116,68 @@
     box-shadow: 0 0 15px var(--primary);
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.loginLink {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+    transition: all var(--transition-fast);
+}
+
+.loginLink:hover {
+    background: var(--primary);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.userBadge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--glass-border);
+}
+
+.userText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.userName {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.userEmail {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.logoutButton {
+    background: var(--error);
+    color: white;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
 @media (max-width: 768px) {
     .container {
         height: 60px;
@@ -139,6 +201,18 @@
 
     .navIcon {
         font-size: 1.5rem;
+    }
+
+    .actions {
+        gap: var(--spacing-xs);
+    }
+
+    .userEmail {
+        display: none;
+    }
+
+    .logoutButton {
+        padding: var(--spacing-xs) var(--spacing-sm);
     }
 
     .themeToggle {

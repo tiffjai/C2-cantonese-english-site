@@ -2,15 +2,18 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Flashcard from '@/components/Flashcard';
 import { VocabularyWord, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel, getRandomWords } from '@/lib/csvParser';
 import { enrichWords } from '@/lib/enrichment';
 import { useProgress } from '@/contexts/ProgressContext';
+import RequireAuth from '@/components/RequireAuth';
 import styles from './page.module.css';
 
 function FlashcardsPageContent() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const initialLevel = (searchParams.get('level') as CEFRLevel) || 'C2';
 
     const [allWords, setAllWords] = useState<VocabularyWord[]>([]);
@@ -165,6 +168,12 @@ function FlashcardsPageContent() {
                             ← 上一張
                         </button>
                         <button
+                            onClick={() => router.push('/')}
+                            className="btn-secondary"
+                        >
+                            🏠 返回主頁
+                        </button>
+                        <button
                             onClick={handleNewSession}
                             className="btn-secondary"
                         >
@@ -193,15 +202,17 @@ function FlashcardsPageContent() {
 
 export default function FlashcardsPage() {
     return (
-        <Suspense fallback={
-            <div className={styles.container}>
-                <div className={styles.loading}>
-                    <div className={styles.spinner}></div>
-                    <p>載入詞彙中...</p>
+        <RequireAuth>
+            <Suspense fallback={
+                <div className={styles.container}>
+                    <div className={styles.loading}>
+                        <div className={styles.spinner}></div>
+                        <p>載入詞彙中...</p>
+                    </div>
                 </div>
-            </div>
-        }>
-            <FlashcardsPageContent />
-        </Suspense>
+            }>
+                <FlashcardsPageContent />
+            </Suspense>
+        </RequireAuth>
     );
 }

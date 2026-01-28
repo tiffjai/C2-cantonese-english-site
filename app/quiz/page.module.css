@@ -406,6 +406,12 @@
     margin-bottom: var(--spacing-sm);
 }
 
+.reviewTranslation {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
 .reviewOptions {
     display: flex;
     flex-direction: column;

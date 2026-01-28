@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
 import { VocabularyWord, QuizQuestion, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel } from '@/lib/csvParser';
 import { generateQuiz, calculateScore } from '@/lib/quizGenerator';
 import { enrichWords } from '@/lib/enrichment';
 import { useProgress } from '@/contexts/ProgressContext';
+import RequireAuth from '@/components/RequireAuth';
 import styles from './page.module.css';
 
 export default function QuizPage() {
@@ -86,8 +87,10 @@ export default function QuizPage() {
         setShowResults(false);
     };
 
+    let content: ReactNode;
+
     if (loading) {
-        return (
+        content = (
             <div className={styles.container}>
                 <div className={styles.loading}>
                     <div className={styles.spinner}></div>
@@ -95,10 +98,8 @@ export default function QuizPage() {
                 </div>
             </div>
         );
-    }
-
-    if (!quizStarted) {
-        return (
+    } else if (!quizStarted) {
+        content = (
             <div className={styles.container}>
                 <div className={styles.setup}>
                     <h1>測驗模式</h1>
@@ -144,11 +145,9 @@ export default function QuizPage() {
                 </div>
             </div>
         );
-    }
-
-    if (showResults) {
+    } else if (showResults) {
         const score = calculateScore(quiz, selectedAnswers);
-        return (
+        content = (
             <div className={styles.container}>
                 <div className={styles.results}>
                     <h1>測驗結果</h1>
@@ -190,6 +189,11 @@ export default function QuizPage() {
                                     <div className={styles.reviewQuestion}>
                                         <strong>{question.word.headword}</strong>
                                     </div>
+                                    {question.word.cantonese && (
+                                        <p className={styles.reviewTranslation}>
+                                            粵語意思：{question.word.cantonese}
+                                        </p>
+                                    )}
                                     <div className={styles.reviewOptions}>
                                         {question.options.map((option, optIndex) => {
                                             const isSelected = selectedAnswers[index] === optIndex;
@@ -223,90 +227,91 @@ export default function QuizPage() {
                 </div>
             </div>
         );
-    }
+    } else {
+        const currentQuestion = quiz[currentQuestionIndex];
+        const progress = ((currentQuestionIndex + 1) / quiz.length) * 100;
 
-    const currentQuestion = quiz[currentQuestionIndex];
-    const progress = ((currentQuestionIndex + 1) / quiz.length) * 100;
-
-    return (
-        <div className={styles.container}>
-            <div className={styles.quizHeader}>
-                <h1>測驗進行中</h1>
-                <div className={styles.progressBar}>
-                    <div className={styles.progressFill} style={{ width: `${progress}%` }} />
-                </div>
-                <p className={styles.progressText}>
-                    第 {currentQuestionIndex + 1} 題 / 共 {quiz.length} 題
-                </p>
-            </div>
-
-            <div className={styles.questionCard}>
-                <div className={styles.questionHeader}>
-                    <span className={styles.levelBadge}>{currentQuestion.word.level}</span>
-                    <span className={styles.questionNumber}>Q{currentQuestionIndex + 1}</span>
-                </div>
-
-                <div className={styles.questionContent}>
-                    <h2 className={styles.word}>{currentQuestion.word.headword}</h2>
-                    <p className={styles.questionText}>選擇正確的粵語意思：</p>
-                    <p className={styles.translation}>
-                        {currentQuestion.word.cantonese || '翻譯載入中…'}
+        content = (
+            <div className={styles.container}>
+                <div className={styles.quizHeader}>
+                    <h1>測驗進行中</h1>
+                    <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: `${progress}%` }} />
+                    </div>
+                    <p className={styles.progressText}>
+                        第 {currentQuestionIndex + 1} 題 / 共 {quiz.length} 題
                     </p>
-                    {currentQuestion.word.examples && currentQuestion.word.examples.length > 0 && (
-                        <div className={styles.examples}>
-                            {currentQuestion.word.examples.map((ex, idx) => (
-                                <p key={idx} className={styles.exampleLine}>
-                                    ・{ex}
-                                </p>
-                            ))}
-                        </div>
+                </div>
+
+                <div className={styles.questionCard}>
+                    <div className={styles.questionHeader}>
+                        <span className={styles.levelBadge}>{currentQuestion.word.level}</span>
+                        <span className={styles.questionNumber}>Q{currentQuestionIndex + 1}</span>
+                    </div>
+
+                    <div className={styles.questionContent}>
+                        <h2 className={styles.word}>{currentQuestion.word.headword}</h2>
+                        <p className={styles.questionText}>
+                            選擇正確的粵語意思（提交後會顯示標準答案）
+                        </p>
+                        {currentQuestion.word.examples && currentQuestion.word.examples.length > 0 && (
+                            <div className={styles.examples}>
+                                {currentQuestion.word.examples.map((ex, idx) => (
+                                    <p key={idx} className={styles.exampleLine}>
+                                        ・{ex}
+                                    </p>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    <div className={styles.options}>
+                        {currentQuestion.options.map((option, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleAnswerSelect(index)}
+                                className={`${styles.option} ${selectedAnswers[currentQuestionIndex] === index ? styles.selected : ''
+                                    }`}
+                            >
+                                <span className={styles.optionLetter}>
+                                    {String.fromCharCode(65 + index)}
+                                </span>
+                                <span className={styles.optionText}>{option}</span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.navigation}>
+                    <button
+                        onClick={handlePrevious}
+                        disabled={currentQuestionIndex === 0}
+                        className="btn-secondary"
+                    >
+                        ← 上一題
+                    </button>
+
+                    {currentQuestionIndex === quiz.length - 1 ? (
+                        <button
+                            onClick={handleSubmit}
+                            disabled={selectedAnswers.includes(-1)}
+                            className="btn-primary"
+                        >
+                            提交答案 ✓
+                        </button>
+                    ) : (
+                        <button
+                            onClick={handleNext}
+                            disabled={selectedAnswers[currentQuestionIndex] === -1}
+                            className="btn-primary"
+                        >
+                            下一題 →
+                        </button>
                     )}
                 </div>
-
-                <div className={styles.options}>
-                    {currentQuestion.options.map((option, index) => (
-                        <button
-                            key={index}
-                            onClick={() => handleAnswerSelect(index)}
-                            className={`${styles.option} ${selectedAnswers[currentQuestionIndex] === index ? styles.selected : ''
-                                }`}
-                        >
-                            <span className={styles.optionLetter}>
-                                {String.fromCharCode(65 + index)}
-                            </span>
-                            <span className={styles.optionText}>{option}</span>
-                        </button>
-                    ))}
-                </div>
             </div>
+        );
+    }
 
-            <div className={styles.navigation}>
-                <button
-                    onClick={handlePrevious}
-                    disabled={currentQuestionIndex === 0}
-                    className="btn-secondary"
-                >
-                    ← 上一題
-                </button>
-
-                {currentQuestionIndex === quiz.length - 1 ? (
-                    <button
-                        onClick={handleSubmit}
-                        disabled={selectedAnswers.includes(-1)}
-                        className="btn-primary"
-                    >
-                        提交答案 ✓
-                    </button>
-                ) : (
-                    <button
-                        onClick={handleNext}
-                        disabled={selectedAnswers[currentQuestionIndex] === -1}
-                        className="btn-primary"
-                    >
-                        下一題 →
-                    </button>
-                )}
-            </div>
-        </div>
-    );
+    return <RequireAuth>{content}</RequireAuth>;
 }

@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { UserProgress, QuizScore, CEFRLevel, Statistics } from '@/lib/types';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface ProgressContextType {
     progress: UserProgress;
@@ -13,21 +14,25 @@ interface ProgressContextType {
 
 const ProgressContext = createContext<ProgressContextType | undefined>(undefined);
 
-const defaultProgress: UserProgress = {
+const createDefaultProgress = (): UserProgress => ({
     wordsLearned: new Set<string>(),
     quizScores: [],
     lastStudied: new Date(),
     currentLevel: 'A1',
     streak: 0,
-};
+});
 
 export function ProgressProvider({ children }: { children: ReactNode }) {
-    const [progress, setProgress] = useState<UserProgress>(defaultProgress);
+    const { user } = useAuth();
+    const storageKey = user ? `userProgress-${user.id}` : 'userProgress-guest';
+
+    const [progress, setProgress] = useState<UserProgress>(createDefaultProgress());
+    const [hydratedKey, setHydratedKey] = useState<string | null>(null);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
-        const savedProgress = localStorage.getItem('userProgress');
+        const savedProgress = localStorage.getItem(storageKey);
         if (savedProgress) {
             try {
                 const parsed = JSON.parse(savedProgress);
@@ -43,17 +48,22 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
             } catch (error) {
                 console.error('Failed to load progress:', error);
             }
+        } else {
+            setProgress(createDefaultProgress());
         }
-    }, []);
+        setHydratedKey(storageKey);
+    }, [storageKey]);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
+        if (hydratedKey !== storageKey) return;
+
         const toSave = {
             ...progress,
             wordsLearned: Array.from(progress.wordsLearned),
         };
-        localStorage.setItem('userProgress', JSON.stringify(toSave));
-    }, [progress]);
+        localStorage.setItem(storageKey, JSON.stringify(toSave));
+    }, [progress, storageKey, hydratedKey]);
 
     const addLearnedWord = (wordId: string) => {
         setProgress(prev => ({
@@ -100,8 +110,8 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     };
 
     const resetProgress = () => {
-        setProgress(defaultProgress);
-        localStorage.removeItem('userProgress');
+        setProgress(createDefaultProgress());
+        localStorage.removeItem(storageKey);
     };
 
     return (

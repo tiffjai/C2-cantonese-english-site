@@ -1,0 +1,110 @@
+.container {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.card {
+    width: min(520px, 100%);
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.kicker {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.input {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.input:focus {
+    outline: 2px solid var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+.error {
+    background: rgba(255, 99, 99, 0.12);
+    color: var(--error);
+    border: 1px solid rgba(255, 99, 99, 0.3);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+}
+
+.demoButton {
+    margin-top: var(--spacing-xs);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px dashed var(--border);
+    width: 100%;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+.note {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.skip {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: var(--spacing-lg);
+    }
+
+    .meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skip {
+        width: 100%;
+    }
+}

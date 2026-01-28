@@ -3,6 +3,7 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import { ProgressProvider } from '@/contexts/ProgressContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
+import { AuthProvider } from '@/contexts/AuthContext'
 
 export const metadata: Metadata = {
     title: 'C2 英語詞彙學習 | Cantonese-English Flashcards',
@@ -18,10 +19,12 @@ export default function RootLayout({
         <html lang="zh-HK">
             <body>
                 <ThemeProvider>
-                    <ProgressProvider>
-                        <Navigation />
-                        <main>{children}</main>
-                    </ProgressProvider>
+                    <AuthProvider>
+                        <ProgressProvider>
+                            <Navigation />
+                            <main>{children}</main>
+                        </ProgressProvider>
+                    </AuthProvider>
                 </ThemeProvider>
             </body>
         </html>
