@@ -116,7 +116,7 @@ async function enrichSingle(word: VocabularyWord, cache: EnrichmentCache): Promi
         // Fallbacks for lower levels to guarantee content (A1-C1)
         const needsFallback = ['A1', 'A2', 'B1', 'B2', 'C1'].includes(word.level);
         if (!cantonese && needsFallback) {
-            cantonese = `「${word.headword}」的基本意思（暫譯）`;
+            cantonese = '翻譯暫缺（稍後提供）';
         }
         if ((!examples || examples.length === 0) && needsFallback) {
             examples = [`我正在學習「${word.headword}」這個單詞。`];
