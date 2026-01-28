@@ -110,8 +110,16 @@ async function enrichSingle(word: VocabularyWord, cache: EnrichmentCache): Promi
     }
 
     const task = (async () => {
-        const cantonese = cached?.cantonese ?? (await fetchTranslation(word.headword));
-        const examples = cached?.examples ?? (await fetchExamples(word.headword));
+        let cantonese = cached?.cantonese ?? (await fetchTranslation(word.headword));
+        let examples = cached?.examples ?? (await fetchExamples(word.headword));
+
+        // Fallbacks for low-level words to guarantee content
+        if (!cantonese && word.level === 'A1') {
+            cantonese = `「${word.headword}」的基本意思（暫譯）`;
+        }
+        if ((!examples || examples.length === 0) && word.level === 'A1') {
+            examples = [`我正在學習「${word.headword}」這個單詞。`];
+        }
 
         const enrichment = { cantonese, examples };
         cache[key] = {
