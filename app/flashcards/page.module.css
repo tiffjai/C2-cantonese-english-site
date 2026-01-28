@@ -122,6 +122,12 @@
     font-size: 1.125rem;
 }
 
+.helperText {
+    margin-top: var(--spacing-sm);
+    color: var(--text-secondary);
+    text-align: center;
+}
+
 .empty {
     text-align: center;
     padding: var(--spacing-xl);

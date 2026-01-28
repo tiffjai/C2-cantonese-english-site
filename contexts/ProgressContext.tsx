@@ -23,11 +23,10 @@ const defaultProgress: UserProgress = {
 
 export function ProgressProvider({ children }: { children: ReactNode }) {
     const [progress, setProgress] = useState<UserProgress>(defaultProgress);
-    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
-        // Load progress from localStorage
+        if (typeof window === 'undefined') return;
+
         const savedProgress = localStorage.getItem('userProgress');
         if (savedProgress) {
             try {
@@ -48,15 +47,13 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     }, []);
 
     useEffect(() => {
-        if (mounted) {
-            // Save progress to localStorage
-            const toSave = {
-                ...progress,
-                wordsLearned: Array.from(progress.wordsLearned),
-            };
-            localStorage.setItem('userProgress', JSON.stringify(toSave));
-        }
-    }, [progress, mounted]);
+        if (typeof window === 'undefined') return;
+        const toSave = {
+            ...progress,
+            wordsLearned: Array.from(progress.wordsLearned),
+        };
+        localStorage.setItem('userProgress', JSON.stringify(toSave));
+    }, [progress]);
 
     const addLearnedWord = (wordId: string) => {
         setProgress(prev => ({
@@ -106,10 +103,6 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
         setProgress(defaultProgress);
         localStorage.removeItem('userProgress');
     };
-
-    if (!mounted) {
-        return <>{children}</>;
-    }
 
     return (
         <ProgressContext.Provider

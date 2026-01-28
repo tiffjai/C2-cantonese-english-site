@@ -208,6 +208,23 @@
     font-size: 1.125rem;
 }
 
+.translation {
+    margin-top: var(--spacing-sm);
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.examples {
+    margin-top: var(--spacing-sm);
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.exampleLine {
+    margin: 0;
+    line-height: 1.5;
+}
+
 .options {
     display: flex;
     flex-direction: column;

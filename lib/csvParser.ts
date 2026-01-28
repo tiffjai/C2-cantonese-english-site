@@ -2,6 +2,7 @@ import { VocabularyWord, CEFRLevel } from './types';
 
 /**
  * Parse CSV content and convert to VocabularyWord array
+ * Format: headword,CEFR,cantonese,example1|example2|example3
  */
 export async function parseVocabularyCSV(csvContent: string): Promise<VocabularyWord[]> {
     const lines = csvContent.trim().split('\n');
@@ -12,22 +13,34 @@ export async function parseVocabularyCSV(csvContent: string): Promise<Vocabulary
         const line = lines[i].trim();
         if (!line) continue;
 
-        // Split by comma, handling potential quotes
-        const match = line.match(/^([^,]+),([^,\r]+)/);
-        if (!match) continue;
+        // Split by comma, but handle commas within quoted fields
+        const parts = line.split(',').map(part => part.trim().replace(/\r$/, ''));
 
-        const headword = match[1].trim();
-        const level = match[2].trim().replace('\r', '') as CEFRLevel;
+        if (parts.length < 2) continue;
+
+        const headword = parts[0];
+        const level = parts[1] as CEFRLevel;
 
         // Validate level
         if (!['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].includes(level)) {
             continue;
         }
 
+        // Parse optional cantonese translation (3rd column)
+        const cantonese = parts.length > 2 && parts[2] ? parts[2] : undefined;
+
+        // Parse optional examples (4th column, pipe-separated)
+        const examplesStr = parts.length > 3 && parts[3] ? parts[3] : '';
+        const examples = examplesStr
+            ? examplesStr.split('|').map(ex => ex.trim()).filter(ex => ex.length > 0)
+            : undefined;
+
         words.push({
             id: `${level}-${headword}-${i}`,
             headword,
             level,
+            cantonese,
+            examples,
         });
     }
 

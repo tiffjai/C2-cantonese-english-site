@@ -15,16 +15,15 @@ export function generateQuizQuestion(
     const distractors = getRandomItems(sameLevel, 3);
 
     // Create options array with correct answer and distractors
-    const options = [word, ...distractors]
-        .sort(() => Math.random() - 0.5)
-        .map(w => w.headword);
+    const optionsWords = [word, ...distractors].sort(() => Math.random() - 0.5);
+    const options = optionsWords.map(w => w.cantonese || w.headword);
 
-    const correctAnswer = options.indexOf(word.headword);
+    const correctAnswer = optionsWords.findIndex(w => w.id === word.id);
 
     return {
         id: `quiz-${word.id}`,
         word,
-        question: `What is the meaning of "${word.headword}"?`,
+        question: `「${word.headword}」的意思是？`,
         options,
         correctAnswer,
     };

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { VocabularyWord, QuizQuestion, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel } from '@/lib/csvParser';
 import { generateQuiz, calculateScore } from '@/lib/quizGenerator';
+import { enrichWords } from '@/lib/enrichment';
 import { useProgress } from '@/contexts/ProgressContext';
 import styles from './page.module.css';
 
@@ -17,6 +18,7 @@ export default function QuizPage() {
     const [questionCount, setQuestionCount] = useState(10);
     const [loading, setLoading] = useState(true);
     const [quizStarted, setQuizStarted] = useState(false);
+    const [buildingQuiz, setBuildingQuiz] = useState(false);
 
     const { addQuizScore } = useProgress();
 
@@ -30,16 +32,20 @@ export default function QuizPage() {
         loadWords();
     }, []);
 
-    const startQuiz = () => {
-        if (allWords.length === 0) return;
+    const startQuiz = async () => {
+        if (allWords.length === 0 || buildingQuiz) return;
+        setBuildingQuiz(true);
 
         const levelWords = filterByLevel(allWords, selectedLevel);
-        const newQuiz = generateQuiz(levelWords, allWords, questionCount);
+        const enrichedLevel = await enrichWords(levelWords);
+
+        const newQuiz = generateQuiz(enrichedLevel, enrichedLevel, questionCount);
         setQuiz(newQuiz);
         setSelectedAnswers(new Array(newQuiz.length).fill(-1));
         setCurrentQuestionIndex(0);
         setShowResults(false);
         setQuizStarted(true);
+        setBuildingQuiz(false);
     };
 
     const handleAnswerSelect = (answerIndex: number) => {
@@ -131,8 +137,8 @@ export default function QuizPage() {
                             </div>
                         </div>
 
-                        <button onClick={startQuiz} className="btn-primary" style={{ fontSize: '1.25rem', padding: '1rem 2rem' }}>
-                            開始測驗 🚀
+                        <button onClick={startQuiz} className="btn-primary" style={{ fontSize: '1.25rem', padding: '1rem 2rem' }} disabled={buildingQuiz}>
+                            {buildingQuiz ? '載入翻譯中…' : '開始測驗 🚀'}
                         </button>
                     </div>
                 </div>
@@ -242,7 +248,19 @@ export default function QuizPage() {
 
                 <div className={styles.questionContent}>
                     <h2 className={styles.word}>{currentQuestion.word.headword}</h2>
-                    <p className={styles.questionText}>選擇正確的意思：</p>
+                    <p className={styles.questionText}>選擇正確的粵語意思：</p>
+                    <p className={styles.translation}>
+                        {currentQuestion.word.cantonese || '翻譯載入中…'}
+                    </p>
+                    {currentQuestion.word.examples && currentQuestion.word.examples.length > 0 && (
+                        <div className={styles.examples}>
+                            {currentQuestion.word.examples.map((ex, idx) => (
+                                <p key={idx} className={styles.exampleLine}>
+                                    ・{ex}
+                                </p>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <div className={styles.options}>

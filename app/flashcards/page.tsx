@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import Flashcard from '@/components/Flashcard';
 import { VocabularyWord, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel, getRandomWords } from '@/lib/csvParser';
+import { enrichWords } from '@/lib/enrichment';
 import { useProgress } from '@/contexts/ProgressContext';
 import styles from './page.module.css';
 
@@ -17,6 +18,7 @@ export default function FlashcardsPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(initialLevel);
     const [loading, setLoading] = useState(true);
+    const [enriching, setEnriching] = useState(false);
     const [wordsPerSession] = useState(10);
 
     const { addLearnedWord, progress } = useProgress();
@@ -32,12 +34,29 @@ export default function FlashcardsPage() {
     }, []);
 
     useEffect(() => {
-        if (allWords.length > 0) {
+        if (allWords.length === 0) return;
+
+        const controller = new AbortController();
+        async function buildSession() {
+            setEnriching(true);
             const levelWords = filterByLevel(allWords, selectedLevel);
             const sessionWords = getRandomWords(levelWords, wordsPerSession);
+            // Optimistically render basic words first
             setCurrentWords(sessionWords);
             setCurrentIndex(0);
+
+            try {
+                const enriched = await enrichWords(sessionWords);
+                if (!controller.signal.aborted) {
+                    setCurrentWords(enriched);
+                }
+            } finally {
+                if (!controller.signal.aborted) setEnriching(false);
+            }
         }
+
+        buildSession();
+        return () => controller.abort();
     }, [allWords, selectedLevel, wordsPerSession]);
 
     const handleNext = () => {
@@ -69,6 +88,11 @@ export default function FlashcardsPage() {
             const sessionWords = getRandomWords(levelWords, wordsPerSession);
             setCurrentWords(sessionWords);
             setCurrentIndex(0);
+            setEnriching(true);
+            enrichWords(sessionWords).then(enriched => {
+                setCurrentWords(enriched);
+                setEnriching(false);
+            });
         }
     };
 
@@ -127,6 +151,10 @@ export default function FlashcardsPage() {
                         word={currentWord}
                         onMarkLearned={handleMarkLearned}
                     />
+
+                    {enriching && (
+                        <div className={styles.helperText}>翻譯與例句載入中…</div>
+                    )}
 
                     <div className={styles.navigation}>
                         <button
