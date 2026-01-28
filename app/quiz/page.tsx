@@ -1,6 +1,7 @@
 'use client';
 
 import { Suspense, useState, useEffect, type ReactNode } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { VocabularyWord, QuizQuestion, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel } from '@/lib/csvParser';
@@ -231,9 +232,9 @@ function QuizPageContent() {
                         <button onClick={handleRestart} className="btn-primary">
                             再測一次
                         </button>
-                        <button onClick={() => router.push('/flashcards')} className="btn-secondary">
+                        <Link href="/flashcards" className="btn-secondary">
                             返回閃卡
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
