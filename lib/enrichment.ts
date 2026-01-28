@@ -45,9 +45,21 @@ async function fetchTranslation(headword: string): Promise<string | undefined> {
         if (!res.ok) throw new Error(`Translation HTTP ${res.status}`);
         const data = await res.json();
         const translated = data?.responseData?.translatedText as string | undefined;
+        if (translated) return sanitize(translated);
+    } catch (error) {
+        console.warn(`MyMemory translation failed for ${headword}`, error);
+    }
+
+    // Fallback: Lingva (Google Translate proxy) zh locale
+    try {
+        const lingvaUrl = `https://lingva.pot-app.com/api/v1/en/zh/${encodeURIComponent(headword)}`;
+        const res = await fetch(lingvaUrl);
+        if (!res.ok) throw new Error(`Lingva HTTP ${res.status}`);
+        const data = await res.json();
+        const translated = data?.translation as string | undefined;
         return translated ? sanitize(translated) : undefined;
     } catch (error) {
-        console.warn(`Translation failed for ${headword}`, error);
+        console.warn(`Lingva translation failed for ${headword}`, error);
         return undefined;
     }
 }
