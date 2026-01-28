@@ -1,6 +1,7 @@
 'use client';
 
 import { Suspense, useState, useEffect, type ReactNode } from 'react';
+import { useRouter } from 'next/navigation';
 import { VocabularyWord, QuizQuestion, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
 import { loadVocabulary, filterByLevel } from '@/lib/csvParser';
 import { generateQuiz, calculateScore } from '@/lib/quizGenerator';
@@ -10,6 +11,7 @@ import RequireAuth from '@/components/RequireAuth';
 import styles from './page.module.css';
 
 function QuizPageContent() {
+    const router = useRouter();
     const [allWords, setAllWords] = useState<VocabularyWord[]>([]);
     const [quiz, setQuiz] = useState<QuizQuestion[]>([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -220,7 +222,7 @@ function QuizPageContent() {
                         <button onClick={handleRestart} className="btn-primary">
                             再測一次
                         </button>
-                        <button onClick={() => window.location.href = '/flashcards'} className="btn-secondary">
+                        <button onClick={() => router.push('/flashcards')} className="btn-secondary">
                             返回閃卡
                         </button>
                     </div>
