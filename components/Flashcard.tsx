@@ -52,16 +52,14 @@ export default function Flashcard({ word, onMarkLearned, showControls = true }: 
                                     </div>
                                 )}
                             </div>
-                            {word.examples && word.examples.length > 0 && (
-                                <div className={styles.examples}>
-                                    <h4>例句：</h4>
-                                    {word.examples.map((example, index) => (
-                                        <p key={index} className={styles.example}>
-                                            {example}
-                                        </p>
-                                    ))}
-                                </div>
-                            )}
+                            <div className={styles.examples}>
+                                <h4>例句：</h4>
+                                {(word.examples && word.examples.length > 0 ? word.examples : ['暫未找到例句']).map((example, index) => (
+                                    <p key={index} className={styles.example}>
+                                        {example}
+                                    </p>
+                                ))}
+                            </div>
                         </div>
                         <div className={styles.flipIcon}>🔄</div>
                     </div>

@@ -22,6 +22,7 @@ function FlashcardsPageContent() {
     const [loading, setLoading] = useState(true);
     const [enriching, setEnriching] = useState(false);
     const [wordsPerSession] = useState(10);
+    const [notice, setNotice] = useState<string | null>(null);
 
     const { addLearnedWord, progress } = useProgress();
 
@@ -41,17 +42,33 @@ function FlashcardsPageContent() {
         const controller = new AbortController();
         async function buildSession() {
             setEnriching(true);
+            setNotice(null);
             const levelWords = filterByLevel(allWords, selectedLevel);
-            const sessionWords = getRandomWords(levelWords, wordsPerSession);
-            // Optimistically render basic words first
-            setCurrentWords(sessionWords);
+            // Pull a wider sample to improve chance of translated cards
+            const candidateCount = Math.min(levelWords.length, wordsPerSession * 3 + 10);
+            const sessionCandidates = getRandomWords(levelWords, candidateCount);
+
+            // Optimistically show raw cards
+            setCurrentWords(sessionCandidates.slice(0, wordsPerSession));
             setCurrentIndex(0);
 
             try {
-                const enriched = await enrichWords(sessionWords);
-                if (!controller.signal.aborted) {
-                    setCurrentWords(enriched);
+                const enriched = await enrichWords(sessionCandidates);
+                if (controller.signal.aborted) return;
+
+                const translated = enriched.filter(w => w.cantonese && w.cantonese.trim().length > 0);
+                if (translated.length === 0) {
+                    setNotice('未能取得粵語翻譯，請再試一次或更換級別。');
+                    setCurrentWords([]);
+                    return;
                 }
+
+                if (translated.length < wordsPerSession) {
+                    setNotice(`只找到 ${translated.length} 張包含粵語翻譯的卡片。`);
+                }
+
+                setCurrentWords(translated.slice(0, wordsPerSession));
+                setCurrentIndex(0);
             } finally {
                 if (!controller.signal.aborted) setEnriching(false);
             }
@@ -85,17 +102,29 @@ function FlashcardsPageContent() {
     };
 
     const handleNewSession = () => {
-        if (allWords.length > 0) {
-            const levelWords = filterByLevel(allWords, selectedLevel);
-            const sessionWords = getRandomWords(levelWords, wordsPerSession);
-            setCurrentWords(sessionWords);
-            setCurrentIndex(0);
-            setEnriching(true);
-            enrichWords(sessionWords).then(enriched => {
-                setCurrentWords(enriched);
-                setEnriching(false);
-            });
-        }
+        if (allWords.length === 0) return;
+
+        const levelWords = filterByLevel(allWords, selectedLevel);
+        const candidateCount = Math.min(levelWords.length, wordsPerSession * 3 + 10);
+        const sessionCandidates = getRandomWords(levelWords, candidateCount);
+
+        setEnriching(true);
+        setNotice(null);
+        setCurrentWords(sessionCandidates.slice(0, wordsPerSession));
+        setCurrentIndex(0);
+
+        enrichWords(sessionCandidates).then(enriched => {
+            const translated = enriched.filter(w => w.cantonese && w.cantonese.trim().length > 0);
+            if (translated.length === 0) {
+                setNotice('未能取得粵語翻譯，請再試一次或更換級別。');
+                setCurrentWords([]);
+            } else {
+                if (translated.length < wordsPerSession) {
+                    setNotice(`只找到 ${translated.length} 張包含粵語翻譯的卡片。`);
+                }
+                setCurrentWords(translated.slice(0, wordsPerSession));
+            }
+        }).finally(() => setEnriching(false));
     };
 
     if (loading) {
@@ -157,6 +186,9 @@ function FlashcardsPageContent() {
                     {enriching && (
                         <div className={styles.helperText}>翻譯與例句載入中…</div>
                     )}
+                    {notice && (
+                        <div className={styles.helperText}>{notice}</div>
+                    )}
 
                     <div className={styles.navigation}>
                         <button
@@ -189,7 +221,8 @@ function FlashcardsPageContent() {
                 </>
             ) : (
                 <div className={styles.empty}>
-                    <p>沒有找到單詞</p>
+                    <p>沒有找到含粵語翻譯的單詞</p>
+                    {notice && <p className={styles.helperText}>{notice}</p>}
                     <button onClick={handleNewSession} className="btn-primary">
                         重新載入
                     </button>
