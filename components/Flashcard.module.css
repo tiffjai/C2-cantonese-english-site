@@ -1,0 +1,204 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.card.flipped .cardInner {
+    transform: rotateY(180deg);
+}
+
+.cardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--glass-border);
+}
+
+.cardFront {
+    background: linear-gradient(135deg,
+            var(--bg-secondary) 0%,
+            var(--bg-tertiary) 100%);
+}
+
+.cardBack {
+    background: linear-gradient(135deg,
+            hsl(var(--primary-hue), 50%, 15%) 0%,
+            var(--bg-secondary) 100%);
+    transform: rotateY(180deg);
+}
+
+.levelBadge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.wordContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.word {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-md);
+    word-break: break-word;
+}
+
+.hint {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.translationContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-md);
+}
+
+.englishWord {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.translation {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--primary-light);
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+.noTranslation {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.noTranslation p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.placeholder {
+    font-size: 0.95rem !important;
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+.examples {
+    margin-top: var(--spacing-md);
+    text-align: left;
+    width: 100%;
+}
+
+.examples h4 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.example {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-sm);
+    border-left: 2px solid var(--primary);
+}
+
+.flipIcon {
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    animation: pulse 2s infinite;
+}
+
+.controls {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.controls button {
+    font-size: 1.125rem;
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 350px;
+    }
+
+    .cardFace {
+        padding: var(--spacing-lg);
+    }
+
+    .word {
+        font-size: 2.5rem;
+    }
+
+    .translation {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 300px;
+    }
+
+    .word {
+        font-size: 2rem;
+    }
+
+    .translation {
+        font-size: 1.5rem;
+    }
+}
