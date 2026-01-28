@@ -42,7 +42,16 @@ function QuizPageContent() {
         const levelWords = filterByLevel(allWords, selectedLevel);
         const enrichedLevel = await enrichWords(levelWords);
 
-        const newQuiz = generateQuiz(enrichedLevel, enrichedLevel, questionCount);
+        const withTranslations = enrichedLevel.filter(word => !!word.cantonese && word.cantonese.trim().length > 0);
+        const usableCount = Math.min(questionCount, withTranslations.length);
+
+        if (usableCount === 0) {
+            setBuildingQuiz(false);
+            alert('尚未取得粵語翻譯，請稍後再試或換一個級別。');
+            return;
+        }
+
+        const newQuiz = generateQuiz(withTranslations, withTranslations, usableCount);
         setQuiz(newQuiz);
         setSelectedAnswers(new Array(newQuiz.length).fill(-1));
         setCurrentQuestionIndex(0);
