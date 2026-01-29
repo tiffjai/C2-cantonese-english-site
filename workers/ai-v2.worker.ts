@@ -73,22 +73,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     try {
         if (!generator) {
             send({ type: 'status', status: 'loading-model' });
-            const hasWebGPU = typeof (self as any).navigator?.gpu !== 'undefined';
-            const device = hasWebGPU ? 'webgpu' : 'wasm';
-            const dtype = hasWebGPU ? 'q4f16' : 'q4';
-            console.info(`[AI Worker] Loading ${MODEL_ID} (device=${device}, dtype=${dtype})`);
-            const loaded = await pipeline('text-generation', MODEL_ID, {
-                device,
-                dtype,
-                progress_callback: (data: any) => {
-                    const loaded = Number(data?.loaded ?? 0);
-                    const total = Number(data?.total ?? 0);
-                    if (total > 0) {
-                        send({ type: 'progress', loaded, total });
-                    }
-                },
-            });
-            generator = loaded as TextGenerationPipelineType;
+            generator = await loadGeneratorWithFallback();
             send({ type: 'status', status: 'model-ready' });
         } else {
             send({ type: 'status', status: 'model-ready' });
@@ -96,13 +81,23 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         send({ type: 'status', status: 'generating' });
 
-        const prompt = promptTemplate({ word, level, meaning });
-        const output = await generator(prompt, {
-            max_new_tokens: 420,
-            temperature: 0,
-            do_sample: false,
-            return_full_text: false,
-        });
+        let output: any;
+        try {
+            const prompt = promptTemplate({ word, level, meaning });
+            output = await generator(prompt, {
+                max_new_tokens: 420,
+                temperature: 0,
+                do_sample: false,
+                return_full_text: false,
+            });
+        } catch (genError) {
+            const fallback = buildPosFallbackOutput(word, distractors);
+            if (fallback) {
+                send({ type: 'result', payload: fallback });
+                return;
+            }
+            throw genError;
+        }
 
         const rawText = truncateAtEndTag(extractGeneratedText(output as any));
         lastRawText = rawText;
@@ -121,6 +116,11 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             const retryPayload = await generateSentenceOnlyFallback(word, level, distractors);
             if (retryPayload) {
                 send({ type: 'result', payload: retryPayload });
+                return;
+            }
+            const fallback = buildPosFallbackOutput(word, distractors);
+            if (fallback) {
+                send({ type: 'result', payload: fallback });
                 return;
             }
             throw err;
@@ -241,6 +241,40 @@ function truncateAtEndTag(text: string): string {
     return text.slice(0, match.index + match[0].length);
 }
 
+async function loadGeneratorWithFallback(): Promise<TextGenerationPipelineType> {
+    const hasWebGPU = typeof (self as any).navigator?.gpu !== 'undefined';
+    const attempts: Array<{ device: 'webgpu' | 'wasm'; dtype: 'q4f16' | 'q4' }> = hasWebGPU
+        ? [
+            { device: 'webgpu', dtype: 'q4f16' },
+            { device: 'wasm', dtype: 'q4' },
+        ]
+        : [{ device: 'wasm', dtype: 'q4' }];
+
+    let lastError: unknown = null;
+
+    for (const attempt of attempts) {
+        try {
+            console.info(`[AI Worker] Loading ${MODEL_ID} (device=${attempt.device}, dtype=${attempt.dtype})`);
+            const loaded = await pipeline('text-generation', MODEL_ID, {
+                device: attempt.device,
+                dtype: attempt.dtype,
+                progress_callback: (data: any) => {
+                    const loaded = Number(data?.loaded ?? 0);
+                    const total = Number(data?.total ?? 0);
+                    if (total > 0) {
+                        send({ type: 'progress', loaded, total });
+                    }
+                },
+            });
+            return loaded as TextGenerationPipelineType;
+        } catch (error) {
+            lastError = error;
+        }
+    }
+
+    throw lastError ?? new Error('Failed to load AI model.');
+}
+
 async function generateSentenceOnlyFallback(
     targetWord: string,
     level: string,
@@ -342,6 +376,68 @@ function extractLabeledExamples(text: string, targetWord: string): string[] | nu
     return null;
 }
 
+function buildPosFallbackOutput(targetWord: string, distractors: string[]): AiOutput | null {
+    const bucket = getPosBucket(targetWord);
+    const examples = buildPosSentences(targetWord, bucket);
+    if (examples.length < 3) return null;
+
+    const clozeCandidate = buildClozeFromExamples(examples, targetWord);
+    if (!clozeCandidate) return null;
+
+    const options = buildOptions(targetWord, distractors);
+    if (!options) return null;
+    const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
+    if (answerIndex === -1) return null;
+
+    return {
+        examples: [
+            { difficulty: 'easy', sentence: examples[0] },
+            { difficulty: 'normal', sentence: examples[1] },
+            { difficulty: 'advanced', sentence: examples[2] },
+        ],
+        cloze: {
+            sentence: clozeCandidate.sentence,
+            options,
+            answer: ['A', 'B', 'C', 'D'][answerIndex],
+            explanation: 'Best fit for the blank is the target word.',
+        },
+    };
+}
+
+function buildPosSentences(targetWord: string, bucket: ReturnType<typeof getPosBucket>): string[] {
+    switch (bucket) {
+        case 'adv':
+            return [
+                `She spoke ${targetWord} during the meeting.`,
+                `They worked ${targetWord} to finish on time.`,
+                `He reacted ${targetWord} to the news.`,
+            ];
+        case 'adj':
+            return [
+                `The explanation was ${targetWord}.`,
+                `It was a ${targetWord} solution to a hard problem.`,
+                `She gave a ${targetWord} response.`,
+            ];
+        case 'noun':
+            return [
+                `The ${targetWord} was difficult to ignore.`,
+                `We discussed the ${targetWord} at length.`,
+                `Her ${targetWord} shaped the decision.`,
+            ];
+        case 'verb':
+            return [
+                `They ${targetWord} the proposal before voting.`,
+                `We must ${targetWord} the details carefully.`,
+                `She will ${targetWord} the results tomorrow.`,
+            ];
+        default:
+            return [
+                `The ${targetWord} was noted by the team.`,
+                `They considered the ${targetWord} important.`,
+                `We returned to the ${targetWord} later.`,
+            ];
+    }
+}
 function extractSentencesWithWord(text: string, targetWord: string): string[] {
     const cleaned = text.replace(/\r?\n/g, ' ').replace(/\s+/g, ' ').trim();
     if (!cleaned) return [];
@@ -383,11 +479,12 @@ function buildOptions(targetWord: string, distractors: string[]): string[] | nul
     return options;
 }
 
-function getPosBucket(word: string): 'noun' | 'adj' | 'adv' | 'unknown' {
+function getPosBucket(word: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown' {
     const lower = word.toLowerCase();
     if (/(ly)$/.test(lower)) return 'adv';
     if (/(tion|ment|ness|ity|ship|ism)$/.test(lower)) return 'noun';
     if (/(able|ible|ous|ive|al|ic|ful|less)$/.test(lower)) return 'adj';
+    if (/(ing|ed|ify|ise|ize|en)$/.test(lower)) return 'verb';
     return 'unknown';
 }
 
