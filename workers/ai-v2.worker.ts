@@ -227,13 +227,14 @@ function extractCodeFence(text: string): string | null {
 }
 
 function extractBetweenTags(text: string): string | null {
-    const match = text.match(/<BEGIN_JSON>\s*([\s\S]*?)\s*<\/END_JSON>/i);
+    const match = text.match(/<BEGIN_JSON>\s*([\s\S]*?)\s*(?:<\/END_JSON>|<END_JSON>)/i);
     return match?.[1]?.trim() || null;
 }
 
 function truncateAtEndTag(text: string): string {
-    const end = text.indexOf('</END_JSON>');
-    return end >= 0 ? text.slice(0, end + '</END_JSON>'.length) : text;
+    const match = text.match(/<\/END_JSON>|<END_JSON>/i);
+    if (!match || match.index === undefined) return text;
+    return text.slice(0, match.index + match[0].length);
 }
 
 function salvageFromRawText(rawText: string, targetWord: string, distractors: string[]): AiOutput | null {
@@ -279,8 +280,9 @@ function buildFallbackOutput(targetWord: string, distractors: string[]): AiOutpu
     ];
 
     const clozeSentence = replaceWord(examples[1], targetWord, '____');
-    const pickedDistractors = pickDistractors(distractors, targetWord, 3, true);
-    if (!pickedDistractors) return null;
+    const pickedDistractors =
+        pickDistractors(distractors, targetWord, 3, true) ?? generateFallbackDistractors(targetWord, 3);
+    if (!pickedDistractors || pickedDistractors.length < 3) return null;
 
     const options = shuffle([targetWord, ...pickedDistractors]);
     const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
@@ -356,6 +358,11 @@ function generateFallbackDistractors(targetWord: string, count: number): string[
         `${targetWord}ed`,
         `${targetWord}s`,
         `${targetWord}er`,
+        'notion',
+        'instance',
+        'factor',
+        'context',
+        'element',
     ];
     const unique = Array.from(new Set(candidates.filter((item) => item.toLowerCase() !== targetWord.toLowerCase())));
     shuffle(unique);
@@ -363,13 +370,19 @@ function generateFallbackDistractors(targetWord: string, count: number): string[
 }
 
 function replaceWord(sentence: string, targetWord: string, replacement: string): string {
-    const regex = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
-    return sentence.replace(regex, replacement);
+    const strict = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
+    if (strict.test(sentence)) {
+        return sentence.replace(strict, replacement);
+    }
+    const loose = new RegExp(`${escapeRegExp(targetWord)}`, 'i');
+    return sentence.replace(loose, replacement);
 }
 
 function containsWord(sentence: string, targetWord: string): boolean {
-    const regex = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
-    return regex.test(sentence);
+    const strict = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
+    if (strict.test(sentence)) return true;
+    const loose = new RegExp(`${escapeRegExp(targetWord)}`, 'i');
+    return loose.test(sentence);
 }
 
 function escapeRegExp(value: string): string {
