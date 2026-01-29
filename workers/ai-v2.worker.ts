@@ -11,6 +11,7 @@ type GenerateMessage = {
     word: string;
     level: string;
     meaning?: string;
+    distractors?: string[];
 };
 
 type WorkerResponse =
@@ -65,7 +66,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
     if (!data || data.type !== 'generate') return;
 
-    const { word, level, meaning } = data;
+    const { word, level, meaning, distractors = [] } = data;
 
     let lastRawText = '';
 
@@ -112,7 +113,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             send({ type: 'result', payload: validated });
             return;
         } catch (err) {
-            const salvaged = await salvageFromRawText(rawText, word, level);
+            const salvaged = salvageFromRawText(rawText, word, distractors);
             if (salvaged) {
                 send({ type: 'result', payload: salvaged });
                 return;
@@ -120,8 +121,9 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             throw err;
         }
     } catch (error: any) {
-        const message = error?.message || 'Failed to generate content.';
-        send({ type: 'error', message, rawText: lastRawText || error?.rawText });
+        const rawText = lastRawText || error?.rawText;
+        const message = normalizeErrorMessage(error?.message);
+        send({ type: 'error', message, rawText });
     }
 };
 
@@ -233,9 +235,7 @@ function truncateAtEndTag(text: string): string {
     return end >= 0 ? text.slice(0, end + '</END_JSON>'.length) : text;
 }
 
-const levelWordCache = new Map<string, string[]>();
-
-async function salvageFromRawText(rawText: string, targetWord: string, level: string): Promise<AiOutput | null> {
+function salvageFromRawText(rawText: string, targetWord: string, distractors: string[]): AiOutput | null {
     try {
         const labeled = extractLabeledExamples(rawText, targetWord);
         const examples = labeled ?? extractSentencesWithWord(rawText, targetWord);
@@ -245,10 +245,10 @@ async function salvageFromRawText(rawText: string, targetWord: string, level: st
         const clozeSentence = replaceWord(normalSentence, targetWord, '____');
         if (!clozeSentence.includes('____')) return null;
 
-        const distractors = await getRandomDistractors(level, targetWord, 3);
-        if (distractors.length < 3) return null;
+        const pickedDistractors = pickDistractors(distractors, targetWord, 3);
+        if (!pickedDistractors) return null;
 
-        const options = shuffle([targetWord, ...distractors]);
+        const options = shuffle([targetWord, ...pickedDistractors]);
         const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
         if (answerIndex === -1) return null;
 
@@ -302,40 +302,13 @@ function extractSentencesWithWord(text: string, targetWord: string): string[] {
     return matches;
 }
 
-async function getRandomDistractors(level: string, targetWord: string, count: number): Promise<string[]> {
-    const words = await getLevelWords(level);
-    const pool = words.filter((word) => word && word.toLowerCase() !== targetWord.toLowerCase());
-    if (pool.length < count) return [];
+function pickDistractors(values: string[], targetWord: string, count: number): string[] | null {
+    const normalizedTarget = targetWord.toLowerCase();
+    const unique = Array.from(new Set(values.map((val) => val.trim()).filter(Boolean)));
+    const pool = unique.filter((val) => val.toLowerCase() !== normalizedTarget);
+    if (pool.length < count) return null;
     shuffle(pool);
     return pool.slice(0, count);
-}
-
-async function getLevelWords(level: string): Promise<string[]> {
-    const cached = levelWordCache.get(level);
-    if (cached) return cached;
-
-    const basePath = getBasePath();
-    const origin = (self as any).location?.origin ?? '';
-    const url = `${origin}${basePath}/levels/${level}.json`;
-    const res = await fetch(url);
-    if (!res.ok) {
-        throw new Error(`Failed to load level words (${level})`);
-    }
-    const data = await res.json();
-    const raw = Array.isArray(data) ? data : data.words || data.items || [];
-    const words = (raw as any[])
-        .map((item) => (typeof item === 'string' ? item : item?.headword ?? item?.word ?? ''))
-        .filter(Boolean);
-    const unique = Array.from(new Set(words));
-    levelWordCache.set(level, unique);
-    return unique;
-}
-
-function getBasePath(): string {
-    const path = (self as any).location?.pathname ?? '';
-    const idx = path.indexOf('/_next/');
-    if (idx > 0) return path.slice(0, idx);
-    return '';
 }
 
 function replaceWord(sentence: string, targetWord: string, replacement: string): string {
@@ -358,6 +331,14 @@ function shuffle<T>(items: T[]): T[] {
         [items[i], items[j]] = [items[j], items[i]];
     }
     return items;
+}
+
+function normalizeErrorMessage(message: string | undefined): string {
+    if (!message) return 'AI response incomplete. Please retry.';
+    if (/json/i.test(message)) {
+        return 'AI response incomplete. Please retry.';
+    }
+    return message;
 }
 
 function normalizeJsonish(text: string): string {

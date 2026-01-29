@@ -315,6 +315,9 @@ function FlashcardsPageContent() {
                         word={currentWord.headword}
                         level={selectedLevel}
                         meaning={currentWord.cantonese}
+                        distractors={currentWords
+                            .map((word) => word.headword)
+                            .filter((headword) => headword && headword !== currentWord.headword)}
                     />
 
                     <div className={styles.navigation}>

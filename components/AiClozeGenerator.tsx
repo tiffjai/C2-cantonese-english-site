@@ -10,9 +10,10 @@ interface AiClozeGeneratorProps {
     word: string;
     level: string;
     meaning?: string;
+    distractors?: string[];
 }
 
-export default function AiClozeGenerator({ word, level, meaning }: AiClozeGeneratorProps) {
+export default function AiClozeGenerator({ word, level, meaning, distractors }: AiClozeGeneratorProps) {
     const workerRef = useRef<Worker | null>(null);
     const [status, setStatus] = useState<Status>('idle');
     const [error, setError] = useState<string | null>(null);
@@ -90,6 +91,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
             word,
             level,
             meaning,
+            distractors: distractors ?? [],
         });
     };
 
