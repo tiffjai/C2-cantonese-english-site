@@ -12,6 +12,7 @@ import RequireAuth from '@/components/RequireAuth';
 import { FlashcardSkeleton, ErrorState } from '@/components/AsyncState';
 import { saveLastSession, loadLastSession, LastSession } from '@/lib/clientStorage';
 import styles from './page.module.css';
+import AiClozeGenerator from '@/components/AiClozeGenerator';
 
 function FlashcardsPageContent() {
     const searchParams = useSearchParams();
@@ -309,6 +310,12 @@ function FlashcardsPageContent() {
                     {notice && (
                         <div className={styles.helperText}>{notice}</div>
                     )}
+
+                    <AiClozeGenerator
+                        word={currentWord.headword}
+                        level={selectedLevel}
+                        meaning={currentWord.cantonese}
+                    />
 
                     <div className={styles.navigation}>
                         <button
