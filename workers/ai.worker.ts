@@ -115,7 +115,11 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         for (const attempt of attempts) {
             try {
                 const prompt = promptTemplate({ word, level, meaning }) + attempt.extra;
-                const output = await generator(prompt, {
+                const messages = [
+                    { role: 'system', content: 'You are a helpful assistant.' },
+                    { role: 'user', content: prompt },
+                ];
+                const output = await generator(messages, {
                     max_new_tokens: 280,
                     temperature: attempt.temperature,
                     do_sample: attempt.do_sample,
@@ -279,6 +283,9 @@ function extractGeneratedText(output: any): string {
                 if (last?.content) return typeof last.content === 'string' ? last.content : JSON.stringify(last.content);
                 return JSON.stringify(gt);
             }
+            if (gt?.content) {
+                return typeof gt.content === 'string' ? gt.content : JSON.stringify(gt.content);
+            }
             if (typeof gt === 'string') return gt;
             return JSON.stringify(gt);
         }
@@ -294,6 +301,9 @@ function extractGeneratedText(output: any): string {
             const last = gt.at(-1);
             if (last?.content) return typeof last.content === 'string' ? last.content : JSON.stringify(last.content);
             return JSON.stringify(gt);
+        }
+        if (gt?.content) {
+            return typeof gt.content === 'string' ? gt.content : JSON.stringify(gt.content);
         }
         if (typeof gt === 'string') return gt;
         return JSON.stringify(gt);
