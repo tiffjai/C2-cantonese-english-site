@@ -1,7 +1,32 @@
-import Link from 'next/link'
-import styles from './page.module.css'
+'use client';
+
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { loadLastSession, LastSession } from '@/lib/clientStorage';
+import styles from './page.module.css';
 
 export default function Home() {
+    const router = useRouter();
+    const [lastSession, setLastSession] = useState<LastSession | null>(null);
+
+    useEffect(() => {
+        const session = loadLastSession();
+        if (session) {
+            setLastSession(session);
+        }
+    }, []);
+
+    const handleContinue = () => {
+        if (!lastSession) return;
+        const target = lastSession.mode === 'quiz' ? '/quiz' : '/flashcards';
+        router.push(`${target}?level=${lastSession.level}`);
+    };
+
+    const sessionLabel = lastSession
+        ? `${lastSession.mode === 'quiz' ? '測驗' : '閃卡'} · ${lastSession.level} · ${new Date(lastSession.timestamp).toLocaleString('zh-HK')}`
+        : '';
+
     return (
         <div className={styles.container}>
             <section className={styles.hero}>
@@ -31,8 +56,14 @@ export default function Home() {
                 </div>
 
                 <div className={styles.cta}>
+                    {lastSession && (
+                        <button className="btn-primary" onClick={handleContinue} aria-label="繼續上次進度">
+                            繼續上次進度
+                            <span className={styles.sessionMeta}>{sessionLabel}</span>
+                        </button>
+                    )}
                     <Link href="/flashcards">
-                        <button className="btn-primary">
+                        <button className={lastSession ? 'btn-secondary' : 'btn-primary'}>
                             開始學習 🚀
                         </button>
                     </Link>
@@ -62,5 +93,5 @@ export default function Home() {
                 </div>
             </section>
         </div>
-    )
+    );
 }

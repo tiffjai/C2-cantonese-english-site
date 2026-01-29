@@ -1,0 +1,5826 @@
+{
+  "version": "2026-01-29",
+  "level": "A1",
+  "words": [
+    {
+      "id": "A1-a-0",
+      "headword": "a",
+      "level": "A1"
+    },
+    {
+      "id": "A1-a.m./A.M./am/AM-1",
+      "headword": "a.m./A.M./am/AM",
+      "level": "A1"
+    },
+    {
+      "id": "A1-about-12",
+      "headword": "about",
+      "level": "A1"
+    },
+    {
+      "id": "A1-about-13",
+      "headword": "about",
+      "level": "A1"
+    },
+    {
+      "id": "A1-above-15",
+      "headword": "above",
+      "level": "A1"
+    },
+    {
+      "id": "A1-above-16",
+      "headword": "above",
+      "level": "A1"
+    },
+    {
+      "id": "A1-action-74",
+      "headword": "action",
+      "level": "A1"
+    },
+    {
+      "id": "A1-activity-77",
+      "headword": "activity",
+      "level": "A1"
+    },
+    {
+      "id": "A1-actor-78",
+      "headword": "actor",
+      "level": "A1"
+    },
+    {
+      "id": "A1-add-86",
+      "headword": "add",
+      "level": "A1"
+    },
+    {
+      "id": "A1-address-93",
+      "headword": "address",
+      "level": "A1"
+    },
+    {
+      "id": "A1-afraid-146",
+      "headword": "afraid",
+      "level": "A1"
+    },
+    {
+      "id": "A1-after-149",
+      "headword": "after",
+      "level": "A1"
+    },
+    {
+      "id": "A1-afternoon-150",
+      "headword": "afternoon",
+      "level": "A1"
+    },
+    {
+      "id": "A1-again-153",
+      "headword": "again",
+      "level": "A1"
+    },
+    {
+      "id": "A1-age-155",
+      "headword": "age",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ago-163",
+      "headword": "ago",
+      "level": "A1"
+    },
+    {
+      "id": "A1-agree-166",
+      "headword": "agree",
+      "level": "A1"
+    },
+    {
+      "id": "A1-airplane/aeroplane-181",
+      "headword": "airplane/aeroplane",
+      "level": "A1"
+    },
+    {
+      "id": "A1-airport-182",
+      "headword": "airport",
+      "level": "A1"
+    },
+    {
+      "id": "A1-album-187",
+      "headword": "album",
+      "level": "A1"
+    },
+    {
+      "id": "A1-all-197",
+      "headword": "all",
+      "level": "A1"
+    },
+    {
+      "id": "A1-all-198",
+      "headword": "all",
+      "level": "A1"
+    },
+    {
+      "id": "A1-all right-199",
+      "headword": "all right",
+      "level": "A1"
+    },
+    {
+      "id": "A1-all right-200",
+      "headword": "all right",
+      "level": "A1"
+    },
+    {
+      "id": "A1-almost-207",
+      "headword": "almost",
+      "level": "A1"
+    },
+    {
+      "id": "A1-alone-209",
+      "headword": "alone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-along-210",
+      "headword": "along",
+      "level": "A1"
+    },
+    {
+      "id": "A1-already-216",
+      "headword": "already",
+      "level": "A1"
+    },
+    {
+      "id": "A1-also-219",
+      "headword": "also",
+      "level": "A1"
+    },
+    {
+      "id": "A1-always-230",
+      "headword": "always",
+      "level": "A1"
+    },
+    {
+      "id": "A1-am-231",
+      "headword": "am",
+      "level": "A1"
+    },
+    {
+      "id": "A1-an-254",
+      "headword": "an",
+      "level": "A1"
+    },
+    {
+      "id": "A1-and-265",
+      "headword": "and",
+      "level": "A1"
+    },
+    {
+      "id": "A1-angry-270",
+      "headword": "angry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-animal-272",
+      "headword": "animal",
+      "level": "A1"
+    },
+    {
+      "id": "A1-another-287",
+      "headword": "another",
+      "level": "A1"
+    },
+    {
+      "id": "A1-answer-289",
+      "headword": "answer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-answer-290",
+      "headword": "answer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-any-307",
+      "headword": "any",
+      "level": "A1"
+    },
+    {
+      "id": "A1-any-308",
+      "headword": "any",
+      "level": "A1"
+    },
+    {
+      "id": "A1-anybody-309",
+      "headword": "anybody",
+      "level": "A1"
+    },
+    {
+      "id": "A1-anyone-312",
+      "headword": "anyone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-anything-313",
+      "headword": "anything",
+      "level": "A1"
+    },
+    {
+      "id": "A1-apple-331",
+      "headword": "apple",
+      "level": "A1"
+    },
+    {
+      "id": "A1-April-348",
+      "headword": "April",
+      "level": "A1"
+    },
+    {
+      "id": "A1-apron-349",
+      "headword": "apron",
+      "level": "A1"
+    },
+    {
+      "id": "A1-are-355",
+      "headword": "are",
+      "level": "A1"
+    },
+    {
+      "id": "A1-arm-363",
+      "headword": "arm",
+      "level": "A1"
+    },
+    {
+      "id": "A1-around-370",
+      "headword": "around",
+      "level": "A1"
+    },
+    {
+      "id": "A1-arrive-377",
+      "headword": "arrive",
+      "level": "A1"
+    },
+    {
+      "id": "A1-art-380",
+      "headword": "art",
+      "level": "A1"
+    },
+    {
+      "id": "A1-article-382",
+      "headword": "article",
+      "level": "A1"
+    },
+    {
+      "id": "A1-as-390",
+      "headword": "as",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ask-394",
+      "headword": "ask",
+      "level": "A1"
+    },
+    {
+      "id": "A1-at-425",
+      "headword": "at",
+      "level": "A1"
+    },
+    {
+      "id": "A1-August-461",
+      "headword": "August",
+      "level": "A1"
+    },
+    {
+      "id": "A1-aunt-462",
+      "headword": "aunt",
+      "level": "A1"
+    },
+    {
+      "id": "A1-autumn-469",
+      "headword": "autumn",
+      "level": "A1"
+    },
+    {
+      "id": "A1-awake-478",
+      "headword": "awake",
+      "level": "A1"
+    },
+    {
+      "id": "A1-away-483",
+      "headword": "away",
+      "level": "A1"
+    },
+    {
+      "id": "A1-baby-490",
+      "headword": "baby",
+      "level": "A1"
+    },
+    {
+      "id": "A1-back-494",
+      "headword": "back",
+      "level": "A1"
+    },
+    {
+      "id": "A1-back-495",
+      "headword": "back",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bad-506",
+      "headword": "bad",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bag-511",
+      "headword": "bag",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ball-522",
+      "headword": "ball",
+      "level": "A1"
+    },
+    {
+      "id": "A1-banana-529",
+      "headword": "banana",
+      "level": "A1"
+    },
+    {
+      "id": "A1-band-530",
+      "headword": "band",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bank-534",
+      "headword": "bank",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bar-541",
+      "headword": "bar",
+      "level": "A1"
+    },
+    {
+      "id": "A1-baseball-564",
+      "headword": "baseball",
+      "level": "A1"
+    },
+    {
+      "id": "A1-basketball-571",
+      "headword": "basketball",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bat-572",
+      "headword": "bat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bath-575",
+      "headword": "bath",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bathroom-578",
+      "headword": "bathroom",
+      "level": "A1"
+    },
+    {
+      "id": "A1-be-583",
+      "headword": "be",
+      "level": "A1"
+    },
+    {
+      "id": "A1-beach-584",
+      "headword": "beach",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bean-588",
+      "headword": "bean",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bear-589",
+      "headword": "bear",
+      "level": "A1"
+    },
+    {
+      "id": "A1-beautiful-596",
+      "headword": "beautiful",
+      "level": "A1"
+    },
+    {
+      "id": "A1-because-601",
+      "headword": "because",
+      "level": "A1"
+    },
+    {
+      "id": "A1-become-603",
+      "headword": "become",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bed-604",
+      "headword": "bed",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bedroom-605",
+      "headword": "bedroom",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bee-607",
+      "headword": "bee",
+      "level": "A1"
+    },
+    {
+      "id": "A1-beef-608",
+      "headword": "beef",
+      "level": "A1"
+    },
+    {
+      "id": "A1-before-611",
+      "headword": "before",
+      "level": "A1"
+    },
+    {
+      "id": "A1-before-613",
+      "headword": "before",
+      "level": "A1"
+    },
+    {
+      "id": "A1-begin-615",
+      "headword": "begin",
+      "level": "A1"
+    },
+    {
+      "id": "A1-behind-621",
+      "headword": "behind",
+      "level": "A1"
+    },
+    {
+      "id": "A1-behind-622",
+      "headword": "behind",
+      "level": "A1"
+    },
+    {
+      "id": "A1-believe-625",
+      "headword": "believe",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bell-626",
+      "headword": "bell",
+      "level": "A1"
+    },
+    {
+      "id": "A1-below-632",
+      "headword": "below",
+      "level": "A1"
+    },
+    {
+      "id": "A1-below-633",
+      "headword": "below",
+      "level": "A1"
+    },
+    {
+      "id": "A1-beside-646",
+      "headword": "beside",
+      "level": "A1"
+    },
+    {
+      "id": "A1-best-649",
+      "headword": "best",
+      "level": "A1"
+    },
+    {
+      "id": "A1-best-650",
+      "headword": "best",
+      "level": "A1"
+    },
+    {
+      "id": "A1-better-655",
+      "headword": "better",
+      "level": "A1"
+    },
+    {
+      "id": "A1-between-657",
+      "headword": "between",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bicycle-661",
+      "headword": "bicycle",
+      "level": "A1"
+    },
+    {
+      "id": "A1-big-664",
+      "headword": "big",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bike-665",
+      "headword": "bike",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bird-679",
+      "headword": "bird",
+      "level": "A1"
+    },
+    {
+      "id": "A1-birth-681",
+      "headword": "birth",
+      "level": "A1"
+    },
+    {
+      "id": "A1-birthday-682",
+      "headword": "birthday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-biscuit-684",
+      "headword": "biscuit",
+      "level": "A1"
+    },
+    {
+      "id": "A1-black-692",
+      "headword": "black",
+      "level": "A1"
+    },
+    {
+      "id": "A1-black-693",
+      "headword": "black",
+      "level": "A1"
+    },
+    {
+      "id": "A1-blank-698",
+      "headword": "blank",
+      "level": "A1"
+    },
+    {
+      "id": "A1-block-713",
+      "headword": "block",
+      "level": "A1"
+    },
+    {
+      "id": "A1-blow-726",
+      "headword": "blow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-blue-727",
+      "headword": "blue",
+      "level": "A1"
+    },
+    {
+      "id": "A1-blue-728",
+      "headword": "blue",
+      "level": "A1"
+    },
+    {
+      "id": "A1-board-733",
+      "headword": "board",
+      "level": "A1"
+    },
+    {
+      "id": "A1-boat-737",
+      "headword": "boat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-body-738",
+      "headword": "body",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bone-753",
+      "headword": "bone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-book-756",
+      "headword": "book",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bookstore-766",
+      "headword": "bookstore",
+      "level": "A1"
+    },
+    {
+      "id": "A1-boring-776",
+      "headword": "boring",
+      "level": "A1"
+    },
+    {
+      "id": "A1-borrow-777",
+      "headword": "borrow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-both-781",
+      "headword": "both",
+      "level": "A1"
+    },
+    {
+      "id": "A1-both-782",
+      "headword": "both",
+      "level": "A1"
+    },
+    {
+      "id": "A1-both-783",
+      "headword": "both",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bottle-788",
+      "headword": "bottle",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bottom-790",
+      "headword": "bottom",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bowl-797",
+      "headword": "bowl",
+      "level": "A1"
+    },
+    {
+      "id": "A1-box-799",
+      "headword": "box",
+      "level": "A1"
+    },
+    {
+      "id": "A1-boy-802",
+      "headword": "boy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-boyfriend-803",
+      "headword": "boyfriend",
+      "level": "A1"
+    },
+    {
+      "id": "A1-brain-808",
+      "headword": "brain",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bread-821",
+      "headword": "bread",
+      "level": "A1"
+    },
+    {
+      "id": "A1-break-823",
+      "headword": "break",
+      "level": "A1"
+    },
+    {
+      "id": "A1-breakfast-826",
+      "headword": "breakfast",
+      "level": "A1"
+    },
+    {
+      "id": "A1-breathe-831",
+      "headword": "breathe",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bridge-842",
+      "headword": "bridge",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bright-845",
+      "headword": "bright",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bring-849",
+      "headword": "bring",
+      "level": "A1"
+    },
+    {
+      "id": "A1-broken-859",
+      "headword": "broken",
+      "level": "A1"
+    },
+    {
+      "id": "A1-brother-861",
+      "headword": "brother",
+      "level": "A1"
+    },
+    {
+      "id": "A1-brown-864",
+      "headword": "brown",
+      "level": "A1"
+    },
+    {
+      "id": "A1-brush-869",
+      "headword": "brush",
+      "level": "A1"
+    },
+    {
+      "id": "A1-brush-870",
+      "headword": "brush",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bucket-872",
+      "headword": "bucket",
+      "level": "A1"
+    },
+    {
+      "id": "A1-build-878",
+      "headword": "build",
+      "level": "A1"
+    },
+    {
+      "id": "A1-building-880",
+      "headword": "building",
+      "level": "A1"
+    },
+    {
+      "id": "A1-burger-897",
+      "headword": "burger",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bus-907",
+      "headword": "bus",
+      "level": "A1"
+    },
+    {
+      "id": "A1-business-911",
+      "headword": "business",
+      "level": "A1"
+    },
+    {
+      "id": "A1-busy-917",
+      "headword": "busy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-but-918",
+      "headword": "but",
+      "level": "A1"
+    },
+    {
+      "id": "A1-butter-922",
+      "headword": "butter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-butterfly-923",
+      "headword": "butterfly",
+      "level": "A1"
+    },
+    {
+      "id": "A1-button-924",
+      "headword": "button",
+      "level": "A1"
+    },
+    {
+      "id": "A1-buy-925",
+      "headword": "buy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-by-929",
+      "headword": "by",
+      "level": "A1"
+    },
+    {
+      "id": "A1-bye-930",
+      "headword": "bye",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cafe/café-936",
+      "headword": "cafe/café",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cake-939",
+      "headword": "cake",
+      "level": "A1"
+    },
+    {
+      "id": "A1-call-945",
+      "headword": "call",
+      "level": "A1"
+    },
+    {
+      "id": "A1-camera-952",
+      "headword": "camera",
+      "level": "A1"
+    },
+    {
+      "id": "A1-camp-953",
+      "headword": "camp",
+      "level": "A1"
+    },
+    {
+      "id": "A1-can-959",
+      "headword": "can",
+      "level": "A1"
+    },
+    {
+      "id": "A1-candy-966",
+      "headword": "candy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cap-972",
+      "headword": "cap",
+      "level": "A1"
+    },
+    {
+      "id": "A1-car-984",
+      "headword": "car",
+      "level": "A1"
+    },
+    {
+      "id": "A1-card-991",
+      "headword": "card",
+      "level": "A1"
+    },
+    {
+      "id": "A1-care-994",
+      "headword": "care",
+      "level": "A1"
+    },
+    {
+      "id": "A1-careful-998",
+      "headword": "careful",
+      "level": "A1"
+    },
+    {
+      "id": "A1-carefully-999",
+      "headword": "carefully",
+      "level": "A1"
+    },
+    {
+      "id": "A1-carry-1009",
+      "headword": "carry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cartoon-1011",
+      "headword": "cartoon",
+      "level": "A1"
+    },
+    {
+      "id": "A1-case-1014",
+      "headword": "case",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cat-1023",
+      "headword": "cat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-catch-1028",
+      "headword": "catch",
+      "level": "A1"
+    },
+    {
+      "id": "A1-catch-1029",
+      "headword": "catch",
+      "level": "A1"
+    },
+    {
+      "id": "A1-CD-1042",
+      "headword": "CD",
+      "level": "A1"
+    },
+    {
+      "id": "A1-CD player-1043",
+      "headword": "CD player",
+      "level": "A1"
+    },
+    {
+      "id": "A1-celebrate-1047",
+      "headword": "celebrate",
+      "level": "A1"
+    },
+    {
+      "id": "A1-celebration-1048",
+      "headword": "celebration",
+      "level": "A1"
+    },
+    {
+      "id": "A1-chair-1071",
+      "headword": "chair",
+      "level": "A1"
+    },
+    {
+      "id": "A1-change-1081",
+      "headword": "change",
+      "level": "A1"
+    },
+    {
+      "id": "A1-change-1082",
+      "headword": "change",
+      "level": "A1"
+    },
+    {
+      "id": "A1-character-1087",
+      "headword": "character",
+      "level": "A1"
+    },
+    {
+      "id": "A1-check-1105",
+      "headword": "check",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cheese-1117",
+      "headword": "cheese",
+      "level": "A1"
+    },
+    {
+      "id": "A1-chicken-1133",
+      "headword": "chicken",
+      "level": "A1"
+    },
+    {
+      "id": "A1-child-1136",
+      "headword": "child",
+      "level": "A1"
+    },
+    {
+      "id": "A1-chocolate-1145",
+      "headword": "chocolate",
+      "level": "A1"
+    },
+    {
+      "id": "A1-choose-1149",
+      "headword": "choose",
+      "level": "A1"
+    },
+    {
+      "id": "A1-church-1155",
+      "headword": "church",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cinema-1157",
+      "headword": "cinema",
+      "level": "A1"
+    },
+    {
+      "id": "A1-circle-1158",
+      "headword": "circle",
+      "level": "A1"
+    },
+    {
+      "id": "A1-city-1167",
+      "headword": "city",
+      "level": "A1"
+    },
+    {
+      "id": "A1-class-1176",
+      "headword": "class",
+      "level": "A1"
+    },
+    {
+      "id": "A1-classmate-1183",
+      "headword": "classmate",
+      "level": "A1"
+    },
+    {
+      "id": "A1-classroom-1184",
+      "headword": "classroom",
+      "level": "A1"
+    },
+    {
+      "id": "A1-clean-1186",
+      "headword": "clean",
+      "level": "A1"
+    },
+    {
+      "id": "A1-clean-1187",
+      "headword": "clean",
+      "level": "A1"
+    },
+    {
+      "id": "A1-clever-1195",
+      "headword": "clever",
+      "level": "A1"
+    },
+    {
+      "id": "A1-climb-1202",
+      "headword": "climb",
+      "level": "A1"
+    },
+    {
+      "id": "A1-clock-1208",
+      "headword": "clock",
+      "level": "A1"
+    },
+    {
+      "id": "A1-close-1211",
+      "headword": "close",
+      "level": "A1"
+    },
+    {
+      "id": "A1-close-1212",
+      "headword": "close",
+      "level": "A1"
+    },
+    {
+      "id": "A1-closed-1213",
+      "headword": "closed",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cloth-1216",
+      "headword": "cloth",
+      "level": "A1"
+    },
+    {
+      "id": "A1-clothes-1217",
+      "headword": "clothes",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cloud-1219",
+      "headword": "cloud",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cloudy-1220",
+      "headword": "cloudy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-club-1222",
+      "headword": "club",
+      "level": "A1"
+    },
+    {
+      "id": "A1-coach-1225",
+      "headword": "coach",
+      "level": "A1"
+    },
+    {
+      "id": "A1-coat-1235",
+      "headword": "coat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-code-1240",
+      "headword": "code",
+      "level": "A1"
+    },
+    {
+      "id": "A1-coffee-1241",
+      "headword": "coffee",
+      "level": "A1"
+    },
+    {
+      "id": "A1-coke-1248",
+      "headword": "coke",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cold-1250",
+      "headword": "cold",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cold-1251",
+      "headword": "cold",
+      "level": "A1"
+    },
+    {
+      "id": "A1-collect-1256",
+      "headword": "collect",
+      "level": "A1"
+    },
+    {
+      "id": "A1-collection-1257",
+      "headword": "collection",
+      "level": "A1"
+    },
+    {
+      "id": "A1-college-1259",
+      "headword": "college",
+      "level": "A1"
+    },
+    {
+      "id": "A1-color/colour-1263",
+      "headword": "color/colour",
+      "level": "A1"
+    },
+    {
+      "id": "A1-color/colour-1264",
+      "headword": "color/colour",
+      "level": "A1"
+    },
+    {
+      "id": "A1-come-1273",
+      "headword": "come",
+      "level": "A1"
+    },
+    {
+      "id": "A1-computer-1347",
+      "headword": "computer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-concert-1361",
+      "headword": "concert",
+      "level": "A1"
+    },
+    {
+      "id": "A1-contest-1435",
+      "headword": "contest",
+      "level": "A1"
+    },
+    {
+      "id": "A1-conversation-1460",
+      "headword": "conversation",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cook-1468",
+      "headword": "cook",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cook-1469",
+      "headword": "cook",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cookie-1471",
+      "headword": "cookie",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cool-1473",
+      "headword": "cool",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cop-1479",
+      "headword": "cop",
+      "level": "A1"
+    },
+    {
+      "id": "A1-copy-1482",
+      "headword": "copy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-corn-1487",
+      "headword": "corn",
+      "level": "A1"
+    },
+    {
+      "id": "A1-corner-1488",
+      "headword": "corner",
+      "level": "A1"
+    },
+    {
+      "id": "A1-correct-1495",
+      "headword": "correct",
+      "level": "A1"
+    },
+    {
+      "id": "A1-couch-1513",
+      "headword": "couch",
+      "level": "A1"
+    },
+    {
+      "id": "A1-could-1516",
+      "headword": "could",
+      "level": "A1"
+    },
+    {
+      "id": "A1-course-1533",
+      "headword": "course",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cousin-1536",
+      "headword": "cousin",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cover-1537",
+      "headword": "cover",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cow-1539",
+      "headword": "cow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cream-1555",
+      "headword": "cream",
+      "level": "A1"
+    },
+    {
+      "id": "A1-credit card-1565",
+      "headword": "credit card",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cry-1599",
+      "headword": "cry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-culture-1610",
+      "headword": "culture",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cup-1611",
+      "headword": "cup",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cut-1634",
+      "headword": "cut",
+      "level": "A1"
+    },
+    {
+      "id": "A1-cute-1635",
+      "headword": "cute",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dad-1647",
+      "headword": "dad",
+      "level": "A1"
+    },
+    {
+      "id": "A1-daddy-1648",
+      "headword": "daddy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dance-1661",
+      "headword": "dance",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dance-1662",
+      "headword": "dance",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dancing-1664",
+      "headword": "dancing",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dark-1670",
+      "headword": "dark",
+      "level": "A1"
+    },
+    {
+      "id": "A1-date-1678",
+      "headword": "date",
+      "level": "A1"
+    },
+    {
+      "id": "A1-daughter-1682",
+      "headword": "daughter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-day-1685",
+      "headword": "day",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dear-1698",
+      "headword": "dear",
+      "level": "A1"
+    },
+    {
+      "id": "A1-December-1711",
+      "headword": "December",
+      "level": "A1"
+    },
+    {
+      "id": "A1-delicious-1763",
+      "headword": "delicious",
+      "level": "A1"
+    },
+    {
+      "id": "A1-describe-1801",
+      "headword": "describe",
+      "level": "A1"
+    },
+    {
+      "id": "A1-design-1806",
+      "headword": "design",
+      "level": "A1"
+    },
+    {
+      "id": "A1-desk-1813",
+      "headword": "desk",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dictionary-1859",
+      "headword": "dictionary",
+      "level": "A1"
+    },
+    {
+      "id": "A1-did-1860",
+      "headword": "did",
+      "level": "A1"
+    },
+    {
+      "id": "A1-difference-1864",
+      "headword": "difference",
+      "level": "A1"
+    },
+    {
+      "id": "A1-different-1865",
+      "headword": "different",
+      "level": "A1"
+    },
+    {
+      "id": "A1-difficult-1867",
+      "headword": "difficult",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dig-1869",
+      "headword": "dig",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dining room-1882",
+      "headword": "dining room",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dinner-1883",
+      "headword": "dinner",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dirty-1896",
+      "headword": "dirty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-discuss-1927",
+      "headword": "discuss",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dish-1934",
+      "headword": "dish",
+      "level": "A1"
+    },
+    {
+      "id": "A1-do-1995",
+      "headword": "do",
+      "level": "A1"
+    },
+    {
+      "id": "A1-doctor/Dr./Dr-1998",
+      "headword": "doctor/Dr./Dr",
+      "level": "A1"
+    },
+    {
+      "id": "A1-does-2001",
+      "headword": "does",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dog-2002",
+      "headword": "dog",
+      "level": "A1"
+    },
+    {
+      "id": "A1-doing-2003",
+      "headword": "doing",
+      "level": "A1"
+    },
+    {
+      "id": "A1-doll-2004",
+      "headword": "doll",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dollar-2005",
+      "headword": "dollar",
+      "level": "A1"
+    },
+    {
+      "id": "A1-door-2014",
+      "headword": "door",
+      "level": "A1"
+    },
+    {
+      "id": "A1-down-2030",
+      "headword": "down",
+      "level": "A1"
+    },
+    {
+      "id": "A1-drama-2048",
+      "headword": "drama",
+      "level": "A1"
+    },
+    {
+      "id": "A1-draw-2053",
+      "headword": "draw",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dream-2058",
+      "headword": "dream",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dress-2061",
+      "headword": "dress",
+      "level": "A1"
+    },
+    {
+      "id": "A1-drink-2065",
+      "headword": "drink",
+      "level": "A1"
+    },
+    {
+      "id": "A1-drink-2066",
+      "headword": "drink",
+      "level": "A1"
+    },
+    {
+      "id": "A1-drive-2068",
+      "headword": "drive",
+      "level": "A1"
+    },
+    {
+      "id": "A1-driver-2070",
+      "headword": "driver",
+      "level": "A1"
+    },
+    {
+      "id": "A1-drop-2074",
+      "headword": "drop",
+      "level": "A1"
+    },
+    {
+      "id": "A1-drum-2080",
+      "headword": "drum",
+      "level": "A1"
+    },
+    {
+      "id": "A1-dry-2082",
+      "headword": "dry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-due-2086",
+      "headword": "due",
+      "level": "A1"
+    },
+    {
+      "id": "A1-DVD-2101",
+      "headword": "DVD",
+      "level": "A1"
+    },
+    {
+      "id": "A1-each-2106",
+      "headword": "each",
+      "level": "A1"
+    },
+    {
+      "id": "A1-each-2107",
+      "headword": "each",
+      "level": "A1"
+    },
+    {
+      "id": "A1-each other-2108",
+      "headword": "each other",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ear-2113",
+      "headword": "ear",
+      "level": "A1"
+    },
+    {
+      "id": "A1-early-2116",
+      "headword": "early",
+      "level": "A1"
+    },
+    {
+      "id": "A1-easy-2131",
+      "headword": "easy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-eat-2133",
+      "headword": "eat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-egg-2165",
+      "headword": "egg",
+      "level": "A1"
+    },
+    {
+      "id": "A1-eight-2166",
+      "headword": "eight",
+      "level": "A1"
+    },
+    {
+      "id": "A1-eighteen-2167",
+      "headword": "eighteen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-eighty-2168",
+      "headword": "eighty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-either-2169",
+      "headword": "either",
+      "level": "A1"
+    },
+    {
+      "id": "A1-elementary-2191",
+      "headword": "elementary",
+      "level": "A1"
+    },
+    {
+      "id": "A1-eleven-2194",
+      "headword": "eleven",
+      "level": "A1"
+    },
+    {
+      "id": "A1-else-2200",
+      "headword": "else",
+      "level": "A1"
+    },
+    {
+      "id": "A1-email/e-mail/E-mail-2203",
+      "headword": "email/e-mail/E-mail",
+      "level": "A1"
+    },
+    {
+      "id": "A1-end-2234",
+      "headword": "end",
+      "level": "A1"
+    },
+    {
+      "id": "A1-engineer-2254",
+      "headword": "engineer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-enjoy-2259",
+      "headword": "enjoy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-evening-2335",
+      "headword": "evening",
+      "level": "A1"
+    },
+    {
+      "id": "A1-event-2337",
+      "headword": "event",
+      "level": "A1"
+    },
+    {
+      "id": "A1-every-2341",
+      "headword": "every",
+      "level": "A1"
+    },
+    {
+      "id": "A1-everybody-2342",
+      "headword": "everybody",
+      "level": "A1"
+    },
+    {
+      "id": "A1-everyday-2343",
+      "headword": "everyday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-everyone-2344",
+      "headword": "everyone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-everything-2345",
+      "headword": "everything",
+      "level": "A1"
+    },
+    {
+      "id": "A1-everywhere-2346",
+      "headword": "everywhere",
+      "level": "A1"
+    },
+    {
+      "id": "A1-example-2365",
+      "headword": "example",
+      "level": "A1"
+    },
+    {
+      "id": "A1-excellent-2369",
+      "headword": "excellent",
+      "level": "A1"
+    },
+    {
+      "id": "A1-excited-2380",
+      "headword": "excited",
+      "level": "A1"
+    },
+    {
+      "id": "A1-exciting-2383",
+      "headword": "exciting",
+      "level": "A1"
+    },
+    {
+      "id": "A1-excuse-2391",
+      "headword": "excuse",
+      "level": "A1"
+    },
+    {
+      "id": "A1-exercise-2398",
+      "headword": "exercise",
+      "level": "A1"
+    },
+    {
+      "id": "A1-expensive-2419",
+      "headword": "expensive",
+      "level": "A1"
+    },
+    {
+      "id": "A1-eye-2464",
+      "headword": "eye",
+      "level": "A1"
+    },
+    {
+      "id": "A1-face-2471",
+      "headword": "face",
+      "level": "A1"
+    },
+    {
+      "id": "A1-factory-2480",
+      "headword": "factory",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fair-2487",
+      "headword": "fair",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fairy-2490",
+      "headword": "fairy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-false-2497",
+      "headword": "false",
+      "level": "A1"
+    },
+    {
+      "id": "A1-family-2502",
+      "headword": "family",
+      "level": "A1"
+    },
+    {
+      "id": "A1-famous-2503",
+      "headword": "famous",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fan-2504",
+      "headword": "fan",
+      "level": "A1"
+    },
+    {
+      "id": "A1-farm-2516",
+      "headword": "farm",
+      "level": "A1"
+    },
+    {
+      "id": "A1-farmer-2517",
+      "headword": "farmer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fast-2528",
+      "headword": "fast",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fast-2529",
+      "headword": "fast",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fat-2532",
+      "headword": "fat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-father-2536",
+      "headword": "father",
+      "level": "A1"
+    },
+    {
+      "id": "A1-favorite/favourite-2542",
+      "headword": "favorite/favourite",
+      "level": "A1"
+    },
+    {
+      "id": "A1-favorite/favourite-2543",
+      "headword": "favorite/favourite",
+      "level": "A1"
+    },
+    {
+      "id": "A1-February-2554",
+      "headword": "February",
+      "level": "A1"
+    },
+    {
+      "id": "A1-feed-2558",
+      "headword": "feed",
+      "level": "A1"
+    },
+    {
+      "id": "A1-feel-2562",
+      "headword": "feel",
+      "level": "A1"
+    },
+    {
+      "id": "A1-feeling-2563",
+      "headword": "feeling",
+      "level": "A1"
+    },
+    {
+      "id": "A1-festival-2571",
+      "headword": "festival",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fever-2574",
+      "headword": "fever",
+      "level": "A1"
+    },
+    {
+      "id": "A1-field-2581",
+      "headword": "field",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fifteen-2583",
+      "headword": "fifteen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fifty-2585",
+      "headword": "fifty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fight-2586",
+      "headword": "fight",
+      "level": "A1"
+    },
+    {
+      "id": "A1-file-2593",
+      "headword": "file",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fill-2596",
+      "headword": "fill",
+      "level": "A1"
+    },
+    {
+      "id": "A1-find-2609",
+      "headword": "find",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fine-2611",
+      "headword": "fine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-finish-2618",
+      "headword": "finish",
+      "level": "A1"
+    },
+    {
+      "id": "A1-finish-2619",
+      "headword": "finish",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fire-2620",
+      "headword": "fire",
+      "level": "A1"
+    },
+    {
+      "id": "A1-first-2632",
+      "headword": "first",
+      "level": "A1"
+    },
+    {
+      "id": "A1-first-2633",
+      "headword": "first",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fish-2642",
+      "headword": "fish",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fishing-2645",
+      "headword": "fishing",
+      "level": "A1"
+    },
+    {
+      "id": "A1-five-2650",
+      "headword": "five",
+      "level": "A1"
+    },
+    {
+      "id": "A1-flag-2654",
+      "headword": "flag",
+      "level": "A1"
+    },
+    {
+      "id": "A1-flat-2662",
+      "headword": "flat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-floor-2681",
+      "headword": "floor",
+      "level": "A1"
+    },
+    {
+      "id": "A1-flower-2685",
+      "headword": "flower",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fly-2694",
+      "headword": "fly",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fly-2695",
+      "headword": "fly",
+      "level": "A1"
+    },
+    {
+      "id": "A1-focus-2697",
+      "headword": "focus",
+      "level": "A1"
+    },
+    {
+      "id": "A1-foggy-2699",
+      "headword": "foggy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-following-2706",
+      "headword": "following",
+      "level": "A1"
+    },
+    {
+      "id": "A1-food-2712",
+      "headword": "food",
+      "level": "A1"
+    },
+    {
+      "id": "A1-football-2718",
+      "headword": "football",
+      "level": "A1"
+    },
+    {
+      "id": "A1-for-2722",
+      "headword": "for",
+      "level": "A1"
+    },
+    {
+      "id": "A1-foreign-2730",
+      "headword": "foreign",
+      "level": "A1"
+    },
+    {
+      "id": "A1-foreigner-2731",
+      "headword": "foreigner",
+      "level": "A1"
+    },
+    {
+      "id": "A1-forget-2737",
+      "headword": "forget",
+      "level": "A1"
+    },
+    {
+      "id": "A1-form-2740",
+      "headword": "form",
+      "level": "A1"
+    },
+    {
+      "id": "A1-forty-2757",
+      "headword": "forty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-four-2763",
+      "headword": "four",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fourteen-2764",
+      "headword": "fourteen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-free-2775",
+      "headword": "free",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Friday-2788",
+      "headword": "Friday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-friend-2791",
+      "headword": "friend",
+      "level": "A1"
+    },
+    {
+      "id": "A1-frog-2800",
+      "headword": "frog",
+      "level": "A1"
+    },
+    {
+      "id": "A1-from-2801",
+      "headword": "from",
+      "level": "A1"
+    },
+    {
+      "id": "A1-front-2802",
+      "headword": "front",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fruit-2808",
+      "headword": "fruit",
+      "level": "A1"
+    },
+    {
+      "id": "A1-full-2816",
+      "headword": "full",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fun-2822",
+      "headword": "fun",
+      "level": "A1"
+    },
+    {
+      "id": "A1-fun-2823",
+      "headword": "fun",
+      "level": "A1"
+    },
+    {
+      "id": "A1-funny-2834",
+      "headword": "funny",
+      "level": "A1"
+    },
+    {
+      "id": "A1-future-2847",
+      "headword": "future",
+      "level": "A1"
+    },
+    {
+      "id": "A1-game-2855",
+      "headword": "game",
+      "level": "A1"
+    },
+    {
+      "id": "A1-garbage-2860",
+      "headword": "garbage",
+      "level": "A1"
+    },
+    {
+      "id": "A1-garden-2861",
+      "headword": "garden",
+      "level": "A1"
+    },
+    {
+      "id": "A1-get-2904",
+      "headword": "get",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ghost-2907",
+      "headword": "ghost",
+      "level": "A1"
+    },
+    {
+      "id": "A1-gift-2909",
+      "headword": "gift",
+      "level": "A1"
+    },
+    {
+      "id": "A1-girl-2914",
+      "headword": "girl",
+      "level": "A1"
+    },
+    {
+      "id": "A1-girlfriend-2915",
+      "headword": "girlfriend",
+      "level": "A1"
+    },
+    {
+      "id": "A1-give-2916",
+      "headword": "give",
+      "level": "A1"
+    },
+    {
+      "id": "A1-glad-2920",
+      "headword": "glad",
+      "level": "A1"
+    },
+    {
+      "id": "A1-glass-2925",
+      "headword": "glass",
+      "level": "A1"
+    },
+    {
+      "id": "A1-glasses-2926",
+      "headword": "glasses",
+      "level": "A1"
+    },
+    {
+      "id": "A1-go-2944",
+      "headword": "go",
+      "level": "A1"
+    },
+    {
+      "id": "A1-goal-2945",
+      "headword": "goal",
+      "level": "A1"
+    },
+    {
+      "id": "A1-gold-2951",
+      "headword": "gold",
+      "level": "A1"
+    },
+    {
+      "id": "A1-good-2956",
+      "headword": "good",
+      "level": "A1"
+    },
+    {
+      "id": "A1-good afternoon-2958",
+      "headword": "good afternoon",
+      "level": "A1"
+    },
+    {
+      "id": "A1-good morning-2959",
+      "headword": "good morning",
+      "level": "A1"
+    },
+    {
+      "id": "A1-good night-2960",
+      "headword": "good night",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grade-2980",
+      "headword": "grade",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grammar-2989",
+      "headword": "grammar",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grandfather-2994",
+      "headword": "grandfather",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grandma-2995",
+      "headword": "grandma",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grandmother-2996",
+      "headword": "grandmother",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grandpa-2997",
+      "headword": "grandpa",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grandparent-2998",
+      "headword": "grandparent",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grape-3003",
+      "headword": "grape",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grass-3009",
+      "headword": "grass",
+      "level": "A1"
+    },
+    {
+      "id": "A1-gray/grey-3016",
+      "headword": "gray/grey",
+      "level": "A1"
+    },
+    {
+      "id": "A1-gray/grey-3017",
+      "headword": "gray/grey",
+      "level": "A1"
+    },
+    {
+      "id": "A1-great-3018",
+      "headword": "great",
+      "level": "A1"
+    },
+    {
+      "id": "A1-green-3022",
+      "headword": "green",
+      "level": "A1"
+    },
+    {
+      "id": "A1-greet-3025",
+      "headword": "greet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ground-3039",
+      "headword": "ground",
+      "level": "A1"
+    },
+    {
+      "id": "A1-group-3041",
+      "headword": "group",
+      "level": "A1"
+    },
+    {
+      "id": "A1-grow-3044",
+      "headword": "grow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-guess-3055",
+      "headword": "guess",
+      "level": "A1"
+    },
+    {
+      "id": "A1-guest-3056",
+      "headword": "guest",
+      "level": "A1"
+    },
+    {
+      "id": "A1-guitar-3064",
+      "headword": "guitar",
+      "level": "A1"
+    },
+    {
+      "id": "A1-guy-3071",
+      "headword": "guy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-habit-3075",
+      "headword": "habit",
+      "level": "A1"
+    },
+    {
+      "id": "A1-had-3078",
+      "headword": "had",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hair-3080",
+      "headword": "hair",
+      "level": "A1"
+    },
+    {
+      "id": "A1-haircut-3081",
+      "headword": "haircut",
+      "level": "A1"
+    },
+    {
+      "id": "A1-half-3087",
+      "headword": "half",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hall-3091",
+      "headword": "hall",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hamburger-3093",
+      "headword": "hamburger",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hand-3096",
+      "headword": "hand",
+      "level": "A1"
+    },
+    {
+      "id": "A1-handsome-3110",
+      "headword": "handsome",
+      "level": "A1"
+    },
+    {
+      "id": "A1-happen-3116",
+      "headword": "happen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-happy-3119",
+      "headword": "happy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hard-3121",
+      "headword": "hard",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hard-3122",
+      "headword": "hard",
+      "level": "A1"
+    },
+    {
+      "id": "A1-has-3136",
+      "headword": "has",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hat-3140",
+      "headword": "hat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-have-3149",
+      "headword": "have",
+      "level": "A1"
+    },
+    {
+      "id": "A1-have to-3150",
+      "headword": "have to",
+      "level": "A1"
+    },
+    {
+      "id": "A1-he-3155",
+      "headword": "he",
+      "level": "A1"
+    },
+    {
+      "id": "A1-head-3156",
+      "headword": "head",
+      "level": "A1"
+    },
+    {
+      "id": "A1-headache-3158",
+      "headword": "headache",
+      "level": "A1"
+    },
+    {
+      "id": "A1-health-3165",
+      "headword": "health",
+      "level": "A1"
+    },
+    {
+      "id": "A1-healthy-3167",
+      "headword": "healthy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hear-3170",
+      "headword": "hear",
+      "level": "A1"
+    },
+    {
+      "id": "A1-heart-3172",
+      "headword": "heart",
+      "level": "A1"
+    },
+    {
+      "id": "A1-heavy-3185",
+      "headword": "heavy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hello-3191",
+      "headword": "hello",
+      "level": "A1"
+    },
+    {
+      "id": "A1-help-3194",
+      "headword": "help",
+      "level": "A1"
+    },
+    {
+      "id": "A1-her-3199",
+      "headword": "her",
+      "level": "A1"
+    },
+    {
+      "id": "A1-her-3200",
+      "headword": "her",
+      "level": "A1"
+    },
+    {
+      "id": "A1-here-3203",
+      "headword": "here",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hers-3206",
+      "headword": "hers",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hi-3211",
+      "headword": "hi",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hide-3213",
+      "headword": "hide",
+      "level": "A1"
+    },
+    {
+      "id": "A1-high-3214",
+      "headword": "high",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hill-3227",
+      "headword": "hill",
+      "level": "A1"
+    },
+    {
+      "id": "A1-him-3228",
+      "headword": "him",
+      "level": "A1"
+    },
+    {
+      "id": "A1-his-3234",
+      "headword": "his",
+      "level": "A1"
+    },
+    {
+      "id": "A1-his-3235",
+      "headword": "his",
+      "level": "A1"
+    },
+    {
+      "id": "A1-history-3239",
+      "headword": "history",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hobby-3243",
+      "headword": "hobby",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hold-3245",
+      "headword": "hold",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hole-3248",
+      "headword": "hole",
+      "level": "A1"
+    },
+    {
+      "id": "A1-holiday-3249",
+      "headword": "holiday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-home-3254",
+      "headword": "home",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hometown-3256",
+      "headword": "hometown",
+      "level": "A1"
+    },
+    {
+      "id": "A1-homework-3258",
+      "headword": "homework",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hope-3272",
+      "headword": "hope",
+      "level": "A1"
+    },
+    {
+      "id": "A1-horse-3282",
+      "headword": "horse",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hospital-3285",
+      "headword": "hospital",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hot-3290",
+      "headword": "hot",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hotel-3291",
+      "headword": "hotel",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hour-3292",
+      "headword": "hour",
+      "level": "A1"
+    },
+    {
+      "id": "A1-house-3294",
+      "headword": "house",
+      "level": "A1"
+    },
+    {
+      "id": "A1-how-3301",
+      "headword": "how",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hungry-3324",
+      "headword": "hungry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hurry-3330",
+      "headword": "hurry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-hurt-3333",
+      "headword": "hurt",
+      "level": "A1"
+    },
+    {
+      "id": "A1-husband-3334",
+      "headword": "husband",
+      "level": "A1"
+    },
+    {
+      "id": "A1-I-3341",
+      "headword": "I",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ice-3342",
+      "headword": "ice",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ice cream-3343",
+      "headword": "ice cream",
+      "level": "A1"
+    },
+    {
+      "id": "A1-idea-3351",
+      "headword": "idea",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ideal-3352",
+      "headword": "ideal",
+      "level": "A1"
+    },
+    {
+      "id": "A1-if-3365",
+      "headword": "if",
+      "level": "A1"
+    },
+    {
+      "id": "A1-imagine-3380",
+      "headword": "imagine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-important-3407",
+      "headword": "important",
+      "level": "A1"
+    },
+    {
+      "id": "A1-in-3430",
+      "headword": "in",
+      "level": "A1"
+    },
+    {
+      "id": "A1-information-3499",
+      "headword": "information",
+      "level": "A1"
+    },
+    {
+      "id": "A1-inside-3537",
+      "headword": "inside",
+      "level": "A1"
+    },
+    {
+      "id": "A1-interested-3580",
+      "headword": "interested",
+      "level": "A1"
+    },
+    {
+      "id": "A1-interesting-3581",
+      "headword": "interesting",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Internet/internet-3589",
+      "headword": "Internet/internet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-interview-3598",
+      "headword": "interview",
+      "level": "A1"
+    },
+    {
+      "id": "A1-interviewer-3601",
+      "headword": "interviewer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-into-3603",
+      "headword": "into",
+      "level": "A1"
+    },
+    {
+      "id": "A1-introduce-3606",
+      "headword": "introduce",
+      "level": "A1"
+    },
+    {
+      "id": "A1-is-3647",
+      "headword": "is",
+      "level": "A1"
+    },
+    {
+      "id": "A1-island-3648",
+      "headword": "island",
+      "level": "A1"
+    },
+    {
+      "id": "A1-it-3655",
+      "headword": "it",
+      "level": "A1"
+    },
+    {
+      "id": "A1-item-3658",
+      "headword": "item",
+      "level": "A1"
+    },
+    {
+      "id": "A1-its-3659",
+      "headword": "its",
+      "level": "A1"
+    },
+    {
+      "id": "A1-its-3660",
+      "headword": "its",
+      "level": "A1"
+    },
+    {
+      "id": "A1-jacket-3663",
+      "headword": "jacket",
+      "level": "A1"
+    },
+    {
+      "id": "A1-January-3668",
+      "headword": "January",
+      "level": "A1"
+    },
+    {
+      "id": "A1-jeans-3674",
+      "headword": "jeans",
+      "level": "A1"
+    },
+    {
+      "id": "A1-jet-3677",
+      "headword": "jet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-jewelry/jewellery-3680",
+      "headword": "jewelry/jewellery",
+      "level": "A1"
+    },
+    {
+      "id": "A1-job-3681",
+      "headword": "job",
+      "level": "A1"
+    },
+    {
+      "id": "A1-join-3685",
+      "headword": "join",
+      "level": "A1"
+    },
+    {
+      "id": "A1-judge-3696",
+      "headword": "judge",
+      "level": "A1"
+    },
+    {
+      "id": "A1-juice-3700",
+      "headword": "juice",
+      "level": "A1"
+    },
+    {
+      "id": "A1-July-3702",
+      "headword": "July",
+      "level": "A1"
+    },
+    {
+      "id": "A1-jump-3704",
+      "headword": "jump",
+      "level": "A1"
+    },
+    {
+      "id": "A1-June-3706",
+      "headword": "June",
+      "level": "A1"
+    },
+    {
+      "id": "A1-just-3713",
+      "headword": "just",
+      "level": "A1"
+    },
+    {
+      "id": "A1-keep-3719",
+      "headword": "keep",
+      "level": "A1"
+    },
+    {
+      "id": "A1-key-3723",
+      "headword": "key",
+      "level": "A1"
+    },
+    {
+      "id": "A1-key-3724",
+      "headword": "key",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kick-3727",
+      "headword": "kick",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kick-3728",
+      "headword": "kick",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kid-3729",
+      "headword": "kid",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kill-3731",
+      "headword": "kill",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kind-3738",
+      "headword": "kind",
+      "level": "A1"
+    },
+    {
+      "id": "A1-king-3742",
+      "headword": "king",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kiss-3744",
+      "headword": "kiss",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kitchen-3747",
+      "headword": "kitchen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-kite-3748",
+      "headword": "kite",
+      "level": "A1"
+    },
+    {
+      "id": "A1-knee-3750",
+      "headword": "knee",
+      "level": "A1"
+    },
+    {
+      "id": "A1-knife-3752",
+      "headword": "knife",
+      "level": "A1"
+    },
+    {
+      "id": "A1-know-3757",
+      "headword": "know",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lady-3769",
+      "headword": "lady",
+      "level": "A1"
+    },
+    {
+      "id": "A1-language-3783",
+      "headword": "language",
+      "level": "A1"
+    },
+    {
+      "id": "A1-large-3786",
+      "headword": "large",
+      "level": "A1"
+    },
+    {
+      "id": "A1-last name-3795",
+      "headword": "last name",
+      "level": "A1"
+    },
+    {
+      "id": "A1-late-3799",
+      "headword": "late",
+      "level": "A1"
+    },
+    {
+      "id": "A1-late-3800",
+      "headword": "late",
+      "level": "A1"
+    },
+    {
+      "id": "A1-later-3804",
+      "headword": "later",
+      "level": "A1"
+    },
+    {
+      "id": "A1-laugh-3810",
+      "headword": "laugh",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lazy-3825",
+      "headword": "lazy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-leader-3829",
+      "headword": "leader",
+      "level": "A1"
+    },
+    {
+      "id": "A1-leaf-3832",
+      "headword": "leaf",
+      "level": "A1"
+    },
+    {
+      "id": "A1-learn-3841",
+      "headword": "learn",
+      "level": "A1"
+    },
+    {
+      "id": "A1-leave-3851",
+      "headword": "leave",
+      "level": "A1"
+    },
+    {
+      "id": "A1-left-3855",
+      "headword": "left",
+      "level": "A1"
+    },
+    {
+      "id": "A1-leg-3859",
+      "headword": "leg",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lesson-3883",
+      "headword": "lesson",
+      "level": "A1"
+    },
+    {
+      "id": "A1-let-3885",
+      "headword": "let",
+      "level": "A1"
+    },
+    {
+      "id": "A1-letter-3886",
+      "headword": "letter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-library-3897",
+      "headword": "library",
+      "level": "A1"
+    },
+    {
+      "id": "A1-life-3903",
+      "headword": "life",
+      "level": "A1"
+    },
+    {
+      "id": "A1-light-3911",
+      "headword": "light",
+      "level": "A1"
+    },
+    {
+      "id": "A1-light-3912",
+      "headword": "light",
+      "level": "A1"
+    },
+    {
+      "id": "A1-like-3920",
+      "headword": "like",
+      "level": "A1"
+    },
+    {
+      "id": "A1-like-3921",
+      "headword": "like",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lily-3925",
+      "headword": "lily",
+      "level": "A1"
+    },
+    {
+      "id": "A1-line-3932",
+      "headword": "line",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lion-3940",
+      "headword": "lion",
+      "level": "A1"
+    },
+    {
+      "id": "A1-list-3944",
+      "headword": "list",
+      "level": "A1"
+    },
+    {
+      "id": "A1-listen-3946",
+      "headword": "listen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-little-3954",
+      "headword": "little",
+      "level": "A1"
+    },
+    {
+      "id": "A1-little-3955",
+      "headword": "little",
+      "level": "A1"
+    },
+    {
+      "id": "A1-live-3959",
+      "headword": "live",
+      "level": "A1"
+    },
+    {
+      "id": "A1-living-3962",
+      "headword": "living",
+      "level": "A1"
+    },
+    {
+      "id": "A1-living room-3964",
+      "headword": "living room",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lonely-3981",
+      "headword": "lonely",
+      "level": "A1"
+    },
+    {
+      "id": "A1-long-3982",
+      "headword": "long",
+      "level": "A1"
+    },
+    {
+      "id": "A1-look-3986",
+      "headword": "look",
+      "level": "A1"
+    },
+    {
+      "id": "A1-look-3987",
+      "headword": "look",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lot-3994",
+      "headword": "lot",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lot-3996",
+      "headword": "lot",
+      "level": "A1"
+    },
+    {
+      "id": "A1-love-4003",
+      "headword": "love",
+      "level": "A1"
+    },
+    {
+      "id": "A1-love-4004",
+      "headword": "love",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lovely-4005",
+      "headword": "lovely",
+      "level": "A1"
+    },
+    {
+      "id": "A1-luck-4014",
+      "headword": "luck",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lucky-4016",
+      "headword": "lucky",
+      "level": "A1"
+    },
+    {
+      "id": "A1-lunch-4019",
+      "headword": "lunch",
+      "level": "A1"
+    },
+    {
+      "id": "A1-'m-4028",
+      "headword": "'m",
+      "level": "A1"
+    },
+    {
+      "id": "A1-machine-4029",
+      "headword": "machine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-magazine-4035",
+      "headword": "magazine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mail-4042",
+      "headword": "mail",
+      "level": "A1"
+    },
+    {
+      "id": "A1-make-4054",
+      "headword": "make",
+      "level": "A1"
+    },
+    {
+      "id": "A1-man-4063",
+      "headword": "man",
+      "level": "A1"
+    },
+    {
+      "id": "A1-many-4078",
+      "headword": "many",
+      "level": "A1"
+    },
+    {
+      "id": "A1-many-4079",
+      "headword": "many",
+      "level": "A1"
+    },
+    {
+      "id": "A1-map-4080",
+      "headword": "map",
+      "level": "A1"
+    },
+    {
+      "id": "A1-March-4084",
+      "headword": "March",
+      "level": "A1"
+    },
+    {
+      "id": "A1-match-4111",
+      "headword": "match",
+      "level": "A1"
+    },
+    {
+      "id": "A1-math/maths-4115",
+      "headword": "math/maths",
+      "level": "A1"
+    },
+    {
+      "id": "A1-matter-4119",
+      "headword": "matter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-may-4126",
+      "headword": "may",
+      "level": "A1"
+    },
+    {
+      "id": "A1-May-4127",
+      "headword": "May",
+      "level": "A1"
+    },
+    {
+      "id": "A1-maybe-4128",
+      "headword": "maybe",
+      "level": "A1"
+    },
+    {
+      "id": "A1-me-4130",
+      "headword": "me",
+      "level": "A1"
+    },
+    {
+      "id": "A1-meal-4131",
+      "headword": "meal",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mean-4134",
+      "headword": "mean",
+      "level": "A1"
+    },
+    {
+      "id": "A1-meat-4142",
+      "headword": "meat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-medicine-4150",
+      "headword": "medicine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-meet-4158",
+      "headword": "meet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-meeting-4159",
+      "headword": "meeting",
+      "level": "A1"
+    },
+    {
+      "id": "A1-memory-4168",
+      "headword": "memory",
+      "level": "A1"
+    },
+    {
+      "id": "A1-merry-4183",
+      "headword": "merry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-message-4186",
+      "headword": "message",
+      "level": "A1"
+    },
+    {
+      "id": "A1-middle-4206",
+      "headword": "middle",
+      "level": "A1"
+    },
+    {
+      "id": "A1-milk-4217",
+      "headword": "milk",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mind-4223",
+      "headword": "mind",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mine-4226",
+      "headword": "mine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-minute-4238",
+      "headword": "minute",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Miss-4248",
+      "headword": "Miss",
+      "level": "A1"
+    },
+    {
+      "id": "A1-miss-4249",
+      "headword": "miss",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mobile-4265",
+      "headword": "mobile",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mobile phone-4266",
+      "headword": "mobile phone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mom-4285",
+      "headword": "mom",
+      "level": "A1"
+    },
+    {
+      "id": "A1-moment-4286",
+      "headword": "moment",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mommy/mommie-4289",
+      "headword": "mommy/mommie",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Monday-4291",
+      "headword": "Monday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-money-4292",
+      "headword": "money",
+      "level": "A1"
+    },
+    {
+      "id": "A1-monkey-4296",
+      "headword": "monkey",
+      "level": "A1"
+    },
+    {
+      "id": "A1-month-4298",
+      "headword": "month",
+      "level": "A1"
+    },
+    {
+      "id": "A1-moon-4304",
+      "headword": "moon",
+      "level": "A1"
+    },
+    {
+      "id": "A1-more-4312",
+      "headword": "more",
+      "level": "A1"
+    },
+    {
+      "id": "A1-more-4313",
+      "headword": "more",
+      "level": "A1"
+    },
+    {
+      "id": "A1-morning-4315",
+      "headword": "morning",
+      "level": "A1"
+    },
+    {
+      "id": "A1-most-4324",
+      "headword": "most",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mother-4327",
+      "headword": "mother",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mountain-4344",
+      "headword": "mountain",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mouse-4348",
+      "headword": "mouse",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mouth-4349",
+      "headword": "mouth",
+      "level": "A1"
+    },
+    {
+      "id": "A1-move-4350",
+      "headword": "move",
+      "level": "A1"
+    },
+    {
+      "id": "A1-movie-4354",
+      "headword": "movie",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Mr./Mr-4357",
+      "headword": "Mr./Mr",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Mrs./Mrs-4358",
+      "headword": "Mrs./Mrs",
+      "level": "A1"
+    },
+    {
+      "id": "A1-much-4360",
+      "headword": "much",
+      "level": "A1"
+    },
+    {
+      "id": "A1-much-4361",
+      "headword": "much",
+      "level": "A1"
+    },
+    {
+      "id": "A1-much-4362",
+      "headword": "much",
+      "level": "A1"
+    },
+    {
+      "id": "A1-mum-4369",
+      "headword": "mum",
+      "level": "A1"
+    },
+    {
+      "id": "A1-music-4380",
+      "headword": "music",
+      "level": "A1"
+    },
+    {
+      "id": "A1-musician-4383",
+      "headword": "musician",
+      "level": "A1"
+    },
+    {
+      "id": "A1-must-4384",
+      "headword": "must",
+      "level": "A1"
+    },
+    {
+      "id": "A1-my-4393",
+      "headword": "my",
+      "level": "A1"
+    },
+    {
+      "id": "A1-name-4401",
+      "headword": "name",
+      "level": "A1"
+    },
+    {
+      "id": "A1-nationality-4416",
+      "headword": "nationality",
+      "level": "A1"
+    },
+    {
+      "id": "A1-near-4432",
+      "headword": "near",
+      "level": "A1"
+    },
+    {
+      "id": "A1-neck-4440",
+      "headword": "neck",
+      "level": "A1"
+    },
+    {
+      "id": "A1-need-4443",
+      "headword": "need",
+      "level": "A1"
+    },
+    {
+      "id": "A1-neighbor/neighbour-4454",
+      "headword": "neighbor/neighbour",
+      "level": "A1"
+    },
+    {
+      "id": "A1-never-4474",
+      "headword": "never",
+      "level": "A1"
+    },
+    {
+      "id": "A1-new-4476",
+      "headword": "new",
+      "level": "A1"
+    },
+    {
+      "id": "A1-news-4480",
+      "headword": "news",
+      "level": "A1"
+    },
+    {
+      "id": "A1-newspaper-4482",
+      "headword": "newspaper",
+      "level": "A1"
+    },
+    {
+      "id": "A1-nice-4490",
+      "headword": "nice",
+      "level": "A1"
+    },
+    {
+      "id": "A1-night-4494",
+      "headword": "night",
+      "level": "A1"
+    },
+    {
+      "id": "A1-nine-4498",
+      "headword": "nine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-nineteen-4499",
+      "headword": "nineteen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ninety-4500",
+      "headword": "ninety",
+      "level": "A1"
+    },
+    {
+      "id": "A1-no-4501",
+      "headword": "no",
+      "level": "A1"
+    },
+    {
+      "id": "A1-no-4502",
+      "headword": "no",
+      "level": "A1"
+    },
+    {
+      "id": "A1-noise-4510",
+      "headword": "noise",
+      "level": "A1"
+    },
+    {
+      "id": "A1-nose-4536",
+      "headword": "nose",
+      "level": "A1"
+    },
+    {
+      "id": "A1-not-4538",
+      "headword": "not",
+      "level": "A1"
+    },
+    {
+      "id": "A1-note-4539",
+      "headword": "note",
+      "level": "A1"
+    },
+    {
+      "id": "A1-note-4540",
+      "headword": "note",
+      "level": "A1"
+    },
+    {
+      "id": "A1-notebook-4541",
+      "headword": "notebook",
+      "level": "A1"
+    },
+    {
+      "id": "A1-nothing-4542",
+      "headword": "nothing",
+      "level": "A1"
+    },
+    {
+      "id": "A1-November-4556",
+      "headword": "November",
+      "level": "A1"
+    },
+    {
+      "id": "A1-now-4557",
+      "headword": "now",
+      "level": "A1"
+    },
+    {
+      "id": "A1-number-4564",
+      "headword": "number",
+      "level": "A1"
+    },
+    {
+      "id": "A1-nurse-4567",
+      "headword": "nurse",
+      "level": "A1"
+    },
+    {
+      "id": "A1-o'clock-4605",
+      "headword": "o'clock",
+      "level": "A1"
+    },
+    {
+      "id": "A1-October-4606",
+      "headword": "October",
+      "level": "A1"
+    },
+    {
+      "id": "A1-of-4608",
+      "headword": "of",
+      "level": "A1"
+    },
+    {
+      "id": "A1-off-4609",
+      "headword": "off",
+      "level": "A1"
+    },
+    {
+      "id": "A1-office-4619",
+      "headword": "office",
+      "level": "A1"
+    },
+    {
+      "id": "A1-officer-4620",
+      "headword": "officer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-often-4625",
+      "headword": "often",
+      "level": "A1"
+    },
+    {
+      "id": "A1-OK/okay-4629",
+      "headword": "OK/okay",
+      "level": "A1"
+    },
+    {
+      "id": "A1-OK/okay-4630",
+      "headword": "OK/okay",
+      "level": "A1"
+    },
+    {
+      "id": "A1-old-4631",
+      "headword": "old",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Olympics-4638",
+      "headword": "Olympics",
+      "level": "A1"
+    },
+    {
+      "id": "A1-on-4641",
+      "headword": "on",
+      "level": "A1"
+    },
+    {
+      "id": "A1-once-4642",
+      "headword": "once",
+      "level": "A1"
+    },
+    {
+      "id": "A1-one-4644",
+      "headword": "one",
+      "level": "A1"
+    },
+    {
+      "id": "A1-one-4645",
+      "headword": "one",
+      "level": "A1"
+    },
+    {
+      "id": "A1-only-4651",
+      "headword": "only",
+      "level": "A1"
+    },
+    {
+      "id": "A1-only-4652",
+      "headword": "only",
+      "level": "A1"
+    },
+    {
+      "id": "A1-open-4655",
+      "headword": "open",
+      "level": "A1"
+    },
+    {
+      "id": "A1-open-4656",
+      "headword": "open",
+      "level": "A1"
+    },
+    {
+      "id": "A1-opera-4659",
+      "headword": "opera",
+      "level": "A1"
+    },
+    {
+      "id": "A1-or-4679",
+      "headword": "or",
+      "level": "A1"
+    },
+    {
+      "id": "A1-orange-4682",
+      "headword": "orange",
+      "level": "A1"
+    },
+    {
+      "id": "A1-orange-4683",
+      "headword": "orange",
+      "level": "A1"
+    },
+    {
+      "id": "A1-order-4689",
+      "headword": "order",
+      "level": "A1"
+    },
+    {
+      "id": "A1-other-4708",
+      "headword": "other",
+      "level": "A1"
+    },
+    {
+      "id": "A1-our-4713",
+      "headword": "our",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ours-4714",
+      "headword": "ours",
+      "level": "A1"
+    },
+    {
+      "id": "A1-out-4716",
+      "headword": "out",
+      "level": "A1"
+    },
+    {
+      "id": "A1-outside-4742",
+      "headword": "outside",
+      "level": "A1"
+    },
+    {
+      "id": "A1-over-4754",
+      "headword": "over",
+      "level": "A1"
+    },
+    {
+      "id": "A1-own-4789",
+      "headword": "own",
+      "level": "A1"
+    },
+    {
+      "id": "A1-owner-4792",
+      "headword": "owner",
+      "level": "A1"
+    },
+    {
+      "id": "A1-p.m./P.M./pm/PM-4796",
+      "headword": "p.m./P.M./pm/PM",
+      "level": "A1"
+    },
+    {
+      "id": "A1-page-4808",
+      "headword": "page",
+      "level": "A1"
+    },
+    {
+      "id": "A1-paint-4812",
+      "headword": "paint",
+      "level": "A1"
+    },
+    {
+      "id": "A1-paint-4813",
+      "headword": "paint",
+      "level": "A1"
+    },
+    {
+      "id": "A1-painting-4816",
+      "headword": "painting",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pair-4817",
+      "headword": "pair",
+      "level": "A1"
+    },
+    {
+      "id": "A1-palace-4820",
+      "headword": "palace",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pants-4830",
+      "headword": "pants",
+      "level": "A1"
+    },
+    {
+      "id": "A1-paper-4832",
+      "headword": "paper",
+      "level": "A1"
+    },
+    {
+      "id": "A1-paragraph-4839",
+      "headword": "paragraph",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pardon-4845",
+      "headword": "pardon",
+      "level": "A1"
+    },
+    {
+      "id": "A1-parent-4847",
+      "headword": "parent",
+      "level": "A1"
+    },
+    {
+      "id": "A1-park-4849",
+      "headword": "park",
+      "level": "A1"
+    },
+    {
+      "id": "A1-partner-4866",
+      "headword": "partner",
+      "level": "A1"
+    },
+    {
+      "id": "A1-party-4870",
+      "headword": "party",
+      "level": "A1"
+    },
+    {
+      "id": "A1-past-4882",
+      "headword": "past",
+      "level": "A1"
+    },
+    {
+      "id": "A1-past-4883",
+      "headword": "past",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pay-4906",
+      "headword": "pay",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pay-4907",
+      "headword": "pay",
+      "level": "A1"
+    },
+    {
+      "id": "A1-peace-4911",
+      "headword": "peace",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pen-4930",
+      "headword": "pen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pencil-4934",
+      "headword": "pencil",
+      "level": "A1"
+    },
+    {
+      "id": "A1-people-4943",
+      "headword": "people",
+      "level": "A1"
+    },
+    {
+      "id": "A1-period-4957",
+      "headword": "period",
+      "level": "A1"
+    },
+    {
+      "id": "A1-person-4968",
+      "headword": "person",
+      "level": "A1"
+    },
+    {
+      "id": "A1-personal-4969",
+      "headword": "personal",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pet-4982",
+      "headword": "pet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-phone-4997",
+      "headword": "phone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-phone-4998",
+      "headword": "phone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-photo-4999",
+      "headword": "photo",
+      "level": "A1"
+    },
+    {
+      "id": "A1-piano-5012",
+      "headword": "piano",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pick-5014",
+      "headword": "pick",
+      "level": "A1"
+    },
+    {
+      "id": "A1-picnic-5017",
+      "headword": "picnic",
+      "level": "A1"
+    },
+    {
+      "id": "A1-picture-5018",
+      "headword": "picture",
+      "level": "A1"
+    },
+    {
+      "id": "A1-piece-5022",
+      "headword": "piece",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pig-5024",
+      "headword": "pig",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pink-5035",
+      "headword": "pink",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pizza-5045",
+      "headword": "pizza",
+      "level": "A1"
+    },
+    {
+      "id": "A1-place-5046",
+      "headword": "place",
+      "level": "A1"
+    },
+    {
+      "id": "A1-plan-5050",
+      "headword": "plan",
+      "level": "A1"
+    },
+    {
+      "id": "A1-plane-5052",
+      "headword": "plane",
+      "level": "A1"
+    },
+    {
+      "id": "A1-play-5061",
+      "headword": "play",
+      "level": "A1"
+    },
+    {
+      "id": "A1-play-5062",
+      "headword": "play",
+      "level": "A1"
+    },
+    {
+      "id": "A1-player-5063",
+      "headword": "player",
+      "level": "A1"
+    },
+    {
+      "id": "A1-please-5071",
+      "headword": "please",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pleasure-5075",
+      "headword": "pleasure",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pocket-5089",
+      "headword": "pocket",
+      "level": "A1"
+    },
+    {
+      "id": "A1-poem-5091",
+      "headword": "poem",
+      "level": "A1"
+    },
+    {
+      "id": "A1-point-5094",
+      "headword": "point",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pollution-5121",
+      "headword": "pollution",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pool-5125",
+      "headword": "pool",
+      "level": "A1"
+    },
+    {
+      "id": "A1-poor-5126",
+      "headword": "poor",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pop-5127",
+      "headword": "pop",
+      "level": "A1"
+    },
+    {
+      "id": "A1-post-5151",
+      "headword": "post",
+      "level": "A1"
+    },
+    {
+      "id": "A1-poster-5156",
+      "headword": "poster",
+      "level": "A1"
+    },
+    {
+      "id": "A1-potato-5160",
+      "headword": "potato",
+      "level": "A1"
+    },
+    {
+      "id": "A1-practice-5178",
+      "headword": "practice",
+      "level": "A1"
+    },
+    {
+      "id": "A1-practice/practise-5179",
+      "headword": "practice/practise",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pray-5184",
+      "headword": "pray",
+      "level": "A1"
+    },
+    {
+      "id": "A1-present-5221",
+      "headword": "present",
+      "level": "A1"
+    },
+    {
+      "id": "A1-pretty-5238",
+      "headword": "pretty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-price-5246",
+      "headword": "price",
+      "level": "A1"
+    },
+    {
+      "id": "A1-prince-5258",
+      "headword": "prince",
+      "level": "A1"
+    },
+    {
+      "id": "A1-princess-5259",
+      "headword": "princess",
+      "level": "A1"
+    },
+    {
+      "id": "A1-problem-5280",
+      "headword": "problem",
+      "level": "A1"
+    },
+    {
+      "id": "A1-program/programme-5299",
+      "headword": "program/programme",
+      "level": "A1"
+    },
+    {
+      "id": "A1-purple-5389",
+      "headword": "purple",
+      "level": "A1"
+    },
+    {
+      "id": "A1-push-5396",
+      "headword": "push",
+      "level": "A1"
+    },
+    {
+      "id": "A1-put-5397",
+      "headword": "put",
+      "level": "A1"
+    },
+    {
+      "id": "A1-quarter-5412",
+      "headword": "quarter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-question-5416",
+      "headword": "question",
+      "level": "A1"
+    },
+    {
+      "id": "A1-quickly-5423",
+      "headword": "quickly",
+      "level": "A1"
+    },
+    {
+      "id": "A1-quiet-5424",
+      "headword": "quiet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rabbit-5435",
+      "headword": "rabbit",
+      "level": "A1"
+    },
+    {
+      "id": "A1-radio-5448",
+      "headword": "radio",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rain-5456",
+      "headword": "rain",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rain-5457",
+      "headword": "rain",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rainy-5463",
+      "headword": "rainy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rat-5482",
+      "headword": "rat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-'re-5494",
+      "headword": "'re",
+      "level": "A1"
+    },
+    {
+      "id": "A1-read-5499",
+      "headword": "read",
+      "level": "A1"
+    },
+    {
+      "id": "A1-reader-5500",
+      "headword": "reader",
+      "level": "A1"
+    },
+    {
+      "id": "A1-reading-5502",
+      "headword": "reading",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ready-5503",
+      "headword": "ready",
+      "level": "A1"
+    },
+    {
+      "id": "A1-real-5504",
+      "headword": "real",
+      "level": "A1"
+    },
+    {
+      "id": "A1-real-5505",
+      "headword": "real",
+      "level": "A1"
+    },
+    {
+      "id": "A1-really-5511",
+      "headword": "really",
+      "level": "A1"
+    },
+    {
+      "id": "A1-reason-5514",
+      "headword": "reason",
+      "level": "A1"
+    },
+    {
+      "id": "A1-red-5552",
+      "headword": "red",
+      "level": "A1"
+    },
+    {
+      "id": "A1-remember-5639",
+      "headword": "remember",
+      "level": "A1"
+    },
+    {
+      "id": "A1-repeat-5655",
+      "headword": "repeat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-reporter-5666",
+      "headword": "reporter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-restaurant-5715",
+      "headword": "restaurant",
+      "level": "A1"
+    },
+    {
+      "id": "A1-result-5719",
+      "headword": "result",
+      "level": "A1"
+    },
+    {
+      "id": "A1-review-5746",
+      "headword": "review",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ribbon-5764",
+      "headword": "ribbon",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rice-5765",
+      "headword": "rice",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rich-5766",
+      "headword": "rich",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ride-5770",
+      "headword": "ride",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ride-5771",
+      "headword": "ride",
+      "level": "A1"
+    },
+    {
+      "id": "A1-right-5775",
+      "headword": "right",
+      "level": "A1"
+    },
+    {
+      "id": "A1-right-5776",
+      "headword": "right",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ring-5783",
+      "headword": "ring",
+      "level": "A1"
+    },
+    {
+      "id": "A1-river-5794",
+      "headword": "river",
+      "level": "A1"
+    },
+    {
+      "id": "A1-role-5809",
+      "headword": "role",
+      "level": "A1"
+    },
+    {
+      "id": "A1-room-5816",
+      "headword": "room",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rose-5821",
+      "headword": "rose",
+      "level": "A1"
+    },
+    {
+      "id": "A1-row-5834",
+      "headword": "row",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rude-5842",
+      "headword": "rude",
+      "level": "A1"
+    },
+    {
+      "id": "A1-rule-5849",
+      "headword": "rule",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ruler-5851",
+      "headword": "ruler",
+      "level": "A1"
+    },
+    {
+      "id": "A1-run-5853",
+      "headword": "run",
+      "level": "A1"
+    },
+    {
+      "id": "A1-run-5854",
+      "headword": "run",
+      "level": "A1"
+    },
+    {
+      "id": "A1-'s-5864",
+      "headword": "'s",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sad-5867",
+      "headword": "sad",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sailor-5880",
+      "headword": "sailor",
+      "level": "A1"
+    },
+    {
+      "id": "A1-salad-5882",
+      "headword": "salad",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sale-5884",
+      "headword": "sale",
+      "level": "A1"
+    },
+    {
+      "id": "A1-same-5894",
+      "headword": "same",
+      "level": "A1"
+    },
+    {
+      "id": "A1-same-5895",
+      "headword": "same",
+      "level": "A1"
+    },
+    {
+      "id": "A1-same-5896",
+      "headword": "same",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sandwich-5901",
+      "headword": "sandwich",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Saturday-5910",
+      "headword": "Saturday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-save-5915",
+      "headword": "save",
+      "level": "A1"
+    },
+    {
+      "id": "A1-saw-5917",
+      "headword": "saw",
+      "level": "A1"
+    },
+    {
+      "id": "A1-say-5920",
+      "headword": "say",
+      "level": "A1"
+    },
+    {
+      "id": "A1-school-5944",
+      "headword": "school",
+      "level": "A1"
+    },
+    {
+      "id": "A1-science-5950",
+      "headword": "science",
+      "level": "A1"
+    },
+    {
+      "id": "A1-scientist-5954",
+      "headword": "scientist",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sea-5976",
+      "headword": "sea",
+      "level": "A1"
+    },
+    {
+      "id": "A1-seat-5984",
+      "headword": "seat",
+      "level": "A1"
+    },
+    {
+      "id": "A1-second-5987",
+      "headword": "second",
+      "level": "A1"
+    },
+    {
+      "id": "A1-section-6001",
+      "headword": "section",
+      "level": "A1"
+    },
+    {
+      "id": "A1-see-6005",
+      "headword": "see",
+      "level": "A1"
+    },
+    {
+      "id": "A1-self-6016",
+      "headword": "self",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sell-6022",
+      "headword": "sell",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sentence-6037",
+      "headword": "sentence",
+      "level": "A1"
+    },
+    {
+      "id": "A1-September-6043",
+      "headword": "September",
+      "level": "A1"
+    },
+    {
+      "id": "A1-set-6057",
+      "headword": "set",
+      "level": "A1"
+    },
+    {
+      "id": "A1-seven-6063",
+      "headword": "seven",
+      "level": "A1"
+    },
+    {
+      "id": "A1-seventeen-6064",
+      "headword": "seventeen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-seventy-6065",
+      "headword": "seventy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shake-6080",
+      "headword": "shake",
+      "level": "A1"
+    },
+    {
+      "id": "A1-share-6093",
+      "headword": "share",
+      "level": "A1"
+    },
+    {
+      "id": "A1-she-6099",
+      "headword": "she",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sheep-6101",
+      "headword": "sheep",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shelf-6104",
+      "headword": "shelf",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ship-6114",
+      "headword": "ship",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shirt-6118",
+      "headword": "shirt",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shoe-6124",
+      "headword": "shoe",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shop-6127",
+      "headword": "shop",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shopping-6135",
+      "headword": "shopping",
+      "level": "A1"
+    },
+    {
+      "id": "A1-short-6137",
+      "headword": "short",
+      "level": "A1"
+    },
+    {
+      "id": "A1-short-6138",
+      "headword": "short",
+      "level": "A1"
+    },
+    {
+      "id": "A1-should-6145",
+      "headword": "should",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shoulder-6146",
+      "headword": "shoulder",
+      "level": "A1"
+    },
+    {
+      "id": "A1-show-6150",
+      "headword": "show",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shower-6153",
+      "headword": "shower",
+      "level": "A1"
+    },
+    {
+      "id": "A1-shy-6161",
+      "headword": "shy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sick-6162",
+      "headword": "sick",
+      "level": "A1"
+    },
+    {
+      "id": "A1-side-6164",
+      "headword": "side",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sight-6168",
+      "headword": "sight",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sign-6170",
+      "headword": "sign",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sing-6201",
+      "headword": "sing",
+      "level": "A1"
+    },
+    {
+      "id": "A1-singer-6202",
+      "headword": "singer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sir-6210",
+      "headword": "sir",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sister-6211",
+      "headword": "sister",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sit-6213",
+      "headword": "sit",
+      "level": "A1"
+    },
+    {
+      "id": "A1-site-6214",
+      "headword": "site",
+      "level": "A1"
+    },
+    {
+      "id": "A1-six-6217",
+      "headword": "six",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sixteen-6218",
+      "headword": "sixteen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sixty-6219",
+      "headword": "sixty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-size-6220",
+      "headword": "size",
+      "level": "A1"
+    },
+    {
+      "id": "A1-skill-6232",
+      "headword": "skill",
+      "level": "A1"
+    },
+    {
+      "id": "A1-skirt-6239",
+      "headword": "skirt",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sky-6240",
+      "headword": "sky",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sleep-6253",
+      "headword": "sleep",
+      "level": "A1"
+    },
+    {
+      "id": "A1-slow-6272",
+      "headword": "slow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-small-6276",
+      "headword": "small",
+      "level": "A1"
+    },
+    {
+      "id": "A1-smart-6277",
+      "headword": "smart",
+      "level": "A1"
+    },
+    {
+      "id": "A1-smell-6279",
+      "headword": "smell",
+      "level": "A1"
+    },
+    {
+      "id": "A1-smile-6281",
+      "headword": "smile",
+      "level": "A1"
+    },
+    {
+      "id": "A1-smith-6283",
+      "headword": "smith",
+      "level": "A1"
+    },
+    {
+      "id": "A1-smoke-6284",
+      "headword": "smoke",
+      "level": "A1"
+    },
+    {
+      "id": "A1-smoking-6288",
+      "headword": "smoking",
+      "level": "A1"
+    },
+    {
+      "id": "A1-snake-6292",
+      "headword": "snake",
+      "level": "A1"
+    },
+    {
+      "id": "A1-snow-6301",
+      "headword": "snow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-snowy-6307",
+      "headword": "snowy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-so-6309",
+      "headword": "so",
+      "level": "A1"
+    },
+    {
+      "id": "A1-soccer-6319",
+      "headword": "soccer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-social-6321",
+      "headword": "social",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sofa-6328",
+      "headword": "sofa",
+      "level": "A1"
+    },
+    {
+      "id": "A1-solve-6345",
+      "headword": "solve",
+      "level": "A1"
+    },
+    {
+      "id": "A1-some-6347",
+      "headword": "some",
+      "level": "A1"
+    },
+    {
+      "id": "A1-some-6348",
+      "headword": "some",
+      "level": "A1"
+    },
+    {
+      "id": "A1-someone-6352",
+      "headword": "someone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-something-6354",
+      "headword": "something",
+      "level": "A1"
+    },
+    {
+      "id": "A1-son-6359",
+      "headword": "son",
+      "level": "A1"
+    },
+    {
+      "id": "A1-song-6360",
+      "headword": "song",
+      "level": "A1"
+    },
+    {
+      "id": "A1-soon-6363",
+      "headword": "soon",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sorry-6369",
+      "headword": "sorry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-soup-6377",
+      "headword": "soup",
+      "level": "A1"
+    },
+    {
+      "id": "A1-speak-6404",
+      "headword": "speak",
+      "level": "A1"
+    },
+    {
+      "id": "A1-special-6406",
+      "headword": "special",
+      "level": "A1"
+    },
+    {
+      "id": "A1-speech-6418",
+      "headword": "speech",
+      "level": "A1"
+    },
+    {
+      "id": "A1-spell-6422",
+      "headword": "spell",
+      "level": "A1"
+    },
+    {
+      "id": "A1-spend-6426",
+      "headword": "spend",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sport-6451",
+      "headword": "sport",
+      "level": "A1"
+    },
+    {
+      "id": "A1-spot-6455",
+      "headword": "spot",
+      "level": "A1"
+    },
+    {
+      "id": "A1-spring-6462",
+      "headword": "spring",
+      "level": "A1"
+    },
+    {
+      "id": "A1-spy-6465",
+      "headword": "spy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-stage-6478",
+      "headword": "stage",
+      "level": "A1"
+    },
+    {
+      "id": "A1-stand-6488",
+      "headword": "stand",
+      "level": "A1"
+    },
+    {
+      "id": "A1-star-6495",
+      "headword": "star",
+      "level": "A1"
+    },
+    {
+      "id": "A1-start-6498",
+      "headword": "start",
+      "level": "A1"
+    },
+    {
+      "id": "A1-start-6499",
+      "headword": "start",
+      "level": "A1"
+    },
+    {
+      "id": "A1-station-6510",
+      "headword": "station",
+      "level": "A1"
+    },
+    {
+      "id": "A1-stay-6515",
+      "headword": "stay",
+      "level": "A1"
+    },
+    {
+      "id": "A1-step-6528",
+      "headword": "step",
+      "level": "A1"
+    },
+    {
+      "id": "A1-still-6539",
+      "headword": "still",
+      "level": "A1"
+    },
+    {
+      "id": "A1-stone-6553",
+      "headword": "stone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-stop-6556",
+      "headword": "stop",
+      "level": "A1"
+    },
+    {
+      "id": "A1-stop-6557",
+      "headword": "stop",
+      "level": "A1"
+    },
+    {
+      "id": "A1-store-6561",
+      "headword": "store",
+      "level": "A1"
+    },
+    {
+      "id": "A1-story-6565",
+      "headword": "story",
+      "level": "A1"
+    },
+    {
+      "id": "A1-straight-6569",
+      "headword": "straight",
+      "level": "A1"
+    },
+    {
+      "id": "A1-strange-6576",
+      "headword": "strange",
+      "level": "A1"
+    },
+    {
+      "id": "A1-street-6586",
+      "headword": "street",
+      "level": "A1"
+    },
+    {
+      "id": "A1-strict-6595",
+      "headword": "strict",
+      "level": "A1"
+    },
+    {
+      "id": "A1-strong-6608",
+      "headword": "strong",
+      "level": "A1"
+    },
+    {
+      "id": "A1-student-6616",
+      "headword": "student",
+      "level": "A1"
+    },
+    {
+      "id": "A1-study-6619",
+      "headword": "study",
+      "level": "A1"
+    },
+    {
+      "id": "A1-subject-6634",
+      "headword": "subject",
+      "level": "A1"
+    },
+    {
+      "id": "A1-subway-6648",
+      "headword": "subway",
+      "level": "A1"
+    },
+    {
+      "id": "A1-successful-6651",
+      "headword": "successful",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sugar-6665",
+      "headword": "sugar",
+      "level": "A1"
+    },
+    {
+      "id": "A1-suggestion-6667",
+      "headword": "suggestion",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sum-6675",
+      "headword": "sum",
+      "level": "A1"
+    },
+    {
+      "id": "A1-summer-6678",
+      "headword": "summer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sun-6680",
+      "headword": "sun",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Sunday-6683",
+      "headword": "Sunday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sunny-6688",
+      "headword": "sunny",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sunshine-6691",
+      "headword": "sunshine",
+      "level": "A1"
+    },
+    {
+      "id": "A1-super-6692",
+      "headword": "super",
+      "level": "A1"
+    },
+    {
+      "id": "A1-supermarket-6697",
+      "headword": "supermarket",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sure-6716",
+      "headword": "sure",
+      "level": "A1"
+    },
+    {
+      "id": "A1-surf-6719",
+      "headword": "surf",
+      "level": "A1"
+    },
+    {
+      "id": "A1-surprise-6727",
+      "headword": "surprise",
+      "level": "A1"
+    },
+    {
+      "id": "A1-survey-6737",
+      "headword": "survey",
+      "level": "A1"
+    },
+    {
+      "id": "A1-sweet-6757",
+      "headword": "sweet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-swim-6762",
+      "headword": "swim",
+      "level": "A1"
+    },
+    {
+      "id": "A1-swim-6763",
+      "headword": "swim",
+      "level": "A1"
+    },
+    {
+      "id": "A1-swimming-6765",
+      "headword": "swimming",
+      "level": "A1"
+    },
+    {
+      "id": "A1-swimming pool-6767",
+      "headword": "swimming pool",
+      "level": "A1"
+    },
+    {
+      "id": "A1-table-6787",
+      "headword": "table",
+      "level": "A1"
+    },
+    {
+      "id": "A1-take-6800",
+      "headword": "take",
+      "level": "A1"
+    },
+    {
+      "id": "A1-talk-6807",
+      "headword": "talk",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tall-6809",
+      "headword": "tall",
+      "level": "A1"
+    },
+    {
+      "id": "A1-taxi-6828",
+      "headword": "taxi",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tea-6829",
+      "headword": "tea",
+      "level": "A1"
+    },
+    {
+      "id": "A1-teach-6830",
+      "headword": "teach",
+      "level": "A1"
+    },
+    {
+      "id": "A1-teacher-6831",
+      "headword": "teacher",
+      "level": "A1"
+    },
+    {
+      "id": "A1-team-6833",
+      "headword": "team",
+      "level": "A1"
+    },
+    {
+      "id": "A1-technology-6845",
+      "headword": "technology",
+      "level": "A1"
+    },
+    {
+      "id": "A1-telephone-6851",
+      "headword": "telephone",
+      "level": "A1"
+    },
+    {
+      "id": "A1-television-6854",
+      "headword": "television",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tell-6855",
+      "headword": "tell",
+      "level": "A1"
+    },
+    {
+      "id": "A1-temple-6860",
+      "headword": "temple",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ten-6865",
+      "headword": "ten",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tennis-6871",
+      "headword": "tennis",
+      "level": "A1"
+    },
+    {
+      "id": "A1-terrible-6879",
+      "headword": "terrible",
+      "level": "A1"
+    },
+    {
+      "id": "A1-test-6890",
+      "headword": "test",
+      "level": "A1"
+    },
+    {
+      "id": "A1-than-6898",
+      "headword": "than",
+      "level": "A1"
+    },
+    {
+      "id": "A1-than-6899",
+      "headword": "than",
+      "level": "A1"
+    },
+    {
+      "id": "A1-thank-6900",
+      "headword": "thank",
+      "level": "A1"
+    },
+    {
+      "id": "A1-thanks-6902",
+      "headword": "thanks",
+      "level": "A1"
+    },
+    {
+      "id": "A1-that-6904",
+      "headword": "that",
+      "level": "A1"
+    },
+    {
+      "id": "A1-that-6905",
+      "headword": "that",
+      "level": "A1"
+    },
+    {
+      "id": "A1-that-6906",
+      "headword": "that",
+      "level": "A1"
+    },
+    {
+      "id": "A1-the-6907",
+      "headword": "the",
+      "level": "A1"
+    },
+    {
+      "id": "A1-theater/theatre-6908",
+      "headword": "theater/theatre",
+      "level": "A1"
+    },
+    {
+      "id": "A1-their-6910",
+      "headword": "their",
+      "level": "A1"
+    },
+    {
+      "id": "A1-them-6912",
+      "headword": "them",
+      "level": "A1"
+    },
+    {
+      "id": "A1-then-6915",
+      "headword": "then",
+      "level": "A1"
+    },
+    {
+      "id": "A1-there-6920",
+      "headword": "there",
+      "level": "A1"
+    },
+    {
+      "id": "A1-these-6924",
+      "headword": "these",
+      "level": "A1"
+    },
+    {
+      "id": "A1-these-6925",
+      "headword": "these",
+      "level": "A1"
+    },
+    {
+      "id": "A1-they-6927",
+      "headword": "they",
+      "level": "A1"
+    },
+    {
+      "id": "A1-thick-6928",
+      "headword": "thick",
+      "level": "A1"
+    },
+    {
+      "id": "A1-thin-6933",
+      "headword": "thin",
+      "level": "A1"
+    },
+    {
+      "id": "A1-thing-6934",
+      "headword": "thing",
+      "level": "A1"
+    },
+    {
+      "id": "A1-think-6935",
+      "headword": "think",
+      "level": "A1"
+    },
+    {
+      "id": "A1-thirteen-6943",
+      "headword": "thirteen",
+      "level": "A1"
+    },
+    {
+      "id": "A1-thirty-6944",
+      "headword": "thirty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-this-6945",
+      "headword": "this",
+      "level": "A1"
+    },
+    {
+      "id": "A1-this-6946",
+      "headword": "this",
+      "level": "A1"
+    },
+    {
+      "id": "A1-those-6949",
+      "headword": "those",
+      "level": "A1"
+    },
+    {
+      "id": "A1-those-6950",
+      "headword": "those",
+      "level": "A1"
+    },
+    {
+      "id": "A1-three-6961",
+      "headword": "three",
+      "level": "A1"
+    },
+    {
+      "id": "A1-through-6968",
+      "headword": "through",
+      "level": "A1"
+    },
+    {
+      "id": "A1-throw-6970",
+      "headword": "throw",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Thursday-6977",
+      "headword": "Thursday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ticket-6981",
+      "headword": "ticket",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tiger-6988",
+      "headword": "tiger",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tight-6989",
+      "headword": "tight",
+      "level": "A1"
+    },
+    {
+      "id": "A1-time-6998",
+      "headword": "time",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tired-7012",
+      "headword": "tired",
+      "level": "A1"
+    },
+    {
+      "id": "A1-to-7018",
+      "headword": "to",
+      "level": "A1"
+    },
+    {
+      "id": "A1-to-7019",
+      "headword": "to",
+      "level": "A1"
+    },
+    {
+      "id": "A1-today-7022",
+      "headword": "today",
+      "level": "A1"
+    },
+    {
+      "id": "A1-today-7023",
+      "headword": "today",
+      "level": "A1"
+    },
+    {
+      "id": "A1-together-7026",
+      "headword": "together",
+      "level": "A1"
+    },
+    {
+      "id": "A1-toilet-7028",
+      "headword": "toilet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tomato-7032",
+      "headword": "tomato",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tomorrow-7034",
+      "headword": "tomorrow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tomorrow-7035",
+      "headword": "tomorrow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tonight-7039",
+      "headword": "tonight",
+      "level": "A1"
+    },
+    {
+      "id": "A1-too-7041",
+      "headword": "too",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tool-7042",
+      "headword": "tool",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tooth-7043",
+      "headword": "tooth",
+      "level": "A1"
+    },
+    {
+      "id": "A1-top-7048",
+      "headword": "top",
+      "level": "A1"
+    },
+    {
+      "id": "A1-topic-7049",
+      "headword": "topic",
+      "level": "A1"
+    },
+    {
+      "id": "A1-touch-7058",
+      "headword": "touch",
+      "level": "A1"
+    },
+    {
+      "id": "A1-towel-7068",
+      "headword": "towel",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tower-7069",
+      "headword": "tower",
+      "level": "A1"
+    },
+    {
+      "id": "A1-town-7070",
+      "headword": "town",
+      "level": "A1"
+    },
+    {
+      "id": "A1-toy-7072",
+      "headword": "toy",
+      "level": "A1"
+    },
+    {
+      "id": "A1-train-7092",
+      "headword": "train",
+      "level": "A1"
+    },
+    {
+      "id": "A1-travel-7125",
+      "headword": "travel",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tree-7136",
+      "headword": "tree",
+      "level": "A1"
+    },
+    {
+      "id": "A1-trip-7152",
+      "headword": "trip",
+      "level": "A1"
+    },
+    {
+      "id": "A1-trousers-7164",
+      "headword": "trousers",
+      "level": "A1"
+    },
+    {
+      "id": "A1-truck-7165",
+      "headword": "truck",
+      "level": "A1"
+    },
+    {
+      "id": "A1-true-7166",
+      "headword": "true",
+      "level": "A1"
+    },
+    {
+      "id": "A1-try-7177",
+      "headword": "try",
+      "level": "A1"
+    },
+    {
+      "id": "A1-T-shirt/tee-shirt-7179",
+      "headword": "T-shirt/tee-shirt",
+      "level": "A1"
+    },
+    {
+      "id": "A1-tube-7181",
+      "headword": "tube",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Tuesday-7183",
+      "headword": "Tuesday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-turkey-7194",
+      "headword": "turkey",
+      "level": "A1"
+    },
+    {
+      "id": "A1-turn-7195",
+      "headword": "turn",
+      "level": "A1"
+    },
+    {
+      "id": "A1-turn-7196",
+      "headword": "turn",
+      "level": "A1"
+    },
+    {
+      "id": "A1-TV-7200",
+      "headword": "TV",
+      "level": "A1"
+    },
+    {
+      "id": "A1-twelve-7201",
+      "headword": "twelve",
+      "level": "A1"
+    },
+    {
+      "id": "A1-twenty-7202",
+      "headword": "twenty",
+      "level": "A1"
+    },
+    {
+      "id": "A1-two-7209",
+      "headword": "two",
+      "level": "A1"
+    },
+    {
+      "id": "A1-type-7210",
+      "headword": "type",
+      "level": "A1"
+    },
+    {
+      "id": "A1-ugly-7217",
+      "headword": "ugly",
+      "level": "A1"
+    },
+    {
+      "id": "A1-umbrella-7220",
+      "headword": "umbrella",
+      "level": "A1"
+    },
+    {
+      "id": "A1-uncle-7236",
+      "headword": "uncle",
+      "level": "A1"
+    },
+    {
+      "id": "A1-under-7246",
+      "headword": "under",
+      "level": "A1"
+    },
+    {
+      "id": "A1-underline-7253",
+      "headword": "underline",
+      "level": "A1"
+    },
+    {
+      "id": "A1-until-7351",
+      "headword": "until",
+      "level": "A1"
+    },
+    {
+      "id": "A1-up-7364",
+      "headword": "up",
+      "level": "A1"
+    },
+    {
+      "id": "A1-us-7390",
+      "headword": "us",
+      "level": "A1"
+    },
+    {
+      "id": "A1-use-7393",
+      "headword": "use",
+      "level": "A1"
+    },
+    {
+      "id": "A1-usually-7401",
+      "headword": "usually",
+      "level": "A1"
+    },
+    {
+      "id": "A1-vacation-7408",
+      "headword": "vacation",
+      "level": "A1"
+    },
+    {
+      "id": "A1-vase-7426",
+      "headword": "vase",
+      "level": "A1"
+    },
+    {
+      "id": "A1-vegetable-7428",
+      "headword": "vegetable",
+      "level": "A1"
+    },
+    {
+      "id": "A1-very-7443",
+      "headword": "very",
+      "level": "A1"
+    },
+    {
+      "id": "A1-video-7454",
+      "headword": "video",
+      "level": "A1"
+    },
+    {
+      "id": "A1-visit-7482",
+      "headword": "visit",
+      "level": "A1"
+    },
+    {
+      "id": "A1-visit-7483",
+      "headword": "visit",
+      "level": "A1"
+    },
+    {
+      "id": "A1-volleyball-7495",
+      "headword": "volleyball",
+      "level": "A1"
+    },
+    {
+      "id": "A1-vote-7500",
+      "headword": "vote",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wait-7511",
+      "headword": "wait",
+      "level": "A1"
+    },
+    {
+      "id": "A1-waiter-7512",
+      "headword": "waiter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-waitress-7513",
+      "headword": "waitress",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wake-7514",
+      "headword": "wake",
+      "level": "A1"
+    },
+    {
+      "id": "A1-walk-7516",
+      "headword": "walk",
+      "level": "A1"
+    },
+    {
+      "id": "A1-walk-7517",
+      "headword": "walk",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wall-7521",
+      "headword": "wall",
+      "level": "A1"
+    },
+    {
+      "id": "A1-want-7527",
+      "headword": "want",
+      "level": "A1"
+    },
+    {
+      "id": "A1-war-7528",
+      "headword": "war",
+      "level": "A1"
+    },
+    {
+      "id": "A1-warm-7531",
+      "headword": "warm",
+      "level": "A1"
+    },
+    {
+      "id": "A1-was-7541",
+      "headword": "was",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wash-7542",
+      "headword": "wash",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wash-7543",
+      "headword": "wash",
+      "level": "A1"
+    },
+    {
+      "id": "A1-watch-7552",
+      "headword": "watch",
+      "level": "A1"
+    },
+    {
+      "id": "A1-watch-7553",
+      "headword": "watch",
+      "level": "A1"
+    },
+    {
+      "id": "A1-water-7554",
+      "headword": "water",
+      "level": "A1"
+    },
+    {
+      "id": "A1-way-7562",
+      "headword": "way",
+      "level": "A1"
+    },
+    {
+      "id": "A1-we-7563",
+      "headword": "we",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wear-7571",
+      "headword": "wear",
+      "level": "A1"
+    },
+    {
+      "id": "A1-weather-7574",
+      "headword": "weather",
+      "level": "A1"
+    },
+    {
+      "id": "A1-Wednesday-7583",
+      "headword": "Wednesday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-week-7585",
+      "headword": "week",
+      "level": "A1"
+    },
+    {
+      "id": "A1-weekend-7587",
+      "headword": "weekend",
+      "level": "A1"
+    },
+    {
+      "id": "A1-welcome-7595",
+      "headword": "welcome",
+      "level": "A1"
+    },
+    {
+      "id": "A1-welcome-7597",
+      "headword": "welcome",
+      "level": "A1"
+    },
+    {
+      "id": "A1-well-7599",
+      "headword": "well",
+      "level": "A1"
+    },
+    {
+      "id": "A1-well-7600",
+      "headword": "well",
+      "level": "A1"
+    },
+    {
+      "id": "A1-were-7607",
+      "headword": "were",
+      "level": "A1"
+    },
+    {
+      "id": "A1-what-7616",
+      "headword": "what",
+      "level": "A1"
+    },
+    {
+      "id": "A1-what-7617",
+      "headword": "what",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wheel-7621",
+      "headword": "wheel",
+      "level": "A1"
+    },
+    {
+      "id": "A1-when-7623",
+      "headword": "when",
+      "level": "A1"
+    },
+    {
+      "id": "A1-when-7624",
+      "headword": "when",
+      "level": "A1"
+    },
+    {
+      "id": "A1-where-7627",
+      "headword": "where",
+      "level": "A1"
+    },
+    {
+      "id": "A1-where-7628",
+      "headword": "where",
+      "level": "A1"
+    },
+    {
+      "id": "A1-which-7632",
+      "headword": "which",
+      "level": "A1"
+    },
+    {
+      "id": "A1-which-7633",
+      "headword": "which",
+      "level": "A1"
+    },
+    {
+      "id": "A1-white-7644",
+      "headword": "white",
+      "level": "A1"
+    },
+    {
+      "id": "A1-white-7645",
+      "headword": "white",
+      "level": "A1"
+    },
+    {
+      "id": "A1-who-7646",
+      "headword": "who",
+      "level": "A1"
+    },
+    {
+      "id": "A1-whose-7651",
+      "headword": "whose",
+      "level": "A1"
+    },
+    {
+      "id": "A1-whose-7652",
+      "headword": "whose",
+      "level": "A1"
+    },
+    {
+      "id": "A1-why-7653",
+      "headword": "why",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wife-7661",
+      "headword": "wife",
+      "level": "A1"
+    },
+    {
+      "id": "A1-will-7666",
+      "headword": "will",
+      "level": "A1"
+    },
+    {
+      "id": "A1-win-7672",
+      "headword": "win",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wind-7673",
+      "headword": "wind",
+      "level": "A1"
+    },
+    {
+      "id": "A1-window-7676",
+      "headword": "window",
+      "level": "A1"
+    },
+    {
+      "id": "A1-winter-7685",
+      "headword": "winter",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wish-7691",
+      "headword": "wish",
+      "level": "A1"
+    },
+    {
+      "id": "A1-with-7694",
+      "headword": "with",
+      "level": "A1"
+    },
+    {
+      "id": "A1-woman-7705",
+      "headword": "woman",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wonderful-7708",
+      "headword": "wonderful",
+      "level": "A1"
+    },
+    {
+      "id": "A1-word-7714",
+      "headword": "word",
+      "level": "A1"
+    },
+    {
+      "id": "A1-work-7716",
+      "headword": "work",
+      "level": "A1"
+    },
+    {
+      "id": "A1-work-7717",
+      "headword": "work",
+      "level": "A1"
+    },
+    {
+      "id": "A1-worker-7720",
+      "headword": "worker",
+      "level": "A1"
+    },
+    {
+      "id": "A1-world-7727",
+      "headword": "world",
+      "level": "A1"
+    },
+    {
+      "id": "A1-worry-7736",
+      "headword": "worry",
+      "level": "A1"
+    },
+    {
+      "id": "A1-would-7751",
+      "headword": "would",
+      "level": "A1"
+    },
+    {
+      "id": "A1-write-7760",
+      "headword": "write",
+      "level": "A1"
+    },
+    {
+      "id": "A1-writer-7761",
+      "headword": "writer",
+      "level": "A1"
+    },
+    {
+      "id": "A1-wrong-7764",
+      "headword": "wrong",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yard-7769",
+      "headword": "yard",
+      "level": "A1"
+    },
+    {
+      "id": "A1-year-7773",
+      "headword": "year",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yellow-7777",
+      "headword": "yellow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yellow-7778",
+      "headword": "yellow",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yes-7779",
+      "headword": "yes",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yesterday-7780",
+      "headword": "yesterday",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yet-7781",
+      "headword": "yet",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yogurt/yoghurt-7785",
+      "headword": "yogurt/yoghurt",
+      "level": "A1"
+    },
+    {
+      "id": "A1-you-7786",
+      "headword": "you",
+      "level": "A1"
+    },
+    {
+      "id": "A1-young-7787",
+      "headword": "young",
+      "level": "A1"
+    },
+    {
+      "id": "A1-your-7788",
+      "headword": "your",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yours-7789",
+      "headword": "yours",
+      "level": "A1"
+    },
+    {
+      "id": "A1-yourself-7790",
+      "headword": "yourself",
+      "level": "A1"
+    },
+    {
+      "id": "A1-zoo-7797",
+      "headword": "zoo",
+      "level": "A1"
+    }
+  ]
+}

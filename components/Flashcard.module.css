@@ -13,6 +13,9 @@
     height: 400px;
     perspective: 1000px;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
     --level-color: var(--primary);
     --card-front: linear-gradient(145deg, var(--level-color) 0%, var(--bg-tertiary) 70%);
     --card-back: linear-gradient(145deg, var(--level-color) 0%, var(--bg-secondary) 75%);
@@ -28,6 +31,11 @@
 
 .card.flipped .cardInner {
     transform: rotateY(180deg);
+}
+
+.card:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 6px;
 }
 
 .cardFace {
@@ -203,5 +211,14 @@
 
     .translation {
         font-size: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cardInner {
+        transition: none;
+    }
+    .flipIcon {
+        animation: none;
     }
 }

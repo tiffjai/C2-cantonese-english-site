@@ -57,6 +57,13 @@
     padding: var(--spacing-md) var(--spacing-lg);
 }
 
+.sessionMeta {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
 .levels {
     margin-top: var(--spacing-xl);
     padding: var(--spacing-xl) 0;

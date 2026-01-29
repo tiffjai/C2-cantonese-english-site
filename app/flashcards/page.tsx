@@ -1,13 +1,16 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Flashcard from '@/components/Flashcard';
 import { VocabularyWord, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
-import { loadVocabulary, filterByLevel, getRandomWords } from '@/lib/csvParser';
+import { filterByLevel, getRandomWords } from '@/lib/csvParser';
+import { loadLevelWords, getCachedLevel } from '@/lib/vocabClient';
 import { enrichWords } from '@/lib/enrichment';
 import { useProgress } from '@/contexts/ProgressContext';
 import RequireAuth from '@/components/RequireAuth';
+import { FlashcardSkeleton, ErrorState } from '@/components/AsyncState';
+import { saveLastSession, loadLastSession, LastSession } from '@/lib/clientStorage';
 import styles from './page.module.css';
 
 function FlashcardsPageContent() {
@@ -20,6 +23,10 @@ function FlashcardsPageContent() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(initialLevel);
     const [loading, setLoading] = useState(true);
+    const [loadError, setLoadError] = useState<string | null>(null);
+    const [reloadToken, setReloadToken] = useState(0);
+    const [hasOfflineCache, setHasOfflineCache] = useState(false);
+    const [pendingRestore, setPendingRestore] = useState<LastSession | null>(null);
     const [enriching, setEnriching] = useState(false);
     const [wordsPerSession] = useState(10);
     const [notice, setNotice] = useState<string | null>(null);
@@ -27,30 +34,95 @@ function FlashcardsPageContent() {
     const { addLearnedWord, progress } = useProgress();
 
     useEffect(() => {
-        async function loadWords() {
-            setLoading(true);
-            const words = await loadVocabulary();
-            setAllWords(words);
-            setLoading(false);
+        if (typeof window === 'undefined') return;
+        const session = loadLastSession();
+        if (session?.mode === 'flashcards') {
+            setSelectedLevel(session.level);
+            setPendingRestore(session);
         }
-        loadWords();
     }, []);
 
     useEffect(() => {
-        if (allWords.length === 0) return;
+        let active = true;
+        const controller = new AbortController();
+        setLoading(true);
+        setLoadError(null);
 
+        (async () => {
+            const cached = await getCachedLevel(selectedLevel);
+            if (!active) return;
+
+            const hasCache = Boolean(cached.entry);
+            setHasOfflineCache(hasCache);
+
+            if (cached.entry && !cached.stale) {
+                setAllWords(cached.entry.words);
+                setLoading(false);
+            }
+
+            try {
+                const result = await loadLevelWords(selectedLevel, {
+                    signal: controller.signal,
+                    preferCache: !cached.entry,
+                });
+                if (!active) return;
+                setAllWords(result.words);
+                setLoading(false);
+            } catch (error) {
+                if (!active) return;
+                setLoadError('詞彙下載失敗，請檢查網絡連線後重試。');
+                setLoading(false);
+            }
+        })();
+
+        return () => {
+            active = false;
+            controller.abort();
+        };
+    }, [selectedLevel, reloadToken]);
+
+    useEffect(() => {
         const controller = new AbortController();
         async function buildSession() {
+            // Restore previous session if available
+            if (pendingRestore?.mode === 'flashcards' && pendingRestore.level === selectedLevel) {
+                const savedWords = pendingRestore.payload?.flashcards?.words;
+                if (savedWords && savedWords.length > 0) {
+                    const restoredIndex = Math.min(pendingRestore.index, savedWords.length - 1);
+                    setCurrentWords(savedWords);
+                    setCurrentIndex(restoredIndex);
+                    setNotice('已恢復上次進度');
+                    saveLastSession({
+                        ...pendingRestore,
+                        index: restoredIndex,
+                        timestamp: new Date().toISOString(),
+                    });
+                    setPendingRestore(null);
+                    return;
+                }
+                setPendingRestore(null);
+            }
+
+            if (allWords.length === 0) return;
+
+            const levelWords = filterByLevel(allWords, selectedLevel);
+            if (levelWords.length === 0) return;
+
             setEnriching(true);
             setNotice(null);
-            const levelWords = filterByLevel(allWords, selectedLevel);
-            // Pull a wider sample to improve chance of translated cards
             const candidateCount = Math.min(levelWords.length, wordsPerSession * 3 + 10);
             const sessionCandidates = getRandomWords(levelWords, candidateCount);
 
             // Optimistically show raw cards
             setCurrentWords(sessionCandidates.slice(0, wordsPerSession));
             setCurrentIndex(0);
+            saveLastSession({
+                mode: 'flashcards',
+                level: selectedLevel,
+                index: 0,
+                timestamp: new Date().toISOString(),
+                payload: { flashcards: { words: sessionCandidates.slice(0, wordsPerSession) } },
+            });
 
             try {
                 const enriched = await enrichWords(sessionCandidates);
@@ -67,8 +139,16 @@ function FlashcardsPageContent() {
                     setNotice(`只找到 ${translated.length} 張包含粵語翻譯的卡片。`);
                 }
 
-                setCurrentWords(translated.slice(0, wordsPerSession));
+                const nextWords = translated.slice(0, wordsPerSession);
+                setCurrentWords(nextWords);
                 setCurrentIndex(0);
+                saveLastSession({
+                    mode: 'flashcards',
+                    level: selectedLevel,
+                    index: 0,
+                    timestamp: new Date().toISOString(),
+                    payload: { flashcards: { words: nextWords } },
+                });
             } finally {
                 if (!controller.signal.aborted) setEnriching(false);
             }
@@ -76,17 +156,31 @@ function FlashcardsPageContent() {
 
         buildSession();
         return () => controller.abort();
-    }, [allWords, selectedLevel, wordsPerSession]);
+    }, [allWords, pendingRestore, selectedLevel, wordsPerSession]);
+
+    const persistSessionState = useCallback((words: VocabularyWord[], index: number) => {
+        saveLastSession({
+            mode: 'flashcards',
+            level: selectedLevel,
+            index,
+            timestamp: new Date().toISOString(),
+            payload: { flashcards: { words } },
+        });
+    }, [selectedLevel]);
 
     const handleNext = () => {
         if (currentIndex < currentWords.length - 1) {
-            setCurrentIndex(currentIndex + 1);
+            const nextIndex = currentIndex + 1;
+            setCurrentIndex(nextIndex);
+            persistSessionState(currentWords, nextIndex);
         }
     };
 
     const handlePrevious = () => {
         if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
+            const prevIndex = currentIndex - 1;
+            setCurrentIndex(prevIndex);
+            persistSessionState(currentWords, prevIndex);
         }
     };
 
@@ -99,6 +193,7 @@ function FlashcardsPageContent() {
 
     const handleLevelChange = (level: CEFRLevel) => {
         setSelectedLevel(level);
+        setPendingRestore(null);
     };
 
     const handleNewSession = () => {
@@ -110,8 +205,10 @@ function FlashcardsPageContent() {
 
         setEnriching(true);
         setNotice(null);
-        setCurrentWords(sessionCandidates.slice(0, wordsPerSession));
+        const initialSlice = sessionCandidates.slice(0, wordsPerSession);
+        setCurrentWords(initialSlice);
         setCurrentIndex(0);
+        persistSessionState(initialSlice, 0);
 
         enrichWords(sessionCandidates).then(enriched => {
             const translated = enriched.filter(w => w.cantonese && w.cantonese.trim().length > 0);
@@ -122,19 +219,42 @@ function FlashcardsPageContent() {
                 if (translated.length < wordsPerSession) {
                     setNotice(`只找到 ${translated.length} 張包含粵語翻譯的卡片。`);
                 }
-                setCurrentWords(translated.slice(0, wordsPerSession));
+                const nextWords = translated.slice(0, wordsPerSession);
+                setCurrentWords(nextWords);
+                setCurrentIndex(0);
+                persistSessionState(nextWords, 0);
             }
         }).finally(() => setEnriching(false));
     };
 
-    if (loading) {
+    const handleRetry = () => {
+        setLoadError(null);
+        setLoading(true);
+        setAllWords([]);
+        setReloadToken((token) => token + 1);
+    };
+
+    const handleUseOffline = async () => {
+        const cached = await getCachedLevel(selectedLevel);
+        if (cached.entry) {
+            setAllWords(cached.entry.words);
+            setLoadError(null);
+            setLoading(false);
+        }
+    };
+
+    if (loading && allWords.length === 0) {
+        return <FlashcardSkeleton ctaLabel="載入詞彙中" />;
+    }
+
+    if (loadError && allWords.length === 0) {
         return (
-            <div className={styles.container}>
-                <div className={styles.loading}>
-                    <div className={styles.spinner}></div>
-                    <p>載入詞彙中...</p>
-                </div>
-            </div>
+            <ErrorState
+                message={loadError}
+                onRetry={handleRetry}
+                onUseOffline={handleUseOffline}
+                showOffline={hasOfflineCache}
+            />
         );
     }
 
@@ -235,12 +355,7 @@ function FlashcardsPageContent() {
 export default function FlashcardsPage() {
     return (
         <Suspense fallback={
-            <div className={styles.container}>
-                <div className={styles.loading}>
-                    <div className={styles.spinner}></div>
-                    <p>載入詞彙中...</p>
-                </div>
-            </div>
+            <FlashcardSkeleton ctaLabel="載入詞彙中" />
         }>
             <RequireAuth>
                 <FlashcardsPageContent />

@@ -1,4 +1,5 @@
-import { VocabularyWord, CEFRLevel } from './types';
+import { VocabularyWord, CEFRLevel, CEFR_LEVELS } from './types';
+import { loadLevelWords } from './vocabClient';
 
 /**
  * Parse CSV content and convert to VocabularyWord array
@@ -50,13 +51,14 @@ export async function parseVocabularyCSV(csvContent: string): Promise<Vocabulary
 /**
  * Load vocabulary from CSV file
  */
-export async function loadVocabulary(): Promise<VocabularyWord[]> {
-    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-    const csvUrl = `${basePath}/ENGLISH_CERF_WORDS.csv`;
+export async function loadVocabulary(levels: CEFRLevel[] = CEFR_LEVELS): Promise<VocabularyWord[]> {
     try {
-        const response = await fetch(csvUrl);
-        const csvContent = await response.text();
-        return parseVocabularyCSV(csvContent);
+        const results = await Promise.all(
+            levels.map(level =>
+                loadLevelWords(level, { preferCache: true }).then(res => res.words).catch(() => [])
+            )
+        );
+        return results.flat();
     } catch (error) {
         console.error('Failed to load vocabulary:', error);
         return [];

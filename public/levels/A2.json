@@ -1,0 +1,7061 @@
+{
+  "version": "2026-01-29",
+  "level": "A2",
+  "words": [
+    {
+      "id": "A2-ability-4",
+      "headword": "ability",
+      "level": "A2"
+    },
+    {
+      "id": "A2-abroad-17",
+      "headword": "abroad",
+      "level": "A2"
+    },
+    {
+      "id": "A2-accept-33",
+      "headword": "accept",
+      "level": "A2"
+    },
+    {
+      "id": "A2-acceptable-34",
+      "headword": "acceptable",
+      "level": "A2"
+    },
+    {
+      "id": "A2-accident-41",
+      "headword": "accident",
+      "level": "A2"
+    },
+    {
+      "id": "A2-account-49",
+      "headword": "account",
+      "level": "A2"
+    },
+    {
+      "id": "A2-achieve-62",
+      "headword": "achieve",
+      "level": "A2"
+    },
+    {
+      "id": "A2-across-70",
+      "headword": "across",
+      "level": "A2"
+    },
+    {
+      "id": "A2-across-71",
+      "headword": "across",
+      "level": "A2"
+    },
+    {
+      "id": "A2-act-72",
+      "headword": "act",
+      "level": "A2"
+    },
+    {
+      "id": "A2-actually-81",
+      "headword": "actually",
+      "level": "A2"
+    },
+    {
+      "id": "A2-addition-90",
+      "headword": "addition",
+      "level": "A2"
+    },
+    {
+      "id": "A2-additional-91",
+      "headword": "additional",
+      "level": "A2"
+    },
+    {
+      "id": "A2-adjective-98",
+      "headword": "adjective",
+      "level": "A2"
+    },
+    {
+      "id": "A2-adjust-99",
+      "headword": "adjust",
+      "level": "A2"
+    },
+    {
+      "id": "A2-admire-105",
+      "headword": "admire",
+      "level": "A2"
+    },
+    {
+      "id": "A2-admit-108",
+      "headword": "admit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-adult-116",
+      "headword": "adult",
+      "level": "A2"
+    },
+    {
+      "id": "A2-adult-117",
+      "headword": "adult",
+      "level": "A2"
+    },
+    {
+      "id": "A2-advanced-120",
+      "headword": "advanced",
+      "level": "A2"
+    },
+    {
+      "id": "A2-advantage-122",
+      "headword": "advantage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-adventure-124",
+      "headword": "adventure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-advertisement-133",
+      "headword": "advertisement",
+      "level": "A2"
+    },
+    {
+      "id": "A2-advertising-134",
+      "headword": "advertising",
+      "level": "A2"
+    },
+    {
+      "id": "A2-advice-135",
+      "headword": "advice",
+      "level": "A2"
+    },
+    {
+      "id": "A2-advise-136",
+      "headword": "advise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-affair-139",
+      "headword": "affair",
+      "level": "A2"
+    },
+    {
+      "id": "A2-after-147",
+      "headword": "after",
+      "level": "A2"
+    },
+    {
+      "id": "A2-against-154",
+      "headword": "against",
+      "level": "A2"
+    },
+    {
+      "id": "A2-aged-156",
+      "headword": "aged",
+      "level": "A2"
+    },
+    {
+      "id": "A2-agency-158",
+      "headword": "agency",
+      "level": "A2"
+    },
+    {
+      "id": "A2-agent-160",
+      "headword": "agent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ahead-170",
+      "headword": "ahead",
+      "level": "A2"
+    },
+    {
+      "id": "A2-air-175",
+      "headword": "air",
+      "level": "A2"
+    },
+    {
+      "id": "A2-aisle-183",
+      "headword": "aisle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-alarm-184",
+      "headword": "alarm",
+      "level": "A2"
+    },
+    {
+      "id": "A2-alarm clock-186",
+      "headword": "alarm clock",
+      "level": "A2"
+    },
+    {
+      "id": "A2-alive-195",
+      "headword": "alive",
+      "level": "A2"
+    },
+    {
+      "id": "A2-all-196",
+      "headword": "all",
+      "level": "A2"
+    },
+    {
+      "id": "A2-allow-204",
+      "headword": "allow",
+      "level": "A2"
+    },
+    {
+      "id": "A2-alone-208",
+      "headword": "alone",
+      "level": "A2"
+    },
+    {
+      "id": "A2-along-211",
+      "headword": "along",
+      "level": "A2"
+    },
+    {
+      "id": "A2-alright-217",
+      "headword": "alright",
+      "level": "A2"
+    },
+    {
+      "id": "A2-alright-218",
+      "headword": "alright",
+      "level": "A2"
+    },
+    {
+      "id": "A2-although-226",
+      "headword": "although",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ambition-240",
+      "headword": "ambition",
+      "level": "A2"
+    },
+    {
+      "id": "A2-among-244",
+      "headword": "among",
+      "level": "A2"
+    },
+    {
+      "id": "A2-amused-251",
+      "headword": "amused",
+      "level": "A2"
+    },
+    {
+      "id": "A2-amusement-252",
+      "headword": "amusement",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ancestor-259",
+      "headword": "ancestor",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ancient-264",
+      "headword": "ancient",
+      "level": "A2"
+    },
+    {
+      "id": "A2-angel-266",
+      "headword": "angel",
+      "level": "A2"
+    },
+    {
+      "id": "A2-angrily-269",
+      "headword": "angrily",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ankle-276",
+      "headword": "ankle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-anniversary-277",
+      "headword": "anniversary",
+      "level": "A2"
+    },
+    {
+      "id": "A2-annoy-280",
+      "headword": "annoy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-annoying-283",
+      "headword": "annoying",
+      "level": "A2"
+    },
+    {
+      "id": "A2-another-288",
+      "headword": "another",
+      "level": "A2"
+    },
+    {
+      "id": "A2-anxious-305",
+      "headword": "anxious",
+      "level": "A2"
+    },
+    {
+      "id": "A2-anymore-311",
+      "headword": "anymore",
+      "level": "A2"
+    },
+    {
+      "id": "A2-anyway-314",
+      "headword": "anyway",
+      "level": "A2"
+    },
+    {
+      "id": "A2-anywhere-315",
+      "headword": "anywhere",
+      "level": "A2"
+    },
+    {
+      "id": "A2-apart-316",
+      "headword": "apart",
+      "level": "A2"
+    },
+    {
+      "id": "A2-apartment-317",
+      "headword": "apartment",
+      "level": "A2"
+    },
+    {
+      "id": "A2-apologize/apologise-319",
+      "headword": "apologize/apologise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-apparently-323",
+      "headword": "apparently",
+      "level": "A2"
+    },
+    {
+      "id": "A2-appear-326",
+      "headword": "appear",
+      "level": "A2"
+    },
+    {
+      "id": "A2-appearance-327",
+      "headword": "appearance",
+      "level": "A2"
+    },
+    {
+      "id": "A2-apply-334",
+      "headword": "apply",
+      "level": "A2"
+    },
+    {
+      "id": "A2-appointment-336",
+      "headword": "appointment",
+      "level": "A2"
+    },
+    {
+      "id": "A2-appreciate-337",
+      "headword": "appreciate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-appropriate-342",
+      "headword": "appropriate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-architecture-353",
+      "headword": "architecture",
+      "level": "A2"
+    },
+    {
+      "id": "A2-area-356",
+      "headword": "area",
+      "level": "A2"
+    },
+    {
+      "id": "A2-argue-358",
+      "headword": "argue",
+      "level": "A2"
+    },
+    {
+      "id": "A2-argument-359",
+      "headword": "argument",
+      "level": "A2"
+    },
+    {
+      "id": "A2-armchair-365",
+      "headword": "armchair",
+      "level": "A2"
+    },
+    {
+      "id": "A2-armed-366",
+      "headword": "armed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-around-369",
+      "headword": "around",
+      "level": "A2"
+    },
+    {
+      "id": "A2-artificial-384",
+      "headword": "artificial",
+      "level": "A2"
+    },
+    {
+      "id": "A2-as-389",
+      "headword": "as",
+      "level": "A2"
+    },
+    {
+      "id": "A2-asleep-395",
+      "headword": "asleep",
+      "level": "A2"
+    },
+    {
+      "id": "A2-assistant-410",
+      "headword": "assistant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-association-413",
+      "headword": "association",
+      "level": "A2"
+    },
+    {
+      "id": "A2-astronaut-422",
+      "headword": "astronaut",
+      "level": "A2"
+    },
+    {
+      "id": "A2-athlete-426",
+      "headword": "athlete",
+      "level": "A2"
+    },
+    {
+      "id": "A2-atom-431",
+      "headword": "atom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-attack-436",
+      "headword": "attack",
+      "level": "A2"
+    },
+    {
+      "id": "A2-attack-437",
+      "headword": "attack",
+      "level": "A2"
+    },
+    {
+      "id": "A2-attempt-441",
+      "headword": "attempt",
+      "level": "A2"
+    },
+    {
+      "id": "A2-attention-445",
+      "headword": "attention",
+      "level": "A2"
+    },
+    {
+      "id": "A2-attitude-448",
+      "headword": "attitude",
+      "level": "A2"
+    },
+    {
+      "id": "A2-attractive-451",
+      "headword": "attractive",
+      "level": "A2"
+    },
+    {
+      "id": "A2-audience-457",
+      "headword": "audience",
+      "level": "A2"
+    },
+    {
+      "id": "A2-audio-458",
+      "headword": "audio",
+      "level": "A2"
+    },
+    {
+      "id": "A2-author-463",
+      "headword": "author",
+      "level": "A2"
+    },
+    {
+      "id": "A2-automatic-467",
+      "headword": "automatic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-automatically-468",
+      "headword": "automatically",
+      "level": "A2"
+    },
+    {
+      "id": "A2-average-474",
+      "headword": "average",
+      "level": "A2"
+    },
+    {
+      "id": "A2-average-475",
+      "headword": "average",
+      "level": "A2"
+    },
+    {
+      "id": "A2-avoid-476",
+      "headword": "avoid",
+      "level": "A2"
+    },
+    {
+      "id": "A2-award-479",
+      "headword": "award",
+      "level": "A2"
+    },
+    {
+      "id": "A2-awful-486",
+      "headword": "awful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-back-493",
+      "headword": "back",
+      "level": "A2"
+    },
+    {
+      "id": "A2-background-498",
+      "headword": "background",
+      "level": "A2"
+    },
+    {
+      "id": "A2-badly-508",
+      "headword": "badly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-badminton-509",
+      "headword": "badminton",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bake-513",
+      "headword": "bake",
+      "level": "A2"
+    },
+    {
+      "id": "A2-balcony-519",
+      "headword": "balcony",
+      "level": "A2"
+    },
+    {
+      "id": "A2-balloon-525",
+      "headword": "balloon",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bank-535",
+      "headword": "bank",
+      "level": "A2"
+    },
+    {
+      "id": "A2-banking-538",
+      "headword": "banking",
+      "level": "A2"
+    },
+    {
+      "id": "A2-barbecue-543",
+      "headword": "barbecue",
+      "level": "A2"
+    },
+    {
+      "id": "A2-barber-545",
+      "headword": "barber",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bargain-550",
+      "headword": "bargain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-base-562",
+      "headword": "base",
+      "level": "A2"
+    },
+    {
+      "id": "A2-basic-566",
+      "headword": "basic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-basically-567",
+      "headword": "basically",
+      "level": "A2"
+    },
+    {
+      "id": "A2-basket-570",
+      "headword": "basket",
+      "level": "A2"
+    },
+    {
+      "id": "A2-batch-574",
+      "headword": "batch",
+      "level": "A2"
+    },
+    {
+      "id": "A2-battery-579",
+      "headword": "battery",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bay-582",
+      "headword": "bay",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bear-590",
+      "headword": "bear",
+      "level": "A2"
+    },
+    {
+      "id": "A2-beauty-599",
+      "headword": "beauty",
+      "level": "A2"
+    },
+    {
+      "id": "A2-been-609",
+      "headword": "been",
+      "level": "A2"
+    },
+    {
+      "id": "A2-beer-610",
+      "headword": "beer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-before-612",
+      "headword": "before",
+      "level": "A2"
+    },
+    {
+      "id": "A2-beg-614",
+      "headword": "beg",
+      "level": "A2"
+    },
+    {
+      "id": "A2-beginner-616",
+      "headword": "beginner",
+      "level": "A2"
+    },
+    {
+      "id": "A2-beginning-617",
+      "headword": "beginning",
+      "level": "A2"
+    },
+    {
+      "id": "A2-behavior/behaviour-620",
+      "headword": "behavior/behaviour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-being-623",
+      "headword": "being",
+      "level": "A2"
+    },
+    {
+      "id": "A2-belly-628",
+      "headword": "belly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-belong-629",
+      "headword": "belong",
+      "level": "A2"
+    },
+    {
+      "id": "A2-belt-634",
+      "headword": "belt",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bench-635",
+      "headword": "bench",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bend-637",
+      "headword": "bend",
+      "level": "A2"
+    },
+    {
+      "id": "A2-besides-647",
+      "headword": "besides",
+      "level": "A2"
+    },
+    {
+      "id": "A2-better-656",
+      "headword": "better",
+      "level": "A2"
+    },
+    {
+      "id": "A2-beyond-660",
+      "headword": "beyond",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bill-668",
+      "headword": "bill",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bit-686",
+      "headword": "bit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bite-687",
+      "headword": "bite",
+      "level": "A2"
+    },
+    {
+      "id": "A2-blackboard-694",
+      "headword": "blackboard",
+      "level": "A2"
+    },
+    {
+      "id": "A2-blame-697",
+      "headword": "blame",
+      "level": "A2"
+    },
+    {
+      "id": "A2-blanket-699",
+      "headword": "blanket",
+      "level": "A2"
+    },
+    {
+      "id": "A2-blonde-717",
+      "headword": "blonde",
+      "level": "A2"
+    },
+    {
+      "id": "A2-blood-718",
+      "headword": "blood",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bloom-722",
+      "headword": "bloom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-blow-725",
+      "headword": "blow",
+      "level": "A2"
+    },
+    {
+      "id": "A2-board game-735",
+      "headword": "board game",
+      "level": "A2"
+    },
+    {
+      "id": "A2-boil-739",
+      "headword": "boil",
+      "level": "A2"
+    },
+    {
+      "id": "A2-boiled-740",
+      "headword": "boiled",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bonus-754",
+      "headword": "bonus",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bookcase-758",
+      "headword": "bookcase",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bookshelf-764",
+      "headword": "bookshelf",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bookshop-765",
+      "headword": "bookshop",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bored-774",
+      "headword": "bored",
+      "level": "A2"
+    },
+    {
+      "id": "A2-boss-778",
+      "headword": "boss",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bother-785",
+      "headword": "bother",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bra-804",
+      "headword": "bra",
+      "level": "A2"
+    },
+    {
+      "id": "A2-brainstorm-809",
+      "headword": "brainstorm",
+      "level": "A2"
+    },
+    {
+      "id": "A2-brake-811",
+      "headword": "brake",
+      "level": "A2"
+    },
+    {
+      "id": "A2-branch-813",
+      "headword": "branch",
+      "level": "A2"
+    },
+    {
+      "id": "A2-brand-815",
+      "headword": "brand",
+      "level": "A2"
+    },
+    {
+      "id": "A2-brave-818",
+      "headword": "brave",
+      "level": "A2"
+    },
+    {
+      "id": "A2-break-822",
+      "headword": "break",
+      "level": "A2"
+    },
+    {
+      "id": "A2-breeze-837",
+      "headword": "breeze",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bride-841",
+      "headword": "bride",
+      "level": "A2"
+    },
+    {
+      "id": "A2-brilliant-847",
+      "headword": "brilliant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-brown-865",
+      "headword": "brown",
+      "level": "A2"
+    },
+    {
+      "id": "A2-budget-876",
+      "headword": "budget",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bug-877",
+      "headword": "bug",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bulb-881",
+      "headword": "bulb",
+      "level": "A2"
+    },
+    {
+      "id": "A2-burn-902",
+      "headword": "burn",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bury-906",
+      "headword": "bury",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bus station-908",
+      "headword": "bus station",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bus stop-909",
+      "headword": "bus stop",
+      "level": "A2"
+    },
+    {
+      "id": "A2-bush-910",
+      "headword": "bush",
+      "level": "A2"
+    },
+    {
+      "id": "A2-businessman-912",
+      "headword": "businessman",
+      "level": "A2"
+    },
+    {
+      "id": "A2-businesswoman-913",
+      "headword": "businesswoman",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cab-931",
+      "headword": "cab",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cafeteria-937",
+      "headword": "cafeteria",
+      "level": "A2"
+    },
+    {
+      "id": "A2-calendar-943",
+      "headword": "calendar",
+      "level": "A2"
+    },
+    {
+      "id": "A2-call-946",
+      "headword": "call",
+      "level": "A2"
+    },
+    {
+      "id": "A2-camp-954",
+      "headword": "camp",
+      "level": "A2"
+    },
+    {
+      "id": "A2-camping-956",
+      "headword": "camping",
+      "level": "A2"
+    },
+    {
+      "id": "A2-campus-958",
+      "headword": "campus",
+      "level": "A2"
+    },
+    {
+      "id": "A2-can-960",
+      "headword": "can",
+      "level": "A2"
+    },
+    {
+      "id": "A2-capital-976",
+      "headword": "capital",
+      "level": "A2"
+    },
+    {
+      "id": "A2-capital letter-977",
+      "headword": "capital letter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-captain-979",
+      "headword": "captain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-car park-985",
+      "headword": "car park",
+      "level": "A2"
+    },
+    {
+      "id": "A2-carrot-1008",
+      "headword": "carrot",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cash-1015",
+      "headword": "cash",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cassette-1017",
+      "headword": "cassette",
+      "level": "A2"
+    },
+    {
+      "id": "A2-castle-1020",
+      "headword": "castle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cause-1038",
+      "headword": "cause",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cent-1055",
+      "headword": "cent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-center/centre-1056",
+      "headword": "center/centre",
+      "level": "A2"
+    },
+    {
+      "id": "A2-centimeter/centimetre-1058",
+      "headword": "centimeter/centimetre",
+      "level": "A2"
+    },
+    {
+      "id": "A2-century-1061",
+      "headword": "century",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cereal-1062",
+      "headword": "cereal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-certain-1064",
+      "headword": "certain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-certainly-1065",
+      "headword": "certainly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chain-1070",
+      "headword": "chain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chairman-1072",
+      "headword": "chairman",
+      "level": "A2"
+    },
+    {
+      "id": "A2-challenge-1073",
+      "headword": "challenge",
+      "level": "A2"
+    },
+    {
+      "id": "A2-champagne-1076",
+      "headword": "champagne",
+      "level": "A2"
+    },
+    {
+      "id": "A2-championship-1078",
+      "headword": "championship",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chance-1079",
+      "headword": "chance",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chapter-1086",
+      "headword": "chapter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chart-1097",
+      "headword": "chart",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chat-1101",
+      "headword": "chat",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cheap-1103",
+      "headword": "cheap",
+      "level": "A2"
+    },
+    {
+      "id": "A2-check-1106",
+      "headword": "check",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cheek-1111",
+      "headword": "cheek",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cheer-1113",
+      "headword": "cheer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chef-1118",
+      "headword": "chef",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chemical-1119",
+      "headword": "chemical",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cheque-1124",
+      "headword": "cheque",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chess-1128",
+      "headword": "chess",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chest-1129",
+      "headword": "chest",
+      "level": "A2"
+    },
+    {
+      "id": "A2-childhood-1137",
+      "headword": "childhood",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chili/chilli-1139",
+      "headword": "chili/chilli",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chimpanzee-1141",
+      "headword": "chimpanzee",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chin-1142",
+      "headword": "chin",
+      "level": "A2"
+    },
+    {
+      "id": "A2-chirp-1144",
+      "headword": "chirp",
+      "level": "A2"
+    },
+    {
+      "id": "A2-choice-1146",
+      "headword": "choice",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cigarette-1156",
+      "headword": "cigarette",
+      "level": "A2"
+    },
+    {
+      "id": "A2-citizen-1165",
+      "headword": "citizen",
+      "level": "A2"
+    },
+    {
+      "id": "A2-claim-1172",
+      "headword": "claim",
+      "level": "A2"
+    },
+    {
+      "id": "A2-classic-1177",
+      "headword": "classic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-classical music-1180",
+      "headword": "classical music",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cleaner-1188",
+      "headword": "cleaner",
+      "level": "A2"
+    },
+    {
+      "id": "A2-clear-1189",
+      "headword": "clear",
+      "level": "A2"
+    },
+    {
+      "id": "A2-clearly-1191",
+      "headword": "clearly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-clerk-1194",
+      "headword": "clerk",
+      "level": "A2"
+    },
+    {
+      "id": "A2-click-1197",
+      "headword": "click",
+      "level": "A2"
+    },
+    {
+      "id": "A2-climb-1203",
+      "headword": "climb",
+      "level": "A2"
+    },
+    {
+      "id": "A2-climbing-1205",
+      "headword": "climbing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-clone-1210",
+      "headword": "clone",
+      "level": "A2"
+    },
+    {
+      "id": "A2-clown-1221",
+      "headword": "clown",
+      "level": "A2"
+    },
+    {
+      "id": "A2-clue-1223",
+      "headword": "clue",
+      "level": "A2"
+    },
+    {
+      "id": "A2-coast-1231",
+      "headword": "coast",
+      "level": "A2"
+    },
+    {
+      "id": "A2-coin-1245",
+      "headword": "coin",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cola-1249",
+      "headword": "cola",
+      "level": "A2"
+    },
+    {
+      "id": "A2-colorful/colourful-1265",
+      "headword": "colorful/colourful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-column-1266",
+      "headword": "column",
+      "level": "A2"
+    },
+    {
+      "id": "A2-comb-1269",
+      "headword": "comb",
+      "level": "A2"
+    },
+    {
+      "id": "A2-comfortable-1278",
+      "headword": "comfortable",
+      "level": "A2"
+    },
+    {
+      "id": "A2-comic-1280",
+      "headword": "comic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-comic-1281",
+      "headword": "comic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-commitment-1293",
+      "headword": "commitment",
+      "level": "A2"
+    },
+    {
+      "id": "A2-committee-1294",
+      "headword": "committee",
+      "level": "A2"
+    },
+    {
+      "id": "A2-common-1295",
+      "headword": "common",
+      "level": "A2"
+    },
+    {
+      "id": "A2-communicate-1299",
+      "headword": "communicate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-communication-1300",
+      "headword": "communication",
+      "level": "A2"
+    },
+    {
+      "id": "A2-company-1305",
+      "headword": "company",
+      "level": "A2"
+    },
+    {
+      "id": "A2-comparative-1306",
+      "headword": "comparative",
+      "level": "A2"
+    },
+    {
+      "id": "A2-compare-1307",
+      "headword": "compare",
+      "level": "A2"
+    },
+    {
+      "id": "A2-competition-1317",
+      "headword": "competition",
+      "level": "A2"
+    },
+    {
+      "id": "A2-complain-1321",
+      "headword": "complain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-complaint-1322",
+      "headword": "complaint",
+      "level": "A2"
+    },
+    {
+      "id": "A2-complete-1324",
+      "headword": "complete",
+      "level": "A2"
+    },
+    {
+      "id": "A2-composer-1336",
+      "headword": "composer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-concentrate-1353",
+      "headword": "concentrate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-concern-1357",
+      "headword": "concern",
+      "level": "A2"
+    },
+    {
+      "id": "A2-condition-1368",
+      "headword": "condition",
+      "level": "A2"
+    },
+    {
+      "id": "A2-confident-1378",
+      "headword": "confident",
+      "level": "A2"
+    },
+    {
+      "id": "A2-confuse-1385",
+      "headword": "confuse",
+      "level": "A2"
+    },
+    {
+      "id": "A2-confused-1386",
+      "headword": "confused",
+      "level": "A2"
+    },
+    {
+      "id": "A2-consequence-1400",
+      "headword": "consequence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-consider-1404",
+      "headword": "consider",
+      "level": "A2"
+    },
+    {
+      "id": "A2-consist-1410",
+      "headword": "consist",
+      "level": "A2"
+    },
+    {
+      "id": "A2-contact-1426",
+      "headword": "contact",
+      "level": "A2"
+    },
+    {
+      "id": "A2-contact-1427",
+      "headword": "contact",
+      "level": "A2"
+    },
+    {
+      "id": "A2-container-1429",
+      "headword": "container",
+      "level": "A2"
+    },
+    {
+      "id": "A2-context-1436",
+      "headword": "context",
+      "level": "A2"
+    },
+    {
+      "id": "A2-continent-1437",
+      "headword": "continent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-continue-1440",
+      "headword": "continue",
+      "level": "A2"
+    },
+    {
+      "id": "A2-contrast-1448",
+      "headword": "contrast",
+      "level": "A2"
+    },
+    {
+      "id": "A2-control-1451",
+      "headword": "control",
+      "level": "A2"
+    },
+    {
+      "id": "A2-convenience-1455",
+      "headword": "convenience",
+      "level": "A2"
+    },
+    {
+      "id": "A2-convenient-1456",
+      "headword": "convenient",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cooker-1470",
+      "headword": "cooker",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cooking-1472",
+      "headword": "cooking",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cooler-1475",
+      "headword": "cooler",
+      "level": "A2"
+    },
+    {
+      "id": "A2-copy-1483",
+      "headword": "copy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-correctly-1498",
+      "headword": "correctly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cost-1507",
+      "headword": "cost",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cost-1508",
+      "headword": "cost",
+      "level": "A2"
+    },
+    {
+      "id": "A2-count-1520",
+      "headword": "count",
+      "level": "A2"
+    },
+    {
+      "id": "A2-country-1524",
+      "headword": "country",
+      "level": "A2"
+    },
+    {
+      "id": "A2-countryside-1526",
+      "headword": "countryside",
+      "level": "A2"
+    },
+    {
+      "id": "A2-couple-1529",
+      "headword": "couple",
+      "level": "A2"
+    },
+    {
+      "id": "A2-court-1534",
+      "headword": "court",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cover-1538",
+      "headword": "cover",
+      "level": "A2"
+    },
+    {
+      "id": "A2-crazy-1553",
+      "headword": "crazy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cream-1554",
+      "headword": "cream",
+      "level": "A2"
+    },
+    {
+      "id": "A2-create-1557",
+      "headword": "create",
+      "level": "A2"
+    },
+    {
+      "id": "A2-creative-1559",
+      "headword": "creative",
+      "level": "A2"
+    },
+    {
+      "id": "A2-creativity-1561",
+      "headword": "creativity",
+      "level": "A2"
+    },
+    {
+      "id": "A2-creature-1563",
+      "headword": "creature",
+      "level": "A2"
+    },
+    {
+      "id": "A2-credit-1564",
+      "headword": "credit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cricket-1569",
+      "headword": "cricket",
+      "level": "A2"
+    },
+    {
+      "id": "A2-crime-1570",
+      "headword": "crime",
+      "level": "A2"
+    },
+    {
+      "id": "A2-crisp-1575",
+      "headword": "crisp",
+      "level": "A2"
+    },
+    {
+      "id": "A2-criticize/criticise-1580",
+      "headword": "criticize/criticise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cross-1583",
+      "headword": "cross",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cross-1584",
+      "headword": "cross",
+      "level": "A2"
+    },
+    {
+      "id": "A2-crowd-1589",
+      "headword": "crowd",
+      "level": "A2"
+    },
+    {
+      "id": "A2-crowded-1590",
+      "headword": "crowded",
+      "level": "A2"
+    },
+    {
+      "id": "A2-crown-1591",
+      "headword": "crown",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cruise-1596",
+      "headword": "cruise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cry-1600",
+      "headword": "cry",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cupboard-1612",
+      "headword": "cupboard",
+      "level": "A2"
+    },
+    {
+      "id": "A2-curry-1624",
+      "headword": "curry",
+      "level": "A2"
+    },
+    {
+      "id": "A2-curse-1625",
+      "headword": "curse",
+      "level": "A2"
+    },
+    {
+      "id": "A2-custom-1630",
+      "headword": "custom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-customer-1631",
+      "headword": "customer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-cycling-1645",
+      "headword": "cycling",
+      "level": "A2"
+    },
+    {
+      "id": "A2-daily-1650",
+      "headword": "daily",
+      "level": "A2"
+    },
+    {
+      "id": "A2-daily-1651",
+      "headword": "daily",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dam-1653",
+      "headword": "dam",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dancer-1663",
+      "headword": "dancer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-danger-1666",
+      "headword": "danger",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dangerous-1667",
+      "headword": "dangerous",
+      "level": "A2"
+    },
+    {
+      "id": "A2-daylight-1686",
+      "headword": "daylight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dead-1691",
+      "headword": "dead",
+      "level": "A2"
+    },
+    {
+      "id": "A2-deal-1695",
+      "headword": "deal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-death-1701",
+      "headword": "death",
+      "level": "A2"
+    },
+    {
+      "id": "A2-debate-1702",
+      "headword": "debate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-decide-1714",
+      "headword": "decide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-deep-1735",
+      "headword": "deep",
+      "level": "A2"
+    },
+    {
+      "id": "A2-deeply-1736",
+      "headword": "deeply",
+      "level": "A2"
+    },
+    {
+      "id": "A2-degree-1752",
+      "headword": "degree",
+      "level": "A2"
+    },
+    {
+      "id": "A2-delay-1754",
+      "headword": "delay",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dentist-1782",
+      "headword": "dentist",
+      "level": "A2"
+    },
+    {
+      "id": "A2-department store-1786",
+      "headword": "department store",
+      "level": "A2"
+    },
+    {
+      "id": "A2-depend-1788",
+      "headword": "depend",
+      "level": "A2"
+    },
+    {
+      "id": "A2-description-1802",
+      "headword": "description",
+      "level": "A2"
+    },
+    {
+      "id": "A2-desert-1804",
+      "headword": "desert",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dessert-1822",
+      "headword": "dessert",
+      "level": "A2"
+    },
+    {
+      "id": "A2-destroy-1825",
+      "headword": "destroy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-detail-1830",
+      "headword": "detail",
+      "level": "A2"
+    },
+    {
+      "id": "A2-develop-1840",
+      "headword": "develop",
+      "level": "A2"
+    },
+    {
+      "id": "A2-developed-1841",
+      "headword": "developed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-diamond-1854",
+      "headword": "diamond",
+      "level": "A2"
+    },
+    {
+      "id": "A2-diary-1857",
+      "headword": "diary",
+      "level": "A2"
+    },
+    {
+      "id": "A2-die-1861",
+      "headword": "die",
+      "level": "A2"
+    },
+    {
+      "id": "A2-diet-1862",
+      "headword": "diet",
+      "level": "A2"
+    },
+    {
+      "id": "A2-differently-1866",
+      "headword": "differently",
+      "level": "A2"
+    },
+    {
+      "id": "A2-difficulty-1868",
+      "headword": "difficulty",
+      "level": "A2"
+    },
+    {
+      "id": "A2-digital camera-1873",
+      "headword": "digital camera",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dinosaur-1884",
+      "headword": "dinosaur",
+      "level": "A2"
+    },
+    {
+      "id": "A2-direct-1890",
+      "headword": "direct",
+      "level": "A2"
+    },
+    {
+      "id": "A2-direction-1892",
+      "headword": "direction",
+      "level": "A2"
+    },
+    {
+      "id": "A2-director-1894",
+      "headword": "director",
+      "level": "A2"
+    },
+    {
+      "id": "A2-disadvantage-1900",
+      "headword": "disadvantage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-disagree-1901",
+      "headword": "disagree",
+      "level": "A2"
+    },
+    {
+      "id": "A2-disappear-1903",
+      "headword": "disappear",
+      "level": "A2"
+    },
+    {
+      "id": "A2-disappointed-1906",
+      "headword": "disappointed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-disappointing-1907",
+      "headword": "disappointing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-disco-1917",
+      "headword": "disco",
+      "level": "A2"
+    },
+    {
+      "id": "A2-discover-1922",
+      "headword": "discover",
+      "level": "A2"
+    },
+    {
+      "id": "A2-discussion-1928",
+      "headword": "discussion",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dishonest-1935",
+      "headword": "dishonest",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dislike-1940",
+      "headword": "dislike",
+      "level": "A2"
+    },
+    {
+      "id": "A2-display-1948",
+      "headword": "display",
+      "level": "A2"
+    },
+    {
+      "id": "A2-disturb-1975",
+      "headword": "disturb",
+      "level": "A2"
+    },
+    {
+      "id": "A2-divide-1984",
+      "headword": "divide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dizzy-1992",
+      "headword": "dizzy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-done-2011",
+      "headword": "done",
+      "level": "A2"
+    },
+    {
+      "id": "A2-double-2021",
+      "headword": "double",
+      "level": "A2"
+    },
+    {
+      "id": "A2-doubt-2025",
+      "headword": "doubt",
+      "level": "A2"
+    },
+    {
+      "id": "A2-down-2031",
+      "headword": "down",
+      "level": "A2"
+    },
+    {
+      "id": "A2-download-2034",
+      "headword": "download",
+      "level": "A2"
+    },
+    {
+      "id": "A2-downstairs-2037",
+      "headword": "downstairs",
+      "level": "A2"
+    },
+    {
+      "id": "A2-downtown-2038",
+      "headword": "downtown",
+      "level": "A2"
+    },
+    {
+      "id": "A2-draw-2052",
+      "headword": "draw",
+      "level": "A2"
+    },
+    {
+      "id": "A2-drawer-2054",
+      "headword": "drawer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-drawing-2055",
+      "headword": "drawing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dream-2059",
+      "headword": "dream",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dress-2062",
+      "headword": "dress",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dressed-2063",
+      "headword": "dressed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-drill-2064",
+      "headword": "drill",
+      "level": "A2"
+    },
+    {
+      "id": "A2-drive-2069",
+      "headword": "drive",
+      "level": "A2"
+    },
+    {
+      "id": "A2-driver's license/driving licence-2071",
+      "headword": "driver's license/driving licence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-drop-2073",
+      "headword": "drop",
+      "level": "A2"
+    },
+    {
+      "id": "A2-drug-2078",
+      "headword": "drug",
+      "level": "A2"
+    },
+    {
+      "id": "A2-drugstore-2079",
+      "headword": "drugstore",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dry-2083",
+      "headword": "dry",
+      "level": "A2"
+    },
+    {
+      "id": "A2-duck-2084",
+      "headword": "duck",
+      "level": "A2"
+    },
+    {
+      "id": "A2-during-2094",
+      "headword": "during",
+      "level": "A2"
+    },
+    {
+      "id": "A2-dust-2095",
+      "headword": "dust",
+      "level": "A2"
+    },
+    {
+      "id": "A2-early-2115",
+      "headword": "early",
+      "level": "A2"
+    },
+    {
+      "id": "A2-earn-2117",
+      "headword": "earn",
+      "level": "A2"
+    },
+    {
+      "id": "A2-earring-2120",
+      "headword": "earring",
+      "level": "A2"
+    },
+    {
+      "id": "A2-earth-2121",
+      "headword": "earth",
+      "level": "A2"
+    },
+    {
+      "id": "A2-earthquake-2122",
+      "headword": "earthquake",
+      "level": "A2"
+    },
+    {
+      "id": "A2-easily-2125",
+      "headword": "easily",
+      "level": "A2"
+    },
+    {
+      "id": "A2-east-2126",
+      "headword": "east",
+      "level": "A2"
+    },
+    {
+      "id": "A2-east-2127",
+      "headword": "east",
+      "level": "A2"
+    },
+    {
+      "id": "A2-east-2128",
+      "headword": "east",
+      "level": "A2"
+    },
+    {
+      "id": "A2-editor-2151",
+      "headword": "editor",
+      "level": "A2"
+    },
+    {
+      "id": "A2-education-2155",
+      "headword": "education",
+      "level": "A2"
+    },
+    {
+      "id": "A2-educational-2156",
+      "headword": "educational",
+      "level": "A2"
+    },
+    {
+      "id": "A2-effect-2158",
+      "headword": "effect",
+      "level": "A2"
+    },
+    {
+      "id": "A2-effort-2164",
+      "headword": "effort",
+      "level": "A2"
+    },
+    {
+      "id": "A2-either-2170",
+      "headword": "either",
+      "level": "A2"
+    },
+    {
+      "id": "A2-elderly-2174",
+      "headword": "elderly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-electric-2178",
+      "headword": "electric",
+      "level": "A2"
+    },
+    {
+      "id": "A2-elephant-2192",
+      "headword": "elephant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-elevator-2193",
+      "headword": "elevator",
+      "level": "A2"
+    },
+    {
+      "id": "A2-elsewhere-2201",
+      "headword": "elsewhere",
+      "level": "A2"
+    },
+    {
+      "id": "A2-email-2202",
+      "headword": "email",
+      "level": "A2"
+    },
+    {
+      "id": "A2-embarrassing-2206",
+      "headword": "embarrassing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-emergency-2212",
+      "headword": "emergency",
+      "level": "A2"
+    },
+    {
+      "id": "A2-empty-2225",
+      "headword": "empty",
+      "level": "A2"
+    },
+    {
+      "id": "A2-encourage-2230",
+      "headword": "encourage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-end-2235",
+      "headword": "end",
+      "level": "A2"
+    },
+    {
+      "id": "A2-endangered-2237",
+      "headword": "endangered",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ending-2239",
+      "headword": "ending",
+      "level": "A2"
+    },
+    {
+      "id": "A2-energetic-2247",
+      "headword": "energetic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-enormous-2262",
+      "headword": "enormous",
+      "level": "A2"
+    },
+    {
+      "id": "A2-enough-2263",
+      "headword": "enough",
+      "level": "A2"
+    },
+    {
+      "id": "A2-enough-2264",
+      "headword": "enough",
+      "level": "A2"
+    },
+    {
+      "id": "A2-enough-2265",
+      "headword": "enough",
+      "level": "A2"
+    },
+    {
+      "id": "A2-enter-2269",
+      "headword": "enter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-entertainment-2274",
+      "headword": "entertainment",
+      "level": "A2"
+    },
+    {
+      "id": "A2-entrance-2282",
+      "headword": "entrance",
+      "level": "A2"
+    },
+    {
+      "id": "A2-envelope-2285",
+      "headword": "envelope",
+      "level": "A2"
+    },
+    {
+      "id": "A2-envy-2291",
+      "headword": "envy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-episode-2293",
+      "headword": "episode",
+      "level": "A2"
+    },
+    {
+      "id": "A2-error-2305",
+      "headword": "error",
+      "level": "A2"
+    },
+    {
+      "id": "A2-escalator-2308",
+      "headword": "escalator",
+      "level": "A2"
+    },
+    {
+      "id": "A2-escape-2309",
+      "headword": "escape",
+      "level": "A2"
+    },
+    {
+      "id": "A2-especially-2311",
+      "headword": "especially",
+      "level": "A2"
+    },
+    {
+      "id": "A2-essay-2312",
+      "headword": "essay",
+      "level": "A2"
+    },
+    {
+      "id": "A2-establish-2317",
+      "headword": "establish",
+      "level": "A2"
+    },
+    {
+      "id": "A2-euro-2328",
+      "headword": "euro",
+      "level": "A2"
+    },
+    {
+      "id": "A2-even-2334",
+      "headword": "even",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ever-2339",
+      "headword": "ever",
+      "level": "A2"
+    },
+    {
+      "id": "A2-evidence-2347",
+      "headword": "evidence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-exactly-2355",
+      "headword": "exactly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-exam-2360",
+      "headword": "exam",
+      "level": "A2"
+    },
+    {
+      "id": "A2-except-2370",
+      "headword": "except",
+      "level": "A2"
+    },
+    {
+      "id": "A2-except-2371",
+      "headword": "except",
+      "level": "A2"
+    },
+    {
+      "id": "A2-exchange-2377",
+      "headword": "exchange",
+      "level": "A2"
+    },
+    {
+      "id": "A2-exercise-2397",
+      "headword": "exercise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-exhibition-2404",
+      "headword": "exhibition",
+      "level": "A2"
+    },
+    {
+      "id": "A2-exist-2406",
+      "headword": "exist",
+      "level": "A2"
+    },
+    {
+      "id": "A2-expect-2414",
+      "headword": "expect",
+      "level": "A2"
+    },
+    {
+      "id": "A2-experience-2420",
+      "headword": "experience",
+      "level": "A2"
+    },
+    {
+      "id": "A2-expert-2426",
+      "headword": "expert",
+      "level": "A2"
+    },
+    {
+      "id": "A2-explain-2427",
+      "headword": "explain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-explanation-2428",
+      "headword": "explanation",
+      "level": "A2"
+    },
+    {
+      "id": "A2-explore-2432",
+      "headword": "explore",
+      "level": "A2"
+    },
+    {
+      "id": "A2-express-2440",
+      "headword": "express",
+      "level": "A2"
+    },
+    {
+      "id": "A2-expression-2442",
+      "headword": "expression",
+      "level": "A2"
+    },
+    {
+      "id": "A2-extra-2453",
+      "headword": "extra",
+      "level": "A2"
+    },
+    {
+      "id": "A2-extra-2454",
+      "headword": "extra",
+      "level": "A2"
+    },
+    {
+      "id": "A2-extremely-2462",
+      "headword": "extremely",
+      "level": "A2"
+    },
+    {
+      "id": "A2-face-2472",
+      "headword": "face",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fact-2478",
+      "headword": "fact",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fail-2483",
+      "headword": "fail",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fairly-2489",
+      "headword": "fairly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fall-2495",
+      "headword": "fall",
+      "level": "A2"
+    },
+    {
+      "id": "A2-familiar-2500",
+      "headword": "familiar",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fancy-2505",
+      "headword": "fancy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fantastic-2508",
+      "headword": "fantastic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-far-2512",
+      "headword": "far",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fare-2514",
+      "headword": "fare",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fascinating-2524",
+      "headword": "fascinating",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fashion-2526",
+      "headword": "fashion",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fast food-2530",
+      "headword": "fast food",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fault-2538",
+      "headword": "fault",
+      "level": "A2"
+    },
+    {
+      "id": "A2-favor/favour-2540",
+      "headword": "favor/favour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fear-2546",
+      "headword": "fear",
+      "level": "A2"
+    },
+    {
+      "id": "A2-feather-2551",
+      "headword": "feather",
+      "level": "A2"
+    },
+    {
+      "id": "A2-feature-2552",
+      "headword": "feature",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fee-2557",
+      "headword": "fee",
+      "level": "A2"
+    },
+    {
+      "id": "A2-feel-2561",
+      "headword": "feel",
+      "level": "A2"
+    },
+    {
+      "id": "A2-female-2566",
+      "headword": "female",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fence-2568",
+      "headword": "fence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-few-2576",
+      "headword": "few",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fiction-2579",
+      "headword": "fiction",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fighter-2588",
+      "headword": "fighter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-figure-2591",
+      "headword": "figure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-figure-2592",
+      "headword": "figure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-film-2598",
+      "headword": "film",
+      "level": "A2"
+    },
+    {
+      "id": "A2-final-2602",
+      "headword": "final",
+      "level": "A2"
+    },
+    {
+      "id": "A2-final-2603",
+      "headword": "final",
+      "level": "A2"
+    },
+    {
+      "id": "A2-finally-2604",
+      "headword": "finally",
+      "level": "A2"
+    },
+    {
+      "id": "A2-first name-2637",
+      "headword": "first name",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fisherman-2644",
+      "headword": "fisherman",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fit-2646",
+      "headword": "fit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fix-2651",
+      "headword": "fix",
+      "level": "A2"
+    },
+    {
+      "id": "A2-flea-2667",
+      "headword": "flea",
+      "level": "A2"
+    },
+    {
+      "id": "A2-flight-2674",
+      "headword": "flight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-float-2676",
+      "headword": "float",
+      "level": "A2"
+    },
+    {
+      "id": "A2-flood-2679",
+      "headword": "flood",
+      "level": "A2"
+    },
+    {
+      "id": "A2-flour-2682",
+      "headword": "flour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fog-2698",
+      "headword": "fog",
+      "level": "A2"
+    },
+    {
+      "id": "A2-folder-2702",
+      "headword": "folder",
+      "level": "A2"
+    },
+    {
+      "id": "A2-follow-2704",
+      "headword": "follow",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fool-2713",
+      "headword": "fool",
+      "level": "A2"
+    },
+    {
+      "id": "A2-footballer-2719",
+      "headword": "footballer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-for-2721",
+      "headword": "for",
+      "level": "A2"
+    },
+    {
+      "id": "A2-forbid-2723",
+      "headword": "forbid",
+      "level": "A2"
+    },
+    {
+      "id": "A2-force-2725",
+      "headword": "force",
+      "level": "A2"
+    },
+    {
+      "id": "A2-forest-2734",
+      "headword": "forest",
+      "level": "A2"
+    },
+    {
+      "id": "A2-forever-2736",
+      "headword": "forever",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fork-2739",
+      "headword": "fork",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fortunately-2755",
+      "headword": "fortunately",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fortune-2756",
+      "headword": "fortune",
+      "level": "A2"
+    },
+    {
+      "id": "A2-forward-2758",
+      "headword": "forward",
+      "level": "A2"
+    },
+    {
+      "id": "A2-frame-2768",
+      "headword": "frame",
+      "level": "A2"
+    },
+    {
+      "id": "A2-frank-2770",
+      "headword": "frank",
+      "level": "A2"
+    },
+    {
+      "id": "A2-free-2776",
+      "headword": "free",
+      "level": "A2"
+    },
+    {
+      "id": "A2-freedom-2778",
+      "headword": "freedom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-freeze-2780",
+      "headword": "freeze",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fresh-2786",
+      "headword": "fresh",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fridge-2789",
+      "headword": "fridge",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fried-2790",
+      "headword": "fried",
+      "level": "A2"
+    },
+    {
+      "id": "A2-friendship-2794",
+      "headword": "friendship",
+      "level": "A2"
+    },
+    {
+      "id": "A2-frighten-2797",
+      "headword": "frighten",
+      "level": "A2"
+    },
+    {
+      "id": "A2-frightened-2798",
+      "headword": "frightened",
+      "level": "A2"
+    },
+    {
+      "id": "A2-frightening-2799",
+      "headword": "frightening",
+      "level": "A2"
+    },
+    {
+      "id": "A2-front-2803",
+      "headword": "front",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fry-2811",
+      "headword": "fry",
+      "level": "A2"
+    },
+    {
+      "id": "A2-fully-2820",
+      "headword": "fully",
+      "level": "A2"
+    },
+    {
+      "id": "A2-function-2825",
+      "headword": "function",
+      "level": "A2"
+    },
+    {
+      "id": "A2-furniture-2839",
+      "headword": "furniture",
+      "level": "A2"
+    },
+    {
+      "id": "A2-further-2841",
+      "headword": "further",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gallery-2852",
+      "headword": "gallery",
+      "level": "A2"
+    },
+    {
+      "id": "A2-garage-2859",
+      "headword": "garage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-garlic-2864",
+      "headword": "garlic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gas-2866",
+      "headword": "gas",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gate-2868",
+      "headword": "gate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gather-2870",
+      "headword": "gather",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gender-2876",
+      "headword": "gender",
+      "level": "A2"
+    },
+    {
+      "id": "A2-generation-2884",
+      "headword": "generation",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gentle-2893",
+      "headword": "gentle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-given-2918",
+      "headword": "given",
+      "level": "A2"
+    },
+    {
+      "id": "A2-globe-2935",
+      "headword": "globe",
+      "level": "A2"
+    },
+    {
+      "id": "A2-glove-2941",
+      "headword": "glove",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gold-2952",
+      "headword": "gold",
+      "level": "A2"
+    },
+    {
+      "id": "A2-golden-2953",
+      "headword": "golden",
+      "level": "A2"
+    },
+    {
+      "id": "A2-golf-2954",
+      "headword": "golf",
+      "level": "A2"
+    },
+    {
+      "id": "A2-good-looking-2961",
+      "headword": "good-looking",
+      "level": "A2"
+    },
+    {
+      "id": "A2-government-2972",
+      "headword": "government",
+      "level": "A2"
+    },
+    {
+      "id": "A2-grace-2977",
+      "headword": "grace",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gradually-2983",
+      "headword": "gradually",
+      "level": "A2"
+    },
+    {
+      "id": "A2-graduate-2985",
+      "headword": "graduate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gram/gramme-2988",
+      "headword": "gram/gramme",
+      "level": "A2"
+    },
+    {
+      "id": "A2-grandchild-2991",
+      "headword": "grandchild",
+      "level": "A2"
+    },
+    {
+      "id": "A2-granddad-2992",
+      "headword": "granddad",
+      "level": "A2"
+    },
+    {
+      "id": "A2-granddaughter-2993",
+      "headword": "granddaughter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-grandson-2999",
+      "headword": "grandson",
+      "level": "A2"
+    },
+    {
+      "id": "A2-granny-3000",
+      "headword": "granny",
+      "level": "A2"
+    },
+    {
+      "id": "A2-grateful-3010",
+      "headword": "grateful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-greatly-3019",
+      "headword": "greatly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-greedy-3021",
+      "headword": "greedy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-green-3023",
+      "headword": "green",
+      "level": "A2"
+    },
+    {
+      "id": "A2-grilled-3031",
+      "headword": "grilled",
+      "level": "A2"
+    },
+    {
+      "id": "A2-grocery store-3036",
+      "headword": "grocery store",
+      "level": "A2"
+    },
+    {
+      "id": "A2-guard-3051",
+      "headword": "guard",
+      "level": "A2"
+    },
+    {
+      "id": "A2-guidebook-3060",
+      "headword": "guidebook",
+      "level": "A2"
+    },
+    {
+      "id": "A2-gun-3068",
+      "headword": "gun",
+      "level": "A2"
+    },
+    {
+      "id": "A2-half-3086",
+      "headword": "half",
+      "level": "A2"
+    },
+    {
+      "id": "A2-half-3088",
+      "headword": "half",
+      "level": "A2"
+    },
+    {
+      "id": "A2-half-price-3089",
+      "headword": "half-price",
+      "level": "A2"
+    },
+    {
+      "id": "A2-half-price-3090",
+      "headword": "half-price",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ham-3092",
+      "headword": "ham",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hand-3097",
+      "headword": "hand",
+      "level": "A2"
+    },
+    {
+      "id": "A2-handbag-3098",
+      "headword": "handbag",
+      "level": "A2"
+    },
+    {
+      "id": "A2-handicapped-3102",
+      "headword": "handicapped",
+      "level": "A2"
+    },
+    {
+      "id": "A2-handle-3105",
+      "headword": "handle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-happily-3117",
+      "headword": "happily",
+      "level": "A2"
+    },
+    {
+      "id": "A2-happiness-3118",
+      "headword": "happiness",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hardly-3124",
+      "headword": "hardly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-harm-3129",
+      "headword": "harm",
+      "level": "A2"
+    },
+    {
+      "id": "A2-harmful-3130",
+      "headword": "harmful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-harmony-3132",
+      "headword": "harmony",
+      "level": "A2"
+    },
+    {
+      "id": "A2-harvest-3135",
+      "headword": "harvest",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hate-3144",
+      "headword": "hate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-head-3157",
+      "headword": "head",
+      "level": "A2"
+    },
+    {
+      "id": "A2-headphone-3160",
+      "headword": "headphone",
+      "level": "A2"
+    },
+    {
+      "id": "A2-headteacher-3162",
+      "headword": "headteacher",
+      "level": "A2"
+    },
+    {
+      "id": "A2-heat-3178",
+      "headword": "heat",
+      "level": "A2"
+    },
+    {
+      "id": "A2-heating-3181",
+      "headword": "heating",
+      "level": "A2"
+    },
+    {
+      "id": "A2-heavily-3184",
+      "headword": "heavily",
+      "level": "A2"
+    },
+    {
+      "id": "A2-help-3193",
+      "headword": "help",
+      "level": "A2"
+    },
+    {
+      "id": "A2-helpful-3196",
+      "headword": "helpful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hero-3205",
+      "headword": "hero",
+      "level": "A2"
+    },
+    {
+      "id": "A2-herself-3207",
+      "headword": "herself",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hey-3210",
+      "headword": "hey",
+      "level": "A2"
+    },
+    {
+      "id": "A2-high-3215",
+      "headword": "high",
+      "level": "A2"
+    },
+    {
+      "id": "A2-high school-3216",
+      "headword": "high school",
+      "level": "A2"
+    },
+    {
+      "id": "A2-highway-3221",
+      "headword": "highway",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hike-3224",
+      "headword": "hike",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hiking-3225",
+      "headword": "hiking",
+      "level": "A2"
+    },
+    {
+      "id": "A2-himself-3229",
+      "headword": "himself",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hip hop/hip-hop/hiphop-3232",
+      "headword": "hip hop/hip-hop/hiphop",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hit-3241",
+      "headword": "hit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hockey-3244",
+      "headword": "hockey",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hold-3246",
+      "headword": "hold",
+      "level": "A2"
+    },
+    {
+      "id": "A2-home-3253",
+      "headword": "home",
+      "level": "A2"
+    },
+    {
+      "id": "A2-honey-3263",
+      "headword": "honey",
+      "level": "A2"
+    },
+    {
+      "id": "A2-honor/honour-3265",
+      "headword": "honor/honour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-horror-3281",
+      "headword": "horror",
+      "level": "A2"
+    },
+    {
+      "id": "A2-host-3288",
+      "headword": "host",
+      "level": "A2"
+    },
+    {
+      "id": "A2-however-3302",
+      "headword": "however",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hug-3304",
+      "headword": "hug",
+      "level": "A2"
+    },
+    {
+      "id": "A2-human-3307",
+      "headword": "human",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hundred-3322",
+      "headword": "hundred",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hunter-3327",
+      "headword": "hunter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-hurry-3331",
+      "headword": "hurry",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ID-3349",
+      "headword": "ID",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ID card-3350",
+      "headword": "ID card",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ill-3369",
+      "headword": "ill",
+      "level": "A2"
+    },
+    {
+      "id": "A2-illegal-3370",
+      "headword": "illegal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-image-3376",
+      "headword": "image",
+      "level": "A2"
+    },
+    {
+      "id": "A2-imagination-3379",
+      "headword": "imagination",
+      "level": "A2"
+    },
+    {
+      "id": "A2-impact-3392",
+      "headword": "impact",
+      "level": "A2"
+    },
+    {
+      "id": "A2-impatient-3395",
+      "headword": "impatient",
+      "level": "A2"
+    },
+    {
+      "id": "A2-importance-3406",
+      "headword": "importance",
+      "level": "A2"
+    },
+    {
+      "id": "A2-importantly-3408",
+      "headword": "importantly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-impossible-3411",
+      "headword": "impossible",
+      "level": "A2"
+    },
+    {
+      "id": "A2-impress-3413",
+      "headword": "impress",
+      "level": "A2"
+    },
+    {
+      "id": "A2-improve-3424",
+      "headword": "improve",
+      "level": "A2"
+    },
+    {
+      "id": "A2-in-3429",
+      "headword": "in",
+      "level": "A2"
+    },
+    {
+      "id": "A2-inch-3437",
+      "headword": "inch",
+      "level": "A2"
+    },
+    {
+      "id": "A2-include-3440",
+      "headword": "include",
+      "level": "A2"
+    },
+    {
+      "id": "A2-increase-3446",
+      "headword": "increase",
+      "level": "A2"
+    },
+    {
+      "id": "A2-indeed-3453",
+      "headword": "indeed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-independence-3456",
+      "headword": "independence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-indicate-3461",
+      "headword": "indicate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-indoor-3469",
+      "headword": "indoor",
+      "level": "A2"
+    },
+    {
+      "id": "A2-inexpensive-3479",
+      "headword": "inexpensive",
+      "level": "A2"
+    },
+    {
+      "id": "A2-influence-3493",
+      "headword": "influence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-injure-3514",
+      "headword": "injure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-inner-3519",
+      "headword": "inner",
+      "level": "A2"
+    },
+    {
+      "id": "A2-insect-3532",
+      "headword": "insect",
+      "level": "A2"
+    },
+    {
+      "id": "A2-inside-3535",
+      "headword": "inside",
+      "level": "A2"
+    },
+    {
+      "id": "A2-inspiration-3543",
+      "headword": "inspiration",
+      "level": "A2"
+    },
+    {
+      "id": "A2-instant-3548",
+      "headword": "instant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-instead-3550",
+      "headword": "instead",
+      "level": "A2"
+    },
+    {
+      "id": "A2-instrument-3559",
+      "headword": "instrument",
+      "level": "A2"
+    },
+    {
+      "id": "A2-intelligence-3567",
+      "headword": "intelligence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-intelligent-3568",
+      "headword": "intelligent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-interest-3578",
+      "headword": "interest",
+      "level": "A2"
+    },
+    {
+      "id": "A2-international-3587",
+      "headword": "international",
+      "level": "A2"
+    },
+    {
+      "id": "A2-invade-3611",
+      "headword": "invade",
+      "level": "A2"
+    },
+    {
+      "id": "A2-invent-3615",
+      "headword": "invent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-invention-3616",
+      "headword": "invention",
+      "level": "A2"
+    },
+    {
+      "id": "A2-invite-3627",
+      "headword": "invite",
+      "level": "A2"
+    },
+    {
+      "id": "A2-issue-3652",
+      "headword": "issue",
+      "level": "A2"
+    },
+    {
+      "id": "A2-IT-3654",
+      "headword": "IT",
+      "level": "A2"
+    },
+    {
+      "id": "A2-itself-3661",
+      "headword": "itself",
+      "level": "A2"
+    },
+    {
+      "id": "A2-jam-3666",
+      "headword": "jam",
+      "level": "A2"
+    },
+    {
+      "id": "A2-jelly-3675",
+      "headword": "jelly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-joke-3688",
+      "headword": "joke",
+      "level": "A2"
+    },
+    {
+      "id": "A2-journey-3693",
+      "headword": "journey",
+      "level": "A2"
+    },
+    {
+      "id": "A2-joy-3694",
+      "headword": "joy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-junior-3708",
+      "headword": "junior",
+      "level": "A2"
+    },
+    {
+      "id": "A2-junk-3709",
+      "headword": "junk",
+      "level": "A2"
+    },
+    {
+      "id": "A2-killer-3732",
+      "headword": "killer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-kilo-3734",
+      "headword": "kilo",
+      "level": "A2"
+    },
+    {
+      "id": "A2-kilogram/kilogramme-3735",
+      "headword": "kilogram/kilogramme",
+      "level": "A2"
+    },
+    {
+      "id": "A2-kilometer/kilometre-3736",
+      "headword": "kilometer/kilometre",
+      "level": "A2"
+    },
+    {
+      "id": "A2-kind-3737",
+      "headword": "kind",
+      "level": "A2"
+    },
+    {
+      "id": "A2-kindly-3739",
+      "headword": "kindly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-kingdom-3743",
+      "headword": "kingdom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-kit-3746",
+      "headword": "kit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-knock-3754",
+      "headword": "knock",
+      "level": "A2"
+    },
+    {
+      "id": "A2-knowledge-3759",
+      "headword": "knowledge",
+      "level": "A2"
+    },
+    {
+      "id": "A2-labor/labour-3763",
+      "headword": "labor/labour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lack-3766",
+      "headword": "lack",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lake-3770",
+      "headword": "lake",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lamp-3773",
+      "headword": "lamp",
+      "level": "A2"
+    },
+    {
+      "id": "A2-land-3776",
+      "headword": "land",
+      "level": "A2"
+    },
+    {
+      "id": "A2-landscape-3780",
+      "headword": "landscape",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lane-3782",
+      "headword": "lane",
+      "level": "A2"
+    },
+    {
+      "id": "A2-last-3791",
+      "headword": "last",
+      "level": "A2"
+    },
+    {
+      "id": "A2-last-3792",
+      "headword": "last",
+      "level": "A2"
+    },
+    {
+      "id": "A2-latest-3805",
+      "headword": "latest",
+      "level": "A2"
+    },
+    {
+      "id": "A2-latter-3807",
+      "headword": "latter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-latter-3808",
+      "headword": "latter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-law-3815",
+      "headword": "law",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lawyer-3820",
+      "headword": "lawyer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-laziness-3824",
+      "headword": "laziness",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lead-3827",
+      "headword": "lead",
+      "level": "A2"
+    },
+    {
+      "id": "A2-learner-3842",
+      "headword": "learner",
+      "level": "A2"
+    },
+    {
+      "id": "A2-least-3847",
+      "headword": "least",
+      "level": "A2"
+    },
+    {
+      "id": "A2-leather-3849",
+      "headword": "leather",
+      "level": "A2"
+    },
+    {
+      "id": "A2-left-3856",
+      "headword": "left",
+      "level": "A2"
+    },
+    {
+      "id": "A2-left-3857",
+      "headword": "left",
+      "level": "A2"
+    },
+    {
+      "id": "A2-left-hand-3858",
+      "headword": "left-hand",
+      "level": "A2"
+    },
+    {
+      "id": "A2-leisure-3870",
+      "headword": "leisure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lemon-3872",
+      "headword": "lemon",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lemonade-3873",
+      "headword": "lemonade",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lend-3874",
+      "headword": "lend",
+      "level": "A2"
+    },
+    {
+      "id": "A2-less-3879",
+      "headword": "less",
+      "level": "A2"
+    },
+    {
+      "id": "A2-less-3880",
+      "headword": "less",
+      "level": "A2"
+    },
+    {
+      "id": "A2-less-3881",
+      "headword": "less",
+      "level": "A2"
+    },
+    {
+      "id": "A2-level-3889",
+      "headword": "level",
+      "level": "A2"
+    },
+    {
+      "id": "A2-liberty-3895",
+      "headword": "liberty",
+      "level": "A2"
+    },
+    {
+      "id": "A2-license/licence-3898",
+      "headword": "license/licence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lie-3902",
+      "headword": "lie",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lifestyle-3907",
+      "headword": "lifestyle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-likely-3922",
+      "headword": "likely",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lip-3941",
+      "headword": "lip",
+      "level": "A2"
+    },
+    {
+      "id": "A2-liter/litre-3948",
+      "headword": "liter/litre",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lively-3960",
+      "headword": "lively",
+      "level": "A2"
+    },
+    {
+      "id": "A2-load-3965",
+      "headword": "load",
+      "level": "A2"
+    },
+    {
+      "id": "A2-local-3970",
+      "headword": "local",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lock-3973",
+      "headword": "lock",
+      "level": "A2"
+    },
+    {
+      "id": "A2-logical-3978",
+      "headword": "logical",
+      "level": "A2"
+    },
+    {
+      "id": "A2-long-3983",
+      "headword": "long",
+      "level": "A2"
+    },
+    {
+      "id": "A2-loose-3988",
+      "headword": "loose",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lose-3991",
+      "headword": "lose",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lost-3993",
+      "headword": "lost",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lot-3995",
+      "headword": "lot",
+      "level": "A2"
+    },
+    {
+      "id": "A2-loudly-4000",
+      "headword": "loudly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lover-4006",
+      "headword": "lover",
+      "level": "A2"
+    },
+    {
+      "id": "A2-low-4008",
+      "headword": "low",
+      "level": "A2"
+    },
+    {
+      "id": "A2-low-4009",
+      "headword": "low",
+      "level": "A2"
+    },
+    {
+      "id": "A2-luckily-4015",
+      "headword": "luckily",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lunchtime-4020",
+      "headword": "lunchtime",
+      "level": "A2"
+    },
+    {
+      "id": "A2-lyric-4026",
+      "headword": "lyric",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mad-4030",
+      "headword": "mad",
+      "level": "A2"
+    },
+    {
+      "id": "A2-magic-4036",
+      "headword": "magic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-magic-4037",
+      "headword": "magic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-main course-4046",
+      "headword": "main course",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mainly-4047",
+      "headword": "mainly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-major-4050",
+      "headword": "major",
+      "level": "A2"
+    },
+    {
+      "id": "A2-maker-4055",
+      "headword": "maker",
+      "level": "A2"
+    },
+    {
+      "id": "A2-make-up-4056",
+      "headword": "make-up",
+      "level": "A2"
+    },
+    {
+      "id": "A2-male-4060",
+      "headword": "male",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mall-4061",
+      "headword": "mall",
+      "level": "A2"
+    },
+    {
+      "id": "A2-manage-4064",
+      "headword": "manage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-manager-4066",
+      "headword": "manager",
+      "level": "A2"
+    },
+    {
+      "id": "A2-manner-4070",
+      "headword": "manner",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mark-4089",
+      "headword": "mark",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mark-4090",
+      "headword": "mark",
+      "level": "A2"
+    },
+    {
+      "id": "A2-market-4092",
+      "headword": "market",
+      "level": "A2"
+    },
+    {
+      "id": "A2-married-4096",
+      "headword": "married",
+      "level": "A2"
+    },
+    {
+      "id": "A2-marry-4097",
+      "headword": "marry",
+      "level": "A2"
+    },
+    {
+      "id": "A2-marvelous/marvellous-4099",
+      "headword": "marvelous/marvellous",
+      "level": "A2"
+    },
+    {
+      "id": "A2-material-4114",
+      "headword": "material",
+      "level": "A2"
+    },
+    {
+      "id": "A2-matter-4120",
+      "headword": "matter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-max-4123",
+      "headword": "max",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mean-4132",
+      "headword": "mean",
+      "level": "A2"
+    },
+    {
+      "id": "A2-meaning-4135",
+      "headword": "meaning",
+      "level": "A2"
+    },
+    {
+      "id": "A2-medal-4146",
+      "headword": "medal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-medical-4148",
+      "headword": "medical",
+      "level": "A2"
+    },
+    {
+      "id": "A2-melon-4161",
+      "headword": "melon",
+      "level": "A2"
+    },
+    {
+      "id": "A2-member-4163",
+      "headword": "member",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mention-4172",
+      "headword": "mention",
+      "level": "A2"
+    },
+    {
+      "id": "A2-menu-4175",
+      "headword": "menu",
+      "level": "A2"
+    },
+    {
+      "id": "A2-metal-4190",
+      "headword": "metal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-meter/metre-4192",
+      "headword": "meter/metre",
+      "level": "A2"
+    },
+    {
+      "id": "A2-method-4193",
+      "headword": "method",
+      "level": "A2"
+    },
+    {
+      "id": "A2-midday-4205",
+      "headword": "midday",
+      "level": "A2"
+    },
+    {
+      "id": "A2-middle-4207",
+      "headword": "middle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-midnight-4209",
+      "headword": "midnight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-might-4211",
+      "headword": "might",
+      "level": "A2"
+    },
+    {
+      "id": "A2-military-4216",
+      "headword": "military",
+      "level": "A2"
+    },
+    {
+      "id": "A2-million-4220",
+      "headword": "million",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mind-4224",
+      "headword": "mind",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mineral water-4228",
+      "headword": "mineral water",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mirror-4240",
+      "headword": "mirror",
+      "level": "A2"
+    },
+    {
+      "id": "A2-missing-4251",
+      "headword": "missing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mistake-4254",
+      "headword": "mistake",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mix-4261",
+      "headword": "mix",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mobile-4264",
+      "headword": "mobile",
+      "level": "A2"
+    },
+    {
+      "id": "A2-model-4271",
+      "headword": "model",
+      "level": "A2"
+    },
+    {
+      "id": "A2-modern-4275",
+      "headword": "modern",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mood-4302",
+      "headword": "mood",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mosque-4320",
+      "headword": "mosque",
+      "level": "A2"
+    },
+    {
+      "id": "A2-most-4323",
+      "headword": "most",
+      "level": "A2"
+    },
+    {
+      "id": "A2-most-4325",
+      "headword": "most",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mostly-4326",
+      "headword": "mostly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-motorway-4340",
+      "headword": "motorway",
+      "level": "A2"
+    },
+    {
+      "id": "A2-move-4351",
+      "headword": "move",
+      "level": "A2"
+    },
+    {
+      "id": "A2-MP3 player-4356",
+      "headword": "MP3 player",
+      "level": "A2"
+    },
+    {
+      "id": "A2-Ms./Ms-4359",
+      "headword": "Ms./Ms",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mug-4365",
+      "headword": "mug",
+      "level": "A2"
+    },
+    {
+      "id": "A2-murder-4372",
+      "headword": "murder",
+      "level": "A2"
+    },
+    {
+      "id": "A2-museum-4378",
+      "headword": "museum",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mushroom-4379",
+      "headword": "mushroom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-musical-4381",
+      "headword": "musical",
+      "level": "A2"
+    },
+    {
+      "id": "A2-myself-4394",
+      "headword": "myself",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mysterious-4395",
+      "headword": "mysterious",
+      "level": "A2"
+    },
+    {
+      "id": "A2-mystery-4396",
+      "headword": "mystery",
+      "level": "A2"
+    },
+    {
+      "id": "A2-napkin-4405",
+      "headword": "napkin",
+      "level": "A2"
+    },
+    {
+      "id": "A2-nation-4413",
+      "headword": "nation",
+      "level": "A2"
+    },
+    {
+      "id": "A2-national-4414",
+      "headword": "national",
+      "level": "A2"
+    },
+    {
+      "id": "A2-native-4419",
+      "headword": "native",
+      "level": "A2"
+    },
+    {
+      "id": "A2-natural-4421",
+      "headword": "natural",
+      "level": "A2"
+    },
+    {
+      "id": "A2-nature-4423",
+      "headword": "nature",
+      "level": "A2"
+    },
+    {
+      "id": "A2-nearly-4435",
+      "headword": "nearly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-necessary-4438",
+      "headword": "necessary",
+      "level": "A2"
+    },
+    {
+      "id": "A2-need-4445",
+      "headword": "need",
+      "level": "A2"
+    },
+    {
+      "id": "A2-negative-4449",
+      "headword": "negative",
+      "level": "A2"
+    },
+    {
+      "id": "A2-nervous-4464",
+      "headword": "nervous",
+      "level": "A2"
+    },
+    {
+      "id": "A2-net-4468",
+      "headword": "net",
+      "level": "A2"
+    },
+    {
+      "id": "A2-next-4484",
+      "headword": "next",
+      "level": "A2"
+    },
+    {
+      "id": "A2-next-4485",
+      "headword": "next",
+      "level": "A2"
+    },
+    {
+      "id": "A2-next to-4488",
+      "headword": "next to",
+      "level": "A2"
+    },
+    {
+      "id": "A2-no one-4503",
+      "headword": "no one",
+      "level": "A2"
+    },
+    {
+      "id": "A2-nobody-4507",
+      "headword": "nobody",
+      "level": "A2"
+    },
+    {
+      "id": "A2-noisy-4512",
+      "headword": "noisy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-noon-4521",
+      "headword": "noon",
+      "level": "A2"
+    },
+    {
+      "id": "A2-normal-4523",
+      "headword": "normal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-north-4525",
+      "headword": "north",
+      "level": "A2"
+    },
+    {
+      "id": "A2-north-4526",
+      "headword": "north",
+      "level": "A2"
+    },
+    {
+      "id": "A2-north-4527",
+      "headword": "north",
+      "level": "A2"
+    },
+    {
+      "id": "A2-notice-4543",
+      "headword": "notice",
+      "level": "A2"
+    },
+    {
+      "id": "A2-noun-4550",
+      "headword": "noun",
+      "level": "A2"
+    },
+    {
+      "id": "A2-novel-4553",
+      "headword": "novel",
+      "level": "A2"
+    },
+    {
+      "id": "A2-nowadays-4559",
+      "headword": "nowadays",
+      "level": "A2"
+    },
+    {
+      "id": "A2-oak-4575",
+      "headword": "oak",
+      "level": "A2"
+    },
+    {
+      "id": "A2-occupation-4601",
+      "headword": "occupation",
+      "level": "A2"
+    },
+    {
+      "id": "A2-off-4610",
+      "headword": "off",
+      "level": "A2"
+    },
+    {
+      "id": "A2-offer-4616",
+      "headword": "offer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-offer-4617",
+      "headword": "offer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-official-4621",
+      "headword": "official",
+      "level": "A2"
+    },
+    {
+      "id": "A2-oil-4626",
+      "headword": "oil",
+      "level": "A2"
+    },
+    {
+      "id": "A2-olive oil-4634",
+      "headword": "olive oil",
+      "level": "A2"
+    },
+    {
+      "id": "A2-Olympic-4637",
+      "headword": "Olympic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-omelet/omelette-4639",
+      "headword": "omelet/omelette",
+      "level": "A2"
+    },
+    {
+      "id": "A2-on-4640",
+      "headword": "on",
+      "level": "A2"
+    },
+    {
+      "id": "A2-one-4646",
+      "headword": "one",
+      "level": "A2"
+    },
+    {
+      "id": "A2-onion-4648",
+      "headword": "onion",
+      "level": "A2"
+    },
+    {
+      "id": "A2-online-4649",
+      "headword": "online",
+      "level": "A2"
+    },
+    {
+      "id": "A2-online-4650",
+      "headword": "online",
+      "level": "A2"
+    },
+    {
+      "id": "A2-operate-4660",
+      "headword": "operate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-opinion-4663",
+      "headword": "opinion",
+      "level": "A2"
+    },
+    {
+      "id": "A2-opportunity-4665",
+      "headword": "opportunity",
+      "level": "A2"
+    },
+    {
+      "id": "A2-oppose-4666",
+      "headword": "oppose",
+      "level": "A2"
+    },
+    {
+      "id": "A2-opposite-4667",
+      "headword": "opposite",
+      "level": "A2"
+    },
+    {
+      "id": "A2-opposite-4670",
+      "headword": "opposite",
+      "level": "A2"
+    },
+    {
+      "id": "A2-order-4690",
+      "headword": "order",
+      "level": "A2"
+    },
+    {
+      "id": "A2-organize/organise-4697",
+      "headword": "organize/organise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-organized/organised-4698",
+      "headword": "organized/organised",
+      "level": "A2"
+    },
+    {
+      "id": "A2-original-4701",
+      "headword": "original",
+      "level": "A2"
+    },
+    {
+      "id": "A2-orphan-4707",
+      "headword": "orphan",
+      "level": "A2"
+    },
+    {
+      "id": "A2-other-4709",
+      "headword": "other",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ourselves-4715",
+      "headword": "ourselves",
+      "level": "A2"
+    },
+    {
+      "id": "A2-out of-4717",
+      "headword": "out of",
+      "level": "A2"
+    },
+    {
+      "id": "A2-outside-4744",
+      "headword": "outside",
+      "level": "A2"
+    },
+    {
+      "id": "A2-oven-4752",
+      "headword": "oven",
+      "level": "A2"
+    },
+    {
+      "id": "A2-over-4753",
+      "headword": "over",
+      "level": "A2"
+    },
+    {
+      "id": "A2-overseas-4771",
+      "headword": "overseas",
+      "level": "A2"
+    },
+    {
+      "id": "A2-overweight-4780",
+      "headword": "overweight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-own-4790",
+      "headword": "own",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pacific-4799",
+      "headword": "pacific",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pack-4800",
+      "headword": "pack",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pack-4801",
+      "headword": "pack",
+      "level": "A2"
+    },
+    {
+      "id": "A2-painter-4815",
+      "headword": "painter",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pal-4819",
+      "headword": "pal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pan-4824",
+      "headword": "pan",
+      "level": "A2"
+    },
+    {
+      "id": "A2-panic-4828",
+      "headword": "panic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-park-4850",
+      "headword": "park",
+      "level": "A2"
+    },
+    {
+      "id": "A2-part-4854",
+      "headword": "part",
+      "level": "A2"
+    },
+    {
+      "id": "A2-partly-4865",
+      "headword": "partly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pass-4871",
+      "headword": "pass",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pass-4872",
+      "headword": "pass",
+      "level": "A2"
+    },
+    {
+      "id": "A2-passage-4873",
+      "headword": "passage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-passenger-4874",
+      "headword": "passenger",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pasta-4884",
+      "headword": "pasta",
+      "level": "A2"
+    },
+    {
+      "id": "A2-path-4888",
+      "headword": "path",
+      "level": "A2"
+    },
+    {
+      "id": "A2-patient-4891",
+      "headword": "patient",
+      "level": "A2"
+    },
+    {
+      "id": "A2-PC-4909",
+      "headword": "PC",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pea-4910",
+      "headword": "pea",
+      "level": "A2"
+    },
+    {
+      "id": "A2-peaceful-4912",
+      "headword": "peaceful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pear-4917",
+      "headword": "pear",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pence-4933",
+      "headword": "pence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-penfriend/pen friend-4936",
+      "headword": "penfriend/pen friend",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pepper-4944",
+      "headword": "pepper",
+      "level": "A2"
+    },
+    {
+      "id": "A2-perfect-4950",
+      "headword": "perfect",
+      "level": "A2"
+    },
+    {
+      "id": "A2-perfectly-4951",
+      "headword": "perfectly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-perform-4952",
+      "headword": "perform",
+      "level": "A2"
+    },
+    {
+      "id": "A2-performance-4953",
+      "headword": "performance",
+      "level": "A2"
+    },
+    {
+      "id": "A2-perfume-4955",
+      "headword": "perfume",
+      "level": "A2"
+    },
+    {
+      "id": "A2-perhaps-4956",
+      "headword": "perhaps",
+      "level": "A2"
+    },
+    {
+      "id": "A2-permission-4962",
+      "headword": "permission",
+      "level": "A2"
+    },
+    {
+      "id": "A2-personality-4970",
+      "headword": "personality",
+      "level": "A2"
+    },
+    {
+      "id": "A2-petrol-4984",
+      "headword": "petrol",
+      "level": "A2"
+    },
+    {
+      "id": "A2-petrol station-4985",
+      "headword": "petrol station",
+      "level": "A2"
+    },
+    {
+      "id": "A2-photograph-5001",
+      "headword": "photograph",
+      "level": "A2"
+    },
+    {
+      "id": "A2-photographer-5003",
+      "headword": "photographer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-photography-5004",
+      "headword": "photography",
+      "level": "A2"
+    },
+    {
+      "id": "A2-physical-5007",
+      "headword": "physical",
+      "level": "A2"
+    },
+    {
+      "id": "A2-physically-5008",
+      "headword": "physically",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pile-5025",
+      "headword": "pile",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pilgrim-5026",
+      "headword": "pilgrim",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pill-5027",
+      "headword": "pill",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pilot-5030",
+      "headword": "pilot",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pink-5036",
+      "headword": "pink",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pity-5044",
+      "headword": "pity",
+      "level": "A2"
+    },
+    {
+      "id": "A2-planet-5053",
+      "headword": "planet",
+      "level": "A2"
+    },
+    {
+      "id": "A2-plant-5055",
+      "headword": "plant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-plastic-5057",
+      "headword": "plastic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-plate-5059",
+      "headword": "plate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-playful-5064",
+      "headword": "playful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-playground-5065",
+      "headword": "playground",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pleasant-5069",
+      "headword": "pleasant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pleased-5073",
+      "headword": "pleased",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pleasing-5074",
+      "headword": "pleasing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-plenty-5076",
+      "headword": "plenty",
+      "level": "A2"
+    },
+    {
+      "id": "A2-plural-5084",
+      "headword": "plural",
+      "level": "A2"
+    },
+    {
+      "id": "A2-plus-5087",
+      "headword": "plus",
+      "level": "A2"
+    },
+    {
+      "id": "A2-point-5095",
+      "headword": "point",
+      "level": "A2"
+    },
+    {
+      "id": "A2-police-5103",
+      "headword": "police",
+      "level": "A2"
+    },
+    {
+      "id": "A2-police officer-5104",
+      "headword": "police officer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-police station-5105",
+      "headword": "police station",
+      "level": "A2"
+    },
+    {
+      "id": "A2-policeman-5106",
+      "headword": "policeman",
+      "level": "A2"
+    },
+    {
+      "id": "A2-policewoman-5107",
+      "headword": "policewoman",
+      "level": "A2"
+    },
+    {
+      "id": "A2-polite-5111",
+      "headword": "polite",
+      "level": "A2"
+    },
+    {
+      "id": "A2-political-5114",
+      "headword": "political",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pollute-5120",
+      "headword": "pollute",
+      "level": "A2"
+    },
+    {
+      "id": "A2-popular-5130",
+      "headword": "popular",
+      "level": "A2"
+    },
+    {
+      "id": "A2-population-5133",
+      "headword": "population",
+      "level": "A2"
+    },
+    {
+      "id": "A2-portrait-5138",
+      "headword": "portrait",
+      "level": "A2"
+    },
+    {
+      "id": "A2-position-5141",
+      "headword": "position",
+      "level": "A2"
+    },
+    {
+      "id": "A2-possible-5149",
+      "headword": "possible",
+      "level": "A2"
+    },
+    {
+      "id": "A2-possibly-5150",
+      "headword": "possibly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-post-5152",
+      "headword": "post",
+      "level": "A2"
+    },
+    {
+      "id": "A2-post office-5153",
+      "headword": "post office",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pour-5168",
+      "headword": "pour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-power-5172",
+      "headword": "power",
+      "level": "A2"
+    },
+    {
+      "id": "A2-powerful-5173",
+      "headword": "powerful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-precise-5188",
+      "headword": "precise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-predict-5193",
+      "headword": "predict",
+      "level": "A2"
+    },
+    {
+      "id": "A2-prediction-5195",
+      "headword": "prediction",
+      "level": "A2"
+    },
+    {
+      "id": "A2-prefer-5199",
+      "headword": "prefer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-prepare-5213",
+      "headword": "prepare",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pressure-5232",
+      "headword": "pressure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pretend-5237",
+      "headword": "pretend",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pretty-5239",
+      "headword": "pretty",
+      "level": "A2"
+    },
+    {
+      "id": "A2-prevent-5241",
+      "headword": "prevent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pride-5250",
+      "headword": "pride",
+      "level": "A2"
+    },
+    {
+      "id": "A2-principal-5260",
+      "headword": "principal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-print-5264",
+      "headword": "print",
+      "level": "A2"
+    },
+    {
+      "id": "A2-printer-5265",
+      "headword": "printer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-private-5271",
+      "headword": "private",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pro-5275",
+      "headword": "pro",
+      "level": "A2"
+    },
+    {
+      "id": "A2-probably-5278",
+      "headword": "probably",
+      "level": "A2"
+    },
+    {
+      "id": "A2-produce-5287",
+      "headword": "produce",
+      "level": "A2"
+    },
+    {
+      "id": "A2-product-5289",
+      "headword": "product",
+      "level": "A2"
+    },
+    {
+      "id": "A2-production-5290",
+      "headword": "production",
+      "level": "A2"
+    },
+    {
+      "id": "A2-professional-5293",
+      "headword": "professional",
+      "level": "A2"
+    },
+    {
+      "id": "A2-progressive-5305",
+      "headword": "progressive",
+      "level": "A2"
+    },
+    {
+      "id": "A2-promise-5314",
+      "headword": "promise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pronounce-5323",
+      "headword": "pronounce",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pronunciation-5324",
+      "headword": "pronunciation",
+      "level": "A2"
+    },
+    {
+      "id": "A2-proper-5326",
+      "headword": "proper",
+      "level": "A2"
+    },
+    {
+      "id": "A2-provide-5350",
+      "headword": "provide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-psychologist-5357",
+      "headword": "psychologist",
+      "level": "A2"
+    },
+    {
+      "id": "A2-public-5361",
+      "headword": "public",
+      "level": "A2"
+    },
+    {
+      "id": "A2-publish-5367",
+      "headword": "publish",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pull-5370",
+      "headword": "pull",
+      "level": "A2"
+    },
+    {
+      "id": "A2-punctuation-5379",
+      "headword": "punctuation",
+      "level": "A2"
+    },
+    {
+      "id": "A2-purple-5388",
+      "headword": "purple",
+      "level": "A2"
+    },
+    {
+      "id": "A2-purpose-5390",
+      "headword": "purpose",
+      "level": "A2"
+    },
+    {
+      "id": "A2-pursue-5393",
+      "headword": "pursue",
+      "level": "A2"
+    },
+    {
+      "id": "A2-quality-5405",
+      "headword": "quality",
+      "level": "A2"
+    },
+    {
+      "id": "A2-queen-5413",
+      "headword": "queen",
+      "level": "A2"
+    },
+    {
+      "id": "A2-quick-5422",
+      "headword": "quick",
+      "level": "A2"
+    },
+    {
+      "id": "A2-quietly-5426",
+      "headword": "quietly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-quit-5428",
+      "headword": "quit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-quite-5429",
+      "headword": "quite",
+      "level": "A2"
+    },
+    {
+      "id": "A2-quiz-5430",
+      "headword": "quiz",
+      "level": "A2"
+    },
+    {
+      "id": "A2-racket-5442",
+      "headword": "racket",
+      "level": "A2"
+    },
+    {
+      "id": "A2-raincoat-5459",
+      "headword": "raincoat",
+      "level": "A2"
+    },
+    {
+      "id": "A2-raise-5464",
+      "headword": "raise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-range-5468",
+      "headword": "range",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rap-5472",
+      "headword": "rap",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rate-5483",
+      "headword": "rate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rather-5485",
+      "headword": "rather",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rating-5486",
+      "headword": "rating",
+      "level": "A2"
+    },
+    {
+      "id": "A2-raw-5491",
+      "headword": "raw",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ray-5492",
+      "headword": "ray",
+      "level": "A2"
+    },
+    {
+      "id": "A2-reach-5496",
+      "headword": "reach",
+      "level": "A2"
+    },
+    {
+      "id": "A2-realize/realise-5510",
+      "headword": "realize/realise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-receipt-5522",
+      "headword": "receipt",
+      "level": "A2"
+    },
+    {
+      "id": "A2-receive-5523",
+      "headword": "receive",
+      "level": "A2"
+    },
+    {
+      "id": "A2-recent-5524",
+      "headword": "recent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-recently-5525",
+      "headword": "recently",
+      "level": "A2"
+    },
+    {
+      "id": "A2-receptionist-5527",
+      "headword": "receptionist",
+      "level": "A2"
+    },
+    {
+      "id": "A2-record-5542",
+      "headword": "record",
+      "level": "A2"
+    },
+    {
+      "id": "A2-recycle-5549",
+      "headword": "recycle",
+      "level": "A2"
+    },
+    {
+      "id": "A2-red-5553",
+      "headword": "red",
+      "level": "A2"
+    },
+    {
+      "id": "A2-refer-5560",
+      "headword": "refer",
+      "level": "A2"
+    },
+    {
+      "id": "A2-reflect-5565",
+      "headword": "reflect",
+      "level": "A2"
+    },
+    {
+      "id": "A2-refrigerator-5572",
+      "headword": "refrigerator",
+      "level": "A2"
+    },
+    {
+      "id": "A2-regret-5593",
+      "headword": "regret",
+      "level": "A2"
+    },
+    {
+      "id": "A2-regular-5595",
+      "headword": "regular",
+      "level": "A2"
+    },
+    {
+      "id": "A2-regularly-5596",
+      "headword": "regularly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-relax-5613",
+      "headword": "relax",
+      "level": "A2"
+    },
+    {
+      "id": "A2-relaxed-5615",
+      "headword": "relaxed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-release-5618",
+      "headword": "release",
+      "level": "A2"
+    },
+    {
+      "id": "A2-remain-5630",
+      "headword": "remain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-remind-5641",
+      "headword": "remind",
+      "level": "A2"
+    },
+    {
+      "id": "A2-remote-5643",
+      "headword": "remote",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rent-5647",
+      "headword": "rent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rent-5648",
+      "headword": "rent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-repair-5652",
+      "headword": "repair",
+      "level": "A2"
+    },
+    {
+      "id": "A2-repair-5653",
+      "headword": "repair",
+      "level": "A2"
+    },
+    {
+      "id": "A2-replace-5659",
+      "headword": "replace",
+      "level": "A2"
+    },
+    {
+      "id": "A2-reply-5662",
+      "headword": "reply",
+      "level": "A2"
+    },
+    {
+      "id": "A2-report-5664",
+      "headword": "report",
+      "level": "A2"
+    },
+    {
+      "id": "A2-represent-5667",
+      "headword": "represent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-request-5676",
+      "headword": "request",
+      "level": "A2"
+    },
+    {
+      "id": "A2-research-5682",
+      "headword": "research",
+      "level": "A2"
+    },
+    {
+      "id": "A2-response-5710",
+      "headword": "response",
+      "level": "A2"
+    },
+    {
+      "id": "A2-retire-5728",
+      "headword": "retire",
+      "level": "A2"
+    },
+    {
+      "id": "A2-retired-5729",
+      "headword": "retired",
+      "level": "A2"
+    },
+    {
+      "id": "A2-return-5735",
+      "headword": "return",
+      "level": "A2"
+    },
+    {
+      "id": "A2-return-5736",
+      "headword": "return",
+      "level": "A2"
+    },
+    {
+      "id": "A2-reunion-5739",
+      "headword": "reunion",
+      "level": "A2"
+    },
+    {
+      "id": "A2-reveal-5740",
+      "headword": "reveal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rhythm-5761",
+      "headword": "rhythm",
+      "level": "A2"
+    },
+    {
+      "id": "A2-right-5777",
+      "headword": "right",
+      "level": "A2"
+    },
+    {
+      "id": "A2-right-hand-5779",
+      "headword": "right-hand",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ring-5782",
+      "headword": "ring",
+      "level": "A2"
+    },
+    {
+      "id": "A2-road-5795",
+      "headword": "road",
+      "level": "A2"
+    },
+    {
+      "id": "A2-roast-5800",
+      "headword": "roast",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rob-5801",
+      "headword": "rob",
+      "level": "A2"
+    },
+    {
+      "id": "A2-robbery-5802",
+      "headword": "robbery",
+      "level": "A2"
+    },
+    {
+      "id": "A2-robin-5803",
+      "headword": "robin",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rock-5805",
+      "headword": "rock",
+      "level": "A2"
+    },
+    {
+      "id": "A2-roll-5810",
+      "headword": "roll",
+      "level": "A2"
+    },
+    {
+      "id": "A2-romance-5813",
+      "headword": "romance",
+      "level": "A2"
+    },
+    {
+      "id": "A2-romantic-5814",
+      "headword": "romantic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-roof-5815",
+      "headword": "roof",
+      "level": "A2"
+    },
+    {
+      "id": "A2-root-5819",
+      "headword": "root",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rope-5820",
+      "headword": "rope",
+      "level": "A2"
+    },
+    {
+      "id": "A2-roughly-5825",
+      "headword": "roughly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-round-5827",
+      "headword": "round",
+      "level": "A2"
+    },
+    {
+      "id": "A2-roundabout-5831",
+      "headword": "roundabout",
+      "level": "A2"
+    },
+    {
+      "id": "A2-royal-5836",
+      "headword": "royal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rugby-5845",
+      "headword": "rugby",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ruin-5847",
+      "headword": "ruin",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rumor/rumour-5852",
+      "headword": "rumor/rumour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-runner-5856",
+      "headword": "runner",
+      "level": "A2"
+    },
+    {
+      "id": "A2-running-5857",
+      "headword": "running",
+      "level": "A2"
+    },
+    {
+      "id": "A2-rush-5860",
+      "headword": "rush",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sadly-5868",
+      "headword": "sadly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-safe-5871",
+      "headword": "safe",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sailing-5879",
+      "headword": "sailing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sake-5881",
+      "headword": "sake",
+      "level": "A2"
+    },
+    {
+      "id": "A2-salt-5892",
+      "headword": "salt",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sample-5897",
+      "headword": "sample",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sandy-5902",
+      "headword": "sandy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-satisfy-5909",
+      "headword": "satisfy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sauce-5911",
+      "headword": "sauce",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sausage-5914",
+      "headword": "sausage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-scale-5921",
+      "headword": "scale",
+      "level": "A2"
+    },
+    {
+      "id": "A2-scarf-5929",
+      "headword": "scarf",
+      "level": "A2"
+    },
+    {
+      "id": "A2-scene-5933",
+      "headword": "scene",
+      "level": "A2"
+    },
+    {
+      "id": "A2-scenery-5934",
+      "headword": "scenery",
+      "level": "A2"
+    },
+    {
+      "id": "A2-schedule-5937",
+      "headword": "schedule",
+      "level": "A2"
+    },
+    {
+      "id": "A2-schoolchild-5945",
+      "headword": "schoolchild",
+      "level": "A2"
+    },
+    {
+      "id": "A2-schoolwork-5949",
+      "headword": "schoolwork",
+      "level": "A2"
+    },
+    {
+      "id": "A2-scientific-5952",
+      "headword": "scientific",
+      "level": "A2"
+    },
+    {
+      "id": "A2-scissors-5955",
+      "headword": "scissors",
+      "level": "A2"
+    },
+    {
+      "id": "A2-scream-5964",
+      "headword": "scream",
+      "level": "A2"
+    },
+    {
+      "id": "A2-screen-5966",
+      "headword": "screen",
+      "level": "A2"
+    },
+    {
+      "id": "A2-screw-5968",
+      "headword": "screw",
+      "level": "A2"
+    },
+    {
+      "id": "A2-script-5971",
+      "headword": "script",
+      "level": "A2"
+    },
+    {
+      "id": "A2-seafood-5977",
+      "headword": "seafood",
+      "level": "A2"
+    },
+    {
+      "id": "A2-search-5979",
+      "headword": "search",
+      "level": "A2"
+    },
+    {
+      "id": "A2-seaside-5981",
+      "headword": "seaside",
+      "level": "A2"
+    },
+    {
+      "id": "A2-second-5989",
+      "headword": "second",
+      "level": "A2"
+    },
+    {
+      "id": "A2-second-5990",
+      "headword": "second",
+      "level": "A2"
+    },
+    {
+      "id": "A2-secret-5998",
+      "headword": "secret",
+      "level": "A2"
+    },
+    {
+      "id": "A2-secretary-5999",
+      "headword": "secretary",
+      "level": "A2"
+    },
+    {
+      "id": "A2-seed-6006",
+      "headword": "seed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-seek-6007",
+      "headword": "seek",
+      "level": "A2"
+    },
+    {
+      "id": "A2-seem-6008",
+      "headword": "seem",
+      "level": "A2"
+    },
+    {
+      "id": "A2-semester-6024",
+      "headword": "semester",
+      "level": "A2"
+    },
+    {
+      "id": "A2-send-6029",
+      "headword": "send",
+      "level": "A2"
+    },
+    {
+      "id": "A2-senior-6030",
+      "headword": "senior",
+      "level": "A2"
+    },
+    {
+      "id": "A2-senior-6031",
+      "headword": "senior",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sense-6033",
+      "headword": "sense",
+      "level": "A2"
+    },
+    {
+      "id": "A2-separate-6039",
+      "headword": "separate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-seriously-6049",
+      "headword": "seriously",
+      "level": "A2"
+    },
+    {
+      "id": "A2-serve-6051",
+      "headword": "serve",
+      "level": "A2"
+    },
+    {
+      "id": "A2-set-6056",
+      "headword": "set",
+      "level": "A2"
+    },
+    {
+      "id": "A2-several-6066",
+      "headword": "several",
+      "level": "A2"
+    },
+    {
+      "id": "A2-several-6067",
+      "headword": "several",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sew-6070",
+      "headword": "sew",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shade-6076",
+      "headword": "shade",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shadow-6077",
+      "headword": "shadow",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shall-6085",
+      "headword": "shall",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shampoo-6089",
+      "headword": "shampoo",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shape-6090",
+      "headword": "shape",
+      "level": "A2"
+    },
+    {
+      "id": "A2-share-6092",
+      "headword": "share",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shell-6105",
+      "headword": "shell",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shine-6112",
+      "headword": "shine",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shock-6120",
+      "headword": "shock",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shoot-6125",
+      "headword": "shoot",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shop assistant-6129",
+      "headword": "shop assistant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shore-6136",
+      "headword": "shore",
+      "level": "A2"
+    },
+    {
+      "id": "A2-short/shorts-6139",
+      "headword": "short/shorts",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shot-6144",
+      "headword": "shot",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shout-6147",
+      "headword": "shout",
+      "level": "A2"
+    },
+    {
+      "id": "A2-show-6149",
+      "headword": "show",
+      "level": "A2"
+    },
+    {
+      "id": "A2-shut-6160",
+      "headword": "shut",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sightseeing-6169",
+      "headword": "sightseeing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-significant-6175",
+      "headword": "significant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-silence-6179",
+      "headword": "silence",
+      "level": "A2"
+    },
+    {
+      "id": "A2-silently-6181",
+      "headword": "silently",
+      "level": "A2"
+    },
+    {
+      "id": "A2-silly-6183",
+      "headword": "silly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-silver-6184",
+      "headword": "silver",
+      "level": "A2"
+    },
+    {
+      "id": "A2-silver-6185",
+      "headword": "silver",
+      "level": "A2"
+    },
+    {
+      "id": "A2-similar-6187",
+      "headword": "similar",
+      "level": "A2"
+    },
+    {
+      "id": "A2-simple-6190",
+      "headword": "simple",
+      "level": "A2"
+    },
+    {
+      "id": "A2-simply-6193",
+      "headword": "simply",
+      "level": "A2"
+    },
+    {
+      "id": "A2-since-6198",
+      "headword": "since",
+      "level": "A2"
+    },
+    {
+      "id": "A2-singing-6203",
+      "headword": "singing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-single-6204",
+      "headword": "single",
+      "level": "A2"
+    },
+    {
+      "id": "A2-singular-6206",
+      "headword": "singular",
+      "level": "A2"
+    },
+    {
+      "id": "A2-singular-6207",
+      "headword": "singular",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sink-6208",
+      "headword": "sink",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sitting room-6215",
+      "headword": "sitting room",
+      "level": "A2"
+    },
+    {
+      "id": "A2-situation-6216",
+      "headword": "situation",
+      "level": "A2"
+    },
+    {
+      "id": "A2-skate-6221",
+      "headword": "skate",
+      "level": "A2"
+    },
+    {
+      "id": "A2-skateboarding-6225",
+      "headword": "skateboarding",
+      "level": "A2"
+    },
+    {
+      "id": "A2-skating-6226",
+      "headword": "skating",
+      "level": "A2"
+    },
+    {
+      "id": "A2-ski-6229",
+      "headword": "ski",
+      "level": "A2"
+    },
+    {
+      "id": "A2-skiing-6231",
+      "headword": "skiing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-slave-6250",
+      "headword": "slave",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sleepless-6254",
+      "headword": "sleepless",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sleepy-6255",
+      "headword": "sleepy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-slice-6257",
+      "headword": "slice",
+      "level": "A2"
+    },
+    {
+      "id": "A2-slide-6259",
+      "headword": "slide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-slim-6264",
+      "headword": "slim",
+      "level": "A2"
+    },
+    {
+      "id": "A2-slowly-6275",
+      "headword": "slowly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-smoke-6285",
+      "headword": "smoke",
+      "level": "A2"
+    },
+    {
+      "id": "A2-smooth-6289",
+      "headword": "smooth",
+      "level": "A2"
+    },
+    {
+      "id": "A2-smoothly-6290",
+      "headword": "smoothly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-snack-6291",
+      "headword": "snack",
+      "level": "A2"
+    },
+    {
+      "id": "A2-snow-6302",
+      "headword": "snow",
+      "level": "A2"
+    },
+    {
+      "id": "A2-snowboarding-6305",
+      "headword": "snowboarding",
+      "level": "A2"
+    },
+    {
+      "id": "A2-so-6308",
+      "headword": "so",
+      "level": "A2"
+    },
+    {
+      "id": "A2-soap-6314",
+      "headword": "soap",
+      "level": "A2"
+    },
+    {
+      "id": "A2-society-6325",
+      "headword": "society",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sock-6326",
+      "headword": "sock",
+      "level": "A2"
+    },
+    {
+      "id": "A2-soda-6327",
+      "headword": "soda",
+      "level": "A2"
+    },
+    {
+      "id": "A2-soft-6329",
+      "headword": "soft",
+      "level": "A2"
+    },
+    {
+      "id": "A2-soft drink-6330",
+      "headword": "soft drink",
+      "level": "A2"
+    },
+    {
+      "id": "A2-softly-6331",
+      "headword": "softly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-software-6333",
+      "headword": "software",
+      "level": "A2"
+    },
+    {
+      "id": "A2-soldier-6337",
+      "headword": "soldier",
+      "level": "A2"
+    },
+    {
+      "id": "A2-solution-6344",
+      "headword": "solution",
+      "level": "A2"
+    },
+    {
+      "id": "A2-somebody-6349",
+      "headword": "somebody",
+      "level": "A2"
+    },
+    {
+      "id": "A2-someday-6350",
+      "headword": "someday",
+      "level": "A2"
+    },
+    {
+      "id": "A2-somewhere-6358",
+      "headword": "somewhere",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sound-6374",
+      "headword": "sound",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sound-6375",
+      "headword": "sound",
+      "level": "A2"
+    },
+    {
+      "id": "A2-source-6379",
+      "headword": "source",
+      "level": "A2"
+    },
+    {
+      "id": "A2-south-6380",
+      "headword": "south",
+      "level": "A2"
+    },
+    {
+      "id": "A2-south-6381",
+      "headword": "south",
+      "level": "A2"
+    },
+    {
+      "id": "A2-south-6382",
+      "headword": "south",
+      "level": "A2"
+    },
+    {
+      "id": "A2-space-6393",
+      "headword": "space",
+      "level": "A2"
+    },
+    {
+      "id": "A2-spaceship-6394",
+      "headword": "spaceship",
+      "level": "A2"
+    },
+    {
+      "id": "A2-spaghetti-6395",
+      "headword": "spaghetti",
+      "level": "A2"
+    },
+    {
+      "id": "A2-speaker-6405",
+      "headword": "speaker",
+      "level": "A2"
+    },
+    {
+      "id": "A2-specific-6412",
+      "headword": "specific",
+      "level": "A2"
+    },
+    {
+      "id": "A2-speed-6419",
+      "headword": "speed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-spell-6423",
+      "headword": "spell",
+      "level": "A2"
+    },
+    {
+      "id": "A2-spill-6431",
+      "headword": "spill",
+      "level": "A2"
+    },
+    {
+      "id": "A2-splash-6439",
+      "headword": "splash",
+      "level": "A2"
+    },
+    {
+      "id": "A2-split-6441",
+      "headword": "split",
+      "level": "A2"
+    },
+    {
+      "id": "A2-spoon-6450",
+      "headword": "spoon",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sports center/sports centre-6453",
+      "headword": "sports center/sports centre",
+      "level": "A2"
+    },
+    {
+      "id": "A2-spread-6459",
+      "headword": "spread",
+      "level": "A2"
+    },
+    {
+      "id": "A2-square-6467",
+      "headword": "square",
+      "level": "A2"
+    },
+    {
+      "id": "A2-square-6468",
+      "headword": "square",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stadium-6476",
+      "headword": "stadium",
+      "level": "A2"
+    },
+    {
+      "id": "A2-staff-6477",
+      "headword": "staff",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stair-6482",
+      "headword": "stair",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stamp-6486",
+      "headword": "stamp",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stand-6489",
+      "headword": "stand",
+      "level": "A2"
+    },
+    {
+      "id": "A2-state-6505",
+      "headword": "state",
+      "level": "A2"
+    },
+    {
+      "id": "A2-statement-6507",
+      "headword": "statement",
+      "level": "A2"
+    },
+    {
+      "id": "A2-statue-6512",
+      "headword": "statue",
+      "level": "A2"
+    },
+    {
+      "id": "A2-steak-6518",
+      "headword": "steak",
+      "level": "A2"
+    },
+    {
+      "id": "A2-steal-6519",
+      "headword": "steal",
+      "level": "A2"
+    },
+    {
+      "id": "A2-step-6527",
+      "headword": "step",
+      "level": "A2"
+    },
+    {
+      "id": "A2-still-6540",
+      "headword": "still",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stomach-6551",
+      "headword": "stomach",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stomachache-6552",
+      "headword": "stomachache",
+      "level": "A2"
+    },
+    {
+      "id": "A2-storm-6563",
+      "headword": "storm",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stove-6567",
+      "headword": "stove",
+      "level": "A2"
+    },
+    {
+      "id": "A2-straight-6568",
+      "headword": "straight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stranger-6578",
+      "headword": "stranger",
+      "level": "A2"
+    },
+    {
+      "id": "A2-strategy-6581",
+      "headword": "strategy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-strength-6587",
+      "headword": "strength",
+      "level": "A2"
+    },
+    {
+      "id": "A2-strike-6598",
+      "headword": "strike",
+      "level": "A2"
+    },
+    {
+      "id": "A2-string-6601",
+      "headword": "string",
+      "level": "A2"
+    },
+    {
+      "id": "A2-strongly-6609",
+      "headword": "strongly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-structure-6610",
+      "headword": "structure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-study-6618",
+      "headword": "study",
+      "level": "A2"
+    },
+    {
+      "id": "A2-stuff-6620",
+      "headword": "stuff",
+      "level": "A2"
+    },
+    {
+      "id": "A2-style-6627",
+      "headword": "style",
+      "level": "A2"
+    },
+    {
+      "id": "A2-succeed-6649",
+      "headword": "succeed",
+      "level": "A2"
+    },
+    {
+      "id": "A2-success-6650",
+      "headword": "success",
+      "level": "A2"
+    },
+    {
+      "id": "A2-successfully-6652",
+      "headword": "successfully",
+      "level": "A2"
+    },
+    {
+      "id": "A2-such-6654",
+      "headword": "such",
+      "level": "A2"
+    },
+    {
+      "id": "A2-such-6655",
+      "headword": "such",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sudden-6657",
+      "headword": "sudden",
+      "level": "A2"
+    },
+    {
+      "id": "A2-suggest-6666",
+      "headword": "suggest",
+      "level": "A2"
+    },
+    {
+      "id": "A2-suit-6669",
+      "headword": "suit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-suit-6670",
+      "headword": "suit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-suitable-6671",
+      "headword": "suitable",
+      "level": "A2"
+    },
+    {
+      "id": "A2-suitcase-6673",
+      "headword": "suitcase",
+      "level": "A2"
+    },
+    {
+      "id": "A2-summary-6677",
+      "headword": "summary",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sunflower-6685",
+      "headword": "sunflower",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sunglasses-6686",
+      "headword": "sunglasses",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sunlight-6687",
+      "headword": "sunlight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-superlative-6696",
+      "headword": "superlative",
+      "level": "A2"
+    },
+    {
+      "id": "A2-superstar-6699",
+      "headword": "superstar",
+      "level": "A2"
+    },
+    {
+      "id": "A2-supper-6704",
+      "headword": "supper",
+      "level": "A2"
+    },
+    {
+      "id": "A2-support-6709",
+      "headword": "support",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sure-6717",
+      "headword": "sure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-surf-6720",
+      "headword": "surf",
+      "level": "A2"
+    },
+    {
+      "id": "A2-surfing-6722",
+      "headword": "surfing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-surname-6726",
+      "headword": "surname",
+      "level": "A2"
+    },
+    {
+      "id": "A2-surprised-6729",
+      "headword": "surprised",
+      "level": "A2"
+    },
+    {
+      "id": "A2-surprising-6730",
+      "headword": "surprising",
+      "level": "A2"
+    },
+    {
+      "id": "A2-survive-6739",
+      "headword": "survive",
+      "level": "A2"
+    },
+    {
+      "id": "A2-swallow-6748",
+      "headword": "swallow",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sweat-6753",
+      "headword": "sweat",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sweater-6754",
+      "headword": "sweater",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sweet-6758",
+      "headword": "sweet",
+      "level": "A2"
+    },
+    {
+      "id": "A2-sweetheart-6759",
+      "headword": "sweetheart",
+      "level": "A2"
+    },
+    {
+      "id": "A2-swimming costume-6766",
+      "headword": "swimming costume",
+      "level": "A2"
+    },
+    {
+      "id": "A2-swimsuit-6768",
+      "headword": "swimsuit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-symbol-6776",
+      "headword": "symbol",
+      "level": "A2"
+    },
+    {
+      "id": "A2-symphony-6781",
+      "headword": "symphony",
+      "level": "A2"
+    },
+    {
+      "id": "A2-system-6785",
+      "headword": "system",
+      "level": "A2"
+    },
+    {
+      "id": "A2-table tennis-6788",
+      "headword": "table tennis",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tablespoon-6790",
+      "headword": "tablespoon",
+      "level": "A2"
+    },
+    {
+      "id": "A2-talent-6804",
+      "headword": "talent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tap-6814",
+      "headword": "tap",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tape-6816",
+      "headword": "tape",
+      "level": "A2"
+    },
+    {
+      "id": "A2-target-6818",
+      "headword": "target",
+      "level": "A2"
+    },
+    {
+      "id": "A2-task-6819",
+      "headword": "task",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tear-6836",
+      "headword": "tear",
+      "level": "A2"
+    },
+    {
+      "id": "A2-teenage-6847",
+      "headword": "teenage",
+      "level": "A2"
+    },
+    {
+      "id": "A2-teenager-6848",
+      "headword": "teenager",
+      "level": "A2"
+    },
+    {
+      "id": "A2-telephone-6852",
+      "headword": "telephone",
+      "level": "A2"
+    },
+    {
+      "id": "A2-temperature-6859",
+      "headword": "temperature",
+      "level": "A2"
+    },
+    {
+      "id": "A2-terrify-6883",
+      "headword": "terrify",
+      "level": "A2"
+    },
+    {
+      "id": "A2-terrorist-6888",
+      "headword": "terrorist",
+      "level": "A2"
+    },
+    {
+      "id": "A2-text-6894",
+      "headword": "text",
+      "level": "A2"
+    },
+    {
+      "id": "A2-text-6895",
+      "headword": "text",
+      "level": "A2"
+    },
+    {
+      "id": "A2-text message-6896",
+      "headword": "text message",
+      "level": "A2"
+    },
+    {
+      "id": "A2-textbook-6897",
+      "headword": "textbook",
+      "level": "A2"
+    },
+    {
+      "id": "A2-theirs-6911",
+      "headword": "theirs",
+      "level": "A2"
+    },
+    {
+      "id": "A2-themselves-6914",
+      "headword": "themselves",
+      "level": "A2"
+    },
+    {
+      "id": "A2-therefore-6922",
+      "headword": "therefore",
+      "level": "A2"
+    },
+    {
+      "id": "A2-thief-6931",
+      "headword": "thief",
+      "level": "A2"
+    },
+    {
+      "id": "A2-third-6937",
+      "headword": "third",
+      "level": "A2"
+    },
+    {
+      "id": "A2-thirsty-6942",
+      "headword": "thirsty",
+      "level": "A2"
+    },
+    {
+      "id": "A2-though-6952",
+      "headword": "though",
+      "level": "A2"
+    },
+    {
+      "id": "A2-thought-6953",
+      "headword": "thought",
+      "level": "A2"
+    },
+    {
+      "id": "A2-thousand-6956",
+      "headword": "thousand",
+      "level": "A2"
+    },
+    {
+      "id": "A2-throw-6971",
+      "headword": "throw",
+      "level": "A2"
+    },
+    {
+      "id": "A2-thunderstorm-6976",
+      "headword": "thunderstorm",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tidy-6984",
+      "headword": "tidy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tidy-6985",
+      "headword": "tidy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tie-6986",
+      "headword": "tie",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tights-6994",
+      "headword": "tights",
+      "level": "A2"
+    },
+    {
+      "id": "A2-till-6997",
+      "headword": "till",
+      "level": "A2"
+    },
+    {
+      "id": "A2-timetable-7004",
+      "headword": "timetable",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tip-7008",
+      "headword": "tip",
+      "level": "A2"
+    },
+    {
+      "id": "A2-title-7017",
+      "headword": "title",
+      "level": "A2"
+    },
+    {
+      "id": "A2-toast-7020",
+      "headword": "toast",
+      "level": "A2"
+    },
+    {
+      "id": "A2-toe-7024",
+      "headword": "toe",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tone-7037",
+      "headword": "tone",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tonight-7040",
+      "headword": "tonight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-toothache-7044",
+      "headword": "toothache",
+      "level": "A2"
+    },
+    {
+      "id": "A2-toothbrush-7045",
+      "headword": "toothbrush",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tour-7061",
+      "headword": "tour",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tour guide-7063",
+      "headword": "tour guide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tourist-7065",
+      "headword": "tourist",
+      "level": "A2"
+    },
+    {
+      "id": "A2-toward/towards-7067",
+      "headword": "toward/towards",
+      "level": "A2"
+    },
+    {
+      "id": "A2-track-7075",
+      "headword": "track",
+      "level": "A2"
+    },
+    {
+      "id": "A2-trade-7078",
+      "headword": "trade",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tradition-7081",
+      "headword": "tradition",
+      "level": "A2"
+    },
+    {
+      "id": "A2-traditional-7082",
+      "headword": "traditional",
+      "level": "A2"
+    },
+    {
+      "id": "A2-traffic-7084",
+      "headword": "traffic",
+      "level": "A2"
+    },
+    {
+      "id": "A2-traffic light-7086",
+      "headword": "traffic light",
+      "level": "A2"
+    },
+    {
+      "id": "A2-train-7093",
+      "headword": "train",
+      "level": "A2"
+    },
+    {
+      "id": "A2-training-7096",
+      "headword": "training",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tram-7099",
+      "headword": "tram",
+      "level": "A2"
+    },
+    {
+      "id": "A2-trap-7122",
+      "headword": "trap",
+      "level": "A2"
+    },
+    {
+      "id": "A2-travel-7124",
+      "headword": "travel",
+      "level": "A2"
+    },
+    {
+      "id": "A2-traveler/traveller-7127",
+      "headword": "traveler/traveller",
+      "level": "A2"
+    },
+    {
+      "id": "A2-treasure-7131",
+      "headword": "treasure",
+      "level": "A2"
+    },
+    {
+      "id": "A2-trick-7146",
+      "headword": "trick",
+      "level": "A2"
+    },
+    {
+      "id": "A2-trouble-7161",
+      "headword": "trouble",
+      "level": "A2"
+    },
+    {
+      "id": "A2-truly-7167",
+      "headword": "truly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-trust-7171",
+      "headword": "trust",
+      "level": "A2"
+    },
+    {
+      "id": "A2-truth-7174",
+      "headword": "truth",
+      "level": "A2"
+    },
+    {
+      "id": "A2-try-7178",
+      "headword": "try",
+      "level": "A2"
+    },
+    {
+      "id": "A2-tune-7190",
+      "headword": "tune",
+      "level": "A2"
+    },
+    {
+      "id": "A2-twice-7203",
+      "headword": "twice",
+      "level": "A2"
+    },
+    {
+      "id": "A2-uncertain-7232",
+      "headword": "uncertain",
+      "level": "A2"
+    },
+    {
+      "id": "A2-uncomfortable-7239",
+      "headword": "uncomfortable",
+      "level": "A2"
+    },
+    {
+      "id": "A2-understand-7259",
+      "headword": "understand",
+      "level": "A2"
+    },
+    {
+      "id": "A2-underwater-7264",
+      "headword": "underwater",
+      "level": "A2"
+    },
+    {
+      "id": "A2-uneasy-7274",
+      "headword": "uneasy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unfair-7281",
+      "headword": "unfair",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unforgettable-7288",
+      "headword": "unforgettable",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unfortunately-7290",
+      "headword": "unfortunately",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unhappy-7294",
+      "headword": "unhappy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unhealthy-7295",
+      "headword": "unhealthy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-uniform-7298",
+      "headword": "uniform",
+      "level": "A2"
+    },
+    {
+      "id": "A2-uniform-7299",
+      "headword": "uniform",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unimportant-7303",
+      "headword": "unimportant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unit-7308",
+      "headword": "unit",
+      "level": "A2"
+    },
+    {
+      "id": "A2-university-7313",
+      "headword": "university",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unknown-7316",
+      "headword": "unknown",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unlike-7318",
+      "headword": "unlike",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unnecessary-7328",
+      "headword": "unnecessary",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unpleasant-7331",
+      "headword": "unpleasant",
+      "level": "A2"
+    },
+    {
+      "id": "A2-unusual-7355",
+      "headword": "unusual",
+      "level": "A2"
+    },
+    {
+      "id": "A2-up-7363",
+      "headword": "up",
+      "level": "A2"
+    },
+    {
+      "id": "A2-upon-7372",
+      "headword": "upon",
+      "level": "A2"
+    },
+    {
+      "id": "A2-upset-7376",
+      "headword": "upset",
+      "level": "A2"
+    },
+    {
+      "id": "A2-upstairs-7381",
+      "headword": "upstairs",
+      "level": "A2"
+    },
+    {
+      "id": "A2-use-7392",
+      "headword": "use",
+      "level": "A2"
+    },
+    {
+      "id": "A2-used-7394",
+      "headword": "used",
+      "level": "A2"
+    },
+    {
+      "id": "A2-useful-7396",
+      "headword": "useful",
+      "level": "A2"
+    },
+    {
+      "id": "A2-usual-7400",
+      "headword": "usual",
+      "level": "A2"
+    },
+    {
+      "id": "A2-valley-7414",
+      "headword": "valley",
+      "level": "A2"
+    },
+    {
+      "id": "A2-value-7416",
+      "headword": "value",
+      "level": "A2"
+    },
+    {
+      "id": "A2-verb-7435",
+      "headword": "verb",
+      "level": "A2"
+    },
+    {
+      "id": "A2-video game-7456",
+      "headword": "video game",
+      "level": "A2"
+    },
+    {
+      "id": "A2-view-7457",
+      "headword": "view",
+      "level": "A2"
+    },
+    {
+      "id": "A2-village-7465",
+      "headword": "village",
+      "level": "A2"
+    },
+    {
+      "id": "A2-violent-7470",
+      "headword": "violent",
+      "level": "A2"
+    },
+    {
+      "id": "A2-violin-7472",
+      "headword": "violin",
+      "level": "A2"
+    },
+    {
+      "id": "A2-visitor-7484",
+      "headword": "visitor",
+      "level": "A2"
+    },
+    {
+      "id": "A2-vocabulary-7491",
+      "headword": "vocabulary",
+      "level": "A2"
+    },
+    {
+      "id": "A2-voice-7493",
+      "headword": "voice",
+      "level": "A2"
+    },
+    {
+      "id": "A2-walking-7520",
+      "headword": "walking",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wallet-7523",
+      "headword": "wallet",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wander-7525",
+      "headword": "wander",
+      "level": "A2"
+    },
+    {
+      "id": "A2-washing machine-7545",
+      "headword": "washing machine",
+      "level": "A2"
+    },
+    {
+      "id": "A2-washing-up-7546",
+      "headword": "washing-up",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wave-7558",
+      "headword": "wave",
+      "level": "A2"
+    },
+    {
+      "id": "A2-weak-7564",
+      "headword": "weak",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wealth-7568",
+      "headword": "wealth",
+      "level": "A2"
+    },
+    {
+      "id": "A2-web-7577",
+      "headword": "web",
+      "level": "A2"
+    },
+    {
+      "id": "A2-web page-7578",
+      "headword": "web page",
+      "level": "A2"
+    },
+    {
+      "id": "A2-website-7580",
+      "headword": "website",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wedding-7582",
+      "headword": "wedding",
+      "level": "A2"
+    },
+    {
+      "id": "A2-weekday-7586",
+      "headword": "weekday",
+      "level": "A2"
+    },
+    {
+      "id": "A2-weekly-7588",
+      "headword": "weekly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-weekly-7589",
+      "headword": "weekly",
+      "level": "A2"
+    },
+    {
+      "id": "A2-weep-7590",
+      "headword": "weep",
+      "level": "A2"
+    },
+    {
+      "id": "A2-weigh-7591",
+      "headword": "weigh",
+      "level": "A2"
+    },
+    {
+      "id": "A2-weight-7592",
+      "headword": "weight",
+      "level": "A2"
+    },
+    {
+      "id": "A2-well-known-7604",
+      "headword": "well-known",
+      "level": "A2"
+    },
+    {
+      "id": "A2-west-7608",
+      "headword": "west",
+      "level": "A2"
+    },
+    {
+      "id": "A2-west-7609",
+      "headword": "west",
+      "level": "A2"
+    },
+    {
+      "id": "A2-west-7610",
+      "headword": "west",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wet-7613",
+      "headword": "wet",
+      "level": "A2"
+    },
+    {
+      "id": "A2-whatever-7618",
+      "headword": "whatever",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wheelchair-7622",
+      "headword": "wheelchair",
+      "level": "A2"
+    },
+    {
+      "id": "A2-while-7636",
+      "headword": "while",
+      "level": "A2"
+    },
+    {
+      "id": "A2-whole-7648",
+      "headword": "whole",
+      "level": "A2"
+    },
+    {
+      "id": "A2-whom-7650",
+      "headword": "whom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wide-7654",
+      "headword": "wide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wide-7655",
+      "headword": "wide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-widely-7656",
+      "headword": "widely",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wild-7662",
+      "headword": "wild",
+      "level": "A2"
+    },
+    {
+      "id": "A2-windy-7680",
+      "headword": "windy",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wine-7681",
+      "headword": "wine",
+      "level": "A2"
+    },
+    {
+      "id": "A2-winner-7684",
+      "headword": "winner",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wisdom-7689",
+      "headword": "wisdom",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wise-7690",
+      "headword": "wise",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wish-7692",
+      "headword": "wish",
+      "level": "A2"
+    },
+    {
+      "id": "A2-within-7698",
+      "headword": "within",
+      "level": "A2"
+    },
+    {
+      "id": "A2-without-7699",
+      "headword": "without",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wonder-7707",
+      "headword": "wonder",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wood-7710",
+      "headword": "wood",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wooden-7712",
+      "headword": "wooden",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wool-7713",
+      "headword": "wool",
+      "level": "A2"
+    },
+    {
+      "id": "A2-worldwide-7731",
+      "headword": "worldwide",
+      "level": "A2"
+    },
+    {
+      "id": "A2-worried-7735",
+      "headword": "worried",
+      "level": "A2"
+    },
+    {
+      "id": "A2-worry-7737",
+      "headword": "worry",
+      "level": "A2"
+    },
+    {
+      "id": "A2-worse-7739",
+      "headword": "worse",
+      "level": "A2"
+    },
+    {
+      "id": "A2-worse-7740",
+      "headword": "worse",
+      "level": "A2"
+    },
+    {
+      "id": "A2-worst-7744",
+      "headword": "worst",
+      "level": "A2"
+    },
+    {
+      "id": "A2-writing-7762",
+      "headword": "writing",
+      "level": "A2"
+    },
+    {
+      "id": "A2-wrong-7765",
+      "headword": "wrong",
+      "level": "A2"
+    },
+    {
+      "id": "A2-yeah-7772",
+      "headword": "yeah",
+      "level": "A2"
+    },
+    {
+      "id": "A2-youth-7791",
+      "headword": "youth",
+      "level": "A2"
+    },
+    {
+      "id": "A2-zone-7796",
+      "headword": "zone",
+      "level": "A2"
+    }
+  ]
+}

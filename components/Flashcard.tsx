@@ -23,9 +23,12 @@ export default function Flashcard({ word, onMarkLearned, showControls = true }: 
 
     return (
         <div className={styles.container}>
-            <div
+            <button
+                type="button"
                 className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}
                 onClick={handleFlip}
+                aria-pressed={isFlipped}
+                aria-label={isFlipped ? '顯示英語單詞面' : '翻轉卡片查看粵語解釋'}
                 style={{ '--level-color': levelColor } as CSSProperties}
             >
                 <div className={styles.cardInner}>
@@ -64,7 +67,7 @@ export default function Flashcard({ word, onMarkLearned, showControls = true }: 
                         <div className={styles.flipIcon}>🔄</div>
                     </div>
                 </div>
-            </div>
+            </button>
 
             {showControls && onMarkLearned && (
                 <div className={styles.controls}>

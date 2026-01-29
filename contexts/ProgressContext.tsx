@@ -10,6 +10,7 @@ interface ProgressContextType {
     addQuizScore: (score: QuizScore) => void;
     getStatistics: () => Statistics;
     resetProgress: () => void;
+    ready: boolean;
 }
 
 const ProgressContext = createContext<ProgressContextType | undefined>(undefined);
@@ -28,10 +29,12 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
     const [progress, setProgress] = useState<UserProgress>(createDefaultProgress());
     const [hydratedKey, setHydratedKey] = useState<string | null>(null);
+    const [ready, setReady] = useState(false);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
+        setReady(false);
         const savedProgress = localStorage.getItem(storageKey);
         if (savedProgress) {
             try {
@@ -52,6 +55,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
             setProgress(createDefaultProgress());
         }
         setHydratedKey(storageKey);
+        setReady(true);
     }, [storageKey]);
 
     useEffect(() => {
@@ -122,6 +126,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
                 addQuizScore,
                 getStatistics,
                 resetProgress,
+                ready,
             }}
         >
             {children}

@@ -127,6 +127,11 @@
     box-shadow: var(--shadow-sm);
 }
 
+.helper {
+    margin-top: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
 /* Quiz Screen */
 .quizHeader {
     text-align: center;
@@ -360,6 +365,31 @@
     margin-bottom: var(--spacing-lg);
 }
 
+.wrongList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.wrongItem {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+}
+
+.wrongLevel {
+    margin-left: var(--spacing-xs);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.wrongTranslation {
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
 .reviewItem {
     background: var(--bg-tertiary);
     border: 2px solid var(--border);
@@ -469,5 +499,12 @@
     .resultActions button {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .option,
+    .progressFill {
+        transition: none;
     }
 }

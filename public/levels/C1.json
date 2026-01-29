@@ -1,0 +1,5561 @@
+{
+  "version": "2026-01-29",
+  "level": "C1",
+  "words": [
+    {
+      "id": "C1-exterior-7799",
+      "headword": "exterior",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cloak-7800",
+      "headword": "cloak",
+      "level": "C1"
+    },
+    {
+      "id": "C1-timid-7801",
+      "headword": "timid",
+      "level": "C1"
+    },
+    {
+      "id": "C1-reluctantly-7802",
+      "headword": "reluctantly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-complexity-7803",
+      "headword": "complexity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-concur-7804",
+      "headword": "concur",
+      "level": "C1"
+    },
+    {
+      "id": "C1-avid-7805",
+      "headword": "avid",
+      "level": "C1"
+    },
+    {
+      "id": "C1-marvel-7806",
+      "headword": "marvel",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wing-7807",
+      "headword": "wing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-enviable-7808",
+      "headword": "enviable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-organizational-7809",
+      "headword": "organizational",
+      "level": "C1"
+    },
+    {
+      "id": "C1-psychiatrist-7810",
+      "headword": "psychiatrist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-psychiatric-7811",
+      "headword": "psychiatric",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clinical-7812",
+      "headword": "clinical",
+      "level": "C1"
+    },
+    {
+      "id": "C1-corps-7813",
+      "headword": "corps",
+      "level": "C1"
+    },
+    {
+      "id": "C1-forensic-7814",
+      "headword": "forensic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-juvenile-7815",
+      "headword": "juvenile",
+      "level": "C1"
+    },
+    {
+      "id": "C1-juvenile-7816",
+      "headword": "juvenile",
+      "level": "C1"
+    },
+    {
+      "id": "C1-jurisdiction-7817",
+      "headword": "jurisdiction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-accustomed-7818",
+      "headword": "accustomed",
+      "level": "C1"
+    },
+    {
+      "id": "C1-trauma-7819",
+      "headword": "trauma",
+      "level": "C1"
+    },
+    {
+      "id": "C1-traumatic-7820",
+      "headword": "traumatic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-constraint-7821",
+      "headword": "constraint",
+      "level": "C1"
+    },
+    {
+      "id": "C1-revealing-7822",
+      "headword": "revealing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-eccentric-7823",
+      "headword": "eccentric",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sanctity-7824",
+      "headword": "sanctity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conform-7825",
+      "headword": "conform",
+      "level": "C1"
+    },
+    {
+      "id": "C1-norms-7826",
+      "headword": "norms",
+      "level": "C1"
+    },
+    {
+      "id": "C1-quirk-7827",
+      "headword": "quirk",
+      "level": "C1"
+    },
+    {
+      "id": "C1-oddity-7828",
+      "headword": "oddity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-compel-7829",
+      "headword": "compel",
+      "level": "C1"
+    },
+    {
+      "id": "C1-compulsion-7830",
+      "headword": "compulsion",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conceive-7831",
+      "headword": "conceive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conceivable-7832",
+      "headword": "conceivable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-assertion-7833",
+      "headword": "assertion",
+      "level": "C1"
+    },
+    {
+      "id": "C1-individuality-7834",
+      "headword": "individuality",
+      "level": "C1"
+    },
+    {
+      "id": "C1-psyche-7835",
+      "headword": "psyche",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conformity-7836",
+      "headword": "conformity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unconventional-7837",
+      "headword": "unconventional",
+      "level": "C1"
+    },
+    {
+      "id": "C1-congregate-7838",
+      "headword": "congregate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rally-7839",
+      "headword": "rally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-resent-7840",
+      "headword": "resent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-self-conscious-7841",
+      "headword": "self-conscious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wary-7842",
+      "headword": "wary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stoke-7843",
+      "headword": "stoke",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dynamically-7844",
+      "headword": "dynamically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hostess-7845",
+      "headword": "hostess",
+      "level": "C1"
+    },
+    {
+      "id": "C1-perpetuate-7846",
+      "headword": "perpetuate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-naturalness-7847",
+      "headword": "naturalness",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exhibitionist-7848",
+      "headword": "exhibitionist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-isolate-7849",
+      "headword": "isolate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-isolated-7850",
+      "headword": "isolated",
+      "level": "C1"
+    },
+    {
+      "id": "C1-humble-7851",
+      "headword": "humble",
+      "level": "C1"
+    },
+    {
+      "id": "C1-humble-7852",
+      "headword": "humble",
+      "level": "C1"
+    },
+    {
+      "id": "C1-refreshingly-7853",
+      "headword": "refreshingly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-effortless-7854",
+      "headword": "effortless",
+      "level": "C1"
+    },
+    {
+      "id": "C1-vegetation-7855",
+      "headword": "vegetation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-brief-7856",
+      "headword": "brief",
+      "level": "C1"
+    },
+    {
+      "id": "C1-respite-7857",
+      "headword": "respite",
+      "level": "C1"
+    },
+    {
+      "id": "C1-suffice-7858",
+      "headword": "suffice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-purity-7859",
+      "headword": "purity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gruelling-7860",
+      "headword": "gruelling",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cast-7861",
+      "headword": "cast",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cast-7862",
+      "headword": "cast",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cast-7863",
+      "headword": "cast",
+      "level": "C1"
+    },
+    {
+      "id": "C1-comprise-7864",
+      "headword": "comprise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plaster-7865",
+      "headword": "plaster",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plaster-7866",
+      "headword": "plaster",
+      "level": "C1"
+    },
+    {
+      "id": "C1-darkroom-7867",
+      "headword": "darkroom",
+      "level": "C1"
+    },
+    {
+      "id": "C1-induct-7868",
+      "headword": "induct",
+      "level": "C1"
+    },
+    {
+      "id": "C1-induction-7869",
+      "headword": "induction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stock-7870",
+      "headword": "stock",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fossil-7871",
+      "headword": "fossil",
+      "level": "C1"
+    },
+    {
+      "id": "C1-geological-7872",
+      "headword": "geological",
+      "level": "C1"
+    },
+    {
+      "id": "C1-geologically-7873",
+      "headword": "geologically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-house-7874",
+      "headword": "house",
+      "level": "C1"
+    },
+    {
+      "id": "C1-specimen-7875",
+      "headword": "specimen",
+      "level": "C1"
+    },
+    {
+      "id": "C1-enormously-7876",
+      "headword": "enormously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gem-7877",
+      "headword": "gem",
+      "level": "C1"
+    },
+    {
+      "id": "C1-explanatory-7878",
+      "headword": "explanatory",
+      "level": "C1"
+    },
+    {
+      "id": "C1-vertical-7879",
+      "headword": "vertical",
+      "level": "C1"
+    },
+    {
+      "id": "C1-knowledgeable-7880",
+      "headword": "knowledgeable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ordinarily-7881",
+      "headword": "ordinarily",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hanging-7882",
+      "headword": "hanging",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hanging-7883",
+      "headword": "hanging",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tomb-7884",
+      "headword": "tomb",
+      "level": "C1"
+    },
+    {
+      "id": "C1-formulate-7885",
+      "headword": "formulate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-resin-7886",
+      "headword": "resin",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sacrifice-7887",
+      "headword": "sacrifice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sacrifice-7888",
+      "headword": "sacrifice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cleanly-7889",
+      "headword": "cleanly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-endorsement-7890",
+      "headword": "endorsement",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stretching-7891",
+      "headword": "stretching",
+      "level": "C1"
+    },
+    {
+      "id": "C1-continuity-7892",
+      "headword": "continuity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-shambles-7893",
+      "headword": "shambles",
+      "level": "C1"
+    },
+    {
+      "id": "C1-claustrophobic-7894",
+      "headword": "claustrophobic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-claustrophobia-7895",
+      "headword": "claustrophobia",
+      "level": "C1"
+    },
+    {
+      "id": "C1-headstrong-7896",
+      "headword": "headstrong",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tact-7897",
+      "headword": "tact",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tactful-7898",
+      "headword": "tactful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tactfully-7899",
+      "headword": "tactfully",
+      "level": "C1"
+    },
+    {
+      "id": "C1-blister-7900",
+      "headword": "blister",
+      "level": "C1"
+    },
+    {
+      "id": "C1-blister-7901",
+      "headword": "blister",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sponsorship-7902",
+      "headword": "sponsorship",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ego-7903",
+      "headword": "ego",
+      "level": "C1"
+    },
+    {
+      "id": "C1-class-7904",
+      "headword": "class",
+      "level": "C1"
+    },
+    {
+      "id": "C1-saloon-7905",
+      "headword": "saloon",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lap-7906",
+      "headword": "lap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-beforehand-7907",
+      "headword": "beforehand",
+      "level": "C1"
+    },
+    {
+      "id": "C1-slob-7908",
+      "headword": "slob",
+      "level": "C1"
+    },
+    {
+      "id": "C1-coverage-7909",
+      "headword": "coverage",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unplug-7910",
+      "headword": "unplug",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gadget-7911",
+      "headword": "gadget",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rediscover-7912",
+      "headword": "rediscover",
+      "level": "C1"
+    },
+    {
+      "id": "C1-subtly-7913",
+      "headword": "subtly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-brainwash-7914",
+      "headword": "brainwash",
+      "level": "C1"
+    },
+    {
+      "id": "C1-brainwashing-7915",
+      "headword": "brainwashing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-implicate-7916",
+      "headword": "implicate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-craft-7917",
+      "headword": "craft",
+      "level": "C1"
+    },
+    {
+      "id": "C1-malfunction-7918",
+      "headword": "malfunction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dependent-7919",
+      "headword": "dependent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wayside-7920",
+      "headword": "wayside",
+      "level": "C1"
+    },
+    {
+      "id": "C1-expire-7921",
+      "headword": "expire",
+      "level": "C1"
+    },
+    {
+      "id": "C1-con-7922",
+      "headword": "con",
+      "level": "C1"
+    },
+    {
+      "id": "C1-con-7923",
+      "headword": "con",
+      "level": "C1"
+    },
+    {
+      "id": "C1-puzzle-7924",
+      "headword": "puzzle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-damply-7925",
+      "headword": "damply",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ghostly-7926",
+      "headword": "ghostly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-carrier-7927",
+      "headword": "carrier",
+      "level": "C1"
+    },
+    {
+      "id": "C1-washtub-7928",
+      "headword": "washtub",
+      "level": "C1"
+    },
+    {
+      "id": "C1-apt-7929",
+      "headword": "apt",
+      "level": "C1"
+    },
+    {
+      "id": "C1-apt to-7930",
+      "headword": "apt to",
+      "level": "C1"
+    },
+    {
+      "id": "C1-portable-7931",
+      "headword": "portable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-portable-7932",
+      "headword": "portable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ornamental-7933",
+      "headword": "ornamental",
+      "level": "C1"
+    },
+    {
+      "id": "C1-placid-7934",
+      "headword": "placid",
+      "level": "C1"
+    },
+    {
+      "id": "C1-placidly-7935",
+      "headword": "placidly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unmanageable-7936",
+      "headword": "unmanageable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-appliance-7937",
+      "headword": "appliance",
+      "level": "C1"
+    },
+    {
+      "id": "C1-relinquish-7938",
+      "headword": "relinquish",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tedious-7939",
+      "headword": "tedious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tedium-7940",
+      "headword": "tedium",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exert-7941",
+      "headword": "exert",
+      "level": "C1"
+    },
+    {
+      "id": "C1-extortion-7942",
+      "headword": "extortion",
+      "level": "C1"
+    },
+    {
+      "id": "C1-alleviate-7943",
+      "headword": "alleviate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elaborate-7944",
+      "headword": "elaborate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elaborate-7945",
+      "headword": "elaborate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elaboration-7946",
+      "headword": "elaboration",
+      "level": "C1"
+    },
+    {
+      "id": "C1-detest-7947",
+      "headword": "detest",
+      "level": "C1"
+    },
+    {
+      "id": "C1-detestable-7948",
+      "headword": "detestable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-suds-7949",
+      "headword": "suds",
+      "level": "C1"
+    },
+    {
+      "id": "C1-agreeable-7950",
+      "headword": "agreeable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prowl-7951",
+      "headword": "prowl",
+      "level": "C1"
+    },
+    {
+      "id": "C1-speculate-7952",
+      "headword": "speculate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-speculation-7953",
+      "headword": "speculation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-speculative-7954",
+      "headword": "speculative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-peacock-7955",
+      "headword": "peacock",
+      "level": "C1"
+    },
+    {
+      "id": "C1-disdain-7956",
+      "headword": "disdain",
+      "level": "C1"
+    },
+    {
+      "id": "C1-reenact-7957",
+      "headword": "reenact",
+      "level": "C1"
+    },
+    {
+      "id": "C1-torment-7958",
+      "headword": "torment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-torment-7959",
+      "headword": "torment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-extravagance-7960",
+      "headword": "extravagance",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exploit-7961",
+      "headword": "exploit",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exploitation-7962",
+      "headword": "exploitation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-mechanism-7963",
+      "headword": "mechanism",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hence-7964",
+      "headword": "hence",
+      "level": "C1"
+    },
+    {
+      "id": "C1-offspring-7965",
+      "headword": "offspring",
+      "level": "C1"
+    },
+    {
+      "id": "C1-implicate-7966",
+      "headword": "implicate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fit-7967",
+      "headword": "fit",
+      "level": "C1"
+    },
+    {
+      "id": "C1-oblige-7968",
+      "headword": "oblige",
+      "level": "C1"
+    },
+    {
+      "id": "C1-drive-7969",
+      "headword": "drive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-drive-7970",
+      "headword": "drive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-collaborate-7971",
+      "headword": "collaborate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-collaborator-7972",
+      "headword": "collaborator",
+      "level": "C1"
+    },
+    {
+      "id": "C1-collaboration-7973",
+      "headword": "collaboration",
+      "level": "C1"
+    },
+    {
+      "id": "C1-collaborative-7974",
+      "headword": "collaborative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-showy-7975",
+      "headword": "showy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wrangle-7976",
+      "headword": "wrangle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-premise-7977",
+      "headword": "premise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-advantageous-7978",
+      "headword": "advantageous",
+      "level": "C1"
+    },
+    {
+      "id": "C1-parasite-7979",
+      "headword": "parasite",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fanciful-7980",
+      "headword": "fanciful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-poise-7981",
+      "headword": "poise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-customary-7982",
+      "headword": "customary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insightful-7983",
+      "headword": "insightful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-notable-7984",
+      "headword": "notable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-vicious-7985",
+      "headword": "vicious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-viciously-7986",
+      "headword": "viciously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pupil-7987",
+      "headword": "pupil",
+      "level": "C1"
+    },
+    {
+      "id": "C1-withdrawn-7988",
+      "headword": "withdrawn",
+      "level": "C1"
+    },
+    {
+      "id": "C1-withdrawal-7989",
+      "headword": "withdrawal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-torturous-7990",
+      "headword": "torturous",
+      "level": "C1"
+    },
+    {
+      "id": "C1-depict-7991",
+      "headword": "depict",
+      "level": "C1"
+    },
+    {
+      "id": "C1-depiction-7992",
+      "headword": "depiction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-upheaval-7993",
+      "headword": "upheaval",
+      "level": "C1"
+    },
+    {
+      "id": "C1-shortlist-7994",
+      "headword": "shortlist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-shortlist-7995",
+      "headword": "shortlist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-uneventful-7996",
+      "headword": "uneventful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pertinent-7997",
+      "headword": "pertinent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pertain to-7998",
+      "headword": "pertain to",
+      "level": "C1"
+    },
+    {
+      "id": "C1-daydream-7999",
+      "headword": "daydream",
+      "level": "C1"
+    },
+    {
+      "id": "C1-daydream-8000",
+      "headword": "daydream",
+      "level": "C1"
+    },
+    {
+      "id": "C1-protagonist-8001",
+      "headword": "protagonist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-simplicity-8002",
+      "headword": "simplicity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-blockbuster-8003",
+      "headword": "blockbuster",
+      "level": "C1"
+    },
+    {
+      "id": "C1-resonate-8004",
+      "headword": "resonate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sequel-8005",
+      "headword": "sequel",
+      "level": "C1"
+    },
+    {
+      "id": "C1-irony-8006",
+      "headword": "irony",
+      "level": "C1"
+    },
+    {
+      "id": "C1-acidic-8007",
+      "headword": "acidic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-align-8008",
+      "headword": "align",
+      "level": "C1"
+    },
+    {
+      "id": "C1-alignment-8009",
+      "headword": "alignment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-manipulation-8010",
+      "headword": "manipulation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-suitor-8011",
+      "headword": "suitor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-deceit-8012",
+      "headword": "deceit",
+      "level": "C1"
+    },
+    {
+      "id": "C1-alienate-8013",
+      "headword": "alienate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-persuasively-8014",
+      "headword": "persuasively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-compel-8015",
+      "headword": "compel",
+      "level": "C1"
+    },
+    {
+      "id": "C1-confinement-8016",
+      "headword": "confinement",
+      "level": "C1"
+    },
+    {
+      "id": "C1-minutiae-8017",
+      "headword": "minutiae",
+      "level": "C1"
+    },
+    {
+      "id": "C1-peasant-8018",
+      "headword": "peasant",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inexplicable-8019",
+      "headword": "inexplicable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inexplicably-8020",
+      "headword": "inexplicably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pigeon-8021",
+      "headword": "pigeon",
+      "level": "C1"
+    },
+    {
+      "id": "C1-harass-8022",
+      "headword": "harass",
+      "level": "C1"
+    },
+    {
+      "id": "C1-harassment-8023",
+      "headword": "harassment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-believably-8024",
+      "headword": "believably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-readable-8025",
+      "headword": "readable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cleverness-8026",
+      "headword": "cleverness",
+      "level": "C1"
+    },
+    {
+      "id": "C1-persecute-8027",
+      "headword": "persecute",
+      "level": "C1"
+    },
+    {
+      "id": "C1-persecution-8028",
+      "headword": "persecution",
+      "level": "C1"
+    },
+    {
+      "id": "C1-smug-8029",
+      "headword": "smug",
+      "level": "C1"
+    },
+    {
+      "id": "C1-smugly-8030",
+      "headword": "smugly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ferocious-8031",
+      "headword": "ferocious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ferociously-8032",
+      "headword": "ferociously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hostile-8033",
+      "headword": "hostile",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hostility-8034",
+      "headword": "hostility",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dismay-8035",
+      "headword": "dismay",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dismay-8036",
+      "headword": "dismay",
+      "level": "C1"
+    },
+    {
+      "id": "C1-methodical-8037",
+      "headword": "methodical",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ruthless-8038",
+      "headword": "ruthless",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ruthlessness-8039",
+      "headword": "ruthlessness",
+      "level": "C1"
+    },
+    {
+      "id": "C1-talkative-8040",
+      "headword": "talkative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-awe-8041",
+      "headword": "awe",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clan-8042",
+      "headword": "clan",
+      "level": "C1"
+    },
+    {
+      "id": "C1-privileged-8043",
+      "headword": "privileged",
+      "level": "C1"
+    },
+    {
+      "id": "C1-crumble-8044",
+      "headword": "crumble",
+      "level": "C1"
+    },
+    {
+      "id": "C1-crumb-8045",
+      "headword": "crumb",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pace-8046",
+      "headword": "pace",
+      "level": "C1"
+    },
+    {
+      "id": "C1-closeness-8047",
+      "headword": "closeness",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rarity-8048",
+      "headword": "rarity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-evoke-8049",
+      "headword": "evoke",
+      "level": "C1"
+    },
+    {
+      "id": "C1-repel-8050",
+      "headword": "repel",
+      "level": "C1"
+    },
+    {
+      "id": "C1-repellant-8051",
+      "headword": "repellant",
+      "level": "C1"
+    },
+    {
+      "id": "C1-repellant-8052",
+      "headword": "repellant",
+      "level": "C1"
+    },
+    {
+      "id": "C1-aqua-8053",
+      "headword": "aqua",
+      "level": "C1"
+    },
+    {
+      "id": "C1-aquarium-8054",
+      "headword": "aquarium",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insightful-8055",
+      "headword": "insightful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insightfully-8056",
+      "headword": "insightfully",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flashback-8057",
+      "headword": "flashback",
+      "level": "C1"
+    },
+    {
+      "id": "C1-self-worth-8058",
+      "headword": "self-worth",
+      "level": "C1"
+    },
+    {
+      "id": "C1-agonize-8059",
+      "headword": "agonize",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cite-8060",
+      "headword": "cite",
+      "level": "C1"
+    },
+    {
+      "id": "C1-citation-8061",
+      "headword": "citation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recite-8062",
+      "headword": "recite",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ecstasy-8063",
+      "headword": "ecstasy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ecstatic-8064",
+      "headword": "ecstatic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ecstatically-8065",
+      "headword": "ecstatically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pleasurable-8066",
+      "headword": "pleasurable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-nature-8067",
+      "headword": "nature",
+      "level": "C1"
+    },
+    {
+      "id": "C1-substantially-8068",
+      "headword": "substantially",
+      "level": "C1"
+    },
+    {
+      "id": "C1-favorably/favourably-8069",
+      "headword": "favorably/favourably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-diversity-8070",
+      "headword": "diversity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elitist-8071",
+      "headword": "elitist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-grumble-8072",
+      "headword": "grumble",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rumble-8073",
+      "headword": "rumble",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rumble-8074",
+      "headword": "rumble",
+      "level": "C1"
+    },
+    {
+      "id": "C1-neglectful-8075",
+      "headword": "neglectful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-roundup-8076",
+      "headword": "roundup",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conscientious-8077",
+      "headword": "conscientious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conscientiously-8078",
+      "headword": "conscientiously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-indefinite-8079",
+      "headword": "indefinite",
+      "level": "C1"
+    },
+    {
+      "id": "C1-indefinitely-8080",
+      "headword": "indefinitely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-atmospheric-8081",
+      "headword": "atmospheric",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fuse-8082",
+      "headword": "fuse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fusion-8083",
+      "headword": "fusion",
+      "level": "C1"
+    },
+    {
+      "id": "C1-robust-8084",
+      "headword": "robust",
+      "level": "C1"
+    },
+    {
+      "id": "C1-robustly-8085",
+      "headword": "robustly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dismal-8086",
+      "headword": "dismal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dismally-8087",
+      "headword": "dismally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-crave-8088",
+      "headword": "crave",
+      "level": "C1"
+    },
+    {
+      "id": "C1-craving-8089",
+      "headword": "craving",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prospective-8090",
+      "headword": "prospective",
+      "level": "C1"
+    },
+    {
+      "id": "C1-swap-8091",
+      "headword": "swap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-remotely-8092",
+      "headword": "remotely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-splatter-8093",
+      "headword": "splatter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-automatic-8094",
+      "headword": "automatic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-automatically-8095",
+      "headword": "automatically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exhaust-8096",
+      "headword": "exhaust",
+      "level": "C1"
+    },
+    {
+      "id": "C1-violet-8097",
+      "headword": "violet",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bubbly-8098",
+      "headword": "bubbly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chaotically-8099",
+      "headword": "chaotically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-apprehensive-8100",
+      "headword": "apprehensive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-settee-8101",
+      "headword": "settee",
+      "level": "C1"
+    },
+    {
+      "id": "C1-trampoline-8102",
+      "headword": "trampoline",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stamina-8103",
+      "headword": "stamina",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ploy-8104",
+      "headword": "ploy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dither-8105",
+      "headword": "dither",
+      "level": "C1"
+    },
+    {
+      "id": "C1-overalls-8106",
+      "headword": "overalls",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unison-8107",
+      "headword": "unison",
+      "level": "C1"
+    },
+    {
+      "id": "C1-snail-8108",
+      "headword": "snail",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bliss-8109",
+      "headword": "bliss",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inexhaustible-8110",
+      "headword": "inexhaustible",
+      "level": "C1"
+    },
+    {
+      "id": "C1-acre-8111",
+      "headword": "acre",
+      "level": "C1"
+    },
+    {
+      "id": "C1-calf-8112",
+      "headword": "calf",
+      "level": "C1"
+    },
+    {
+      "id": "C1-heifer-8113",
+      "headword": "heifer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ewe-8114",
+      "headword": "ewe",
+      "level": "C1"
+    },
+    {
+      "id": "C1-adversary-8115",
+      "headword": "adversary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-victorious-8116",
+      "headword": "victorious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-victoriously-8117",
+      "headword": "victoriously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-profound-8118",
+      "headword": "profound",
+      "level": "C1"
+    },
+    {
+      "id": "C1-profoundly-8119",
+      "headword": "profoundly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-baldly-8120",
+      "headword": "baldly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bald-8121",
+      "headword": "bald",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bearded-8122",
+      "headword": "bearded",
+      "level": "C1"
+    },
+    {
+      "id": "C1-professionalism-8123",
+      "headword": "professionalism",
+      "level": "C1"
+    },
+    {
+      "id": "C1-artistically-8124",
+      "headword": "artistically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-popularization-8125",
+      "headword": "popularization",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pendulum-8126",
+      "headword": "pendulum",
+      "level": "C1"
+    },
+    {
+      "id": "C1-predecessor-8127",
+      "headword": "predecessor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-boast-8128",
+      "headword": "boast",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lapse-8129",
+      "headword": "lapse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ceaseless-8130",
+      "headword": "ceaseless",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ceaselessly-8131",
+      "headword": "ceaselessly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-climax-8132",
+      "headword": "climax",
+      "level": "C1"
+    },
+    {
+      "id": "C1-climactic-8133",
+      "headword": "climactic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-anticlimactic-8134",
+      "headword": "anticlimactic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scramble-8135",
+      "headword": "scramble",
+      "level": "C1"
+    },
+    {
+      "id": "C1-forfeit-8136",
+      "headword": "forfeit",
+      "level": "C1"
+    },
+    {
+      "id": "C1-twitch-8137",
+      "headword": "twitch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-twitch-8138",
+      "headword": "twitch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-intellect-8139",
+      "headword": "intellect",
+      "level": "C1"
+    },
+    {
+      "id": "C1-descent-8140",
+      "headword": "descent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-shed-8141",
+      "headword": "shed",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exodus-8142",
+      "headword": "exodus",
+      "level": "C1"
+    },
+    {
+      "id": "C1-immortalize-8143",
+      "headword": "immortalize",
+      "level": "C1"
+    },
+    {
+      "id": "C1-genome-8144",
+      "headword": "genome",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fraction-8145",
+      "headword": "fraction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-faction-8146",
+      "headword": "faction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-physique-8147",
+      "headword": "physique",
+      "level": "C1"
+    },
+    {
+      "id": "C1-utensil-8148",
+      "headword": "utensil",
+      "level": "C1"
+    },
+    {
+      "id": "C1-otter-8149",
+      "headword": "otter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clammy-8150",
+      "headword": "clammy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-absolute-8151",
+      "headword": "absolute",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dispense-8152",
+      "headword": "dispense",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dispensable-8153",
+      "headword": "dispensable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dispensary-8154",
+      "headword": "dispensary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-indispensable-8155",
+      "headword": "indispensable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-diverge-8156",
+      "headword": "diverge",
+      "level": "C1"
+    },
+    {
+      "id": "C1-divergence-8157",
+      "headword": "divergence",
+      "level": "C1"
+    },
+    {
+      "id": "C1-divergent-8158",
+      "headword": "divergent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-burst-8159",
+      "headword": "burst",
+      "level": "C1"
+    },
+    {
+      "id": "C1-superficial-8160",
+      "headword": "superficial",
+      "level": "C1"
+    },
+    {
+      "id": "C1-superficially-8161",
+      "headword": "superficially",
+      "level": "C1"
+    },
+    {
+      "id": "C1-aesthetic-8162",
+      "headword": "aesthetic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-aesthetically-8163",
+      "headword": "aesthetically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scrutinize/scrutinise-8164",
+      "headword": "scrutinize/scrutinise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scrutiny-8165",
+      "headword": "scrutiny",
+      "level": "C1"
+    },
+    {
+      "id": "C1-quip-8166",
+      "headword": "quip",
+      "level": "C1"
+    },
+    {
+      "id": "C1-quip-8167",
+      "headword": "quip",
+      "level": "C1"
+    },
+    {
+      "id": "C1-woo-8168",
+      "headword": "woo",
+      "level": "C1"
+    },
+    {
+      "id": "C1-criteria-8169",
+      "headword": "criteria",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plausible-8170",
+      "headword": "plausible",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plausibility-8171",
+      "headword": "plausibility",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plausibly-8172",
+      "headword": "plausibly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-instinctive-8173",
+      "headword": "instinctive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-instinctively-8174",
+      "headword": "instinctively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stylistic-8175",
+      "headword": "stylistic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stylistically-8176",
+      "headword": "stylistically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inheritance-8177",
+      "headword": "inheritance",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inherent-8178",
+      "headword": "inherent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inherently-8179",
+      "headword": "inherently",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tune-8180",
+      "headword": "tune",
+      "level": "C1"
+    },
+    {
+      "id": "C1-spontaneous-8181",
+      "headword": "spontaneous",
+      "level": "C1"
+    },
+    {
+      "id": "C1-spontaneously-8182",
+      "headword": "spontaneously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-honk-8183",
+      "headword": "honk",
+      "level": "C1"
+    },
+    {
+      "id": "C1-honk-8184",
+      "headword": "honk",
+      "level": "C1"
+    },
+    {
+      "id": "C1-goose-8185",
+      "headword": "goose",
+      "level": "C1"
+    },
+    {
+      "id": "C1-innovate-8186",
+      "headword": "innovate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-innovation-8187",
+      "headword": "innovation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-innovative-8188",
+      "headword": "innovative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-connoisseur-8189",
+      "headword": "connoisseur",
+      "level": "C1"
+    },
+    {
+      "id": "C1-abstraction-8190",
+      "headword": "abstraction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tantrum-8191",
+      "headword": "tantrum",
+      "level": "C1"
+    },
+    {
+      "id": "C1-institute-8192",
+      "headword": "institute",
+      "level": "C1"
+    },
+    {
+      "id": "C1-discard-8193",
+      "headword": "discard",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fatality-8194",
+      "headword": "fatality",
+      "level": "C1"
+    },
+    {
+      "id": "C1-angle-8195",
+      "headword": "angle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stiffen-8196",
+      "headword": "stiffen",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wooded-8197",
+      "headword": "wooded",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hostile-8198",
+      "headword": "hostile",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hostility-8199",
+      "headword": "hostility",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flatter-8200",
+      "headword": "flatter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flattery-8201",
+      "headword": "flattery",
+      "level": "C1"
+    },
+    {
+      "id": "C1-aimless-8202",
+      "headword": "aimless",
+      "level": "C1"
+    },
+    {
+      "id": "C1-aimlessly-8203",
+      "headword": "aimlessly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-meaningless-8204",
+      "headword": "meaningless",
+      "level": "C1"
+    },
+    {
+      "id": "C1-meaninglessly-8205",
+      "headword": "meaninglessly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-candid-8206",
+      "headword": "candid",
+      "level": "C1"
+    },
+    {
+      "id": "C1-candidly-8207",
+      "headword": "candidly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-vitality-8208",
+      "headword": "vitality",
+      "level": "C1"
+    },
+    {
+      "id": "C1-provoke-8209",
+      "headword": "provoke",
+      "level": "C1"
+    },
+    {
+      "id": "C1-provocative-8210",
+      "headword": "provocative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-provocatively-8211",
+      "headword": "provocatively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clench-8212",
+      "headword": "clench",
+      "level": "C1"
+    },
+    {
+      "id": "C1-haggle-8213",
+      "headword": "haggle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scorn-8214",
+      "headword": "scorn",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scornful-8215",
+      "headword": "scornful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scornfully-8216",
+      "headword": "scornfully",
+      "level": "C1"
+    },
+    {
+      "id": "C1-animatedly-8217",
+      "headword": "animatedly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-obscure-8218",
+      "headword": "obscure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-obscure-8219",
+      "headword": "obscure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-obscurely-8220",
+      "headword": "obscurely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elevate-8221",
+      "headword": "elevate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elevation-8222",
+      "headword": "elevation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pose-8223",
+      "headword": "pose",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tedious-8224",
+      "headword": "tedious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tediously-8225",
+      "headword": "tediously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-succession-8226",
+      "headword": "succession",
+      "level": "C1"
+    },
+    {
+      "id": "C1-formality-8227",
+      "headword": "formality",
+      "level": "C1"
+    },
+    {
+      "id": "C1-jog-8228",
+      "headword": "jog",
+      "level": "C1"
+    },
+    {
+      "id": "C1-mountaineer-8229",
+      "headword": "mountaineer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pioneer-8230",
+      "headword": "pioneer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pioneer-8231",
+      "headword": "pioneer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-quest-8232",
+      "headword": "quest",
+      "level": "C1"
+    },
+    {
+      "id": "C1-transatlantic-8233",
+      "headword": "transatlantic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rudiments-8234",
+      "headword": "rudiments",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rudimentary-8235",
+      "headword": "rudimentary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-paddle-8236",
+      "headword": "paddle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-immense-8237",
+      "headword": "immense",
+      "level": "C1"
+    },
+    {
+      "id": "C1-immensely-8238",
+      "headword": "immensely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-advisory-8239",
+      "headword": "advisory",
+      "level": "C1"
+    },
+    {
+      "id": "C1-trying-8240",
+      "headword": "trying",
+      "level": "C1"
+    },
+    {
+      "id": "C1-adrenaline-8241",
+      "headword": "adrenaline",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tinker-8242",
+      "headword": "tinker",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tinker-8243",
+      "headword": "tinker",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lavatory-8244",
+      "headword": "lavatory",
+      "level": "C1"
+    },
+    {
+      "id": "C1-expedition-8245",
+      "headword": "expedition",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pinnacle-8246",
+      "headword": "pinnacle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insecure-8247",
+      "headword": "insecure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insecurely-8248",
+      "headword": "insecurely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-reassure-8249",
+      "headword": "reassure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-reassurance-8250",
+      "headword": "reassurance",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insensitive-8251",
+      "headword": "insensitive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insensitively-8252",
+      "headword": "insensitively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-profess-8253",
+      "headword": "profess",
+      "level": "C1"
+    },
+    {
+      "id": "C1-drawback-8254",
+      "headword": "drawback",
+      "level": "C1"
+    },
+    {
+      "id": "C1-resort-8255",
+      "headword": "resort",
+      "level": "C1"
+    },
+    {
+      "id": "C1-resort-8256",
+      "headword": "resort",
+      "level": "C1"
+    },
+    {
+      "id": "C1-oversee-8257",
+      "headword": "oversee",
+      "level": "C1"
+    },
+    {
+      "id": "C1-overseer-8258",
+      "headword": "overseer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-estimation-8259",
+      "headword": "estimation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-commission-8260",
+      "headword": "commission",
+      "level": "C1"
+    },
+    {
+      "id": "C1-commission-8261",
+      "headword": "commission",
+      "level": "C1"
+    },
+    {
+      "id": "C1-liaison-8262",
+      "headword": "liaison",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stressfully-8263",
+      "headword": "stressfully",
+      "level": "C1"
+    },
+    {
+      "id": "C1-loom-8264",
+      "headword": "loom",
+      "level": "C1"
+    },
+    {
+      "id": "C1-notwithstanding-8265",
+      "headword": "notwithstanding",
+      "level": "C1"
+    },
+    {
+      "id": "C1-structurally-8266",
+      "headword": "structurally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-structural-8267",
+      "headword": "structural",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chauffer-8268",
+      "headword": "chauffer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chauffer-8269",
+      "headword": "chauffer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sedentary-8270",
+      "headword": "sedentary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rapport-8271",
+      "headword": "rapport",
+      "level": "C1"
+    },
+    {
+      "id": "C1-landscape-8272",
+      "headword": "landscape",
+      "level": "C1"
+    },
+    {
+      "id": "C1-consultation-8273",
+      "headword": "consultation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-consultancy-8274",
+      "headword": "consultancy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bloom-8275",
+      "headword": "bloom",
+      "level": "C1"
+    },
+    {
+      "id": "C1-engineer-8276",
+      "headword": "engineer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-retention-8277",
+      "headword": "retention",
+      "level": "C1"
+    },
+    {
+      "id": "C1-quarry-8278",
+      "headword": "quarry",
+      "level": "C1"
+    },
+    {
+      "id": "C1-specification-8279",
+      "headword": "specification",
+      "level": "C1"
+    },
+    {
+      "id": "C1-contract-8280",
+      "headword": "contract",
+      "level": "C1"
+    },
+    {
+      "id": "C1-contract-8281",
+      "headword": "contract",
+      "level": "C1"
+    },
+    {
+      "id": "C1-contractor-8282",
+      "headword": "contractor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-query-8283",
+      "headword": "query",
+      "level": "C1"
+    },
+    {
+      "id": "C1-possessor-8284",
+      "headword": "possessor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chill-8285",
+      "headword": "chill",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chill-8286",
+      "headword": "chill",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chilly-8287",
+      "headword": "chilly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-frost-8288",
+      "headword": "frost",
+      "level": "C1"
+    },
+    {
+      "id": "C1-frosty-8289",
+      "headword": "frosty",
+      "level": "C1"
+    },
+    {
+      "id": "C1-frostily-8290",
+      "headword": "frostily",
+      "level": "C1"
+    },
+    {
+      "id": "C1-man-8291",
+      "headword": "man",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unmanned-8292",
+      "headword": "unmanned",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impersonal-8293",
+      "headword": "impersonal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impersonally-8294",
+      "headword": "impersonally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impersonate-8295",
+      "headword": "impersonate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impersonator-8296",
+      "headword": "impersonator",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impersonation-8297",
+      "headword": "impersonation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-buzzer-8298",
+      "headword": "buzzer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-desert-8299",
+      "headword": "desert",
+      "level": "C1"
+    },
+    {
+      "id": "C1-desertion-8300",
+      "headword": "desertion",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unoccupied-8301",
+      "headword": "unoccupied",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stuffy-8302",
+      "headword": "stuffy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stuffily-8303",
+      "headword": "stuffily",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stuffiness-8304",
+      "headword": "stuffiness",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gape-8305",
+      "headword": "gape",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gape-8306",
+      "headword": "gape",
+      "level": "C1"
+    },
+    {
+      "id": "C1-repute-8307",
+      "headword": "repute",
+      "level": "C1"
+    },
+    {
+      "id": "C1-toughness-8308",
+      "headword": "toughness",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recall-8309",
+      "headword": "recall",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recollection-8310",
+      "headword": "recollection",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plumbing-8311",
+      "headword": "plumbing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-usher-8312",
+      "headword": "usher",
+      "level": "C1"
+    },
+    {
+      "id": "C1-glum-8313",
+      "headword": "glum",
+      "level": "C1"
+    },
+    {
+      "id": "C1-glumly-8314",
+      "headword": "glumly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gamely-8315",
+      "headword": "gamely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dissect-8316",
+      "headword": "dissect",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dissection-8317",
+      "headword": "dissection",
+      "level": "C1"
+    },
+    {
+      "id": "C1-commend-8318",
+      "headword": "commend",
+      "level": "C1"
+    },
+    {
+      "id": "C1-commendation-8319",
+      "headword": "commendation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-thereby-8320",
+      "headword": "thereby",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flick-8321",
+      "headword": "flick",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flicker-8322",
+      "headword": "flicker",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unenviable-8323",
+      "headword": "unenviable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unenviably-8324",
+      "headword": "unenviably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-voice-8325",
+      "headword": "voice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tread-8326",
+      "headword": "tread",
+      "level": "C1"
+    },
+    {
+      "id": "C1-allege-8327",
+      "headword": "allege",
+      "level": "C1"
+    },
+    {
+      "id": "C1-allegation-8328",
+      "headword": "allegation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bribe-8329",
+      "headword": "bribe",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bribe-8330",
+      "headword": "bribe",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bribery-8331",
+      "headword": "bribery",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inclusion-8332",
+      "headword": "inclusion",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inclusive-8333",
+      "headword": "inclusive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inclusively-8334",
+      "headword": "inclusively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unconvincing-8335",
+      "headword": "unconvincing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unconvincingly-8336",
+      "headword": "unconvincingly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recharge-8337",
+      "headword": "recharge",
+      "level": "C1"
+    },
+    {
+      "id": "C1-facilitation-8338",
+      "headword": "facilitation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-condition-8339",
+      "headword": "condition",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conditional-8340",
+      "headword": "conditional",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conditionally-8341",
+      "headword": "conditionally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tone-8342",
+      "headword": "tone",
+      "level": "C1"
+    },
+    {
+      "id": "C1-align-8343",
+      "headword": "align",
+      "level": "C1"
+    },
+    {
+      "id": "C1-alignment-8344",
+      "headword": "alignment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-supple-8345",
+      "headword": "supple",
+      "level": "C1"
+    },
+    {
+      "id": "C1-manicure-8346",
+      "headword": "manicure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-manicure-8347",
+      "headword": "manicure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pedicure-8348",
+      "headword": "pedicure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-facial-8349",
+      "headword": "facial",
+      "level": "C1"
+    },
+    {
+      "id": "C1-facial-8350",
+      "headword": "facial",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bouquet-8351",
+      "headword": "bouquet",
+      "level": "C1"
+    },
+    {
+      "id": "C1-refurbish-8352",
+      "headword": "refurbish",
+      "level": "C1"
+    },
+    {
+      "id": "C1-refurbishment-8353",
+      "headword": "refurbishment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-grounds-8354",
+      "headword": "grounds",
+      "level": "C1"
+    },
+    {
+      "id": "C1-grounds-8355",
+      "headword": "grounds",
+      "level": "C1"
+    },
+    {
+      "id": "C1-grounds-8356",
+      "headword": "grounds",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ground-8357",
+      "headword": "ground",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lethargy-8358",
+      "headword": "lethargy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lethargic-8359",
+      "headword": "lethargic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lethargically-8360",
+      "headword": "lethargically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stately-8361",
+      "headword": "stately",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conserve-8362",
+      "headword": "conserve",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conservatory-8363",
+      "headword": "conservatory",
+      "level": "C1"
+    },
+    {
+      "id": "C1-disquieting-8364",
+      "headword": "disquieting",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiercely-8365",
+      "headword": "fiercely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-grapefruit-8366",
+      "headword": "grapefruit",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exotic-8367",
+      "headword": "exotic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exotically-8368",
+      "headword": "exotically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flask-8369",
+      "headword": "flask",
+      "level": "C1"
+    },
+    {
+      "id": "C1-spacious-8370",
+      "headword": "spacious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gourmet-8371",
+      "headword": "gourmet",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gourmet-8372",
+      "headword": "gourmet",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rich-8373",
+      "headword": "rich",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conjure-8374",
+      "headword": "conjure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-creamy-8375",
+      "headword": "creamy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sauna-8376",
+      "headword": "sauna",
+      "level": "C1"
+    },
+    {
+      "id": "C1-remedial-8377",
+      "headword": "remedial",
+      "level": "C1"
+    },
+    {
+      "id": "C1-posture-8378",
+      "headword": "posture",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sedate-8379",
+      "headword": "sedate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sedately-8380",
+      "headword": "sedately",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sedate-8381",
+      "headword": "sedate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clutch-8382",
+      "headword": "clutch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clutch-8383",
+      "headword": "clutch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stagger-8384",
+      "headword": "stagger",
+      "level": "C1"
+    },
+    {
+      "id": "C1-staggering-8385",
+      "headword": "staggering",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dutiful-8386",
+      "headword": "dutiful",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dutifully-8387",
+      "headword": "dutifully",
+      "level": "C1"
+    },
+    {
+      "id": "C1-calorie-8388",
+      "headword": "calorie",
+      "level": "C1"
+    },
+    {
+      "id": "C1-firm-8389",
+      "headword": "firm",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fabulously-8390",
+      "headword": "fabulously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-premise-8391",
+      "headword": "premise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-premises-8392",
+      "headword": "premises",
+      "level": "C1"
+    },
+    {
+      "id": "C1-eclectic-8393",
+      "headword": "eclectic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-eclectic-8394",
+      "headword": "eclectic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-eclectically-8395",
+      "headword": "eclectically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-revere-8396",
+      "headword": "revere",
+      "level": "C1"
+    },
+    {
+      "id": "C1-harbor/harbour-8397",
+      "headword": "harbor/harbour",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recognizable/recognisable-8398",
+      "headword": "recognizable/recognisable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recognizably/recognisably-8399",
+      "headword": "recognizably/recognisably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-batter-8400",
+      "headword": "batter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-battery-8401",
+      "headword": "battery",
+      "level": "C1"
+    },
+    {
+      "id": "C1-batter-8402",
+      "headword": "batter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-batter-8403",
+      "headword": "batter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unreliably-8404",
+      "headword": "unreliably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-waterfront-8405",
+      "headword": "waterfront",
+      "level": "C1"
+    },
+    {
+      "id": "C1-amply-8406",
+      "headword": "amply",
+      "level": "C1"
+    },
+    {
+      "id": "C1-amplification-8407",
+      "headword": "amplification",
+      "level": "C1"
+    },
+    {
+      "id": "C1-battered-8408",
+      "headword": "battered",
+      "level": "C1"
+    },
+    {
+      "id": "C1-battered-8409",
+      "headword": "battered",
+      "level": "C1"
+    },
+    {
+      "id": "C1-comply-8410",
+      "headword": "comply",
+      "level": "C1"
+    },
+    {
+      "id": "C1-compliance-8411",
+      "headword": "compliance",
+      "level": "C1"
+    },
+    {
+      "id": "C1-compliant-8412",
+      "headword": "compliant",
+      "level": "C1"
+    },
+    {
+      "id": "C1-compliantly-8413",
+      "headword": "compliantly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-blankness-8414",
+      "headword": "blankness",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exuberant-8415",
+      "headword": "exuberant",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exuberance-8416",
+      "headword": "exuberance",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exuberantly-8417",
+      "headword": "exuberantly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-linear-8418",
+      "headword": "linear",
+      "level": "C1"
+    },
+    {
+      "id": "C1-linearly-8419",
+      "headword": "linearly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flourish-8420",
+      "headword": "flourish",
+      "level": "C1"
+    },
+    {
+      "id": "C1-flourish-8421",
+      "headword": "flourish",
+      "level": "C1"
+    },
+    {
+      "id": "C1-anchor-8422",
+      "headword": "anchor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-anchored-8423",
+      "headword": "anchored",
+      "level": "C1"
+    },
+    {
+      "id": "C1-domination-8424",
+      "headword": "domination",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dominant-8425",
+      "headword": "dominant",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dominantly-8426",
+      "headword": "dominantly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-interject-8427",
+      "headword": "interject",
+      "level": "C1"
+    },
+    {
+      "id": "C1-interjection-8428",
+      "headword": "interjection",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gush-8429",
+      "headword": "gush",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gushing-8430",
+      "headword": "gushing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gush-8431",
+      "headword": "gush",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gushingly-8432",
+      "headword": "gushingly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-voracious-8433",
+      "headword": "voracious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-voraciously-8434",
+      "headword": "voraciously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sketchbook-8435",
+      "headword": "sketchbook",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sketch-8436",
+      "headword": "sketch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prop-8437",
+      "headword": "prop",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prop-8438",
+      "headword": "prop",
+      "level": "C1"
+    },
+    {
+      "id": "C1-imp-8439",
+      "headword": "imp",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impish-8440",
+      "headword": "impish",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impishly-8441",
+      "headword": "impishly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wicked-8442",
+      "headword": "wicked",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wickedly-8443",
+      "headword": "wickedly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-macabre-8444",
+      "headword": "macabre",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gusto-8445",
+      "headword": "gusto",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tantamount-8446",
+      "headword": "tantamount",
+      "level": "C1"
+    },
+    {
+      "id": "C1-antics-8447",
+      "headword": "antics",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lapse-8448",
+      "headword": "lapse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lapse-8449",
+      "headword": "lapse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-relapse-8450",
+      "headword": "relapse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-relapse-8451",
+      "headword": "relapse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impede-8452",
+      "headword": "impede",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impediment-8453",
+      "headword": "impediment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-taut-8454",
+      "headword": "taut",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tautly-8455",
+      "headword": "tautly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-jersey-8456",
+      "headword": "jersey",
+      "level": "C1"
+    },
+    {
+      "id": "C1-jersey-8457",
+      "headword": "jersey",
+      "level": "C1"
+    },
+    {
+      "id": "C1-startling-8458",
+      "headword": "startling",
+      "level": "C1"
+    },
+    {
+      "id": "C1-startlingly-8459",
+      "headword": "startlingly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-slack-8460",
+      "headword": "slack",
+      "level": "C1"
+    },
+    {
+      "id": "C1-slack-8461",
+      "headword": "slack",
+      "level": "C1"
+    },
+    {
+      "id": "C1-slack-8462",
+      "headword": "slack",
+      "level": "C1"
+    },
+    {
+      "id": "C1-slackly-8463",
+      "headword": "slackly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unwavering-8464",
+      "headword": "unwavering",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unwaveringly-8465",
+      "headword": "unwaveringly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-removed-8466",
+      "headword": "removed",
+      "level": "C1"
+    },
+    {
+      "id": "C1-buffoon-8467",
+      "headword": "buffoon",
+      "level": "C1"
+    },
+    {
+      "id": "C1-beguiling-8468",
+      "headword": "beguiling",
+      "level": "C1"
+    },
+    {
+      "id": "C1-beguilingly-8469",
+      "headword": "beguilingly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-blithely-8470",
+      "headword": "blithely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stray-8471",
+      "headword": "stray",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stray-8472",
+      "headword": "stray",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stray-8473",
+      "headword": "stray",
+      "level": "C1"
+    },
+    {
+      "id": "C1-mythological-8474",
+      "headword": "mythological",
+      "level": "C1"
+    },
+    {
+      "id": "C1-mythology-8475",
+      "headword": "mythology",
+      "level": "C1"
+    },
+    {
+      "id": "C1-venerate-8476",
+      "headword": "venerate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-veneration-8477",
+      "headword": "veneration",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ethical-8478",
+      "headword": "ethical",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ethically-8479",
+      "headword": "ethically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-heroine-8480",
+      "headword": "heroine",
+      "level": "C1"
+    },
+    {
+      "id": "C1-refreshing-8481",
+      "headword": "refreshing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-refresh-8482",
+      "headword": "refresh",
+      "level": "C1"
+    },
+    {
+      "id": "C1-refreshingly-8483",
+      "headword": "refreshingly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-zany-8484",
+      "headword": "zany",
+      "level": "C1"
+    },
+    {
+      "id": "C1-devotee-8485",
+      "headword": "devotee",
+      "level": "C1"
+    },
+    {
+      "id": "C1-salve-8486",
+      "headword": "salve",
+      "level": "C1"
+    },
+    {
+      "id": "C1-salvation-8487",
+      "headword": "salvation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-salvage-8488",
+      "headword": "salvage",
+      "level": "C1"
+    },
+    {
+      "id": "C1-staccato-8489",
+      "headword": "staccato",
+      "level": "C1"
+    },
+    {
+      "id": "C1-staccato-8490",
+      "headword": "staccato",
+      "level": "C1"
+    },
+    {
+      "id": "C1-verve-8491",
+      "headword": "verve",
+      "level": "C1"
+    },
+    {
+      "id": "C1-motley-8492",
+      "headword": "motley",
+      "level": "C1"
+    },
+    {
+      "id": "C1-preach-8493",
+      "headword": "preach",
+      "level": "C1"
+    },
+    {
+      "id": "C1-preacher-8494",
+      "headword": "preacher",
+      "level": "C1"
+    },
+    {
+      "id": "C1-behind-8495",
+      "headword": "behind",
+      "level": "C1"
+    },
+    {
+      "id": "C1-continuity-8496",
+      "headword": "continuity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-justly-8497",
+      "headword": "justly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wry-8498",
+      "headword": "wry",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wryly-8499",
+      "headword": "wryly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-poetess-8500",
+      "headword": "poetess",
+      "level": "C1"
+    },
+    {
+      "id": "C1-confide-8501",
+      "headword": "confide",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sentient-8502",
+      "headword": "sentient",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sentiment-8503",
+      "headword": "sentiment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sentimental-8504",
+      "headword": "sentimental",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sentimentally-8505",
+      "headword": "sentimentally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tangle-8506",
+      "headword": "tangle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tangle-8507",
+      "headword": "tangle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tangled-8508",
+      "headword": "tangled",
+      "level": "C1"
+    },
+    {
+      "id": "C1-untangle-8509",
+      "headword": "untangle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-untangled-8510",
+      "headword": "untangled",
+      "level": "C1"
+    },
+    {
+      "id": "C1-perceptive-8511",
+      "headword": "perceptive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-perceptively-8512",
+      "headword": "perceptively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-outset-8513",
+      "headword": "outset",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tycoon-8514",
+      "headword": "tycoon",
+      "level": "C1"
+    },
+    {
+      "id": "C1-launch-8515",
+      "headword": "launch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-engross-8516",
+      "headword": "engross",
+      "level": "C1"
+    },
+    {
+      "id": "C1-engrossing-8517",
+      "headword": "engrossing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plague-8518",
+      "headword": "plague",
+      "level": "C1"
+    },
+    {
+      "id": "C1-orphan-8519",
+      "headword": "orphan",
+      "level": "C1"
+    },
+    {
+      "id": "C1-detritus-8520",
+      "headword": "detritus",
+      "level": "C1"
+    },
+    {
+      "id": "C1-detriment-8521",
+      "headword": "detriment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-detrimental-8522",
+      "headword": "detrimental",
+      "level": "C1"
+    },
+    {
+      "id": "C1-detrimentally-8523",
+      "headword": "detrimentally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-domestically-8524",
+      "headword": "domestically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-domesticate-8525",
+      "headword": "domesticate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-domestication-8526",
+      "headword": "domestication",
+      "level": "C1"
+    },
+    {
+      "id": "C1-eccentric-8527",
+      "headword": "eccentric",
+      "level": "C1"
+    },
+    {
+      "id": "C1-eccentric-8528",
+      "headword": "eccentric",
+      "level": "C1"
+    },
+    {
+      "id": "C1-eccentrically-8529",
+      "headword": "eccentrically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-render-8530",
+      "headword": "render",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rendering-8531",
+      "headword": "rendering",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pathos-8532",
+      "headword": "pathos",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tailor-8533",
+      "headword": "tailor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tailor-8534",
+      "headword": "tailor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-personalize/personalise-8535",
+      "headword": "personalize/personalise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-personalization/personalisation-8536",
+      "headword": "personalization/personalisation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-personification-8537",
+      "headword": "personification",
+      "level": "C1"
+    },
+    {
+      "id": "C1-limitless-8538",
+      "headword": "limitless",
+      "level": "C1"
+    },
+    {
+      "id": "C1-apprentice-8539",
+      "headword": "apprentice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-apprentice-8540",
+      "headword": "apprentice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-apprenticeship-8541",
+      "headword": "apprenticeship",
+      "level": "C1"
+    },
+    {
+      "id": "C1-precision-8542",
+      "headword": "precision",
+      "level": "C1"
+    },
+    {
+      "id": "C1-swap-8543",
+      "headword": "swap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-swap-8544",
+      "headword": "swap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-perfect-8545",
+      "headword": "perfect",
+      "level": "C1"
+    },
+    {
+      "id": "C1-silhouette-8546",
+      "headword": "silhouette",
+      "level": "C1"
+    },
+    {
+      "id": "C1-nondescript-8547",
+      "headword": "nondescript",
+      "level": "C1"
+    },
+    {
+      "id": "C1-signal-8548",
+      "headword": "signal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-negligible-8549",
+      "headword": "negligible",
+      "level": "C1"
+    },
+    {
+      "id": "C1-negligent-8550",
+      "headword": "negligent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-negligently-8551",
+      "headword": "negligently",
+      "level": "C1"
+    },
+    {
+      "id": "C1-principally-8552",
+      "headword": "principally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-altruism-8553",
+      "headword": "altruism",
+      "level": "C1"
+    },
+    {
+      "id": "C1-altruistic-8554",
+      "headword": "altruistic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scenario-8555",
+      "headword": "scenario",
+      "level": "C1"
+    },
+    {
+      "id": "C1-voluntary-8556",
+      "headword": "voluntary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-voluntarily-8557",
+      "headword": "voluntarily",
+      "level": "C1"
+    },
+    {
+      "id": "C1-reap-8558",
+      "headword": "reap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-paternal-8559",
+      "headword": "paternal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-maternal-8560",
+      "headword": "maternal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-maternalistic-8561",
+      "headword": "maternalistic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-paternalistic-8562",
+      "headword": "paternalistic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-provisions-8563",
+      "headword": "provisions",
+      "level": "C1"
+    },
+    {
+      "id": "C1-injustice-8564",
+      "headword": "injustice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impoverished-8565",
+      "headword": "impoverished",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unsustainable-8566",
+      "headword": "unsustainable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unsustainably-8567",
+      "headword": "unsustainably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sustainable-8568",
+      "headword": "sustainable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sustainably-8569",
+      "headword": "sustainably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bypass-8570",
+      "headword": "bypass",
+      "level": "C1"
+    },
+    {
+      "id": "C1-imperative-8571",
+      "headword": "imperative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-imperative-8572",
+      "headword": "imperative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cynic-8573",
+      "headword": "cynic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cynical-8574",
+      "headword": "cynical",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cynically-8575",
+      "headword": "cynically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cynicism-8576",
+      "headword": "cynicism",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sarcasm-8577",
+      "headword": "sarcasm",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sarcastic-8578",
+      "headword": "sarcastic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sarcastically-8579",
+      "headword": "sarcastically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-misplace-8580",
+      "headword": "misplace",
+      "level": "C1"
+    },
+    {
+      "id": "C1-symptomatic-8581",
+      "headword": "symptomatic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-degrade-8582",
+      "headword": "degrade",
+      "level": "C1"
+    },
+    {
+      "id": "C1-degrading-8583",
+      "headword": "degrading",
+      "level": "C1"
+    },
+    {
+      "id": "C1-degradation-8584",
+      "headword": "degradation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-discourse-8585",
+      "headword": "discourse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-amid-8586",
+      "headword": "amid",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hedgehog-8587",
+      "headword": "hedgehog",
+      "level": "C1"
+    },
+    {
+      "id": "C1-nocturnal-8588",
+      "headword": "nocturnal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hibernate-8589",
+      "headword": "hibernate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hibernation-8590",
+      "headword": "hibernation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-convict-8591",
+      "headword": "convict",
+      "level": "C1"
+    },
+    {
+      "id": "C1-convict-8592",
+      "headword": "convict",
+      "level": "C1"
+    },
+    {
+      "id": "C1-conviction-8593",
+      "headword": "conviction",
+      "level": "C1"
+    },
+    {
+      "id": "C1-latent-8594",
+      "headword": "latent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-snooze-8595",
+      "headword": "snooze",
+      "level": "C1"
+    },
+    {
+      "id": "C1-classy-8596",
+      "headword": "classy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wrench-8597",
+      "headword": "wrench",
+      "level": "C1"
+    },
+    {
+      "id": "C1-reminisce-8598",
+      "headword": "reminisce",
+      "level": "C1"
+    },
+    {
+      "id": "C1-reminiscent-8599",
+      "headword": "reminiscent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-intuit-8600",
+      "headword": "intuit",
+      "level": "C1"
+    },
+    {
+      "id": "C1-intuition-8601",
+      "headword": "intuition",
+      "level": "C1"
+    },
+    {
+      "id": "C1-intuitive-8602",
+      "headword": "intuitive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-intuitively-8603",
+      "headword": "intuitively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-marginal-8604",
+      "headword": "marginal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-marginally-8605",
+      "headword": "marginally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-crude-8606",
+      "headword": "crude",
+      "level": "C1"
+    },
+    {
+      "id": "C1-crudely-8607",
+      "headword": "crudely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-strap-8608",
+      "headword": "strap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-strap-8609",
+      "headword": "strap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-strapping-8610",
+      "headword": "strapping",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scoff-8611",
+      "headword": "scoff",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiddly-8612",
+      "headword": "fiddly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiddler-8613",
+      "headword": "fiddler",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiddle-8614",
+      "headword": "fiddle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiddle-8615",
+      "headword": "fiddle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unmusical-8616",
+      "headword": "unmusical",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unmusically-8617",
+      "headword": "unmusically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-repertory-8618",
+      "headword": "repertory",
+      "level": "C1"
+    },
+    {
+      "id": "C1-concerto-8619",
+      "headword": "concerto",
+      "level": "C1"
+    },
+    {
+      "id": "C1-premier-8620",
+      "headword": "premier",
+      "level": "C1"
+    },
+    {
+      "id": "C1-premier-8621",
+      "headword": "premier",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fanatic-8622",
+      "headword": "fanatic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fanatic-8623",
+      "headword": "fanatic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fanatically-8624",
+      "headword": "fanatically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-acoustically-8625",
+      "headword": "acoustically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-acoustic-8626",
+      "headword": "acoustic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-acoustics-8627",
+      "headword": "acoustics",
+      "level": "C1"
+    },
+    {
+      "id": "C1-compromised-8628",
+      "headword": "compromised",
+      "level": "C1"
+    },
+    {
+      "id": "C1-daunt-8629",
+      "headword": "daunt",
+      "level": "C1"
+    },
+    {
+      "id": "C1-daunting-8630",
+      "headword": "daunting",
+      "level": "C1"
+    },
+    {
+      "id": "C1-realist-8631",
+      "headword": "realist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-realism-8632",
+      "headword": "realism",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recess-8633",
+      "headword": "recess",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recess-8634",
+      "headword": "recess",
+      "level": "C1"
+    },
+    {
+      "id": "C1-recessive-8635",
+      "headword": "recessive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prolific-8636",
+      "headword": "prolific",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prolifically-8637",
+      "headword": "prolifically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-proliferate-8638",
+      "headword": "proliferate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fragmentation-8639",
+      "headword": "fragmentation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-campaign-8640",
+      "headword": "campaign",
+      "level": "C1"
+    },
+    {
+      "id": "C1-astray-8641",
+      "headword": "astray",
+      "level": "C1"
+    },
+    {
+      "id": "C1-duration-8642",
+      "headword": "duration",
+      "level": "C1"
+    },
+    {
+      "id": "C1-durable-8643",
+      "headword": "durable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-durable-8644",
+      "headword": "durable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-likelihood-8645",
+      "headword": "likelihood",
+      "level": "C1"
+    },
+    {
+      "id": "C1-naive-8646",
+      "headword": "naive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-naively-8647",
+      "headword": "naively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-naivety-8648",
+      "headword": "naivety",
+      "level": "C1"
+    },
+    {
+      "id": "C1-impervious-8649",
+      "headword": "impervious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ludicrous-8650",
+      "headword": "ludicrous",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ludicrously-8651",
+      "headword": "ludicrously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cost-effective-8652",
+      "headword": "cost-effective",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gruesome-8653",
+      "headword": "gruesome",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gruesomely-8654",
+      "headword": "gruesomely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-envisage-8655",
+      "headword": "envisage",
+      "level": "C1"
+    },
+    {
+      "id": "C1-screenwriter-8656",
+      "headword": "screenwriter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-mingle-8657",
+      "headword": "mingle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-churn-8658",
+      "headword": "churn",
+      "level": "C1"
+    },
+    {
+      "id": "C1-buffer-8659",
+      "headword": "buffer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-buffer-8660",
+      "headword": "buffer",
+      "level": "C1"
+    },
+    {
+      "id": "C1-irate-8661",
+      "headword": "irate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-irately-8662",
+      "headword": "irately",
+      "level": "C1"
+    },
+    {
+      "id": "C1-docile-8663",
+      "headword": "docile",
+      "level": "C1"
+    },
+    {
+      "id": "C1-docilely-8664",
+      "headword": "docilely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiend-8665",
+      "headword": "fiend",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiendish-8666",
+      "headword": "fiendish",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fiendishly-8667",
+      "headword": "fiendishly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-transfix-8668",
+      "headword": "transfix",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gypsy-8669",
+      "headword": "gypsy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-temperament-8670",
+      "headword": "temperament",
+      "level": "C1"
+    },
+    {
+      "id": "C1-temperamental-8671",
+      "headword": "temperamental",
+      "level": "C1"
+    },
+    {
+      "id": "C1-temperamentally-8672",
+      "headword": "temperamentally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-screenplay-8673",
+      "headword": "screenplay",
+      "level": "C1"
+    },
+    {
+      "id": "C1-disillusionment-8674",
+      "headword": "disillusionment",
+      "level": "C1"
+    },
+    {
+      "id": "C1-demise-8675",
+      "headword": "demise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-raunchy-8676",
+      "headword": "raunchy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-raunchily-8677",
+      "headword": "raunchily",
+      "level": "C1"
+    },
+    {
+      "id": "C1-overdraft-8678",
+      "headword": "overdraft",
+      "level": "C1"
+    },
+    {
+      "id": "C1-overdraft-8679",
+      "headword": "overdraft",
+      "level": "C1"
+    },
+    {
+      "id": "C1-synopsis-8680",
+      "headword": "synopsis",
+      "level": "C1"
+    },
+    {
+      "id": "C1-renown-8681",
+      "headword": "renown",
+      "level": "C1"
+    },
+    {
+      "id": "C1-contest-8682",
+      "headword": "contest",
+      "level": "C1"
+    },
+    {
+      "id": "C1-contested-8683",
+      "headword": "contested",
+      "level": "C1"
+    },
+    {
+      "id": "C1-verandah-8684",
+      "headword": "verandah",
+      "level": "C1"
+    },
+    {
+      "id": "C1-occupational-8685",
+      "headword": "occupational",
+      "level": "C1"
+    },
+    {
+      "id": "C1-verdict-8686",
+      "headword": "verdict",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ventilate-8687",
+      "headword": "ventilate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ventilation-8688",
+      "headword": "ventilation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-occupant-8689",
+      "headword": "occupant",
+      "level": "C1"
+    },
+    {
+      "id": "C1-radiator-8690",
+      "headword": "radiator",
+      "level": "C1"
+    },
+    {
+      "id": "C1-homely-8691",
+      "headword": "homely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bureaucratic-8692",
+      "headword": "bureaucratic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bureaucratically-8693",
+      "headword": "bureaucratically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-adjustable-8694",
+      "headword": "adjustable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fatigue-8695",
+      "headword": "fatigue",
+      "level": "C1"
+    },
+    {
+      "id": "C1-muscular-8696",
+      "headword": "muscular",
+      "level": "C1"
+    },
+    {
+      "id": "C1-versatile-8697",
+      "headword": "versatile",
+      "level": "C1"
+    },
+    {
+      "id": "C1-versatility-8698",
+      "headword": "versatility",
+      "level": "C1"
+    },
+    {
+      "id": "C1-stimuli-8699",
+      "headword": "stimuli",
+      "level": "C1"
+    },
+    {
+      "id": "C1-uninspiring-8700",
+      "headword": "uninspiring",
+      "level": "C1"
+    },
+    {
+      "id": "C1-mutually-8701",
+      "headword": "mutually",
+      "level": "C1"
+    },
+    {
+      "id": "C1-somber/sombre-8702",
+      "headword": "somber/sombre",
+      "level": "C1"
+    },
+    {
+      "id": "C1-somberly/sombrely-8703",
+      "headword": "somberly/sombrely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clutter-8704",
+      "headword": "clutter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-clutter-8705",
+      "headword": "clutter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lodge-8706",
+      "headword": "lodge",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dislodge-8707",
+      "headword": "dislodge",
+      "level": "C1"
+    },
+    {
+      "id": "C1-carpenter-8708",
+      "headword": "carpenter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-carpentry-8709",
+      "headword": "carpentry",
+      "level": "C1"
+    },
+    {
+      "id": "C1-transit-8710",
+      "headword": "transit",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plummet-8711",
+      "headword": "plummet",
+      "level": "C1"
+    },
+    {
+      "id": "C1-circulate-8712",
+      "headword": "circulate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-circulation-8713",
+      "headword": "circulation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-demography-8714",
+      "headword": "demography",
+      "level": "C1"
+    },
+    {
+      "id": "C1-demographic-8715",
+      "headword": "demographic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-demographic-8716",
+      "headword": "demographic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-demographically-8717",
+      "headword": "demographically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-phenomenal-8718",
+      "headword": "phenomenal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-phenomenally-8719",
+      "headword": "phenomenally",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prophet-8720",
+      "headword": "prophet",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prophetic-8721",
+      "headword": "prophetic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-paywall-8722",
+      "headword": "paywall",
+      "level": "C1"
+    },
+    {
+      "id": "C1-firewall-8723",
+      "headword": "firewall",
+      "level": "C1"
+    },
+    {
+      "id": "C1-launch-8724",
+      "headword": "launch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-invoice-8725",
+      "headword": "invoice",
+      "level": "C1"
+    },
+    {
+      "id": "C1-demolition-8726",
+      "headword": "demolition",
+      "level": "C1"
+    },
+    {
+      "id": "C1-demo-8727",
+      "headword": "demo",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gig-8728",
+      "headword": "gig",
+      "level": "C1"
+    },
+    {
+      "id": "C1-socialization-8729",
+      "headword": "socialization",
+      "level": "C1"
+    },
+    {
+      "id": "C1-antiquity-8730",
+      "headword": "antiquity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-antiquated-8731",
+      "headword": "antiquated",
+      "level": "C1"
+    },
+    {
+      "id": "C1-restoration-8732",
+      "headword": "restoration",
+      "level": "C1"
+    },
+    {
+      "id": "C1-restorative-8733",
+      "headword": "restorative",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rotate-8734",
+      "headword": "rotate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-till-8735",
+      "headword": "till",
+      "level": "C1"
+    },
+    {
+      "id": "C1-coupled-8736",
+      "headword": "coupled",
+      "level": "C1"
+    },
+    {
+      "id": "C1-itinerary-8737",
+      "headword": "itinerary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-charter-8738",
+      "headword": "charter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-charter-8739",
+      "headword": "charter",
+      "level": "C1"
+    },
+    {
+      "id": "C1-terrain-8740",
+      "headword": "terrain",
+      "level": "C1"
+    },
+    {
+      "id": "C1-resilient-8741",
+      "headword": "resilient",
+      "level": "C1"
+    },
+    {
+      "id": "C1-resilience-8742",
+      "headword": "resilience",
+      "level": "C1"
+    },
+    {
+      "id": "C1-enterprising-8743",
+      "headword": "enterprising",
+      "level": "C1"
+    },
+    {
+      "id": "C1-integral-8744",
+      "headword": "integral",
+      "level": "C1"
+    },
+    {
+      "id": "C1-canoe-8745",
+      "headword": "canoe",
+      "level": "C1"
+    },
+    {
+      "id": "C1-magnetic-8746",
+      "headword": "magnetic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-magnetism-8747",
+      "headword": "magnetism",
+      "level": "C1"
+    },
+    {
+      "id": "C1-magnetically-8748",
+      "headword": "magnetically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-credible-8749",
+      "headword": "credible",
+      "level": "C1"
+    },
+    {
+      "id": "C1-credibly-8750",
+      "headword": "credibly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-credibility-8751",
+      "headword": "credibility",
+      "level": "C1"
+    },
+    {
+      "id": "C1-credential-8752",
+      "headword": "credential",
+      "level": "C1"
+    },
+    {
+      "id": "C1-acutely-8753",
+      "headword": "acutely",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prohibitive-8754",
+      "headword": "prohibitive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-prohibitively-8755",
+      "headword": "prohibitively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fissure-8756",
+      "headword": "fissure",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pendulum-8757",
+      "headword": "pendulum",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pendulous-8758",
+      "headword": "pendulous",
+      "level": "C1"
+    },
+    {
+      "id": "C1-suspension-8759",
+      "headword": "suspension",
+      "level": "C1"
+    },
+    {
+      "id": "C1-aboard-8760",
+      "headword": "aboard",
+      "level": "C1"
+    },
+    {
+      "id": "C1-drill-8761",
+      "headword": "drill",
+      "level": "C1"
+    },
+    {
+      "id": "C1-drill-8762",
+      "headword": "drill",
+      "level": "C1"
+    },
+    {
+      "id": "C1-anthropology-8763",
+      "headword": "anthropology",
+      "level": "C1"
+    },
+    {
+      "id": "C1-anthropologist-8764",
+      "headword": "anthropologist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-squander-8765",
+      "headword": "squander",
+      "level": "C1"
+    },
+    {
+      "id": "C1-munch-8766",
+      "headword": "munch",
+      "level": "C1"
+    },
+    {
+      "id": "C1-adjoin-8767",
+      "headword": "adjoin",
+      "level": "C1"
+    },
+    {
+      "id": "C1-adjoining-8768",
+      "headword": "adjoining",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wizened-8769",
+      "headword": "wizened",
+      "level": "C1"
+    },
+    {
+      "id": "C1-graft-8770",
+      "headword": "graft",
+      "level": "C1"
+    },
+    {
+      "id": "C1-orchard-8771",
+      "headword": "orchard",
+      "level": "C1"
+    },
+    {
+      "id": "C1-seedling-8772",
+      "headword": "seedling",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tract-8773",
+      "headword": "tract",
+      "level": "C1"
+    },
+    {
+      "id": "C1-folktale-8774",
+      "headword": "folktale",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sprout-8775",
+      "headword": "sprout",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sprout-8776",
+      "headword": "sprout",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hypocrisy-8777",
+      "headword": "hypocrisy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hypocrite-8778",
+      "headword": "hypocrite",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hypocritical-8779",
+      "headword": "hypocritical",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hypocritically-8780",
+      "headword": "hypocritically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-midwife-8781",
+      "headword": "midwife",
+      "level": "C1"
+    },
+    {
+      "id": "C1-harvest-8782",
+      "headword": "harvest",
+      "level": "C1"
+    },
+    {
+      "id": "C1-commercially-8783",
+      "headword": "commercially",
+      "level": "C1"
+    },
+    {
+      "id": "C1-uniformity-8784",
+      "headword": "uniformity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-numb-8785",
+      "headword": "numb",
+      "level": "C1"
+    },
+    {
+      "id": "C1-numb-8786",
+      "headword": "numb",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tastebud-8787",
+      "headword": "tastebud",
+      "level": "C1"
+    },
+    {
+      "id": "C1-amateur-8788",
+      "headword": "amateur",
+      "level": "C1"
+    },
+    {
+      "id": "C1-amateur-8789",
+      "headword": "amateur",
+      "level": "C1"
+    },
+    {
+      "id": "C1-retrace-8790",
+      "headword": "retrace",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chart-8791",
+      "headword": "chart",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insubordinate-8792",
+      "headword": "insubordinate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insubordination-8793",
+      "headword": "insubordination",
+      "level": "C1"
+    },
+    {
+      "id": "C1-insubordinately-8794",
+      "headword": "insubordinately",
+      "level": "C1"
+    },
+    {
+      "id": "C1-subordinate-8795",
+      "headword": "subordinate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-primitively-8796",
+      "headword": "primitively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-embark-8797",
+      "headword": "embark",
+      "level": "C1"
+    },
+    {
+      "id": "C1-expedite-8798",
+      "headword": "expedite",
+      "level": "C1"
+    },
+    {
+      "id": "C1-contextual-8799",
+      "headword": "contextual",
+      "level": "C1"
+    },
+    {
+      "id": "C1-contextually-8800",
+      "headword": "contextually",
+      "level": "C1"
+    },
+    {
+      "id": "C1-whilst-8801",
+      "headword": "whilst",
+      "level": "C1"
+    },
+    {
+      "id": "C1-maneuver/manoeuvre-8802",
+      "headword": "maneuver/manoeuvre",
+      "level": "C1"
+    },
+    {
+      "id": "C1-maneuver/manoeuvre-8803",
+      "headword": "maneuver/manoeuvre",
+      "level": "C1"
+    },
+    {
+      "id": "C1-riveting-8804",
+      "headword": "riveting",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plunge-8805",
+      "headword": "plunge",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plunge-8806",
+      "headword": "plunge",
+      "level": "C1"
+    },
+    {
+      "id": "C1-debut-8807",
+      "headword": "debut",
+      "level": "C1"
+    },
+    {
+      "id": "C1-debut-8808",
+      "headword": "debut",
+      "level": "C1"
+    },
+    {
+      "id": "C1-turmoil-8809",
+      "headword": "turmoil",
+      "level": "C1"
+    },
+    {
+      "id": "C1-scathing-8810",
+      "headword": "scathing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unscathing-8811",
+      "headword": "unscathing",
+      "level": "C1"
+    },
+    {
+      "id": "C1-convoluted-8812",
+      "headword": "convoluted",
+      "level": "C1"
+    },
+    {
+      "id": "C1-undaunted-8813",
+      "headword": "undaunted",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gutsy-8814",
+      "headword": "gutsy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-deprivation-8815",
+      "headword": "deprivation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-farce-8816",
+      "headword": "farce",
+      "level": "C1"
+    },
+    {
+      "id": "C1-portray-8817",
+      "headword": "portray",
+      "level": "C1"
+    },
+    {
+      "id": "C1-portrayal-8818",
+      "headword": "portrayal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elusive-8819",
+      "headword": "elusive",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elude-8820",
+      "headword": "elude",
+      "level": "C1"
+    },
+    {
+      "id": "C1-incisor-8821",
+      "headword": "incisor",
+      "level": "C1"
+    },
+    {
+      "id": "C1-incision-8822",
+      "headword": "incision",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chisel-8823",
+      "headword": "chisel",
+      "level": "C1"
+    },
+    {
+      "id": "C1-chiselled-8824",
+      "headword": "chiselled",
+      "level": "C1"
+    },
+    {
+      "id": "C1-gnaw-8825",
+      "headword": "gnaw",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elongate-8826",
+      "headword": "elongate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-telltale-8827",
+      "headword": "telltale",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cavity-8828",
+      "headword": "cavity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rustle-8829",
+      "headword": "rustle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-rustle-8830",
+      "headword": "rustle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-glean-8831",
+      "headword": "glean",
+      "level": "C1"
+    },
+    {
+      "id": "C1-niche-8832",
+      "headword": "niche",
+      "level": "C1"
+    },
+    {
+      "id": "C1-somersault-8833",
+      "headword": "somersault",
+      "level": "C1"
+    },
+    {
+      "id": "C1-somersault-8834",
+      "headword": "somersault",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exhilarate-8835",
+      "headword": "exhilarate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exhilarating-8836",
+      "headword": "exhilarating",
+      "level": "C1"
+    },
+    {
+      "id": "C1-exhilaration-8837",
+      "headword": "exhilaration",
+      "level": "C1"
+    },
+    {
+      "id": "C1-physicality-8838",
+      "headword": "physicality",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hack-8839",
+      "headword": "hack",
+      "level": "C1"
+    },
+    {
+      "id": "C1-hack-8840",
+      "headword": "hack",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lust-8841",
+      "headword": "lust",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unsettling-8842",
+      "headword": "unsettling",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unsettle-8843",
+      "headword": "unsettle",
+      "level": "C1"
+    },
+    {
+      "id": "C1-suburban-8844",
+      "headword": "suburban",
+      "level": "C1"
+    },
+    {
+      "id": "C1-suburbia-8845",
+      "headword": "suburbia",
+      "level": "C1"
+    },
+    {
+      "id": "C1-dramatist-8846",
+      "headword": "dramatist",
+      "level": "C1"
+    },
+    {
+      "id": "C1-characterization/characterisation-8847",
+      "headword": "characterization/characterisation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-quirky-8848",
+      "headword": "quirky",
+      "level": "C1"
+    },
+    {
+      "id": "C1-quirky-8849",
+      "headword": "quirky",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sprawl-8850",
+      "headword": "sprawl",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sprawl-8851",
+      "headword": "sprawl",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ingenuity-8852",
+      "headword": "ingenuity",
+      "level": "C1"
+    },
+    {
+      "id": "C1-panorama-8853",
+      "headword": "panorama",
+      "level": "C1"
+    },
+    {
+      "id": "C1-panoramic-8854",
+      "headword": "panoramic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-benign-8855",
+      "headword": "benign",
+      "level": "C1"
+    },
+    {
+      "id": "C1-benignly-8856",
+      "headword": "benignly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-explosively-8857",
+      "headword": "explosively",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bequeath-8858",
+      "headword": "bequeath",
+      "level": "C1"
+    },
+    {
+      "id": "C1-legacy-8859",
+      "headword": "legacy",
+      "level": "C1"
+    },
+    {
+      "id": "C1-synthetic-8860",
+      "headword": "synthetic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-synthetically-8861",
+      "headword": "synthetically",
+      "level": "C1"
+    },
+    {
+      "id": "C1-lackluster/lacklustre-8862",
+      "headword": "lackluster/lacklustre",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elastic-8863",
+      "headword": "elastic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-elastic-8864",
+      "headword": "elastic",
+      "level": "C1"
+    },
+    {
+      "id": "C1-appall/appal-8865",
+      "headword": "appall/appal",
+      "level": "C1"
+    },
+    {
+      "id": "C1-appalling-8866",
+      "headword": "appalling",
+      "level": "C1"
+    },
+    {
+      "id": "C1-appallingly-8867",
+      "headword": "appallingly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-pounce-8868",
+      "headword": "pounce",
+      "level": "C1"
+    },
+    {
+      "id": "C1-abound-8869",
+      "headword": "abound",
+      "level": "C1"
+    },
+    {
+      "id": "C1-sap-8870",
+      "headword": "sap",
+      "level": "C1"
+    },
+    {
+      "id": "C1-monotonous-8871",
+      "headword": "monotonous",
+      "level": "C1"
+    },
+    {
+      "id": "C1-monotonously-8872",
+      "headword": "monotonously",
+      "level": "C1"
+    },
+    {
+      "id": "C1-monotony-8873",
+      "headword": "monotony",
+      "level": "C1"
+    },
+    {
+      "id": "C1-turn to -8874",
+      "headword": "turn to ",
+      "level": "C1"
+    },
+    {
+      "id": "C1-ingenious-8875",
+      "headword": "ingenious",
+      "level": "C1"
+    },
+    {
+      "id": "C1-plaque-8876",
+      "headword": "plaque",
+      "level": "C1"
+    },
+    {
+      "id": "C1-neutralize/neutralise-8877",
+      "headword": "neutralize/neutralise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-neutralization/neutralisation-8878",
+      "headword": "neutralization/neutralisation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-salivate-8879",
+      "headword": "salivate",
+      "level": "C1"
+    },
+    {
+      "id": "C1-cessation-8880",
+      "headword": "cessation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-remorse-8881",
+      "headword": "remorse",
+      "level": "C1"
+    },
+    {
+      "id": "C1-remorseless-8882",
+      "headword": "remorseless",
+      "level": "C1"
+    },
+    {
+      "id": "C1-remorsefully-8883",
+      "headword": "remorsefully",
+      "level": "C1"
+    },
+    {
+      "id": "C1-remorselessly-8884",
+      "headword": "remorselessly",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inexcusable-8885",
+      "headword": "inexcusable",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inexcusably-8886",
+      "headword": "inexcusably",
+      "level": "C1"
+    },
+    {
+      "id": "C1-inexhaustible-8887",
+      "headword": "inexhaustible",
+      "level": "C1"
+    },
+    {
+      "id": "C1-unassisted-8888",
+      "headword": "unassisted",
+      "level": "C1"
+    },
+    {
+      "id": "C1-heighten-8889",
+      "headword": "heighten",
+      "level": "C1"
+    },
+    {
+      "id": "C1-fixture-8890",
+      "headword": "fixture",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bulk-8891",
+      "headword": "bulk",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bulky-8892",
+      "headword": "bulky",
+      "level": "C1"
+    },
+    {
+      "id": "C1-bulk up-8893",
+      "headword": "bulk up",
+      "level": "C1"
+    },
+    {
+      "id": "C1-digitalize/digitalise-8894",
+      "headword": "digitalize/digitalise",
+      "level": "C1"
+    },
+    {
+      "id": "C1-digitalization/digitalisation-8895",
+      "headword": "digitalization/digitalisation",
+      "level": "C1"
+    },
+    {
+      "id": "C1-mark-up-8896",
+      "headword": "mark-up",
+      "level": "C1"
+    },
+    {
+      "id": "C1-complementary-8897",
+      "headword": "complementary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-complimentary-8898",
+      "headword": "complimentary",
+      "level": "C1"
+    },
+    {
+      "id": "C1-staple-8899",
+      "headword": "staple",
+      "level": "C1"
+    },
+    {
+      "id": "C1-wares-8900",
+      "headword": "wares",
+      "level": "C1"
+    },
+    {
+      "id": "C1-testament-8901",
+      "headword": "testament",
+      "level": "C1"
+    },
+    {
+      "id": "C1-succulent-8902",
+      "headword": "succulent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-succulent-8903",
+      "headword": "succulent",
+      "level": "C1"
+    },
+    {
+      "id": "C1-succulently-8904",
+      "headword": "succulently",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tranquil-8905",
+      "headword": "tranquil",
+      "level": "C1"
+    },
+    {
+      "id": "C1-tranquility-8906",
+      "headword": "tranquility",
+      "level": "C1"
+    },
+    {
+      "id": "C1-spartan-8907",
+      "headword": "spartan",
+      "level": "C1"
+    },
+    {
+      "id": "C1-peninsula-8908",
+      "headword": "peninsula",
+      "level": "C1"
+    },
+    {
+      "id": "C1-billiards-8909",
+      "headword": "billiards",
+      "level": "C1"
+    }
+  ]
+}

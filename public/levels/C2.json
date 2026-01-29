@@ -1,0 +1,5131 @@
+{
+  "version": "2026-01-29",
+  "level": "C2",
+  "words": [
+    {
+      "id": "C2-exude-8910",
+      "headword": "exude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-envisage-8911",
+      "headword": "envisage",
+      "level": "C2"
+    },
+    {
+      "id": "C2-headmistress-8912",
+      "headword": "headmistress",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mien-8913",
+      "headword": "mien",
+      "level": "C2"
+    },
+    {
+      "id": "C2-timidity-8914",
+      "headword": "timidity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unravel-8915",
+      "headword": "unravel",
+      "level": "C2"
+    },
+    {
+      "id": "C2-concurrence-8916",
+      "headword": "concurrence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unpromising-8917",
+      "headword": "unpromising",
+      "level": "C2"
+    },
+    {
+      "id": "C2-teem-8918",
+      "headword": "teem",
+      "level": "C2"
+    },
+    {
+      "id": "C2-marvel-8919",
+      "headword": "marvel",
+      "level": "C2"
+    },
+    {
+      "id": "C2-outpatient-8920",
+      "headword": "outpatient",
+      "level": "C2"
+    },
+    {
+      "id": "C2-corpse-8921",
+      "headword": "corpse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-apprentice-8922",
+      "headword": "apprentice",
+      "level": "C2"
+    },
+    {
+      "id": "C2-constrained-8923",
+      "headword": "constrained",
+      "level": "C2"
+    },
+    {
+      "id": "C2-quirk-8924",
+      "headword": "quirk",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indignant-8925",
+      "headword": "indignant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indignantly-8926",
+      "headword": "indignantly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-eccentricity-8927",
+      "headword": "eccentricity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-locomotive-8928",
+      "headword": "locomotive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-locomotion-8929",
+      "headword": "locomotion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-individualism-8930",
+      "headword": "individualism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-enthuse-8931",
+      "headword": "enthuse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-belligerent-8932",
+      "headword": "belligerent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-belligerence-8933",
+      "headword": "belligerence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stoicism-8934",
+      "headword": "stoicism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deliberate-8935",
+      "headword": "deliberate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-recluse-8936",
+      "headword": "recluse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reclusive-8937",
+      "headword": "reclusive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-metalled-8938",
+      "headword": "metalled",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brief-8939",
+      "headword": "brief",
+      "level": "C2"
+    },
+    {
+      "id": "C2-oblique-8940",
+      "headword": "oblique",
+      "level": "C2"
+    },
+    {
+      "id": "C2-facsimile-8941",
+      "headword": "facsimile",
+      "level": "C2"
+    },
+    {
+      "id": "C2-shamble-8942",
+      "headword": "shamble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-whir-8943",
+      "headword": "whir",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blight-8944",
+      "headword": "blight",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blight-8945",
+      "headword": "blight",
+      "level": "C2"
+    },
+    {
+      "id": "C2-puritanical-8946",
+      "headword": "puritanical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brood-8947",
+      "headword": "brood",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brood-8948",
+      "headword": "brood",
+      "level": "C2"
+    },
+    {
+      "id": "C2-disdainful-8949",
+      "headword": "disdainful",
+      "level": "C2"
+    },
+    {
+      "id": "C2-zoologist-8950",
+      "headword": "zoologist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-zoology-8951",
+      "headword": "zoology",
+      "level": "C2"
+    },
+    {
+      "id": "C2-encumbrance-8952",
+      "headword": "encumbrance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-encumber-8953",
+      "headword": "encumber",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hypothesis-8954",
+      "headword": "hypothesis",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hypothesize-8955",
+      "headword": "hypothesize",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hypothetical-8956",
+      "headword": "hypothetical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-parasitic-8957",
+      "headword": "parasitic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-plumage-8958",
+      "headword": "plumage",
+      "level": "C2"
+    },
+    {
+      "id": "C2-utilitarian-8959",
+      "headword": "utilitarian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-utilize-8960",
+      "headword": "utilize",
+      "level": "C2"
+    },
+    {
+      "id": "C2-utility-8961",
+      "headword": "utility",
+      "level": "C2"
+    },
+    {
+      "id": "C2-predilection-8962",
+      "headword": "predilection",
+      "level": "C2"
+    },
+    {
+      "id": "C2-commensurate-8963",
+      "headword": "commensurate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-commensurately-8964",
+      "headword": "commensurately",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vindicate-8965",
+      "headword": "vindicate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vindication-8966",
+      "headword": "vindication",
+      "level": "C2"
+    },
+    {
+      "id": "C2-parable-8967",
+      "headword": "parable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-poise-8968",
+      "headword": "poise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-minster-8969",
+      "headword": "minster",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wrack-8970",
+      "headword": "wrack",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ironic-8971",
+      "headword": "ironic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-predecessor-8972",
+      "headword": "predecessor",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ally-8973",
+      "headword": "ally",
+      "level": "C2"
+    },
+    {
+      "id": "C2-callous-8974",
+      "headword": "callous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-callously-8975",
+      "headword": "callously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-derelict-8976",
+      "headword": "derelict",
+      "level": "C2"
+    },
+    {
+      "id": "C2-derelict-8977",
+      "headword": "derelict",
+      "level": "C2"
+    },
+    {
+      "id": "C2-materialism-8978",
+      "headword": "materialism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-materialistic-8979",
+      "headword": "materialistic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ferocity-8980",
+      "headword": "ferocity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-utter-8981",
+      "headword": "utter",
+      "level": "C2"
+    },
+    {
+      "id": "C2-utter-8982",
+      "headword": "utter",
+      "level": "C2"
+    },
+    {
+      "id": "C2-evokingly-8983",
+      "headword": "evokingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-recitation-8984",
+      "headword": "recitation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-equable-8985",
+      "headword": "equable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-extant-8986",
+      "headword": "extant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-denounce-8987",
+      "headword": "denounce",
+      "level": "C2"
+    },
+    {
+      "id": "C2-denunciation-8988",
+      "headword": "denunciation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-echo-8989",
+      "headword": "echo",
+      "level": "C2"
+    },
+    {
+      "id": "C2-echo-8990",
+      "headword": "echo",
+      "level": "C2"
+    },
+    {
+      "id": "C2-echo-8991",
+      "headword": "echo",
+      "level": "C2"
+    },
+    {
+      "id": "C2-requisition-8992",
+      "headword": "requisition",
+      "level": "C2"
+    },
+    {
+      "id": "C2-substantiate-8993",
+      "headword": "substantiate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inscrutable-8994",
+      "headword": "inscrutable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stratosphere-8995",
+      "headword": "stratosphere",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indulge-8996",
+      "headword": "indulge",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indulgence-8997",
+      "headword": "indulgence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indulgently-8998",
+      "headword": "indulgently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-laudatory-8999",
+      "headword": "laudatory",
+      "level": "C2"
+    },
+    {
+      "id": "C2-laud -9000",
+      "headword": "laud ",
+      "level": "C2"
+    },
+    {
+      "id": "C2-glitz-9001",
+      "headword": "glitz",
+      "level": "C2"
+    },
+    {
+      "id": "C2-glitzy-9002",
+      "headword": "glitzy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-automate-9003",
+      "headword": "automate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-apprehend-9004",
+      "headword": "apprehend",
+      "level": "C2"
+    },
+    {
+      "id": "C2-athleticism-9005",
+      "headword": "athleticism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-daunt-9006",
+      "headword": "daunt",
+      "level": "C2"
+    },
+    {
+      "id": "C2-daunting-9007",
+      "headword": "daunting",
+      "level": "C2"
+    },
+    {
+      "id": "C2-acreage-9008",
+      "headword": "acreage",
+      "level": "C2"
+    },
+    {
+      "id": "C2-affectation-9009",
+      "headword": "affectation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-imposition-9010",
+      "headword": "imposition",
+      "level": "C2"
+    },
+    {
+      "id": "C2-circuit-9011",
+      "headword": "circuit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stipulate-9012",
+      "headword": "stipulate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stipulation-9013",
+      "headword": "stipulation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-allot-9014",
+      "headword": "allot",
+      "level": "C2"
+    },
+    {
+      "id": "C2-allotment-9015",
+      "headword": "allotment",
+      "level": "C2"
+    },
+    {
+      "id": "C2-anticlimactically-9016",
+      "headword": "anticlimactically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-forfeiture-9017",
+      "headword": "forfeiture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blitz-9018",
+      "headword": "blitz",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blitz-9019",
+      "headword": "blitz",
+      "level": "C2"
+    },
+    {
+      "id": "C2-primeval-9020",
+      "headword": "primeval",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tenacity-9021",
+      "headword": "tenacity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tenacious-9022",
+      "headword": "tenacious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tenaciously-9023",
+      "headword": "tenaciously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-exact-9024",
+      "headword": "exact",
+      "level": "C2"
+    },
+    {
+      "id": "C2-genomic-9025",
+      "headword": "genomic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-genomically-9026",
+      "headword": "genomically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-capacious-9027",
+      "headword": "capacious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-utilitarian-9028",
+      "headword": "utilitarian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-utilization/utilisation-9029",
+      "headword": "utilization/utilisation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unequivocal-9030",
+      "headword": "unequivocal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unequivocally-9031",
+      "headword": "unequivocally",
+      "level": "C2"
+    },
+    {
+      "id": "C2-spontaneity-9032",
+      "headword": "spontaneity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-provocation-9033",
+      "headword": "provocation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-portraiture-9034",
+      "headword": "portraiture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tedium-9035",
+      "headword": "tedium",
+      "level": "C2"
+    },
+    {
+      "id": "C2-succeed-9036",
+      "headword": "succeed",
+      "level": "C2"
+    },
+    {
+      "id": "C2-circumnavigate-9037",
+      "headword": "circumnavigate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-circumnavigation-9038",
+      "headword": "circumnavigation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-liaise-9039",
+      "headword": "liaise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contractual-9040",
+      "headword": "contractual",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contractually-9041",
+      "headword": "contractually",
+      "level": "C2"
+    },
+    {
+      "id": "C2-repute-9042",
+      "headword": "repute",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abject-9043",
+      "headword": "abject",
+      "level": "C2"
+    },
+    {
+      "id": "C2-sheaf-9044",
+      "headword": "sheaf",
+      "level": "C2"
+    },
+    {
+      "id": "C2-articulation-9045",
+      "headword": "articulation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-articulate-9046",
+      "headword": "articulate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-spurious-9047",
+      "headword": "spurious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-spuriously-9048",
+      "headword": "spuriously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-posture-9049",
+      "headword": "posture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-calorific-9050",
+      "headword": "calorific",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fabulate-9051",
+      "headword": "fabulate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fabulation-9052",
+      "headword": "fabulation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-octogenarian-9053",
+      "headword": "octogenarian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-voracity-9054",
+      "headword": "voracity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brandish-9055",
+      "headword": "brandish",
+      "level": "C2"
+    },
+    {
+      "id": "C2-repose-9056",
+      "headword": "repose",
+      "level": "C2"
+    },
+    {
+      "id": "C2-repose-9057",
+      "headword": "repose",
+      "level": "C2"
+    },
+    {
+      "id": "C2-encumber-9058",
+      "headword": "encumber",
+      "level": "C2"
+    },
+    {
+      "id": "C2-encumbrance-9059",
+      "headword": "encumbrance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unencumbered-9060",
+      "headword": "unencumbered",
+      "level": "C2"
+    },
+    {
+      "id": "C2-buffoonery-9061",
+      "headword": "buffoonery",
+      "level": "C2"
+    },
+    {
+      "id": "C2-gauche-9062",
+      "headword": "gauche",
+      "level": "C2"
+    },
+    {
+      "id": "C2-domesticity-9063",
+      "headword": "domesticity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-accrue-9064",
+      "headword": "accrue",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proliferation-9065",
+      "headword": "proliferation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blandishment-9066",
+      "headword": "blandishment",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pluck-9067",
+      "headword": "pluck",
+      "level": "C2"
+    },
+    {
+      "id": "C2-anthropological-9068",
+      "headword": "anthropological",
+      "level": "C2"
+    },
+    {
+      "id": "C2-anthropologically-9069",
+      "headword": "anthropologically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-carbonize/carbonise-9070",
+      "headword": "carbonize/carbonise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-monastic-9071",
+      "headword": "monastic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-graft-9072",
+      "headword": "graft",
+      "level": "C2"
+    },
+    {
+      "id": "C2-midwifery-9073",
+      "headword": "midwifery",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adornment-9074",
+      "headword": "adornment",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adorn-9075",
+      "headword": "adorn",
+      "level": "C2"
+    },
+    {
+      "id": "C2-idle-9076",
+      "headword": "idle",
+      "level": "C2"
+    },
+    {
+      "id": "C2-conjecture-9077",
+      "headword": "conjecture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-conjecture-9078",
+      "headword": "conjecture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-malleable-9079",
+      "headword": "malleable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-malleability-9080",
+      "headword": "malleability",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ore-9081",
+      "headword": "ore",
+      "level": "C2"
+    },
+    {
+      "id": "C2-gale-9082",
+      "headword": "gale",
+      "level": "C2"
+    },
+    {
+      "id": "C2-promenade-9083",
+      "headword": "promenade",
+      "level": "C2"
+    },
+    {
+      "id": "C2-testimonial-9084",
+      "headword": "testimonial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-distill-9085",
+      "headword": "distill",
+      "level": "C2"
+    },
+    {
+      "id": "C2-distillation-9086",
+      "headword": "distillation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-informant-9087",
+      "headword": "informant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vis-a-vis-9088",
+      "headword": "vis-a-vis",
+      "level": "C2"
+    },
+    {
+      "id": "C2-overlay-9089",
+      "headword": "overlay",
+      "level": "C2"
+    },
+    {
+      "id": "C2-nostalgia-9090",
+      "headword": "nostalgia",
+      "level": "C2"
+    },
+    {
+      "id": "C2-nostalgic-9091",
+      "headword": "nostalgic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-nostalgically-9092",
+      "headword": "nostalgically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-grievance-9093",
+      "headword": "grievance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deprivation-9094",
+      "headword": "deprivation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-residue-9095",
+      "headword": "residue",
+      "level": "C2"
+    },
+    {
+      "id": "C2-residual-9096",
+      "headword": "residual",
+      "level": "C2"
+    },
+    {
+      "id": "C2-physiological-9097",
+      "headword": "physiological",
+      "level": "C2"
+    },
+    {
+      "id": "C2-physiologically-9098",
+      "headword": "physiologically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-familiarize/familiarise-9099",
+      "headword": "familiarize/familiarise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-methodology-9100",
+      "headword": "methodology",
+      "level": "C2"
+    },
+    {
+      "id": "C2-methodological-9101",
+      "headword": "methodological",
+      "level": "C2"
+    },
+    {
+      "id": "C2-methodologically-9102",
+      "headword": "methodologically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proportional-9103",
+      "headword": "proportional",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proportionally-9104",
+      "headword": "proportionally",
+      "level": "C2"
+    },
+    {
+      "id": "C2-habitation-9105",
+      "headword": "habitation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inartistic-9106",
+      "headword": "inartistic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ornate-9107",
+      "headword": "ornate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-modernism-9108",
+      "headword": "modernism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-presuppose-9109",
+      "headword": "presuppose",
+      "level": "C2"
+    },
+    {
+      "id": "C2-presupposition-9110",
+      "headword": "presupposition",
+      "level": "C2"
+    },
+    {
+      "id": "C2-centralized/centralised-9111",
+      "headword": "centralized/centralised",
+      "level": "C2"
+    },
+    {
+      "id": "C2-envisage-9112",
+      "headword": "envisage",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contextual-9113",
+      "headword": "contextual",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contextually-9114",
+      "headword": "contextually",
+      "level": "C2"
+    },
+    {
+      "id": "C2-transmitter-9115",
+      "headword": "transmitter",
+      "level": "C2"
+    },
+    {
+      "id": "C2-regulatory-9116",
+      "headword": "regulatory",
+      "level": "C2"
+    },
+    {
+      "id": "C2-archival-9117",
+      "headword": "archival",
+      "level": "C2"
+    },
+    {
+      "id": "C2-diffuse-9118",
+      "headword": "diffuse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-diffuse-9119",
+      "headword": "diffuse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-egalitarian-9120",
+      "headword": "egalitarian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-egalitarian-9121",
+      "headword": "egalitarian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hindsight-9122",
+      "headword": "hindsight",
+      "level": "C2"
+    },
+    {
+      "id": "C2-materialize/materialise-9123",
+      "headword": "materialize/materialise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-materialization/materialisation-9124",
+      "headword": "materialization/materialisation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-disperse-9125",
+      "headword": "disperse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dispersal-9126",
+      "headword": "dispersal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adverse-9127",
+      "headword": "adverse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adversely-9128",
+      "headword": "adversely",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stabilize/stabilise-9129",
+      "headword": "stabilize/stabilise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pervasive-9130",
+      "headword": "pervasive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pervasiveness-9131",
+      "headword": "pervasiveness",
+      "level": "C2"
+    },
+    {
+      "id": "C2-secure-9132",
+      "headword": "secure",
+      "level": "C2"
+    },
+    {
+      "id": "C2-autonomous-9133",
+      "headword": "autonomous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-autonomously-9134",
+      "headword": "autonomously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-outmoded-9135",
+      "headword": "outmoded",
+      "level": "C2"
+    },
+    {
+      "id": "C2-phase-9136",
+      "headword": "phase",
+      "level": "C2"
+    },
+    {
+      "id": "C2-plum-9137",
+      "headword": "plum",
+      "level": "C2"
+    },
+    {
+      "id": "C2-notorious-9138",
+      "headword": "notorious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-notoriously-9139",
+      "headword": "notoriously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-notoriety-9140",
+      "headword": "notoriety",
+      "level": "C2"
+    },
+    {
+      "id": "C2-menial-9141",
+      "headword": "menial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-insular-9142",
+      "headword": "insular",
+      "level": "C2"
+    },
+    {
+      "id": "C2-antidote-9143",
+      "headword": "antidote",
+      "level": "C2"
+    },
+    {
+      "id": "C2-posture-9144",
+      "headword": "posture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-postural-9145",
+      "headword": "postural",
+      "level": "C2"
+    },
+    {
+      "id": "C2-posturing-9146",
+      "headword": "posturing",
+      "level": "C2"
+    },
+    {
+      "id": "C2-revelatory-9147",
+      "headword": "revelatory",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prostrate-9148",
+      "headword": "prostrate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prostrate-9149",
+      "headword": "prostrate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-haphazard-9150",
+      "headword": "haphazard",
+      "level": "C2"
+    },
+    {
+      "id": "C2-haphazardly-9151",
+      "headword": "haphazardly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deficient-9152",
+      "headword": "deficient",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deficiently-9153",
+      "headword": "deficiently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deficit-9154",
+      "headword": "deficit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-delicatessen-9155",
+      "headword": "delicatessen",
+      "level": "C2"
+    },
+    {
+      "id": "C2-muscle-bound-9156",
+      "headword": "muscle-bound",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dive-9157",
+      "headword": "dive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-maneuver/manoeuvre-9158",
+      "headword": "maneuver/manoeuvre",
+      "level": "C2"
+    },
+    {
+      "id": "C2-maneuver/manoeuvre-9159",
+      "headword": "maneuver/manoeuvre",
+      "level": "C2"
+    },
+    {
+      "id": "C2-posit-9160",
+      "headword": "posit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cocoon-9161",
+      "headword": "cocoon",
+      "level": "C2"
+    },
+    {
+      "id": "C2-chrysalis-9162",
+      "headword": "chrysalis",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ignominious-9163",
+      "headword": "ignominious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ignominiously-9164",
+      "headword": "ignominiously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-euphoria-9165",
+      "headword": "euphoria",
+      "level": "C2"
+    },
+    {
+      "id": "C2-euphoric-9166",
+      "headword": "euphoric",
+      "level": "C2"
+    },
+    {
+      "id": "C2-euphorically-9167",
+      "headword": "euphorically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-relegate-9168",
+      "headword": "relegate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-succumb-9169",
+      "headword": "succumb",
+      "level": "C2"
+    },
+    {
+      "id": "C2-treacherous-9170",
+      "headword": "treacherous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-treacherously-9171",
+      "headword": "treacherously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-treachery-9172",
+      "headword": "treachery",
+      "level": "C2"
+    },
+    {
+      "id": "C2-maggot-9173",
+      "headword": "maggot",
+      "level": "C2"
+    },
+    {
+      "id": "C2-palate-9174",
+      "headword": "palate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-palatable-9175",
+      "headword": "palatable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hermit-9176",
+      "headword": "hermit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hermetic-9177",
+      "headword": "hermetic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-irrelevancy-9178",
+      "headword": "irrelevancy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mariner-9179",
+      "headword": "mariner",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rift-9180",
+      "headword": "rift",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mere-9181",
+      "headword": "mere",
+      "level": "C2"
+    },
+    {
+      "id": "C2-helm-9182",
+      "headword": "helm",
+      "level": "C2"
+    },
+    {
+      "id": "C2-autopilot-9183",
+      "headword": "autopilot",
+      "level": "C2"
+    },
+    {
+      "id": "C2-eminence-9184",
+      "headword": "eminence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-eminent-9185",
+      "headword": "eminent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-preeminent-9186",
+      "headword": "preeminent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mold/mould-9187",
+      "headword": "mold/mould",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unsuspected-9188",
+      "headword": "unsuspected",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abolish-9189",
+      "headword": "abolish",
+      "level": "C2"
+    },
+    {
+      "id": "C2-paralyze/paralyse-9190",
+      "headword": "paralyze/paralyse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-paralysis-9191",
+      "headword": "paralysis",
+      "level": "C2"
+    },
+    {
+      "id": "C2-paralyzingly/paralysingly-9192",
+      "headword": "paralyzingly/paralysingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-glory in-9193",
+      "headword": "glory in",
+      "level": "C2"
+    },
+    {
+      "id": "C2-decentralize/decentralise-9194",
+      "headword": "decentralize/decentralise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-preoccupation-9195",
+      "headword": "preoccupation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-preoccupy-9196",
+      "headword": "preoccupy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prolong-9197",
+      "headword": "prolong",
+      "level": "C2"
+    },
+    {
+      "id": "C2-audit-9198",
+      "headword": "audit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-audit-9199",
+      "headword": "audit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-drudgery-9200",
+      "headword": "drudgery",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pressurize-9201",
+      "headword": "pressurize",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pressurization-9202",
+      "headword": "pressurization",
+      "level": "C2"
+    },
+    {
+      "id": "C2-intermediary-9203",
+      "headword": "intermediary",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hotelier-9204",
+      "headword": "hotelier",
+      "level": "C2"
+    },
+    {
+      "id": "C2-denote-9205",
+      "headword": "denote",
+      "level": "C2"
+    },
+    {
+      "id": "C2-denotation-9206",
+      "headword": "denotation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-profitability-9207",
+      "headword": "profitability",
+      "level": "C2"
+    },
+    {
+      "id": "C2-jargon-9208",
+      "headword": "jargon",
+      "level": "C2"
+    },
+    {
+      "id": "C2-declination-9209",
+      "headword": "declination",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vocational-9210",
+      "headword": "vocational",
+      "level": "C2"
+    },
+    {
+      "id": "C2-spatial-9211",
+      "headword": "spatial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-spatially-9212",
+      "headword": "spatially",
+      "level": "C2"
+    },
+    {
+      "id": "C2-punctual-9213",
+      "headword": "punctual",
+      "level": "C2"
+    },
+    {
+      "id": "C2-punctuality-9214",
+      "headword": "punctuality",
+      "level": "C2"
+    },
+    {
+      "id": "C2-integration-9215",
+      "headword": "integration",
+      "level": "C2"
+    },
+    {
+      "id": "C2-curriculum-9216",
+      "headword": "curriculum",
+      "level": "C2"
+    },
+    {
+      "id": "C2-extracurricular-9217",
+      "headword": "extracurricular",
+      "level": "C2"
+    },
+    {
+      "id": "C2-extracurricular-9218",
+      "headword": "extracurricular",
+      "level": "C2"
+    },
+    {
+      "id": "C2-encompass-9219",
+      "headword": "encompass",
+      "level": "C2"
+    },
+    {
+      "id": "C2-all-encompassing-9220",
+      "headword": "all-encompassing",
+      "level": "C2"
+    },
+    {
+      "id": "C2-accountability-9221",
+      "headword": "accountability",
+      "level": "C2"
+    },
+    {
+      "id": "C2-frolic-9222",
+      "headword": "frolic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-minefield-9223",
+      "headword": "minefield",
+      "level": "C2"
+    },
+    {
+      "id": "C2-side-step-9224",
+      "headword": "side-step",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abundant-9225",
+      "headword": "abundant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abundantly-9226",
+      "headword": "abundantly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abundance-9227",
+      "headword": "abundance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-anarchic-9228",
+      "headword": "anarchic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-crystallize/crystallise-9229",
+      "headword": "crystallize/crystallise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-crystallization/crystallisation-9230",
+      "headword": "crystallization/crystallisation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prescriptive-9231",
+      "headword": "prescriptive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-slab-9232",
+      "headword": "slab",
+      "level": "C2"
+    },
+    {
+      "id": "C2-retrospect-9233",
+      "headword": "retrospect",
+      "level": "C2"
+    },
+    {
+      "id": "C2-retrospective-9234",
+      "headword": "retrospective",
+      "level": "C2"
+    },
+    {
+      "id": "C2-retrospection-9235",
+      "headword": "retrospection",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wordage-9236",
+      "headword": "wordage",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brevity-9237",
+      "headword": "brevity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-uncanny-9238",
+      "headword": "uncanny",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tactic-9239",
+      "headword": "tactic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tactical-9240",
+      "headword": "tactical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tactically-9241",
+      "headword": "tactically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tactile-9242",
+      "headword": "tactile",
+      "level": "C2"
+    },
+    {
+      "id": "C2-gambit-9243",
+      "headword": "gambit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-babble-9244",
+      "headword": "babble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-bauble-9245",
+      "headword": "bauble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-correlate-9246",
+      "headword": "correlate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-correlation-9247",
+      "headword": "correlation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-correlate-9248",
+      "headword": "correlate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-combustion-9249",
+      "headword": "combustion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-painstaking-9250",
+      "headword": "painstaking",
+      "level": "C2"
+    },
+    {
+      "id": "C2-painstakingly-9251",
+      "headword": "painstakingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contraption-9252",
+      "headword": "contraption",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mesh-9253",
+      "headword": "mesh",
+      "level": "C2"
+    },
+    {
+      "id": "C2-enabler-9254",
+      "headword": "enabler",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fluctuate-9255",
+      "headword": "fluctuate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fluctuation-9256",
+      "headword": "fluctuation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lyricist-9257",
+      "headword": "lyricist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lyrical-9258",
+      "headword": "lyrical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lyrically-9259",
+      "headword": "lyrically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-bona fide-9260",
+      "headword": "bona fide",
+      "level": "C2"
+    },
+    {
+      "id": "C2-moribund-9261",
+      "headword": "moribund",
+      "level": "C2"
+    },
+    {
+      "id": "C2-perch-9262",
+      "headword": "perch",
+      "level": "C2"
+    },
+    {
+      "id": "C2-perch-9263",
+      "headword": "perch",
+      "level": "C2"
+    },
+    {
+      "id": "C2-perch-9264",
+      "headword": "perch",
+      "level": "C2"
+    },
+    {
+      "id": "C2-solicit-9265",
+      "headword": "solicit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vocalist-9266",
+      "headword": "vocalist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-philanthropy-9267",
+      "headword": "philanthropy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-philanthropist-9268",
+      "headword": "philanthropist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-philanthropic-9269",
+      "headword": "philanthropic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-philanthropically-9270",
+      "headword": "philanthropically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-precocious-9271",
+      "headword": "precocious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-precociously-9272",
+      "headword": "precociously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wordsmith-9273",
+      "headword": "wordsmith",
+      "level": "C2"
+    },
+    {
+      "id": "C2-connote-9274",
+      "headword": "connote",
+      "level": "C2"
+    },
+    {
+      "id": "C2-connotation-9275",
+      "headword": "connotation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-herald-9276",
+      "headword": "herald",
+      "level": "C2"
+    },
+    {
+      "id": "C2-herald-9277",
+      "headword": "herald",
+      "level": "C2"
+    },
+    {
+      "id": "C2-philistine-9278",
+      "headword": "philistine",
+      "level": "C2"
+    },
+    {
+      "id": "C2-innuendo-9279",
+      "headword": "innuendo",
+      "level": "C2"
+    },
+    {
+      "id": "C2-induce-9280",
+      "headword": "induce",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inducement-9281",
+      "headword": "inducement",
+      "level": "C2"
+    },
+    {
+      "id": "C2-anthology-9282",
+      "headword": "anthology",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lament-9283",
+      "headword": "lament",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lamentation-9284",
+      "headword": "lamentation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-conduit-9285",
+      "headword": "conduit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-chronology-9286",
+      "headword": "chronology",
+      "level": "C2"
+    },
+    {
+      "id": "C2-chronological-9287",
+      "headword": "chronological",
+      "level": "C2"
+    },
+    {
+      "id": "C2-chronologically-9288",
+      "headword": "chronologically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-equilibrium-9289",
+      "headword": "equilibrium",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rebound-9290",
+      "headword": "rebound",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rebound-9291",
+      "headword": "rebound",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proposition-9292",
+      "headword": "proposition",
+      "level": "C2"
+    },
+    {
+      "id": "C2-flagging-9293",
+      "headword": "flagging",
+      "level": "C2"
+    },
+    {
+      "id": "C2-electrode-9294",
+      "headword": "electrode",
+      "level": "C2"
+    },
+    {
+      "id": "C2-caffeinate-9295",
+      "headword": "caffeinate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cosmic-9296",
+      "headword": "cosmic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-interlude-9297",
+      "headword": "interlude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-haven-9298",
+      "headword": "haven",
+      "level": "C2"
+    },
+    {
+      "id": "C2-beneficiary-9299",
+      "headword": "beneficiary",
+      "level": "C2"
+    },
+    {
+      "id": "C2-recuperate-9300",
+      "headword": "recuperate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-recuperation-9301",
+      "headword": "recuperation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-recuperative-9302",
+      "headword": "recuperative",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cultish-9303",
+      "headword": "cultish",
+      "level": "C2"
+    },
+    {
+      "id": "C2-seismic-9304",
+      "headword": "seismic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-irrevocably-9305",
+      "headword": "irrevocably",
+      "level": "C2"
+    },
+    {
+      "id": "C2-irrevocable-9306",
+      "headword": "irrevocable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-slither-9307",
+      "headword": "slither",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unnerve-9308",
+      "headword": "unnerve",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unnerving-9309",
+      "headword": "unnerving",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unnervingly-9310",
+      "headword": "unnervingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-protrude-9311",
+      "headword": "protrude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-protrusion-9312",
+      "headword": "protrusion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-qualitative-9313",
+      "headword": "qualitative",
+      "level": "C2"
+    },
+    {
+      "id": "C2-procedural-9314",
+      "headword": "procedural",
+      "level": "C2"
+    },
+    {
+      "id": "C2-procedural-9315",
+      "headword": "procedural",
+      "level": "C2"
+    },
+    {
+      "id": "C2-demystify-9316",
+      "headword": "demystify",
+      "level": "C2"
+    },
+    {
+      "id": "C2-demystification-9317",
+      "headword": "demystification",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proprietary-9318",
+      "headword": "proprietary",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proprietorial-9319",
+      "headword": "proprietorial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tantamount-9320",
+      "headword": "tantamount",
+      "level": "C2"
+    },
+    {
+      "id": "C2-floodgates-9321",
+      "headword": "floodgates",
+      "level": "C2"
+    },
+    {
+      "id": "C2-imperceptible-9322",
+      "headword": "imperceptible",
+      "level": "C2"
+    },
+    {
+      "id": "C2-imperceptibly-9323",
+      "headword": "imperceptibly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hapless-9324",
+      "headword": "hapless",
+      "level": "C2"
+    },
+    {
+      "id": "C2-catastrophic-9325",
+      "headword": "catastrophic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-catastrophically-9326",
+      "headword": "catastrophically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-commission-9327",
+      "headword": "commission",
+      "level": "C2"
+    },
+    {
+      "id": "C2-commission-9328",
+      "headword": "commission",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wayward-9329",
+      "headword": "wayward",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blurb-9330",
+      "headword": "blurb",
+      "level": "C2"
+    },
+    {
+      "id": "C2-provincial-9331",
+      "headword": "provincial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indolent-9332",
+      "headword": "indolent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indolently-9333",
+      "headword": "indolently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indolence-9334",
+      "headword": "indolence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-taste-maker-9335",
+      "headword": "taste-maker",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deviant-9336",
+      "headword": "deviant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deviant-9337",
+      "headword": "deviant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deviantly-9338",
+      "headword": "deviantly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-engender-9339",
+      "headword": "engender",
+      "level": "C2"
+    },
+    {
+      "id": "C2-emolument-9340",
+      "headword": "emolument",
+      "level": "C2"
+    },
+    {
+      "id": "C2-munificence-9341",
+      "headword": "munificence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-posterity-9342",
+      "headword": "posterity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-venomous-9343",
+      "headword": "venomous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-venomously-9344",
+      "headword": "venomously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-choreography-9345",
+      "headword": "choreography",
+      "level": "C2"
+    },
+    {
+      "id": "C2-choreographical-9346",
+      "headword": "choreographical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-archetype-9347",
+      "headword": "archetype",
+      "level": "C2"
+    },
+    {
+      "id": "C2-archetypal-9348",
+      "headword": "archetypal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dissension-9349",
+      "headword": "dissension",
+      "level": "C2"
+    },
+    {
+      "id": "C2-exalted-9350",
+      "headword": "exalted",
+      "level": "C2"
+    },
+    {
+      "id": "C2-exaltedly-9351",
+      "headword": "exaltedly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adept-9352",
+      "headword": "adept",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adept-9353",
+      "headword": "adept",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inert-9354",
+      "headword": "inert",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hitherto-9355",
+      "headword": "hitherto",
+      "level": "C2"
+    },
+    {
+      "id": "C2-angst-9356",
+      "headword": "angst",
+      "level": "C2"
+    },
+    {
+      "id": "C2-angsty-9357",
+      "headword": "angsty",
+      "level": "C2"
+    },
+    {
+      "id": "C2-drabness-9358",
+      "headword": "drabness",
+      "level": "C2"
+    },
+    {
+      "id": "C2-melodious-9359",
+      "headword": "melodious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-melodiously-9360",
+      "headword": "melodiously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-magpie-9361",
+      "headword": "magpie",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lark-9362",
+      "headword": "lark",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lark-9363",
+      "headword": "lark",
+      "level": "C2"
+    },
+    {
+      "id": "C2-melancholy-9364",
+      "headword": "melancholy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-melancholy-9365",
+      "headword": "melancholy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-meteorology-9366",
+      "headword": "meteorology",
+      "level": "C2"
+    },
+    {
+      "id": "C2-meteorological-9367",
+      "headword": "meteorological",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brink-9368",
+      "headword": "brink",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unsurpassed-9369",
+      "headword": "unsurpassed",
+      "level": "C2"
+    },
+    {
+      "id": "C2-loiter-9370",
+      "headword": "loiter",
+      "level": "C2"
+    },
+    {
+      "id": "C2-topple-9371",
+      "headword": "topple",
+      "level": "C2"
+    },
+    {
+      "id": "C2-intrinsic-9372",
+      "headword": "intrinsic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-intrinsically-9373",
+      "headword": "intrinsically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-merit-9374",
+      "headword": "merit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-merit-9375",
+      "headword": "merit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-promotable-9376",
+      "headword": "promotable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-clinch-9377",
+      "headword": "clinch",
+      "level": "C2"
+    },
+    {
+      "id": "C2-anonymity-9378",
+      "headword": "anonymity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-splinter-9379",
+      "headword": "splinter",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reproach-9380",
+      "headword": "reproach",
+      "level": "C2"
+    },
+    {
+      "id": "C2-disseminate-9381",
+      "headword": "disseminate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dissemination-9382",
+      "headword": "dissemination",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dissemble-9383",
+      "headword": "dissemble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mangle-9384",
+      "headword": "mangle",
+      "level": "C2"
+    },
+    {
+      "id": "C2-bereft-9385",
+      "headword": "bereft",
+      "level": "C2"
+    },
+    {
+      "id": "C2-bereftly-9386",
+      "headword": "bereftly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-soliloquy-9387",
+      "headword": "soliloquy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-solipsism-9388",
+      "headword": "solipsism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-soliloquize-9389",
+      "headword": "soliloquize",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mutinous-9390",
+      "headword": "mutinous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mutinously-9391",
+      "headword": "mutinously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prissy-9392",
+      "headword": "prissy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reptilian-9393",
+      "headword": "reptilian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-diminish-9394",
+      "headword": "diminish",
+      "level": "C2"
+    },
+    {
+      "id": "C2-undiminishing-9395",
+      "headword": "undiminishing",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contagion-9396",
+      "headword": "contagion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-homestead-9397",
+      "headword": "homestead",
+      "level": "C2"
+    },
+    {
+      "id": "C2-computerize/computerise-9398",
+      "headword": "computerize/computerise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-incumbent-9399",
+      "headword": "incumbent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-incumbent-9400",
+      "headword": "incumbent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-recumbent-9401",
+      "headword": "recumbent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-nonchalant-9402",
+      "headword": "nonchalant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-nonchalantly-9403",
+      "headword": "nonchalantly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mesmeric-9404",
+      "headword": "mesmeric",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stultify-9405",
+      "headword": "stultify",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stultifyingly-9406",
+      "headword": "stultifyingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wallow-9407",
+      "headword": "wallow",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ponderous-9408",
+      "headword": "ponderous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ponderously-9409",
+      "headword": "ponderously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lassitude-9410",
+      "headword": "lassitude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vicinity-9411",
+      "headword": "vicinity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ebb-9412",
+      "headword": "ebb",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wax-9413",
+      "headword": "wax",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wane-9414",
+      "headword": "wane",
+      "level": "C2"
+    },
+    {
+      "id": "C2-antediluvian-9415",
+      "headword": "antediluvian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ostensible-9416",
+      "headword": "ostensible",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ostensibly-9417",
+      "headword": "ostensibly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-interlocking-9418",
+      "headword": "interlocking",
+      "level": "C2"
+    },
+    {
+      "id": "C2-plane-9419",
+      "headword": "plane",
+      "level": "C2"
+    },
+    {
+      "id": "C2-undemonstrative-9420",
+      "headword": "undemonstrative",
+      "level": "C2"
+    },
+    {
+      "id": "C2-undemonstratively-9421",
+      "headword": "undemonstratively",
+      "level": "C2"
+    },
+    {
+      "id": "C2-menace-9422",
+      "headword": "menace",
+      "level": "C2"
+    },
+    {
+      "id": "C2-menacing-9423",
+      "headword": "menacing",
+      "level": "C2"
+    },
+    {
+      "id": "C2-menacingly-9424",
+      "headword": "menacingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-calamity-9425",
+      "headword": "calamity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-calamitous-9426",
+      "headword": "calamitous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-calamitously-9427",
+      "headword": "calamitously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-nigh-9428",
+      "headword": "nigh",
+      "level": "C2"
+    },
+    {
+      "id": "C2-austere-9429",
+      "headword": "austere",
+      "level": "C2"
+    },
+    {
+      "id": "C2-austerely-9430",
+      "headword": "austerely",
+      "level": "C2"
+    },
+    {
+      "id": "C2-austerity-9431",
+      "headword": "austerity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-idiosyncrasy-9432",
+      "headword": "idiosyncrasy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-idiosyncratic-9433",
+      "headword": "idiosyncratic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-idiomatic-9434",
+      "headword": "idiomatic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-idiomatically-9435",
+      "headword": "idiomatically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-kinetic-9436",
+      "headword": "kinetic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-kinetically-9437",
+      "headword": "kinetically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unmediated-9438",
+      "headword": "unmediated",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mediate-9439",
+      "headword": "mediate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mediation-9440",
+      "headword": "mediation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unharried-9441",
+      "headword": "unharried",
+      "level": "C2"
+    },
+    {
+      "id": "C2-figurative-9442",
+      "headword": "figurative",
+      "level": "C2"
+    },
+    {
+      "id": "C2-figuratively-9443",
+      "headword": "figuratively",
+      "level": "C2"
+    },
+    {
+      "id": "C2-exorcism-9444",
+      "headword": "exorcism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-exorcist-9445",
+      "headword": "exorcist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mundanity-9446",
+      "headword": "mundanity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mediocrity-9447",
+      "headword": "mediocrity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dubiously-9448",
+      "headword": "dubiously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-curate-9449",
+      "headword": "curate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-curator-9450",
+      "headword": "curator",
+      "level": "C2"
+    },
+    {
+      "id": "C2-antithesis-9451",
+      "headword": "antithesis",
+      "level": "C2"
+    },
+    {
+      "id": "C2-antithetical-9452",
+      "headword": "antithetical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-parameter-9453",
+      "headword": "parameter",
+      "level": "C2"
+    },
+    {
+      "id": "C2-detract-9454",
+      "headword": "detract",
+      "level": "C2"
+    },
+    {
+      "id": "C2-interrogate-9455",
+      "headword": "interrogate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-interrogation-9456",
+      "headword": "interrogation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-interrogative-9457",
+      "headword": "interrogative",
+      "level": "C2"
+    },
+    {
+      "id": "C2-interrogatively-9458",
+      "headword": "interrogatively",
+      "level": "C2"
+    },
+    {
+      "id": "C2-perverse-9459",
+      "headword": "perverse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-perversity-9460",
+      "headword": "perversity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-attainment-9461",
+      "headword": "attainment",
+      "level": "C2"
+    },
+    {
+      "id": "C2-opaque-9462",
+      "headword": "opaque",
+      "level": "C2"
+    },
+    {
+      "id": "C2-opacity-9463",
+      "headword": "opacity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-remit-9464",
+      "headword": "remit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-remittance-9465",
+      "headword": "remittance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-recourse-9466",
+      "headword": "recourse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pedestal-9467",
+      "headword": "pedestal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pedestrian-9468",
+      "headword": "pedestrian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lurid-9469",
+      "headword": "lurid",
+      "level": "C2"
+    },
+    {
+      "id": "C2-luridly-9470",
+      "headword": "luridly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fallacy-9471",
+      "headword": "fallacy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rife-9472",
+      "headword": "rife",
+      "level": "C2"
+    },
+    {
+      "id": "C2-grumble-9473",
+      "headword": "grumble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mercenary-9474",
+      "headword": "mercenary",
+      "level": "C2"
+    },
+    {
+      "id": "C2-polysyllabic-9475",
+      "headword": "polysyllabic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-syllabic-9476",
+      "headword": "syllabic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-superfluous-9477",
+      "headword": "superfluous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-superfluously-9478",
+      "headword": "superfluously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-snippet-9479",
+      "headword": "snippet",
+      "level": "C2"
+    },
+    {
+      "id": "C2-practitioner-9480",
+      "headword": "practitioner",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ephemeral-9481",
+      "headword": "ephemeral",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ephemera-9482",
+      "headword": "ephemera",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ephemerality-9483",
+      "headword": "ephemerality",
+      "level": "C2"
+    },
+    {
+      "id": "C2-summarily-9484",
+      "headword": "summarily",
+      "level": "C2"
+    },
+    {
+      "id": "C2-skim-9485",
+      "headword": "skim",
+      "level": "C2"
+    },
+    {
+      "id": "C2-infallibly-9486",
+      "headword": "infallibly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-infallible-9487",
+      "headword": "infallible",
+      "level": "C2"
+    },
+    {
+      "id": "C2-infallibility-9488",
+      "headword": "infallibility",
+      "level": "C2"
+    },
+    {
+      "id": "C2-depravity-9489",
+      "headword": "depravity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-depraved-9490",
+      "headword": "depraved",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deprecate-9491",
+      "headword": "deprecate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deprecatingly-9492",
+      "headword": "deprecatingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-revile-9493",
+      "headword": "revile",
+      "level": "C2"
+    },
+    {
+      "id": "C2-revulsion-9494",
+      "headword": "revulsion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-meager/meagre-9495",
+      "headword": "meager/meagre",
+      "level": "C2"
+    },
+    {
+      "id": "C2-arcane-9496",
+      "headword": "arcane",
+      "level": "C2"
+    },
+    {
+      "id": "C2-arcanely-9497",
+      "headword": "arcanely",
+      "level": "C2"
+    },
+    {
+      "id": "C2-porten-9498",
+      "headword": "porten",
+      "level": "C2"
+    },
+    {
+      "id": "C2-divination-9499",
+      "headword": "divination",
+      "level": "C2"
+    },
+    {
+      "id": "C2-flit-9500",
+      "headword": "flit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hitch-9501",
+      "headword": "hitch",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prone-9502",
+      "headword": "prone",
+      "level": "C2"
+    },
+    {
+      "id": "C2-scavenger-9503",
+      "headword": "scavenger",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vermin-9504",
+      "headword": "vermin",
+      "level": "C2"
+    },
+    {
+      "id": "C2-totemic-9505",
+      "headword": "totemic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-emulate-9506",
+      "headword": "emulate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-emulation-9507",
+      "headword": "emulation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-avian-9508",
+      "headword": "avian",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vestigial-9509",
+      "headword": "vestigial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vestigially-9510",
+      "headword": "vestigially",
+      "level": "C2"
+    },
+    {
+      "id": "C2-barometer-9511",
+      "headword": "barometer",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lament-9512",
+      "headword": "lament",
+      "level": "C2"
+    },
+    {
+      "id": "C2-lamentation-9513",
+      "headword": "lamentation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brouhaha-9514",
+      "headword": "brouhaha",
+      "level": "C2"
+    },
+    {
+      "id": "C2-magnate-9515",
+      "headword": "magnate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-magnanimous-9516",
+      "headword": "magnanimous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-magnanimously-9517",
+      "headword": "magnanimously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-magnanimity-9518",
+      "headword": "magnanimity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-whirlwind-9519",
+      "headword": "whirlwind",
+      "level": "C2"
+    },
+    {
+      "id": "C2-strait-9520",
+      "headword": "strait",
+      "level": "C2"
+    },
+    {
+      "id": "C2-secular-9521",
+      "headword": "secular",
+      "level": "C2"
+    },
+    {
+      "id": "C2-secularly-9522",
+      "headword": "secularly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-euphemism-9523",
+      "headword": "euphemism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-euphemistic-9524",
+      "headword": "euphemistic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-euphemistically-9525",
+      "headword": "euphemistically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-condensation-9526",
+      "headword": "condensation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-redundant-9527",
+      "headword": "redundant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-redundancy-9528",
+      "headword": "redundancy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-redundantly-9529",
+      "headword": "redundantly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-colloquial-9530",
+      "headword": "colloquial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-colloquium-9531",
+      "headword": "colloquium",
+      "level": "C2"
+    },
+    {
+      "id": "C2-colloquially-9532",
+      "headword": "colloquially",
+      "level": "C2"
+    },
+    {
+      "id": "C2-allusion-9533",
+      "headword": "allusion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-allude-9534",
+      "headword": "allude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-disparage-9535",
+      "headword": "disparage",
+      "level": "C2"
+    },
+    {
+      "id": "C2-disparaging-9536",
+      "headword": "disparaging",
+      "level": "C2"
+    },
+    {
+      "id": "C2-disparagingly-9537",
+      "headword": "disparagingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-disparagement-9538",
+      "headword": "disparagement",
+      "level": "C2"
+    },
+    {
+      "id": "C2-huddle-9539",
+      "headword": "huddle",
+      "level": "C2"
+    },
+    {
+      "id": "C2-huddle-9540",
+      "headword": "huddle",
+      "level": "C2"
+    },
+    {
+      "id": "C2-topography-9541",
+      "headword": "topography",
+      "level": "C2"
+    },
+    {
+      "id": "C2-topographical-9542",
+      "headword": "topographical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-topographically-9543",
+      "headword": "topographically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-confabulate-9544",
+      "headword": "confabulate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-confabulation-9545",
+      "headword": "confabulation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-surrealist-9546",
+      "headword": "surrealist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-surrealism-9547",
+      "headword": "surrealism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contrive-9548",
+      "headword": "contrive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-malice-9549",
+      "headword": "malice",
+      "level": "C2"
+    },
+    {
+      "id": "C2-malicious-9550",
+      "headword": "malicious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-maliciously-9551",
+      "headword": "maliciously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cinematography-9552",
+      "headword": "cinematography",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cinematographer-9553",
+      "headword": "cinematographer",
+      "level": "C2"
+    },
+    {
+      "id": "C2-maverick-9554",
+      "headword": "maverick",
+      "level": "C2"
+    },
+    {
+      "id": "C2-diligent-9555",
+      "headword": "diligent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-diligence-9556",
+      "headword": "diligence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-diligently-9557",
+      "headword": "diligently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-turret-9558",
+      "headword": "turret",
+      "level": "C2"
+    },
+    {
+      "id": "C2-impressionistic-9559",
+      "headword": "impressionistic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-impressionistically-9560",
+      "headword": "impressionistically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-snobbery-9561",
+      "headword": "snobbery",
+      "level": "C2"
+    },
+    {
+      "id": "C2-parochial-9562",
+      "headword": "parochial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-gravitate-9563",
+      "headword": "gravitate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-gravitational-9564",
+      "headword": "gravitational",
+      "level": "C2"
+    },
+    {
+      "id": "C2-gravitationally-9565",
+      "headword": "gravitationally",
+      "level": "C2"
+    },
+    {
+      "id": "C2-consternation-9566",
+      "headword": "consternation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-haughty-9567",
+      "headword": "haughty",
+      "level": "C2"
+    },
+    {
+      "id": "C2-haughtily-9568",
+      "headword": "haughtily",
+      "level": "C2"
+    },
+    {
+      "id": "C2-axiom-9569",
+      "headword": "axiom",
+      "level": "C2"
+    },
+    {
+      "id": "C2-axiomatic-9570",
+      "headword": "axiomatic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-attrition-9571",
+      "headword": "attrition",
+      "level": "C2"
+    },
+    {
+      "id": "C2-enduringly-9572",
+      "headword": "enduringly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reissue-9573",
+      "headword": "reissue",
+      "level": "C2"
+    },
+    {
+      "id": "C2-sulphur-9574",
+      "headword": "sulphur",
+      "level": "C2"
+    },
+    {
+      "id": "C2-sulphuric-9575",
+      "headword": "sulphuric",
+      "level": "C2"
+    },
+    {
+      "id": "C2-phantom-9576",
+      "headword": "phantom",
+      "level": "C2"
+    },
+    {
+      "id": "C2-moor-9577",
+      "headword": "moor",
+      "level": "C2"
+    },
+    {
+      "id": "C2-solitary-9578",
+      "headword": "solitary",
+      "level": "C2"
+    },
+    {
+      "id": "C2-solitary-9579",
+      "headword": "solitary",
+      "level": "C2"
+    },
+    {
+      "id": "C2-solitariness-9580",
+      "headword": "solitariness",
+      "level": "C2"
+    },
+    {
+      "id": "C2-solitude-9581",
+      "headword": "solitude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adhere-9582",
+      "headword": "adhere",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adhesion-9583",
+      "headword": "adhesion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proscribe-9584",
+      "headword": "proscribe",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proscription-9585",
+      "headword": "proscription",
+      "level": "C2"
+    },
+    {
+      "id": "C2-crony-9586",
+      "headword": "crony",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dribble-9587",
+      "headword": "dribble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dribble-9588",
+      "headword": "dribble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dribble-9589",
+      "headword": "dribble",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ingrate-9590",
+      "headword": "ingrate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prise-9591",
+      "headword": "prise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rickety-9592",
+      "headword": "rickety",
+      "level": "C2"
+    },
+    {
+      "id": "C2-consign-9593",
+      "headword": "consign",
+      "level": "C2"
+    },
+    {
+      "id": "C2-consignment-9594",
+      "headword": "consignment",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fete-9595",
+      "headword": "fete",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dole out-9596",
+      "headword": "dole out",
+      "level": "C2"
+    },
+    {
+      "id": "C2-opulent-9597",
+      "headword": "opulent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-opulence-9598",
+      "headword": "opulence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-opulently-9599",
+      "headword": "opulently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-plutocrat-9600",
+      "headword": "plutocrat",
+      "level": "C2"
+    },
+    {
+      "id": "C2-averse-9601",
+      "headword": "averse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-edify-9602",
+      "headword": "edify",
+      "level": "C2"
+    },
+    {
+      "id": "C2-edification-9603",
+      "headword": "edification",
+      "level": "C2"
+    },
+    {
+      "id": "C2-converse-9604",
+      "headword": "converse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-converse-9605",
+      "headword": "converse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-sterility-9606",
+      "headword": "sterility",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rhetoric-9607",
+      "headword": "rhetoric",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rhetorical-9608",
+      "headword": "rhetorical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rhetorically-9609",
+      "headword": "rhetorically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-flighty-9610",
+      "headword": "flighty",
+      "level": "C2"
+    },
+    {
+      "id": "C2-flightiness-9611",
+      "headword": "flightiness",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brimstone-9612",
+      "headword": "brimstone",
+      "level": "C2"
+    },
+    {
+      "id": "C2-impeccable-9613",
+      "headword": "impeccable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-impeccably-9614",
+      "headword": "impeccably",
+      "level": "C2"
+    },
+    {
+      "id": "C2-romp-9615",
+      "headword": "romp",
+      "level": "C2"
+    },
+    {
+      "id": "C2-romper-9616",
+      "headword": "romper",
+      "level": "C2"
+    },
+    {
+      "id": "C2-meticulous-9617",
+      "headword": "meticulous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-meticulously-9618",
+      "headword": "meticulously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ingratiate-9619",
+      "headword": "ingratiate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ingratiating-9620",
+      "headword": "ingratiating",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ingratiatingly-9621",
+      "headword": "ingratiatingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-shimmer-9622",
+      "headword": "shimmer",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hull-9623",
+      "headword": "hull",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cull-9624",
+      "headword": "cull",
+      "level": "C2"
+    },
+    {
+      "id": "C2-swivel-9625",
+      "headword": "swivel",
+      "level": "C2"
+    },
+    {
+      "id": "C2-relinquish-9626",
+      "headword": "relinquish",
+      "level": "C2"
+    },
+    {
+      "id": "C2-quiver-9627",
+      "headword": "quiver",
+      "level": "C2"
+    },
+    {
+      "id": "C2-quiver-9628",
+      "headword": "quiver",
+      "level": "C2"
+    },
+    {
+      "id": "C2-sandwiched-9629",
+      "headword": "sandwiched",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mottled-9630",
+      "headword": "mottled",
+      "level": "C2"
+    },
+    {
+      "id": "C2-epoxy-9631",
+      "headword": "epoxy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-resin-9632",
+      "headword": "resin",
+      "level": "C2"
+    },
+    {
+      "id": "C2-sedately-9633",
+      "headword": "sedately",
+      "level": "C2"
+    },
+    {
+      "id": "C2-angular-9634",
+      "headword": "angular",
+      "level": "C2"
+    },
+    {
+      "id": "C2-angularity-9635",
+      "headword": "angularity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dampen-9636",
+      "headword": "dampen",
+      "level": "C2"
+    },
+    {
+      "id": "C2-buccaneer-9637",
+      "headword": "buccaneer",
+      "level": "C2"
+    },
+    {
+      "id": "C2-buccaneer-9638",
+      "headword": "buccaneer",
+      "level": "C2"
+    },
+    {
+      "id": "C2-conglomerate-9639",
+      "headword": "conglomerate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cay-9640",
+      "headword": "cay",
+      "level": "C2"
+    },
+    {
+      "id": "C2-singe-9641",
+      "headword": "singe",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cordon-9642",
+      "headword": "cordon",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fabled-9643",
+      "headword": "fabled",
+      "level": "C2"
+    },
+    {
+      "id": "C2-glint-9644",
+      "headword": "glint",
+      "level": "C2"
+    },
+    {
+      "id": "C2-glint-9645",
+      "headword": "glint",
+      "level": "C2"
+    },
+    {
+      "id": "C2-infernal-9646",
+      "headword": "infernal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-infernally-9647",
+      "headword": "infernally",
+      "level": "C2"
+    },
+    {
+      "id": "C2-presentational-9648",
+      "headword": "presentational",
+      "level": "C2"
+    },
+    {
+      "id": "C2-embed-9649",
+      "headword": "embed",
+      "level": "C2"
+    },
+    {
+      "id": "C2-plume-9650",
+      "headword": "plume",
+      "level": "C2"
+    },
+    {
+      "id": "C2-happenstance-9651",
+      "headword": "happenstance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-venture-9652",
+      "headword": "venture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reconcile-9653",
+      "headword": "reconcile",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reconciliation-9654",
+      "headword": "reconciliation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-conciliatory-9655",
+      "headword": "conciliatory",
+      "level": "C2"
+    },
+    {
+      "id": "C2-conciliation-9656",
+      "headword": "conciliation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-preconception-9657",
+      "headword": "preconception",
+      "level": "C2"
+    },
+    {
+      "id": "C2-baroque-9658",
+      "headword": "baroque",
+      "level": "C2"
+    },
+    {
+      "id": "C2-virginal-9659",
+      "headword": "virginal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-spire-9660",
+      "headword": "spire",
+      "level": "C2"
+    },
+    {
+      "id": "C2-elephantine-9661",
+      "headword": "elephantine",
+      "level": "C2"
+    },
+    {
+      "id": "C2-agency-9662",
+      "headword": "agency",
+      "level": "C2"
+    },
+    {
+      "id": "C2-condone-9663",
+      "headword": "condone",
+      "level": "C2"
+    },
+    {
+      "id": "C2-commodity-9664",
+      "headword": "commodity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-commode-9665",
+      "headword": "commode",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unobtrusive-9666",
+      "headword": "unobtrusive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unobtrusively-9667",
+      "headword": "unobtrusively",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unobtrusiveness-9668",
+      "headword": "unobtrusiveness",
+      "level": "C2"
+    },
+    {
+      "id": "C2-compellingly-9669",
+      "headword": "compellingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hauntingly-9670",
+      "headword": "hauntingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-brim-9671",
+      "headword": "brim",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hazard-9672",
+      "headword": "hazard",
+      "level": "C2"
+    },
+    {
+      "id": "C2-authenticity-9673",
+      "headword": "authenticity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-scholarly-9674",
+      "headword": "scholarly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-accessibility-9675",
+      "headword": "accessibility",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cognitive-9676",
+      "headword": "cognitive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-artifact-9677",
+      "headword": "artifact",
+      "level": "C2"
+    },
+    {
+      "id": "C2-preservationist-9678",
+      "headword": "preservationist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-qualm-9679",
+      "headword": "qualm",
+      "level": "C2"
+    },
+    {
+      "id": "C2-besiege-9680",
+      "headword": "besiege",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cloister-9681",
+      "headword": "cloister",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cloistered-9682",
+      "headword": "cloistered",
+      "level": "C2"
+    },
+    {
+      "id": "C2-annex-9683",
+      "headword": "annex",
+      "level": "C2"
+    },
+    {
+      "id": "C2-annex-9684",
+      "headword": "annex",
+      "level": "C2"
+    },
+    {
+      "id": "C2-resuscitate-9685",
+      "headword": "resuscitate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-resuscitation-9686",
+      "headword": "resuscitation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ravish-9687",
+      "headword": "ravish",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fabricate-9688",
+      "headword": "fabricate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fabrication-9689",
+      "headword": "fabrication",
+      "level": "C2"
+    },
+    {
+      "id": "C2-patchy-9690",
+      "headword": "patchy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-patchily-9691",
+      "headword": "patchily",
+      "level": "C2"
+    },
+    {
+      "id": "C2-resounding-9692",
+      "headword": "resounding",
+      "level": "C2"
+    },
+    {
+      "id": "C2-resoundingly-9693",
+      "headword": "resoundingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-resound-9694",
+      "headword": "resound",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ordain-9695",
+      "headword": "ordain",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inchoate-9696",
+      "headword": "inchoate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inchoately-9697",
+      "headword": "inchoately",
+      "level": "C2"
+    },
+    {
+      "id": "C2-elated-9698",
+      "headword": "elated",
+      "level": "C2"
+    },
+    {
+      "id": "C2-elation-9699",
+      "headword": "elation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hysteria-9700",
+      "headword": "hysteria",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hysterical-9701",
+      "headword": "hysterical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hysterically-9702",
+      "headword": "hysterically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-jarring-9703",
+      "headword": "jarring",
+      "level": "C2"
+    },
+    {
+      "id": "C2-suffuse-9704",
+      "headword": "suffuse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-totter-9705",
+      "headword": "totter",
+      "level": "C2"
+    },
+    {
+      "id": "C2-pyre-9706",
+      "headword": "pyre",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contemptuous-9707",
+      "headword": "contemptuous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-contemptuously-9708",
+      "headword": "contemptuously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-forlorn-9709",
+      "headword": "forlorn",
+      "level": "C2"
+    },
+    {
+      "id": "C2-forlornly-9710",
+      "headword": "forlornly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rebuke-9711",
+      "headword": "rebuke",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rebuke-9712",
+      "headword": "rebuke",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abhorrent-9713",
+      "headword": "abhorrent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abhor-9714",
+      "headword": "abhor",
+      "level": "C2"
+    },
+    {
+      "id": "C2-abhorrently-9715",
+      "headword": "abhorrently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-aberration-9716",
+      "headword": "aberration",
+      "level": "C2"
+    },
+    {
+      "id": "C2-emulsify-9717",
+      "headword": "emulsify",
+      "level": "C2"
+    },
+    {
+      "id": "C2-emulsification-9718",
+      "headword": "emulsification",
+      "level": "C2"
+    },
+    {
+      "id": "C2-emulsifier-9719",
+      "headword": "emulsifier",
+      "level": "C2"
+    },
+    {
+      "id": "C2-additive-9720",
+      "headword": "additive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-additive-9721",
+      "headword": "additive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-confection-9722",
+      "headword": "confection",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proximal-9723",
+      "headword": "proximal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vandalize-9724",
+      "headword": "vandalize",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vandal-9725",
+      "headword": "vandal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-feign-9726",
+      "headword": "feign",
+      "level": "C2"
+    },
+    {
+      "id": "C2-paradoxical-9727",
+      "headword": "paradoxical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-paradoxically-9728",
+      "headword": "paradoxically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-laryngitis-9729",
+      "headword": "laryngitis",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stringent-9730",
+      "headword": "stringent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-astringent-9731",
+      "headword": "astringent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-stringently-9732",
+      "headword": "stringently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-standing-9733",
+      "headword": "standing",
+      "level": "C2"
+    },
+    {
+      "id": "C2-economize/economise-9734",
+      "headword": "economize/economise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-breadwinner-9735",
+      "headword": "breadwinner",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cosset-9736",
+      "headword": "cosset",
+      "level": "C2"
+    },
+    {
+      "id": "C2-counsel-9737",
+      "headword": "counsel",
+      "level": "C2"
+    },
+    {
+      "id": "C2-misdemeanor/misdemanour-9738",
+      "headword": "misdemeanor/misdemanour",
+      "level": "C2"
+    },
+    {
+      "id": "C2-aptitude-9739",
+      "headword": "aptitude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-torrential-9740",
+      "headword": "torrential",
+      "level": "C2"
+    },
+    {
+      "id": "C2-banish-9741",
+      "headword": "banish",
+      "level": "C2"
+    },
+    {
+      "id": "C2-banishment-9742",
+      "headword": "banishment",
+      "level": "C2"
+    },
+    {
+      "id": "C2-knack-9743",
+      "headword": "knack",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fruition-9744",
+      "headword": "fruition",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tantalize/tantalise-9745",
+      "headword": "tantalize/tantalise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tantalizingly/tantalisingly-9746",
+      "headword": "tantalizingly/tantalisingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-maelstrom-9747",
+      "headword": "maelstrom",
+      "level": "C2"
+    },
+    {
+      "id": "C2-vortex-9748",
+      "headword": "vortex",
+      "level": "C2"
+    },
+    {
+      "id": "C2-depressive-9749",
+      "headword": "depressive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-shoal-9750",
+      "headword": "shoal",
+      "level": "C2"
+    },
+    {
+      "id": "C2-scroll-9751",
+      "headword": "scroll",
+      "level": "C2"
+    },
+    {
+      "id": "C2-collide-9752",
+      "headword": "collide",
+      "level": "C2"
+    },
+    {
+      "id": "C2-collider-9753",
+      "headword": "collider",
+      "level": "C2"
+    },
+    {
+      "id": "C2-edifice-9754",
+      "headword": "edifice",
+      "level": "C2"
+    },
+    {
+      "id": "C2-thicket-9755",
+      "headword": "thicket",
+      "level": "C2"
+    },
+    {
+      "id": "C2-leaven-9756",
+      "headword": "leaven",
+      "level": "C2"
+    },
+    {
+      "id": "C2-leavening-9757",
+      "headword": "leavening",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ethos-9758",
+      "headword": "ethos",
+      "level": "C2"
+    },
+    {
+      "id": "C2-exhibitionist-9759",
+      "headword": "exhibitionist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-interweave-9760",
+      "headword": "interweave",
+      "level": "C2"
+    },
+    {
+      "id": "C2-burgeoning-9761",
+      "headword": "burgeoning",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indiscrete-9762",
+      "headword": "indiscrete",
+      "level": "C2"
+    },
+    {
+      "id": "C2-indiscretion-9763",
+      "headword": "indiscretion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-telescopic-9764",
+      "headword": "telescopic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-telescopically-9765",
+      "headword": "telescopically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-amorphous-9766",
+      "headword": "amorphous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-amorphously-9767",
+      "headword": "amorphously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hamper-9768",
+      "headword": "hamper",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proliferate-9769",
+      "headword": "proliferate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proliferation-9770",
+      "headword": "proliferation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deterrent-9771",
+      "headword": "deterrent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-selectivity-9772",
+      "headword": "selectivity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-fractious-9773",
+      "headword": "fractious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mystique-9774",
+      "headword": "mystique",
+      "level": "C2"
+    },
+    {
+      "id": "C2-assimilate-9775",
+      "headword": "assimilate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-assimilation-9776",
+      "headword": "assimilation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-intersperse-9777",
+      "headword": "intersperse",
+      "level": "C2"
+    },
+    {
+      "id": "C2-verbatim-9778",
+      "headword": "verbatim",
+      "level": "C2"
+    },
+    {
+      "id": "C2-verbatim-9779",
+      "headword": "verbatim",
+      "level": "C2"
+    },
+    {
+      "id": "C2-verily-9780",
+      "headword": "verily",
+      "level": "C2"
+    },
+    {
+      "id": "C2-veritable-9781",
+      "headword": "veritable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-verisimilitude-9782",
+      "headword": "verisimilitude",
+      "level": "C2"
+    },
+    {
+      "id": "C2-artifice-9783",
+      "headword": "artifice",
+      "level": "C2"
+    },
+    {
+      "id": "C2-advantageous-9784",
+      "headword": "advantageous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unfeasible-9785",
+      "headword": "unfeasible",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unfeasibly-9786",
+      "headword": "unfeasibly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-behest-9787",
+      "headword": "behest",
+      "level": "C2"
+    },
+    {
+      "id": "C2-virtuoso-9788",
+      "headword": "virtuoso",
+      "level": "C2"
+    },
+    {
+      "id": "C2-virtuosity-9789",
+      "headword": "virtuosity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cascade-9790",
+      "headword": "cascade",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cascade-9791",
+      "headword": "cascade",
+      "level": "C2"
+    },
+    {
+      "id": "C2-crippling-9792",
+      "headword": "crippling",
+      "level": "C2"
+    },
+    {
+      "id": "C2-nascent-9793",
+      "headword": "nascent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-smattering-9794",
+      "headword": "smattering",
+      "level": "C2"
+    },
+    {
+      "id": "C2-corpus-9795",
+      "headword": "corpus",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wheeze-9796",
+      "headword": "wheeze",
+      "level": "C2"
+    },
+    {
+      "id": "C2-neophyte-9797",
+      "headword": "neophyte",
+      "level": "C2"
+    },
+    {
+      "id": "C2-coax-9798",
+      "headword": "coax",
+      "level": "C2"
+    },
+    {
+      "id": "C2-formidably-9799",
+      "headword": "formidably",
+      "level": "C2"
+    },
+    {
+      "id": "C2-formidable-9800",
+      "headword": "formidable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-squint-9801",
+      "headword": "squint",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hoist-9802",
+      "headword": "hoist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-flatout-9803",
+      "headword": "flatout",
+      "level": "C2"
+    },
+    {
+      "id": "C2-buzzard-9804",
+      "headword": "buzzard",
+      "level": "C2"
+    },
+    {
+      "id": "C2-bogus-9805",
+      "headword": "bogus",
+      "level": "C2"
+    },
+    {
+      "id": "C2-derision-9806",
+      "headword": "derision",
+      "level": "C2"
+    },
+    {
+      "id": "C2-derisive-9807",
+      "headword": "derisive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-derisively-9808",
+      "headword": "derisively",
+      "level": "C2"
+    },
+    {
+      "id": "C2-truism-9809",
+      "headword": "truism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prurient-9810",
+      "headword": "prurient",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wither-9811",
+      "headword": "wither",
+      "level": "C2"
+    },
+    {
+      "id": "C2-prurience-9812",
+      "headword": "prurience",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tetchy-9813",
+      "headword": "tetchy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-agile-9814",
+      "headword": "agile",
+      "level": "C2"
+    },
+    {
+      "id": "C2-agility-9815",
+      "headword": "agility",
+      "level": "C2"
+    },
+    {
+      "id": "C2-aghast-9816",
+      "headword": "aghast",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dwarf-9817",
+      "headword": "dwarf",
+      "level": "C2"
+    },
+    {
+      "id": "C2-dwarfism-9818",
+      "headword": "dwarfism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-etch-9819",
+      "headword": "etch",
+      "level": "C2"
+    },
+    {
+      "id": "C2-etching-9820",
+      "headword": "etching",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rapture-9821",
+      "headword": "rapture",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rapturous-9822",
+      "headword": "rapturous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rapturously-9823",
+      "headword": "rapturously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ad lib-9824",
+      "headword": "ad lib",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ad-lib-9825",
+      "headword": "ad-lib",
+      "level": "C2"
+    },
+    {
+      "id": "C2-improvisational-9826",
+      "headword": "improvisational",
+      "level": "C2"
+    },
+    {
+      "id": "C2-acrobatics-9827",
+      "headword": "acrobatics",
+      "level": "C2"
+    },
+    {
+      "id": "C2-acrobatically-9828",
+      "headword": "acrobatically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-acrobatic-9829",
+      "headword": "acrobatic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-arduous-9830",
+      "headword": "arduous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ardor/ardour-9831",
+      "headword": "ardor/ardour",
+      "level": "C2"
+    },
+    {
+      "id": "C2-arduously-9832",
+      "headword": "arduously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-counterproductive-9833",
+      "headword": "counterproductive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-counterproductively-9834",
+      "headword": "counterproductively",
+      "level": "C2"
+    },
+    {
+      "id": "C2-proverbial-9835",
+      "headword": "proverbial",
+      "level": "C2"
+    },
+    {
+      "id": "C2-instantaneous-9836",
+      "headword": "instantaneous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-instantaneously-9837",
+      "headword": "instantaneously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mull over-9838",
+      "headword": "mull over",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ruminate-9839",
+      "headword": "ruminate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-rumination-9840",
+      "headword": "rumination",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ruminant-9841",
+      "headword": "ruminant",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ruminative-9842",
+      "headword": "ruminative",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hover-9843",
+      "headword": "hover",
+      "level": "C2"
+    },
+    {
+      "id": "C2-armory/armoury-9844",
+      "headword": "armory/armoury",
+      "level": "C2"
+    },
+    {
+      "id": "C2-apostle-9845",
+      "headword": "apostle",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blubber-9846",
+      "headword": "blubber",
+      "level": "C2"
+    },
+    {
+      "id": "C2-blubbery-9847",
+      "headword": "blubbery",
+      "level": "C2"
+    },
+    {
+      "id": "C2-merger-9848",
+      "headword": "merger",
+      "level": "C2"
+    },
+    {
+      "id": "C2-trifle-9849",
+      "headword": "trifle",
+      "level": "C2"
+    },
+    {
+      "id": "C2-trifle-9850",
+      "headword": "trifle",
+      "level": "C2"
+    },
+    {
+      "id": "C2-eke out-9851",
+      "headword": "eke out",
+      "level": "C2"
+    },
+    {
+      "id": "C2-paramount-9852",
+      "headword": "paramount",
+      "level": "C2"
+    },
+    {
+      "id": "C2-squirm-9853",
+      "headword": "squirm",
+      "level": "C2"
+    },
+    {
+      "id": "C2-squirmy-9854",
+      "headword": "squirmy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-floe-9855",
+      "headword": "floe",
+      "level": "C2"
+    },
+    {
+      "id": "C2-embody-9856",
+      "headword": "embody",
+      "level": "C2"
+    },
+    {
+      "id": "C2-embodiment-9857",
+      "headword": "embodiment",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wistful-9858",
+      "headword": "wistful",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wistfully-9859",
+      "headword": "wistfully",
+      "level": "C2"
+    },
+    {
+      "id": "C2-mercantile-9860",
+      "headword": "mercantile",
+      "level": "C2"
+    },
+    {
+      "id": "C2-skew-9861",
+      "headword": "skew",
+      "level": "C2"
+    },
+    {
+      "id": "C2-subsist-9862",
+      "headword": "subsist",
+      "level": "C2"
+    },
+    {
+      "id": "C2-subsistence-9863",
+      "headword": "subsistence",
+      "level": "C2"
+    },
+    {
+      "id": "C2-subsidy-9864",
+      "headword": "subsidy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-subsidize-9865",
+      "headword": "subsidize",
+      "level": "C2"
+    },
+    {
+      "id": "C2-legion-9866",
+      "headword": "legion",
+      "level": "C2"
+    },
+    {
+      "id": "C2-confrontational-9867",
+      "headword": "confrontational",
+      "level": "C2"
+    },
+    {
+      "id": "C2-confrontationally-9868",
+      "headword": "confrontationally",
+      "level": "C2"
+    },
+    {
+      "id": "C2-bout-9869",
+      "headword": "bout",
+      "level": "C2"
+    },
+    {
+      "id": "C2-gout-9870",
+      "headword": "gout",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hinder-9871",
+      "headword": "hinder",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hindrance-9872",
+      "headword": "hindrance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-myriad-9873",
+      "headword": "myriad",
+      "level": "C2"
+    },
+    {
+      "id": "C2-histrionic-9874",
+      "headword": "histrionic",
+      "level": "C2"
+    },
+    {
+      "id": "C2-histrionically-9875",
+      "headword": "histrionically",
+      "level": "C2"
+    },
+    {
+      "id": "C2-marketability-9876",
+      "headword": "marketability",
+      "level": "C2"
+    },
+    {
+      "id": "C2-promotable-9877",
+      "headword": "promotable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tacit-9878",
+      "headword": "tacit",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tacitly-9879",
+      "headword": "tacitly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-taciturn-9880",
+      "headword": "taciturn",
+      "level": "C2"
+    },
+    {
+      "id": "C2-taciturnity-9881",
+      "headword": "taciturnity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-surreptitious-9882",
+      "headword": "surreptitious",
+      "level": "C2"
+    },
+    {
+      "id": "C2-surreptitiously-9883",
+      "headword": "surreptitiously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-allegory-9884",
+      "headword": "allegory",
+      "level": "C2"
+    },
+    {
+      "id": "C2-allegorical-9885",
+      "headword": "allegorical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-seedy-9886",
+      "headword": "seedy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-punitive-9887",
+      "headword": "punitive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-punitively-9888",
+      "headword": "punitively",
+      "level": "C2"
+    },
+    {
+      "id": "C2-temper-9889",
+      "headword": "temper",
+      "level": "C2"
+    },
+    {
+      "id": "C2-milieu-9890",
+      "headword": "milieu",
+      "level": "C2"
+    },
+    {
+      "id": "C2-self-aggrandizement/self-aggrandisement-9891",
+      "headword": "self-aggrandizement/self-aggrandisement",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unadulterated-9892",
+      "headword": "unadulterated",
+      "level": "C2"
+    },
+    {
+      "id": "C2-adulterate-9893",
+      "headword": "adulterate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-patronize/patronise-9894",
+      "headword": "patronize/patronise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-patronizing/patronising-9895",
+      "headword": "patronizing/patronising",
+      "level": "C2"
+    },
+    {
+      "id": "C2-patronizingly/patronisingly-9896",
+      "headword": "patronizingly/patronisingly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cogent-9897",
+      "headword": "cogent",
+      "level": "C2"
+    },
+    {
+      "id": "C2-cogently-9898",
+      "headword": "cogently",
+      "level": "C2"
+    },
+    {
+      "id": "C2-relegate-9899",
+      "headword": "relegate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-incongruous-9900",
+      "headword": "incongruous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-incongruously-9901",
+      "headword": "incongruously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-incongruity-9902",
+      "headword": "incongruity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-deaden-9903",
+      "headword": "deaden",
+      "level": "C2"
+    },
+    {
+      "id": "C2-attuned-9904",
+      "headword": "attuned",
+      "level": "C2"
+    },
+    {
+      "id": "C2-attributive-9905",
+      "headword": "attributive",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ecotourism-9906",
+      "headword": "ecotourism",
+      "level": "C2"
+    },
+    {
+      "id": "C2-surge-9907",
+      "headword": "surge",
+      "level": "C2"
+    },
+    {
+      "id": "C2-surge-9908",
+      "headword": "surge",
+      "level": "C2"
+    },
+    {
+      "id": "C2-farcical-9909",
+      "headword": "farcical",
+      "level": "C2"
+    },
+    {
+      "id": "C2-incise-9910",
+      "headword": "incise",
+      "level": "C2"
+    },
+    {
+      "id": "C2-incipient-9911",
+      "headword": "incipient",
+      "level": "C2"
+    },
+    {
+      "id": "C2-echolocation-9912",
+      "headword": "echolocation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-echolocate-9913",
+      "headword": "echolocate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reverb-9914",
+      "headword": "reverb",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reverberation-9915",
+      "headword": "reverberation",
+      "level": "C2"
+    },
+    {
+      "id": "C2-reverberate-9916",
+      "headword": "reverberate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ingenuous-9917",
+      "headword": "ingenuous",
+      "level": "C2"
+    },
+    {
+      "id": "C2-ingenuously-9918",
+      "headword": "ingenuously",
+      "level": "C2"
+    },
+    {
+      "id": "C2-impresario-9919",
+      "headword": "impresario",
+      "level": "C2"
+    },
+    {
+      "id": "C2-elasticity-9920",
+      "headword": "elasticity",
+      "level": "C2"
+    },
+    {
+      "id": "C2-synthesis-9921",
+      "headword": "synthesis",
+      "level": "C2"
+    },
+    {
+      "id": "C2-salivary-9922",
+      "headword": "salivary",
+      "level": "C2"
+    },
+    {
+      "id": "C2-hypnotherapy-9923",
+      "headword": "hypnotherapy",
+      "level": "C2"
+    },
+    {
+      "id": "C2-wholly-9924",
+      "headword": "wholly",
+      "level": "C2"
+    },
+    {
+      "id": "C2-remorseful-9925",
+      "headword": "remorseful",
+      "level": "C2"
+    },
+    {
+      "id": "C2-remonstrate-9926",
+      "headword": "remonstrate",
+      "level": "C2"
+    },
+    {
+      "id": "C2-remonstrance-9927",
+      "headword": "remonstrance",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unexcused-9928",
+      "headword": "unexcused",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unexceptionally-9929",
+      "headword": "unexceptionally",
+      "level": "C2"
+    },
+    {
+      "id": "C2-unexceptional-9930",
+      "headword": "unexceptional",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inexorable-9931",
+      "headword": "inexorable",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inexorably-9932",
+      "headword": "inexorably",
+      "level": "C2"
+    },
+    {
+      "id": "C2-inexorability-9933",
+      "headword": "inexorability",
+      "level": "C2"
+    },
+    {
+      "id": "C2-tranquilize/tranquilise-9934",
+      "headword": "tranquilize/tranquilise",
+      "level": "C2"
+    }
+  ]
+}

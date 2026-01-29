@@ -1,18 +1,19 @@
 'use client';
 
-import { Suspense, useState, useEffect, type ReactNode } from 'react';
+import { Suspense, useState, useEffect, useCallback, type ReactNode } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { VocabularyWord, QuizQuestion, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
-import { loadVocabulary, filterByLevel } from '@/lib/csvParser';
+import { filterByLevel, getRandomWords } from '@/lib/csvParser';
 import { generateQuiz, calculateScore } from '@/lib/quizGenerator';
 import { enrichWords } from '@/lib/enrichment';
 import { useProgress } from '@/contexts/ProgressContext';
 import RequireAuth from '@/components/RequireAuth';
+import { loadLevelWords, getCachedLevel } from '@/lib/vocabClient';
+import { QuizSkeleton, ErrorState } from '@/components/AsyncState';
+import { getWrongQueue, updateWrongQueue, saveLastSession, loadLastSession } from '@/lib/clientStorage';
 import styles from './page.module.css';
 
 function QuizPageContent() {
-    const router = useRouter();
     const [allWords, setAllWords] = useState<VocabularyWord[]>([]);
     const [quiz, setQuiz] = useState<QuizQuestion[]>([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -21,45 +22,149 @@ function QuizPageContent() {
     const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>('C2');
     const [questionCount, setQuestionCount] = useState(10);
     const [loading, setLoading] = useState(true);
+    const [loadError, setLoadError] = useState<string | null>(null);
+    const [reloadToken, setReloadToken] = useState(0);
+    const [hasOfflineCache, setHasOfflineCache] = useState(false);
     const [quizStarted, setQuizStarted] = useState(false);
     const [buildingQuiz, setBuildingQuiz] = useState(false);
+    const [levelWrongQueue, setLevelWrongQueue] = useState<VocabularyWord[]>([]);
+    const [lastWrongWords, setLastWrongWords] = useState<VocabularyWord[]>([]);
 
     const { addQuizScore } = useProgress();
 
     useEffect(() => {
-        async function loadWords() {
-            setLoading(true);
-            const words = await loadVocabulary();
-            setAllWords(words);
-            setLoading(false);
+        if (typeof window === 'undefined') return;
+        const session = loadLastSession();
+        if (session?.mode === 'quiz') {
+            setSelectedLevel(session.level);
+            const payload = session.payload?.quiz;
+            if (payload?.questions?.length) {
+                const startIndex = Math.min(session.index ?? 0, payload.questions.length - 1);
+                setQuiz(payload.questions);
+                setSelectedAnswers(payload.selectedAnswers ?? new Array(payload.questions.length).fill(-1));
+                setCurrentQuestionIndex(startIndex);
+                setQuizStarted(true);
+                setShowResults(false);
+                setLoading(false);
+            }
         }
-        loadWords();
     }, []);
 
-    const startQuiz = async () => {
-        if (allWords.length === 0 || buildingQuiz) return;
-        setBuildingQuiz(true);
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        setLevelWrongQueue(getWrongQueue(selectedLevel));
+    }, [selectedLevel]);
 
-        const levelWords = filterByLevel(allWords, selectedLevel);
-        const enrichedLevel = await enrichWords(levelWords);
+    useEffect(() => {
+        let active = true;
+        const controller = new AbortController();
+        setLoading(true);
+        setLoadError(null);
 
-        const withTranslations = enrichedLevel.filter(word => !!word.cantonese && word.cantonese.trim().length > 0);
-        const usableCount = Math.min(questionCount, withTranslations.length);
+        (async () => {
+            const cached = await getCachedLevel(selectedLevel);
+            if (!active) return;
+            const hasCache = Boolean(cached.entry);
+            setHasOfflineCache(hasCache);
+            if (cached.entry && !cached.stale) {
+                setAllWords(cached.entry.words);
+                setLoading(false);
+            }
 
-        if (usableCount === 0) {
+            try {
+                const result = await loadLevelWords(selectedLevel, {
+                    signal: controller.signal,
+                    preferCache: !cached.entry,
+                });
+                if (!active) return;
+                setAllWords(result.words);
+                setLoading(false);
+            } catch (error) {
+                if (!active) return;
+                setLoadError('詞彙載入失敗，請稍後再試或換一個級別。');
+                setLoading(false);
+            }
+        })();
+
+        return () => {
+            active = false;
+            controller.abort();
+        };
+    }, [selectedLevel, reloadToken]);
+
+    const [startNotice, setStartNotice] = useState<string | null>(null);
+
+    const startQuiz = useCallback(async (useWrongOnly = false) => {
+        if (buildingQuiz) return;
+        setStartNotice(null);
+
+        if (useWrongOnly) {
+            if (levelWrongQueue.length === 0) {
+                setStartNotice('暫時沒有錯題可複習');
+                return;
+            }
+            setBuildingQuiz(true);
+            const usableCount = Math.min(levelWrongQueue.length, questionCount);
+            const reviewSlice = levelWrongQueue.slice(0, usableCount);
+            const quizQuestions = generateQuiz(reviewSlice, levelWrongQueue, usableCount);
+            const initialAnswers = new Array(quizQuestions.length).fill(-1);
+            setQuiz(quizQuestions);
+            setSelectedAnswers(initialAnswers);
+            setCurrentQuestionIndex(0);
+            setShowResults(false);
+            setQuizStarted(true);
+            setLastWrongWords([]);
+            saveLastSession({
+                mode: 'quiz',
+                level: selectedLevel,
+                index: 0,
+                timestamp: new Date().toISOString(),
+                payload: { quiz: { questions: quizQuestions, selectedAnswers: initialAnswers } },
+            });
             setBuildingQuiz(false);
-            alert('尚未取得粵語翻譯，請稍後再試或換一個級別。');
             return;
         }
 
-        const newQuiz = generateQuiz(withTranslations, withTranslations, usableCount);
-        setQuiz(newQuiz);
-        setSelectedAnswers(new Array(newQuiz.length).fill(-1));
-        setCurrentQuestionIndex(0);
-        setShowResults(false);
-        setQuizStarted(true);
-        setBuildingQuiz(false);
-    };
+        if (allWords.length === 0) {
+            setStartNotice('詞彙仍在準備中，請稍候。');
+            return;
+        }
+
+        setBuildingQuiz(true);
+        const levelWords = filterByLevel(allWords, selectedLevel);
+        const sampleSize = Math.min(levelWords.length, questionCount * 3 + 8);
+        const sessionCandidates = getRandomWords(levelWords, sampleSize);
+
+        try {
+            const enriched = await enrichWords(sessionCandidates);
+            const withTranslations = enriched.filter(word => !!word.cantonese && word.cantonese.trim().length > 0);
+            const usableCount = Math.min(questionCount, withTranslations.length);
+
+            if (usableCount === 0) {
+                setStartNotice('尚未取得粵語翻譯，請稍後再試或換一個級別。');
+                return;
+            }
+
+            const mainWords = withTranslations.slice(0, usableCount);
+            const newQuiz = generateQuiz(mainWords, withTranslations, usableCount);
+            const initialAnswers = new Array(newQuiz.length).fill(-1);
+            setQuiz(newQuiz);
+            setSelectedAnswers(initialAnswers);
+            setCurrentQuestionIndex(0);
+            setShowResults(false);
+            setQuizStarted(true);
+            setLastWrongWords([]);
+            saveLastSession({
+                mode: 'quiz',
+                level: selectedLevel,
+                index: 0,
+                timestamp: new Date().toISOString(),
+                payload: { quiz: { questions: newQuiz, selectedAnswers: initialAnswers } },
+            });
+        } finally {
+            setBuildingQuiz(false);
+        }
+    }, [allWords, buildingQuiz, levelWrongQueue, questionCount, selectedLevel]);
 
     const handleAnswerSelect = (answerIndex: number) => {
         const newAnswers = [...selectedAnswers];
@@ -79,8 +184,26 @@ function QuizPageContent() {
         }
     };
 
+    useEffect(() => {
+        if (!quizStarted || quiz.length === 0) return;
+        saveLastSession({
+            mode: 'quiz',
+            level: selectedLevel,
+            index: currentQuestionIndex,
+            timestamp: new Date().toISOString(),
+            payload: { quiz: { questions: quiz, selectedAnswers } },
+        });
+    }, [quizStarted, quiz, selectedAnswers, currentQuestionIndex, selectedLevel]);
+
     const handleSubmit = () => {
         const score = calculateScore(quiz, selectedAnswers);
+        const wrongWords = quiz
+            .filter((question, index) => selectedAnswers[index] !== question.correctAnswer)
+            .map(q => q.word);
+        setLastWrongWords(wrongWords);
+        const askedIds = quiz.map(q => q.word.id);
+        const updatedQueue = updateWrongQueue(selectedLevel, askedIds, wrongWords);
+        setLevelWrongQueue(updatedQueue);
         addQuizScore({
             date: new Date(),
             level: selectedLevel,
@@ -97,18 +220,44 @@ function QuizPageContent() {
         setSelectedAnswers([]);
         setCurrentQuestionIndex(0);
         setShowResults(false);
+        setLastWrongWords([]);
+        saveLastSession({
+            mode: 'quiz',
+            level: selectedLevel,
+            index: 0,
+            timestamp: new Date().toISOString(),
+            payload: { quiz: { questions: [], selectedAnswers: [] } },
+        });
+    };
+
+    const handleRetry = () => {
+        setLoadError(null);
+        setLoading(true);
+        setAllWords([]);
+        setReloadToken(token => token + 1);
+    };
+
+    const handleUseOffline = async () => {
+        const cached = await getCachedLevel(selectedLevel);
+        if (cached.entry) {
+            setAllWords(cached.entry.words);
+            setLoadError(null);
+            setLoading(false);
+        }
     };
 
     let content: ReactNode;
 
-    if (loading) {
+    if (loading && allWords.length === 0 && !quizStarted) {
+        content = <QuizSkeleton ctaLabel="載入中" />;
+    } else if (loadError && allWords.length === 0 && !quizStarted) {
         content = (
-            <div className={styles.container}>
-                <div className={styles.loading}>
-                    <div className={styles.spinner}></div>
-                    <p>載入中...</p>
-                </div>
-            </div>
+            <ErrorState
+                message={loadError}
+                onRetry={handleRetry}
+                onUseOffline={handleUseOffline}
+                showOffline={hasOfflineCache}
+            />
         );
     } else if (!quizStarted) {
         content = (
@@ -150,9 +299,27 @@ function QuizPageContent() {
                             </div>
                         </div>
 
-                        <button onClick={startQuiz} className="btn-primary" style={{ fontSize: '1.25rem', padding: '1rem 2rem' }} disabled={buildingQuiz}>
-                            {buildingQuiz ? '載入翻譯中…' : '開始測驗 🚀'}
-                        </button>
+                        <div className={styles.formGroup}>
+                            <label>錯題複習：</label>
+                            <div className={styles.countButtons}>
+                                <button
+                                    onClick={() => startQuiz(true)}
+                                    className="btn-secondary"
+                                    disabled={buildingQuiz || levelWrongQueue.length === 0}
+                                >
+                                    再試錯題（{levelWrongQueue.length}）
+                                </button>
+                                <button
+                                    onClick={() => startQuiz(false)}
+                                    className="btn-primary"
+                                    style={{ fontSize: '1.1rem', padding: '0.85rem 1.6rem' }}
+                                    disabled={buildingQuiz}
+                                >
+                                    {buildingQuiz ? '載入翻譯中…' : '開始測驗 🚀'}
+                                </button>
+                            </div>
+                            {startNotice && <p className={styles.helper}>{startNotice}</p>}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,6 +352,37 @@ function QuizPageContent() {
                             </div>
                         </div>
                     </div>
+
+                    {lastWrongWords.length > 0 && (
+                        <div className={styles.reviewSection}>
+                            <h2>錯題清單</h2>
+                            <div className={styles.wrongList}>
+                                {lastWrongWords.map((word) => (
+                                    <div key={word.id} className={styles.wrongItem}>
+                                        <div>
+                                            <strong>{word.headword}</strong>
+                                            <span className={styles.wrongLevel}>{word.level}</span>
+                                        </div>
+                                        {word.cantonese && (
+                                            <p className={styles.wrongTranslation}>{word.cantonese}</p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                            <div className={styles.resultActions}>
+                                <button
+                                    onClick={() => startQuiz(true)}
+                                    className="btn-primary"
+                                    disabled={buildingQuiz || levelWrongQueue.length === 0}
+                                >
+                                    再試錯題
+                                </button>
+                                <span className={styles.helper}>
+                                    錯題庫：{levelWrongQueue.length} 題
+                                </span>
+                            </div>
+                        </div>
+                    )}
 
                     <div className={styles.reviewSection}>
                         <h2>答案回顧</h2>
@@ -243,7 +441,7 @@ function QuizPageContent() {
         const currentQuestion = quiz[currentQuestionIndex];
         const progress = ((currentQuestionIndex + 1) / quiz.length) * 100;
 
-        content = (
+        content = currentQuestion ? (
             <div className={styles.container}>
                 <div className={styles.quizHeader}>
                     <h1>測驗進行中</h1>
@@ -281,9 +479,12 @@ function QuizPageContent() {
                         {currentQuestion.options.map((option, index) => (
                             <button
                                 key={index}
+                                type="button"
                                 onClick={() => handleAnswerSelect(index)}
                                 className={`${styles.option} ${selectedAnswers[currentQuestionIndex] === index ? styles.selected : ''
                                     }`}
+                                aria-pressed={selectedAnswers[currentQuestionIndex] === index}
+                                aria-label={`選擇答案 ${String.fromCharCode(65 + index)}：${option}`}
                             >
                                 <span className={styles.optionLetter}>
                                     {String.fromCharCode(65 + index)}
@@ -322,6 +523,11 @@ function QuizPageContent() {
                     )}
                 </div>
             </div>
+        ) : (
+            <ErrorState
+                message="未找到題目，請重新開始測驗。"
+                onRetry={handleRestart}
+            />
         );
     }
 
@@ -331,12 +537,7 @@ function QuizPageContent() {
 export default function QuizPage() {
     return (
         <Suspense fallback={
-            <div className={styles.container}>
-                <div className={styles.loading}>
-                    <div className={styles.spinner}></div>
-                    <p>載入中...</p>
-                </div>
-            </div>
+            <QuizSkeleton ctaLabel="載入中" />
         }>
             <QuizPageContent />
         </Suspense>

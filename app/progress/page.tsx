@@ -4,10 +4,11 @@ import { Suspense } from 'react';
 import { useProgress } from '@/contexts/ProgressContext';
 import { LEVEL_INFO } from '@/lib/types';
 import RequireAuth from '@/components/RequireAuth';
+import { ProgressSkeleton } from '@/components/AsyncState';
 import styles from './page.module.css';
 
 function ProgressContent() {
-    const { progress, getStatistics, resetProgress } = useProgress();
+    const { progress, getStatistics, resetProgress, ready } = useProgress();
     const stats = getStatistics();
 
     const handleReset = () => {
@@ -15,6 +16,14 @@ function ProgressContent() {
             resetProgress();
         }
     };
+
+    if (!ready) {
+        return (
+            <RequireAuth>
+                <ProgressSkeleton />
+            </RequireAuth>
+        );
+    }
 
     return (
         <RequireAuth>
@@ -148,9 +157,7 @@ function ProgressContent() {
 export default function ProgressPage() {
     return (
         <Suspense fallback={
-            <div className={styles.container}>
-                <p>載入進度中…</p>
-            </div>
+            <ProgressSkeleton />
         }>
             <ProgressContent />
         </Suspense>
