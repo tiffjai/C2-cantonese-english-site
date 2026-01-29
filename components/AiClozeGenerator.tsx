@@ -53,13 +53,15 @@ export default function AiClozeGenerator({ word, level, meaning, distractors }: 
                 setResult(msg.payload);
                 setStatus('success');
                 setError(null);
-                setDebugText(msg.rawText || null);
+                const raw = typeof msg.rawText === 'string' ? msg.rawText.trim() : '';
+                setDebugText(raw || '(no raw output received)');
                 return;
             }
 
             if (msg.type === 'error') {
                 setError(msg.message || 'Something went wrong. Please try again.');
-                setDebugText(msg.rawText || null);
+                const raw = typeof msg.rawText === 'string' ? msg.rawText.trim() : '';
+                setDebugText(raw || '(no raw output received)');
                 setStatus('error');
                 return;
             }
@@ -154,7 +156,7 @@ export default function AiClozeGenerator({ word, level, meaning, distractors }: 
                 </div>
             )}
 
-            {debugText && (
+            {debugText !== null && (
                 <div className={styles.debug}>
                     <div className={styles.debugTitle}>Model output</div>
                     <pre>{debugText}</pre>
