@@ -99,10 +99,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             return_full_text: false,
         });
 
-        const outputAny = output as any;
-        const rawText = Array.isArray(outputAny)
-            ? outputAny[0]?.generated_text ?? ''
-            : outputAny?.generated_text ?? '';
+        const rawText = extractGeneratedText(output as any);
 
         const parsed = parseJsonOutput(rawText);
         const validated = validatePayload(parsed, word);
@@ -221,6 +218,32 @@ function normalizeJsonish(text: string): string {
     // Remove trailing commas
     fixed = fixed.replace(/,\s*([}\]])/g, '$1');
     return fixed;
+}
+
+function extractGeneratedText(output: any): string {
+    if (output == null) return '';
+
+    // Array responses
+    if (Array.isArray(output)) {
+        const first = output[0];
+        if (typeof first === 'string') return first;
+        if (first?.generated_text) {
+            if (typeof first.generated_text === 'string') return first.generated_text;
+            return JSON.stringify(first.generated_text);
+        }
+    }
+
+    // Direct string
+    if (typeof output === 'string') return output;
+
+    // Object with generated_text
+    if (output?.generated_text) {
+        if (typeof output.generated_text === 'string') return output.generated_text;
+        return JSON.stringify(output.generated_text);
+    }
+
+    // Fallback
+    return '';
 }
 
 function validatePayload(payload: any, targetWord: string): AiOutput {
