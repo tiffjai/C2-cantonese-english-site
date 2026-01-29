@@ -268,35 +268,11 @@ function validatePayload(payload: any, targetWord: string): AiOutput {
     });
 
     const clozeRaw = payload.cloze || {};
-    const clozeSentence = typeof clozeRaw.sentence === 'string' ? clozeRaw.sentence.trim() : '';
-    if (!clozeSentence || !clozeSentence.includes('____')) {
-        throw new Error('Cloze sentence must include "____".');
-    }
-
-    const optionsRaw: string[] = Array.isArray(clozeRaw.options) ? clozeRaw.options : [];
-    const options = optionsRaw.slice(0, 4).map((opt) => (typeof opt === 'string' ? opt.trim() : '')).filter(Boolean);
-    if (options.length !== 4) {
-        throw new Error('Cloze options must have 4 items.');
-    }
-
-    const answerRaw = typeof clozeRaw.answer === 'string' ? clozeRaw.answer.trim() : '';
-    const answerIndex = parseAnswerIndex(answerRaw, options);
-    if (answerIndex === -1) {
-        throw new Error('Cloze answer must match one option (A-D).');
-    }
-    const answer = ['A', 'B', 'C', 'D'][answerIndex];
-
-    const explanationRaw = typeof clozeRaw.explanation === 'string' ? clozeRaw.explanation.trim() : '';
-    const explanation = trimToWords(explanationRaw || 'Short explanation.', 20);
+    const cloze = normalizeCloze(clozeRaw, targetWord);
 
     return {
         examples,
-        cloze: {
-            sentence: clozeSentence,
-            options,
-            answer,
-            explanation,
-        },
+        cloze,
     };
 }
 
@@ -316,6 +292,60 @@ function trimToWords(text: string, maxWords: number): string {
     const words = text.split(/\s+/).filter(Boolean);
     if (words.length <= maxWords) return words.join(' ');
     return words.slice(0, maxWords).join(' ');
+}
+
+function normalizeCloze(raw: any, targetWord: string): AiCloze {
+    let sentence = typeof raw?.sentence === 'string' ? raw.sentence.trim() : '';
+    if (!sentence && typeof raw?.prompt === 'string') {
+        sentence = raw.prompt.trim();
+    }
+
+    if (!sentence) {
+        sentence = `The ${targetWord} drifted silently across the frozen bay.`;
+    }
+
+    if (!sentence.includes('____')) {
+        // replace first occurrence of target word (case-insensitive) with blank
+        const regex = new RegExp(targetWord, 'i');
+        if (regex.test(sentence)) {
+            sentence = sentence.replace(regex, '____');
+        } else {
+            sentence = sentence + ' ____';
+        }
+    }
+
+    const optionsRaw: string[] = Array.isArray(raw?.options) ? raw.options : [];
+    const cleanedOpts = optionsRaw
+        .map((opt) => (typeof opt === 'string' ? opt.trim() : ''))
+        .filter(Boolean);
+
+    while (cleanedOpts.length < 4) {
+        cleanedOpts.push(generateOption(cleanedOpts.length, targetWord));
+    }
+    const options = cleanedOpts.slice(0, 4);
+
+    const answerRaw = typeof raw?.answer === 'string' ? raw.answer.trim() : '';
+    let answerIndex = parseAnswerIndex(answerRaw, options);
+    if (answerIndex === -1) {
+        answerIndex = 0;
+    }
+    const answer = ['A', 'B', 'C', 'D'][answerIndex];
+
+    const explanationRaw = typeof raw?.explanation === 'string' ? raw.explanation.trim() : '';
+    const explanation = trimToWords(explanationRaw || 'The correct option fits the blank.', 20);
+
+    return {
+        sentence,
+        options,
+        answer,
+        explanation,
+    };
+}
+
+function generateOption(index: number, word: string): string {
+    const suffixes = ['', 's', 'ing', 'ed', 'ly'];
+    const variant = word + (suffixes[index % suffixes.length] || '');
+    return variant || `Option ${index + 1}`;
 }
 
 function fallbackExample(word: string, difficulty: string): string {
