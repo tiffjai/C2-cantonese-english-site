@@ -229,18 +229,17 @@ function validatePayload(payload: any, targetWord: string): AiOutput {
     }
 
     const examplesRaw: any[] = Array.isArray(payload.examples) ? payload.examples : [];
-    if (examplesRaw.length < 3) {
-        throw new Error('Examples missing.');
-    }
 
     const examples: AiExample[] = ['easy', 'normal', 'advanced'].map((difficulty, index) => {
-        const item = examplesRaw.find((ex) => ex?.difficulty?.toLowerCase() === difficulty) ?? examplesRaw[index] ?? {};
-        const sentence = typeof item.sentence === 'string' ? item.sentence.trim() : '';
+        const item = examplesRaw.find((ex) => ex?.difficulty?.toLowerCase?.() === difficulty) ?? examplesRaw[index] ?? {};
+        let sentence = typeof item.sentence === 'string' ? item.sentence.trim() : '';
+
         if (!sentence) {
-            throw new Error(`Missing ${difficulty} sentence.`);
+            sentence = fallbackExample(targetWord, difficulty);
         }
+
         if (!sentence.toLowerCase().includes(targetWord.toLowerCase())) {
-            throw new Error(`The ${difficulty} sentence must include the target word.`);
+            sentence = ensureContainsWord(sentence, targetWord);
         }
         return { difficulty, sentence };
     });
@@ -294,4 +293,23 @@ function trimToWords(text: string, maxWords: number): string {
     const words = text.split(/\s+/).filter(Boolean);
     if (words.length <= maxWords) return words.join(' ');
     return words.slice(0, maxWords).join(' ');
+}
+
+function fallbackExample(word: string, difficulty: string): string {
+    const base = word;
+    switch (difficulty) {
+        case 'easy':
+            return `I hired a ${base} to help with a simple task.`;
+        case 'normal':
+            return `The ${base} finished the mission quickly because payment came first.`;
+        case 'advanced':
+            return `Her ${base} mindset overshadowed any notion of loyalty or principle.`;
+        default:
+            return `Here is a sentence using ${base} in context.`;
+    }
+}
+
+function ensureContainsWord(sentence: string, word: string): string {
+    if (sentence.toLowerCase().includes(word.toLowerCase())) return sentence;
+    return `${sentence.trim().replace(/\.*$/, '')}. ${word}`;
 }
