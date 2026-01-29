@@ -72,9 +72,17 @@ async function fetchTranslation(headword: string): Promise<string | undefined> {
 }
 
 async function fetchExamples(headword: string): Promise<string[]> {
+    // Avoid network calls if offline
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+        return [makeFallbackExample(headword, 'en')];
+    }
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+
     try {
         const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(headword)}`;
-        const res = await fetch(url);
+        const res = await fetch(url, { signal: controller.signal });
         if (!res.ok) throw new Error(`Dictionary HTTP ${res.status}`);
         const payload = await res.json();
 
@@ -103,8 +111,13 @@ async function fetchExamples(headword: string): Promise<string[]> {
 
         return collected.map(sanitize);
     } catch (error) {
-        console.warn(`Example fetch failed for ${headword}`, error);
+        // Swallow network issues and fall back silently for better UX (esp. offline / adblock / CORS).
+        if (process.env.NODE_ENV === 'development') {
+            console.debug(`Example fetch failed for ${headword}`, error);
+        }
         return [makeFallbackExample(headword, 'en')];
+    } finally {
+        clearTimeout(timeout);
     }
 }
 
