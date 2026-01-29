@@ -46,23 +46,27 @@ const send = (message: WorkerResponse) => {
 const promptTemplate = ({
     word,
     level,
-    meaning,
 }: {
     word: string;
     level: string;
     meaning?: string;
-}) => `You are an English teaching assistant. Respond with JSON only, wrapped in <BEGIN_JSON> ... <BEGIN_JSON_END>. No other text.
-JSON must have:
-- examples: array of 3 items with {difficulty: "easy"|"normal"|"advanced", sentence: string}
-- cloze: {sentence: string with "____", options: 4 strings, answer: "A"|"B"|"C"|"D", explanation: string}
-Rules:
-- Use the exact target word "${word}" in all example sentences.
-- Target CEFR level: ${level}; difficulty labels must be "easy","normal","advanced".
-- Cloze sentence must contain "____" in place of the target word.
-- Provide 4 short options (A-D). Exactly one is correct. Answer is the letter (A-D).
-- Explanation <= 20 words. English only.
-${meaning ? `- Word meaning/context: ${meaning}` : ''}
-Return format (no prose): <BEGIN_JSON>{...}<BEGIN_JSON_END>`;
+}) => `OUTPUT ONLY JSON. NO QUESTIONS. NO BULLETS.
+WORD: "${word}"
+LEVEL: ${level}
+Copy and fill this JSON exactly, wrapped in <BEGIN_JSON> and </END_JSON>:
+<BEGIN_JSON>{
+  "examples":[
+    {"difficulty":"easy","sentence":""},
+    {"difficulty":"normal","sentence":""},
+    {"difficulty":"advanced","sentence":""}
+  ],
+  "cloze":{
+    "sentence":"",
+    "options":["","","",""],
+    "answer":"",
+    "explanation":""
+  }
+}</END_JSON>`;
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
@@ -91,11 +95,16 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         send({ type: 'status', status: 'generating' });
 
         const attempts = [
-            { temperature: 0.3, do_sample: true, extra: '' },
             {
-                temperature: 0.2,
-                do_sample: false,
-                extra: '\nIMPORTANT: Output ONLY <BEGIN_JSON>{...}</END_JSON> with no other text.',
+                prompt: promptTemplate({ word, level, meaning }),
+                max_new_tokens: 220,
+            },
+            {
+                prompt: `OUTPUT ONLY JSON. NO QUESTIONS. NO BULLETS.
+WORD: "${word}"
+LEVEL: ${level}
+<BEGIN_JSON>{"examples":[{"difficulty":"easy","sentence":""},{"difficulty":"normal","sentence":""},{"difficulty":"advanced","sentence":""}],"cloze":{"sentence":"","options":["","","",""],"answer":"","explanation":""}}</END_JSON>`,
+                max_new_tokens: 160,
             },
         ];
 
@@ -104,15 +113,18 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         for (const attempt of attempts) {
             try {
-                const prompt = promptTemplate({ word, level, meaning }) + attempt.extra;
-                const output = await generator(prompt, {
-                    max_new_tokens: 280,
-                    temperature: attempt.temperature,
-                    do_sample: attempt.do_sample,
+                const output = await generator(attempt.prompt, {
+                    max_new_tokens: attempt.max_new_tokens,
+                    temperature: 0,
+                    do_sample: false,
                     return_full_text: false,
                 });
 
-                const rawText = extractGeneratedText(output as any);
+                let rawText = extractGeneratedText(output as any);
+                const endIdx = rawText.indexOf('</END_JSON>');
+                if (endIdx !== -1) {
+                    rawText = rawText.slice(0, endIdx + '</END_JSON>'.length);
+                }
                 lastRawText = rawText;
                 const parsed = parseJsonOutput(rawText);
                 const validated = validatePayload(parsed, word);
@@ -231,7 +243,7 @@ function extractCodeFence(text: string): string | null {
 }
 
 function extractBetweenTags(text: string): string | null {
-    const match = text.match(/<BEGIN_JSON>\s*([\s\S]*?)\s*(?:<\/END_JSON>|<END_JSON>|<BEGIN_JSON_END>)/i);
+    const match = text.match(/<BEGIN_JSON>\s*([\s\S]*?)\s*<\/END_JSON>/i);
     return match?.[1]?.trim() || null;
 }
 
