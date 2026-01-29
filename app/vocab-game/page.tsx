@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import THREE from '@/lib/three.module.js'
+import * as THREE from '@/lib/three.module.js'
 import styles from './page.module.css'
 
 let sceneRefGlobal: any = null
@@ -55,13 +55,13 @@ export default function VocabGamePage() {
     const [status, setStatus] = useState<'idle' | 'correct' | 'wrong' | 'timeout'>('idle')
     const [score, setScore] = useState({ correct: 0, wrong: 0, streak: 0, points: 0 })
     const [timeLeft, setTimeLeft] = useState(12)
-    const sceneRef = useRef<any>()
-    const cameraRef = useRef<any>()
-    const rendererRef = useRef<any>()
+    const sceneRef = useRef<any>(null)
+    const cameraRef = useRef<any>(null)
+    const rendererRef = useRef<any>(null)
     const cubesRef = useRef<any[]>([])
     const raycaster = useMemo(() => new THREE.Raycaster(), [])
     const mouse = useMemo(() => new THREE.Vector2(), [])
-    const timerRef = useRef<NodeJS.Timeout>()
+    const timerRef = useRef<NodeJS.Timeout | null>(null)
     const audioCtxRef = useRef<AudioContext | null>(null)
 
     useEffect(() => {
@@ -275,7 +275,7 @@ export default function VocabGamePage() {
                     </button>
                     <button
                         className={`${styles.btn} ${styles.ghost}`}
-                        onClick={() => setScore({ correct: 0, wrong: 0, streak: 0 })}
+                        onClick={() => setScore({ correct: 0, wrong: 0, streak: 0, points: 0 })}
                     >
                         重設分數
                     </button>
