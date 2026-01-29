@@ -51,7 +51,8 @@ const promptTemplate = ({
     word: string;
     level: string;
     meaning?: string;
-}) => `You are an English teaching assistant. Return ONLY valid JSON (no markdown, no explanations) following this schema:
+}) => `You are an English teaching assistant. Respond with JSON only, wrapped in <BEGIN_JSON> ... </END_JSON>. No other text.
+Schema:
 {
   "examples":[
     {"difficulty":"easy","sentence":""},
@@ -67,12 +68,12 @@ const promptTemplate = ({
 }
 Rules:
 - Use the exact target word "${word}" in all example sentences.
-- The target CEFR level is ${level}. Keep difficulty labels exactly "easy", "normal", "advanced".
-- Cloze sentence must replace the target word with "____".
-- Provide 4 short options (A-D). Exactly one is correct. Answer should be the correct option letter (A, B, C, or D).
-- Explanation must be <= 20 words. English only.
+- Target CEFR level: ${level}; difficulty labels must be "easy","normal","advanced".
+- Cloze sentence must contain "____" in place of the target word.
+- Provide 4 short options (A-D). Exactly one is correct. Answer is the letter (A-D).
+- Explanation <= 20 words. English only.
 ${meaning ? `- Word meaning/context: ${meaning}` : ''}
-Return ONLY the JSON object.`;
+Return format (no prose): <BEGIN_JSON>{...}</END_JSON>`;
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
@@ -103,9 +104,9 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         const attempts = [
             { temperature: 0.3, do_sample: true, extra: '' },
             {
-                temperature: 0.1,
+                temperature: 0.2,
                 do_sample: false,
-                extra: '\nIMPORTANT: Output ONLY the JSON object, no markdown or prose.',
+                extra: '\nIMPORTANT: Output ONLY <BEGIN_JSON>{...}</END_JSON> with no other text.',
             },
         ];
 
@@ -115,7 +116,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             try {
                 const prompt = promptTemplate({ word, level, meaning }) + attempt.extra;
                 const output = await generator(prompt, {
-                    max_new_tokens: 260,
+                    max_new_tokens: 280,
                     temperature: attempt.temperature,
                     do_sample: attempt.do_sample,
                     return_full_text: false,
@@ -142,6 +143,13 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 function parseJsonOutput(text: string): AiOutput {
     const trimmed = text.trim();
 
+    // Prefer explicit BEGIN/END tags
+    const tagged = extractBetweenTags(trimmed, 'BEGIN_JSON', 'END_JSON');
+    if (tagged) {
+        const parsedTag = tryParse(tagged) ?? tryParse(simpleRepair(tagged));
+        if (parsedTag) return parsedTag;
+    }
+
     // 1) direct parse
     const direct = tryParse(trimmed);
     if (direct) return direct;
@@ -159,21 +167,14 @@ function parseJsonOutput(text: string): AiOutput {
     // 2) attempt to extract first balanced JSON object
     const extracted = extractFirstJsonObject(trimmed);
     if (extracted) {
-        const parsed = tryParse(extracted);
+        const parsed = tryParse(extracted) ?? tryParse(simpleRepair(extracted));
         if (parsed) return parsed;
     }
 
-    // 3) attempt lenient fixes (quote keys/single quotes)
-    if (extracted) {
-        const fixed = normalizeJsonish(extracted);
-        const parsed = tryParse(fixed);
-        if (parsed) return parsed;
-    }
-
-    // 4) fallback: slice from first { to last }
+    // 3) fallback: slice from first { to last }
     const sliced = sliceOuterBraces(trimmed);
     if (sliced) {
-        const parsed = tryParse(sliced) || tryParse(normalizeJsonish(sliced));
+        const parsed = tryParse(sliced) || tryParse(simpleRepair(sliced));
         if (parsed) return parsed;
     }
 
@@ -237,6 +238,14 @@ function extractCodeFence(text: string): string | null {
     return match?.[1]?.trim() || null;
 }
 
+function extractBetweenTags(text: string, startTag: string, endTag: string): string | null {
+    const start = text.indexOf(`<${startTag}>`);
+    const end = text.indexOf(`</${endTag}>`);
+    if (start === -1 || end === -1 || end <= start) return null;
+    const content = text.slice(start + startTag.length + 2, end);
+    return content.trim();
+}
+
 function normalizeJsonish(text: string): string {
     let fixed = text;
     // Quote bare keys: {foo: "bar"} -> {"foo": "bar"}
@@ -244,6 +253,13 @@ function normalizeJsonish(text: string): string {
     // Convert single-quoted strings to double
     fixed = fixed.replace(/'([^']*)'/g, (_m, p1) => `"${p1.replace(/"/g, '\\"')}"`);
     // Remove trailing commas
+    fixed = fixed.replace(/,\s*([}\]])/g, '$1');
+    return fixed;
+}
+
+function simpleRepair(text: string): string {
+    // lighter repair: single quotes to double, remove trailing commas
+    let fixed = text.replace(/'([^']*)'/g, (_m, p1) => `"${p1.replace(/"/g, '\\"')}"`);
     fixed = fixed.replace(/,\s*([}\]])/g, '$1');
     return fixed;
 }
