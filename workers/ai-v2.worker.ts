@@ -247,11 +247,12 @@ async function generateSentenceOnlyFallback(
     distractors: string[]
 ): Promise<AiOutput | null> {
     if (!generator) return null;
-    const prompt = `Generate ONLY 3 lines. Each line must contain the exact word "${targetWord}".
+    const prompt = `Write 3 English example sentences using the exact word "${targetWord}".
+Target CEFR: ${level}.
+Return EXACTLY 3 lines (no extra text):
 easy: ...
 normal: ...
-advanced: ...
-No JSON. No extra text.`;
+advanced: ...`;
 
     try {
         const output = await generator(prompt, {
@@ -382,12 +383,11 @@ function buildOptions(targetWord: string, distractors: string[]): string[] | nul
     return options;
 }
 
-function getPosBucket(word: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown' {
+function getPosBucket(word: string): 'noun' | 'adj' | 'adv' | 'unknown' {
     const lower = word.toLowerCase();
     if (/(ly)$/.test(lower)) return 'adv';
-    if (/(ing|ed|ify|ise|ize|en)$/.test(lower)) return 'verb';
-    if (/(ous|able|ible|al|ive|ic|ish|ful|less|ary|ory|y)$/.test(lower)) return 'adj';
-    if (/(tion|sion|ment|ness|ity|ance|ence|ship|ism|ist|age|ery|ry|hood|dom)$/.test(lower)) return 'noun';
+    if (/(tion|ment|ness|ity|ship|ism)$/.test(lower)) return 'noun';
+    if (/(able|ible|ous|ive|al|ic|ful|less)$/.test(lower)) return 'adj';
     return 'unknown';
 }
 
@@ -425,8 +425,10 @@ function parseLabeledLines(text: string, targetWord: string): string[] | null {
 }
 
 function buildClozeFromExamples(examples: string[], targetWord: string): { sentence: string; sourceIndex: number } | null {
-    for (let idx = 0; idx < examples.length; idx += 1) {
+    const order = [1, 0, 2];
+    for (const idx of order) {
         const sentence = examples[idx];
+        if (!sentence || isMetaSentence(sentence)) continue;
         const replaced = replaceWord(sentence, targetWord, '____');
         if (replaced.includes('____')) {
             return { sentence: replaced, sourceIndex: idx };
@@ -437,6 +439,10 @@ function buildClozeFromExamples(examples: string[], targetWord: string): { sente
 
 function escapeRegExp(value: string): string {
     return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function isMetaSentence(sentence: string): boolean {
+    return /use(?:s|d)? the word/i.test(sentence);
 }
 
 function shuffle<T>(items: T[]): T[] {
