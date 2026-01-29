@@ -36,7 +36,7 @@ export type AiOutput = {
 env.allowRemoteModels = true;
 env.allowLocalModels = false;
 
-const MODEL_ID = 'onnx-community/SmolLM2-135M-Instruct-ONNX-MHA';
+const MODEL_ID = 'onnx-community/granite-4.0-350m-ONNX-web';
 let generator: TextGenerationPipelineType | null = null;
 
 const send = (message: WorkerResponse) => {
@@ -50,29 +50,24 @@ const promptTemplate = ({
     word: string;
     level: string;
     meaning?: string;
-}) => `OUTPUT ONLY JSON. NO QUESTIONS. NO BULLETS.
-WORD: "${word}"
-LEVEL: ${level}
-Copy and fill this JSON exactly, wrapped in <BEGIN_JSON> and </END_JSON>:
-<BEGIN_JSON>{
-  "examples":[
-    {"difficulty":"easy","sentence":""},
-    {"difficulty":"normal","sentence":""},
-    {"difficulty":"advanced","sentence":""}
-  ],
-  "cloze":{
-    "sentence":"",
-    "options":["","","",""],
-    "answer":"",
-    "explanation":""
-  }
-}</END_JSON>`;
+}) => `OUTPUT ONLY JSON BETWEEN TAGS.
+<BEGIN_JSON>{"examples":[{"difficulty":"easy","sentence":""},{"difficulty":"normal","sentence":""},{"difficulty":"advanced","sentence":""}],"cloze":{"sentence":"","options":["","","",""],"answer":"","explanation":""}}</END_JSON>
+WORD="${word}"
+LEVEL="${level}"
+Rules:
+- Put WORD exactly in all 3 sentences.
+- Cloze replaces WORD with ____.
+- options must be 4 strings; answer must be "A"|"B"|"C"|"D".
+- explanation <= 20 words.
+No other text.`;
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
     if (!data || data.type !== 'generate') return;
 
     const { word, level, meaning } = data;
+
+    let lastRawText = '';
 
     try {
         if (!generator) {
@@ -94,53 +89,24 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         send({ type: 'status', status: 'generating' });
 
-        const attempts = [
-            {
-                prompt: promptTemplate({ word, level, meaning }),
-                max_new_tokens: 220,
-            },
-            {
-                prompt: `OUTPUT ONLY JSON. NO QUESTIONS. NO BULLETS.
-WORD: "${word}"
-LEVEL: ${level}
-<BEGIN_JSON>{"examples":[{"difficulty":"easy","sentence":""},{"difficulty":"normal","sentence":""},{"difficulty":"advanced","sentence":""}],"cloze":{"sentence":"","options":["","","",""],"answer":"","explanation":""}}</END_JSON>`,
-                max_new_tokens: 160,
-            },
-        ];
+        const prompt = promptTemplate({ word, level, meaning });
+        const output = await generator(prompt, {
+            max_new_tokens: 240,
+            temperature: 0,
+            do_sample: false,
+            return_full_text: false,
+        });
 
-        let lastError: Error | null = null;
-        let lastRawText = '';
+        const rawText = truncateAtEndTag(extractGeneratedText(output as any));
+        lastRawText = rawText;
+        const parsed = parseJsonOutput(rawText);
+        const validated = validatePayload(parsed, word);
 
-        for (const attempt of attempts) {
-            try {
-                const output = await generator(attempt.prompt, {
-                    max_new_tokens: attempt.max_new_tokens,
-                    temperature: 0,
-                    do_sample: false,
-                    return_full_text: false,
-                });
-
-                let rawText = extractGeneratedText(output as any);
-                const endIdx = rawText.indexOf('</END_JSON>');
-                if (endIdx !== -1) {
-                    rawText = rawText.slice(0, endIdx + '</END_JSON>'.length);
-                }
-                lastRawText = rawText;
-                const parsed = parseJsonOutput(rawText);
-                const validated = validatePayload(parsed, word);
-
-                send({ type: 'result', payload: validated });
-                return;
-            } catch (err: any) {
-                lastError = err instanceof Error ? err : new Error(String(err));
-                (lastError as any).rawText = lastRawText;
-            }
-        }
-
-        throw lastError ?? new Error('Failed to generate content.');
+        send({ type: 'result', payload: validated });
+        return;
     } catch (error: any) {
         const message = error?.message || 'Failed to generate content.';
-        send({ type: 'error', message, rawText: error?.rawText });
+        send({ type: 'error', message, rawText: lastRawText || error?.rawText });
     }
 };
 
@@ -245,6 +211,11 @@ function extractCodeFence(text: string): string | null {
 function extractBetweenTags(text: string): string | null {
     const match = text.match(/<BEGIN_JSON>\s*([\s\S]*?)\s*<\/END_JSON>/i);
     return match?.[1]?.trim() || null;
+}
+
+function truncateAtEndTag(text: string): string {
+    const end = text.indexOf('</END_JSON>');
+    return end >= 0 ? text.slice(0, end + '</END_JSON>'.length) : text;
 }
 
 function normalizeJsonish(text: string): string {
