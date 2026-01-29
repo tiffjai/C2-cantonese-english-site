@@ -17,7 +17,7 @@ type WorkerResponse =
     | { type: 'status'; status: 'loading-model' | 'model-ready' | 'generating' }
     | { type: 'progress'; loaded: number; total: number }
     | { type: 'result'; payload: AiOutput }
-    | { type: 'error'; message: string };
+    | { type: 'error'; message: string; rawText?: string };
 
 type AiExample = { difficulty: string; sentence: string };
 type AiCloze = {
@@ -51,21 +51,10 @@ const promptTemplate = ({
     word: string;
     level: string;
     meaning?: string;
-}) => `You are an English teaching assistant. Respond with JSON only, wrapped in <BEGIN_JSON> ... </END_JSON>. No other text.
-Schema:
-{
-  "examples":[
-    {"difficulty":"easy","sentence":""},
-    {"difficulty":"normal","sentence":""},
-    {"difficulty":"advanced","sentence":""}
-  ],
-  "cloze":{
-    "sentence":"",
-    "options":["","","",""],
-    "answer":"",
-    "explanation":""
-  }
-}
+}) => `You are an English teaching assistant. Respond with JSON only, wrapped in <BEGIN_JSON> ... <BEGIN_JSON_END>. No other text.
+JSON must have:
+- examples: array of 3 items with {difficulty: "easy"|"normal"|"advanced", sentence: string}
+- cloze: {sentence: string with "____", options: 4 strings, answer: "A"|"B"|"C"|"D", explanation: string}
 Rules:
 - Use the exact target word "${word}" in all example sentences.
 - Target CEFR level: ${level}; difficulty labels must be "easy","normal","advanced".
@@ -73,7 +62,7 @@ Rules:
 - Provide 4 short options (A-D). Exactly one is correct. Answer is the letter (A-D).
 - Explanation <= 20 words. English only.
 ${meaning ? `- Word meaning/context: ${meaning}` : ''}
-Return format (no prose): <BEGIN_JSON>{...}</END_JSON>`;
+Return format (no prose): <BEGIN_JSON>{...}<BEGIN_JSON_END>`;
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
@@ -111,15 +100,12 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         ];
 
         let lastError: Error | null = null;
+        let lastRawText = '';
 
         for (const attempt of attempts) {
             try {
                 const prompt = promptTemplate({ word, level, meaning }) + attempt.extra;
-                const messages = [
-                    { role: 'system', content: 'You are a helpful assistant.' },
-                    { role: 'user', content: prompt },
-                ];
-                const output = await generator(messages, {
+                const output = await generator(prompt, {
                     max_new_tokens: 280,
                     temperature: attempt.temperature,
                     do_sample: attempt.do_sample,
@@ -127,6 +113,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
                 });
 
                 const rawText = extractGeneratedText(output as any);
+                lastRawText = rawText;
                 const parsed = parseJsonOutput(rawText);
                 const validated = validatePayload(parsed, word);
 
@@ -134,13 +121,14 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
                 return;
             } catch (err: any) {
                 lastError = err instanceof Error ? err : new Error(String(err));
+                (lastError as any).rawText = lastRawText;
             }
         }
 
         throw lastError ?? new Error('Failed to generate content.');
     } catch (error: any) {
         const message = error?.message || 'Failed to generate content.';
-        send({ type: 'error', message });
+        send({ type: 'error', message, rawText: error?.rawText });
     }
 };
 
@@ -148,7 +136,7 @@ function parseJsonOutput(text: string): AiOutput {
     const trimmed = text.trim();
 
     // Prefer explicit BEGIN/END tags
-    const tagged = extractBetweenTags(trimmed, 'BEGIN_JSON', 'END_JSON');
+    const tagged = extractBetweenTags(trimmed);
     if (tagged) {
         const parsedTag = tryParse(tagged) ?? tryParse(simpleRepair(tagged));
         if (parsedTag) return parsedTag;
@@ -242,12 +230,9 @@ function extractCodeFence(text: string): string | null {
     return match?.[1]?.trim() || null;
 }
 
-function extractBetweenTags(text: string, startTag: string, endTag: string): string | null {
-    const start = text.indexOf(`<${startTag}>`);
-    const end = text.indexOf(`</${endTag}>`);
-    if (start === -1 || end === -1 || end <= start) return null;
-    const content = text.slice(start + startTag.length + 2, end);
-    return content.trim();
+function extractBetweenTags(text: string): string | null {
+    const match = text.match(/<BEGIN_JSON>\s*([\s\S]*?)\s*(?:<\/END_JSON>|<END_JSON>|<BEGIN_JSON_END>)/i);
+    return match?.[1]?.trim() || null;
 }
 
 function normalizeJsonish(text: string): string {
