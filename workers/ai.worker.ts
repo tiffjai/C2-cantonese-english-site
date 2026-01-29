@@ -32,12 +32,12 @@ export type AiOutput = {
     cloze: AiCloze;
 };
 
-const MODEL_ID = 'HuggingFaceTB/SmolLM2-135M-Instruct';
-let generator: TextGenerationPipelineType | null = null;
-
 // Configure transformers.js for browser usage
 env.allowRemoteModels = true;
 env.allowLocalModels = false;
+
+const MODEL_ID = 'onnx-community/SmolLM2-135M-Instruct-ONNX-MHA';
+let generator: TextGenerationPipelineType | null = null;
 
 const send = (message: WorkerResponse) => {
     self.postMessage(message);
