@@ -37,7 +37,7 @@ export type AiOutput = {
 env.allowRemoteModels = true;
 env.allowLocalModels = false;
 
-const MODEL_ID = 'onnx-community/granite-4.0-350m-ONNX-web';
+const MODEL_ID = 'onnx-community/Llama-3.2-1B-Instruct-onnx-web-gqa';
 let generator: TextGenerationPipelineType | null = null;
 
 const send = (message: WorkerResponse) => {
