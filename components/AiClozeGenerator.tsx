@@ -53,7 +53,7 @@ export default function AiClozeGenerator({ word, level, meaning, distractors }: 
                 setResult(msg.payload);
                 setStatus('success');
                 setError(null);
-                setDebugText(null);
+                setDebugText(msg.rawText || null);
                 return;
             }
 
@@ -151,12 +151,13 @@ export default function AiClozeGenerator({ word, level, meaning, distractors }: 
                     <button className="btn-secondary" onClick={handleGenerate} disabled={isBusy}>
                         Retry
                     </button>
-                    {debugText && (
-                        <details>
-                            <summary>Debug output</summary>
-                            <pre>{debugText}</pre>
-                        </details>
-                    )}
+                </div>
+            )}
+
+            {debugText && (
+                <div className={styles.debug}>
+                    <div className={styles.debugTitle}>Model output</div>
+                    <pre>{debugText}</pre>
                 </div>
             )}
 

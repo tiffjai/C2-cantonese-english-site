@@ -17,7 +17,7 @@ type GenerateMessage = {
 type WorkerResponse =
     | { type: 'status'; status: 'loading-model' | 'model-ready' | 'generating' }
     | { type: 'progress'; loaded: number; total: number }
-    | { type: 'result'; payload: AiOutput }
+    | { type: 'result'; payload: AiOutput; rawText?: string }
     | { type: 'error'; message: string; rawText?: string };
 
 type AiExample = { difficulty: string; sentence: string };
@@ -106,22 +106,23 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             const parsed = parseJsonOutput(rawText);
             const validated = validatePayload(parsed, word);
 
-            send({ type: 'result', payload: validated });
+            send({ type: 'result', payload: validated, rawText: lastRawText });
             return;
         } catch (err) {
             const salvaged = salvageFromRawText(rawText, word, distractors);
             if (salvaged) {
-                send({ type: 'result', payload: salvaged });
+                send({ type: 'result', payload: salvaged, rawText: lastRawText });
                 return;
             }
-            const retryPayload = await generateSentenceOnlyFallback(word, level, distractors);
-            if (retryPayload) {
-                send({ type: 'result', payload: retryPayload });
+            const retryResult = await generateSentenceOnlyFallback(word, level, distractors);
+            if (retryResult) {
+                lastRawText = retryResult.rawText;
+                send({ type: 'result', payload: retryResult.payload, rawText: retryResult.rawText });
                 return;
             }
             const fallback = buildPosFallbackOutput(word, distractors);
             if (fallback) {
-                send({ type: 'result', payload: fallback });
+                send({ type: 'result', payload: fallback, rawText: lastRawText });
                 return;
             }
             throw err;
@@ -276,11 +277,13 @@ async function loadGeneratorWithFallback(): Promise<TextGenerationPipelineType> 
     throw lastError ?? new Error('Failed to load AI model.');
 }
 
+type SentenceFallbackResult = { payload: AiOutput; rawText: string };
+
 async function generateSentenceOnlyFallback(
     targetWord: string,
     level: string,
     distractors: string[]
-): Promise<AiOutput | null> {
+): Promise<SentenceFallbackResult | null> {
     if (!generator) return null;
     const prompt = `Write 3 English example sentences using the exact word "${targetWord}".
 Think silently before responding.
@@ -312,17 +315,20 @@ advanced: ...`;
         if (answerIndex === -1) return null;
 
         return {
-            examples: [
-                { difficulty: 'easy', sentence: examples[0] },
-                { difficulty: 'normal', sentence: examples[1] },
-                { difficulty: 'advanced', sentence: examples[2] },
-            ],
-            cloze: {
-                sentence: clozeSentence,
-                options,
-                answer: ['A', 'B', 'C', 'D'][answerIndex],
-                explanation: 'Best fit for the blank is the target word.',
+            payload: {
+                examples: [
+                    { difficulty: 'easy', sentence: examples[0] },
+                    { difficulty: 'normal', sentence: examples[1] },
+                    { difficulty: 'advanced', sentence: examples[2] },
+                ],
+                cloze: {
+                    sentence: clozeSentence,
+                    options,
+                    answer: ['A', 'B', 'C', 'D'][answerIndex],
+                    explanation: 'Best fit for the blank is the target word.',
+                },
             },
+            rawText,
         };
     } catch {
         return null;
