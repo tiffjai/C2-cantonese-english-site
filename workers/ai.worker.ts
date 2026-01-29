@@ -338,26 +338,56 @@ function validatePayload(payload: any, targetWord: string): AiOutput {
         throw new Error('Examples missing.');
     }
 
-    const examples: AiExample[] = ['easy', 'normal', 'advanced'].map((difficulty, index) => {
-        const item = examplesRaw.find((ex) => ex?.difficulty?.toLowerCase?.() === difficulty) ?? examplesRaw[index] ?? {};
-        const sentence = typeof item.sentence === 'string' ? item.sentence.trim() : '';
+    const remaining = [...examplesRaw];
+    const getSentence = (item: any) => {
+        const raw = item?.sentence ?? item?.text ?? item?.example;
+        return typeof raw === 'string' ? raw.trim() : '';
+    };
 
-        if (!sentence) {
-            throw new Error(`Missing ${difficulty} sentence.`);
+    const pickByLabel = (label: string) => {
+        const idx = remaining.findIndex((ex) => ex?.difficulty?.toLowerCase?.() === label);
+        if (idx === -1) return null;
+        const [picked] = remaining.splice(idx, 1);
+        const sentence = getSentence(picked);
+        return sentence ? { difficulty: label, sentence } : null;
+    };
+
+    const pickNext = (label: string) => {
+        while (remaining.length) {
+            const candidate = remaining.shift();
+            const sentence = getSentence(candidate);
+            if (sentence) return { difficulty: label, sentence };
         }
-        if (!sentence.toLowerCase().includes(targetWord.toLowerCase())) {
-            throw new Error(`The ${difficulty} sentence must include the target word.`);
+        return null;
+    };
+
+    const examples: AiExample[] = [];
+    for (const label of ['easy', 'normal', 'advanced']) {
+        const labeled = pickByLabel(label);
+        const entry = labeled ?? pickNext(label);
+        if (!entry?.sentence) {
+            throw new Error(`Missing ${label} sentence.`);
         }
-        return { difficulty, sentence };
-    });
+        if (!entry.sentence.toLowerCase().includes(targetWord.toLowerCase())) {
+            throw new Error(`The ${label} sentence must include the target word.`);
+        }
+        examples.push(entry);
+    }
 
     const clozeRaw = payload.cloze || {};
-    const clozeSentence = typeof clozeRaw.sentence === 'string' ? clozeRaw.sentence.trim() : '';
+    const clozeSentenceRaw = clozeRaw.sentence ?? clozeRaw.prompt ?? clozeRaw.question;
+    const clozeSentence = typeof clozeSentenceRaw === 'string' ? clozeSentenceRaw.trim() : '';
     if (!clozeSentence || !clozeSentence.includes('____')) {
         throw new Error('Cloze sentence must include "____".');
     }
 
-    const optionsRaw: string[] = Array.isArray(clozeRaw.options) ? clozeRaw.options : [];
+    const optionsRaw: string[] = Array.isArray(clozeRaw.options)
+        ? clozeRaw.options
+        : Array.isArray(clozeRaw.choices)
+            ? clozeRaw.choices
+            : Array.isArray(clozeRaw.answers)
+                ? clozeRaw.answers
+                : [];
     const options = optionsRaw
         .map((opt) => (typeof opt === 'string' ? opt.trim() : ''))
         .filter(Boolean);
@@ -365,14 +395,16 @@ function validatePayload(payload: any, targetWord: string): AiOutput {
         throw new Error('Cloze options must have 4 items.');
     }
 
-    const answerRaw = typeof clozeRaw.answer === 'string' ? clozeRaw.answer.trim() : '';
+    const answerRawValue = clozeRaw.answer ?? clozeRaw.correct ?? clozeRaw.correctAnswer ?? clozeRaw.key;
+    const answerRaw = typeof answerRawValue === 'string' ? answerRawValue.trim() : answerRawValue;
     const answerIndex = parseAnswerIndex(answerRaw, options);
     if (answerIndex === -1) {
         throw new Error('Cloze answer must match one option (A-D).');
     }
     const answer = ['A', 'B', 'C', 'D'][answerIndex];
 
-    const explanationRaw = typeof clozeRaw.explanation === 'string' ? clozeRaw.explanation.trim() : '';
+    const explanationRawValue = clozeRaw.explanation ?? clozeRaw.reason ?? clozeRaw.rationale;
+    const explanationRaw = typeof explanationRawValue === 'string' ? explanationRawValue.trim() : '';
     if (!explanationRaw) {
         throw new Error('Cloze explanation missing.');
     }
@@ -389,14 +421,26 @@ function validatePayload(payload: any, targetWord: string): AiOutput {
     };
 }
 
-function parseAnswerIndex(answer: string, options: string[]): number {
-    if (!answer) return -1;
-    const letter = answer[0].toUpperCase();
+function parseAnswerIndex(answer: string | number, options: string[]): number {
+    if (answer === null || answer === undefined) return -1;
+    if (typeof answer === 'number' && Number.isFinite(answer)) {
+        if (answer >= 0 && answer <= 3) return answer;
+        if (answer >= 1 && answer <= 4) return answer - 1;
+        return -1;
+    }
+    const raw = String(answer).trim();
+    if (!raw) return -1;
+    const letter = raw[0].toUpperCase();
     const letterIndex = ['A', 'B', 'C', 'D'].indexOf(letter);
     if (letterIndex >= 0) return letterIndex;
+    const num = Number(raw);
+    if (Number.isFinite(num)) {
+        if (num >= 0 && num <= 3) return num;
+        if (num >= 1 && num <= 4) return num - 1;
+    }
 
     // Try to match by option text
-    const normalized = answer.toLowerCase();
+    const normalized = raw.toLowerCase();
     const idx = options.findIndex((opt) => opt.toLowerCase() === normalized);
     return idx;
 }
