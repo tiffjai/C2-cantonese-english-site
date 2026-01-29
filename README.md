@@ -49,6 +49,25 @@ npm run build
 npm start
 ```
 
+## 🔊 本機離線發音 (Coqui TTS)
+前端的「發音閃卡」預設會呼叫本機 TTS 服務；若未啟動則退回瀏覽器語音。建議啟用 Coqui 取得更自然的聲音。
+
+1. 建立虛擬環境並安裝依賴
+   ```bash
+   python3 -m venv .venv-coqui && source .venv-coqui/bin/activate
+   pip install -r coqui-requirements.txt
+   ```
+2. 啟動服務（可更換模型，使用 `tts --list_models` 查看）
+   ```bash
+   export COQUI_MODEL="tts_models/en/vctk/vits"
+   uvicorn scripts.coqui_server:app --host 127.0.0.1 --port 5005
+   ```
+3. 在 `.env.local` 設定前端端點
+   ```
+   NEXT_PUBLIC_TTS_ENDPOINT=http://127.0.0.1:5005/speak
+   ```
+4. 重啟 `npm run dev`，在 `/tts-flashcards` 點「讀單字 / 讀例句」時，頁面會顯示「聲源：Coqui(本機)」代表已走本機 TTS。
+
 ## 📁 項目結構 | Project Structure
 
 ```

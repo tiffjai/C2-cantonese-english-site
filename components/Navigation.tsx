@@ -16,6 +16,8 @@ export default function Navigation() {
         { href: '/flashcards', label: '閃卡', icon: '📚' },
         { href: '/quiz', label: '測驗', icon: '✅' },
         { href: '/progress', label: '進度', icon: '📊' },
+        { href: '/vocab-game', label: '3D 單字遊戲', icon: '🕹️' },
+        { href: '/tts-flashcards', label: '發音閃卡', icon: '🔊' },
     ];
 
     return (

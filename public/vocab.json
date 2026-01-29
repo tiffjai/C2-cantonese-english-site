@@ -1,0 +1,4225 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "word": "humanitarian",
+      "ipa": "hjuˌmænəˈtɛrɪən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "人道主義者；慈善家"
+        },
+        {
+          "pos": "形",
+          "zh": "人道主義的；博愛的"
+        }
+      ],
+      "examples": [
+        "The humanitarian scientist called for the improvement of the poor's living condition. 這位人道主義科學家呼籲改善窮人的生活條件。"
+      ],
+      "related": [
+        "human 名 人類",
+        "humanitarian 名 人道主義者",
+        "humanitarian aid 名 人道救援"
+      ]
+    },
+    {
+      "id": 2,
+      "word": "humankind",
+      "ipa": "ˈhjumənˌkaɪnd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（總稱）人類"
+        }
+      ],
+      "examples": [
+        "It is admirable to have love for humankind. 對全人類心懷愛心是值得敬佩的。"
+      ],
+      "related": [
+        "ape 名 猿；大猩猩",
+        "existence 名 存在",
+        "mammal 名 哺乳類動物"
+      ]
+    },
+    {
+      "id": 3,
+      "word": "identity",
+      "ipa": "aɪˈdɛntətɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "身份（簡稱 ID）"
+        }
+      ],
+      "examples": [
+        "The police asked him to show his identity card. 員警讓他出示身份證。"
+      ],
+      "related": [
+        "ID card 名 身分證",
+        "identity verification 名 身份辨識",
+        "fingerprint 名 指紋"
+      ]
+    },
+    {
+      "id": 4,
+      "word": "lad",
+      "ipa": "læd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "男孩；少年"
+        }
+      ],
+      "examples": [
+        "The town's changed a lot since I was a lad. 從我幼時至今，這小城市已有了很大變化。"
+      ],
+      "related": [
+        "bloke 名 小子；傢伙",
+        "cub 名 小子；傢伙"
+      ]
+    },
+    {
+      "id": 5,
+      "word": "landlord / landlady",
+      "ipa": "ˈlændˌlɔrd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "男／女房東"
+        }
+      ],
+      "examples": [
+        "I feel at home living here. The landlady is very kind to me. 我覺得住在這裡像在家裡一樣。房東太太對我很好。",
+        "I've got to go now. My landlord is waiting for me. 我該走了，我的房東在等我。"
+      ],
+      "related": [
+        "tenant 名 房客",
+        "lease 名 租賃契約",
+        "rent 名 租金"
+      ]
+    },
+    {
+      "id": 6,
+      "word": "master",
+      "ipa": "ˈmæstər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "主人"
+        },
+        {
+          "pos": "名",
+          "zh": "能手；名家；大師"
+        },
+        {
+          "pos": "動",
+          "zh": "精通"
+        },
+        {
+          "pos": "動",
+          "zh": "控制"
+        }
+      ],
+      "examples": [
+        "Do you know the master of this house? 你認識這棟房子的主人嗎？",
+        "The painting is done by a great master. 這幅畫是名家之作。",
+        "It's not difficult to master a foreign language. 要精通一門外語並不難。",
+        "He made an effort to master himself. 他竭力控制住自己的情緒。"
+      ],
+      "related": [
+        "master 名 主人",
+        "masterpiece 名 名作",
+        "master's degree 名 碩士"
+      ]
+    },
+    {
+      "id": 7,
+      "word": "orphan",
+      "ipa": "ˈɔrfən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "孤兒"
+        },
+        {
+          "pos": "動",
+          "zh": "使成為孤兒"
+        }
+      ],
+      "examples": [
+        "He has been an orphan since he was five. 他五歲時即成為孤兒。",
+        "She was orphaned at the age of ten. 她在十歲時成為孤兒。"
+      ],
+      "related": [
+        "orphanage 名 孤兒院",
+        "parent 名 父母親；雙親",
+        "abandon 動 拋棄"
+      ]
+    },
+    {
+      "id": 8,
+      "word": "miser",
+      "ipa": "ˈmaɪzər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "吝嗇鬼；守財奴"
+        }
+      ],
+      "examples": [
+        "His grandfather was a miser. 他爺爺是個吝嗇鬼。"
+      ],
+      "related": [
+        "frugal 形 節儉的",
+        "thrifty 形 節儉的",
+        "snobbish 形 勢利眼的",
+        "parsimonious 形 吝嗇的",
+        "stingy 形 小氣的"
+      ]
+    },
+    {
+      "id": 9,
+      "word": "mistress",
+      "ipa": "ˈmɪstrɪs",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "女主人"
+        }
+      ],
+      "examples": [
+        "The dog ran alongside his mistress. 狗在女主人的身邊奔跑。"
+      ],
+      "related": [
+        "host 名 主人",
+        "hostess 名 女主人"
+      ]
+    },
+    {
+      "id": 10,
+      "word": "self",
+      "ipa": "sɛlf",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "自己；自我"
+        }
+      ],
+      "examples": [
+        "He is self-taught and never went to school. 他是自學的，沒有上過學。"
+      ],
+      "related": [
+        "myself 代 我自己",
+        "ourselves 代 我們自己",
+        "him/herself 代 他／她自己"
+      ]
+    },
+    {
+      "id": 11,
+      "word": "spectator",
+      "ipa": "spɛkˈtetər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "觀眾；旁觀者"
+        }
+      ],
+      "examples": [
+        "Football is our most popular spectator sport. 足球是最受我們歡迎；最能吸引觀眾的一項運動。"
+      ],
+      "related": [
+        "accident 名 意外",
+        "stadium 名 運動場",
+        "audience 名 觀眾"
+      ]
+    },
+    {
+      "id": 12,
+      "word": "stranger",
+      "ipa": "ˈstrɛndʒər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "陌生人"
+        }
+      ],
+      "examples": [
+        "They taught the little boy not to talk to strangers. 他們教育小男孩不要和陌生人說話。"
+      ],
+      "related": [
+        "abduct 動 綁架",
+        "kidnap 動 綁架",
+        "ransom 名 贖金"
+      ]
+    },
+    {
+      "id": 13,
+      "word": "aunt",
+      "ipa": "ænt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "姑姑；阿姨；舅媽；嬸嬸"
+        }
+      ],
+      "examples": [
+        "My elder sister had a baby last month, so I am an aunt now. 我姐姐上個月生了孩子，所以我現在是阿姨了。"
+      ],
+      "related": [
+        "uncle 名 伯父；叔父；姑父；姨丈；舅父"
+      ]
+    },
+    {
+      "id": 14,
+      "word": "auntie / aunty",
+      "ipa": "ˈæntɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "aunt 的暱稱"
+        }
+      ],
+      "examples": [
+        "All but my auntie have had lunch. 除了我的嬸嬸以外，大家都吃了午餐。"
+      ],
+      "related": [
+        "niece 名 姪女",
+        "nephew 名 姪子"
+      ]
+    },
+    {
+      "id": 15,
+      "word": "born",
+      "ipa": "bɔrn",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "出生的"
+        },
+        {
+          "pos": "形",
+          "zh": "天生的"
+        }
+      ],
+      "examples": [
+        "He was born in Atlanta. 他出生在亞特蘭大。",
+        "She was born to be a star. 她天生就是當明星的料。",
+        "He is a born athlete. 他是天生的運動家。"
+      ],
+      "related": [
+        "pregnant 形 懷孕的",
+        "inherent 形 天生的"
+      ]
+    },
+    {
+      "id": 16,
+      "word": "bride",
+      "ipa": "braɪd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "新娘"
+        }
+      ],
+      "examples": [
+        "The bride was dressed in a beautiful white dress. 新娘穿了一襲美麗的白色禮服。"
+      ],
+      "related": [
+        "dowry 名 嫁妝",
+        "wedding dress; wedding gown 名 婚紗",
+        "maid of honor 名 伴娘"
+      ]
+    },
+    {
+      "id": 17,
+      "word": "bridegroom",
+      "ipa": "ˈbraɪdˌgrum",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "新郎"
+        }
+      ],
+      "examples": [
+        "Her bridegroom is a handsome young man. 她的新郎是一個英俊的年輕人。"
+      ],
+      "related": [
+        "suit 名 西裝",
+        "tuxedo 名 燕尾服",
+        "best man 名 伴郎"
+      ]
+    },
+    {
+      "id": 18,
+      "word": "brotherhood",
+      "ipa": "ˈbrʌðərˌhʊd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "兄弟關係；手足之情"
+        }
+      ],
+      "examples": [
+        "He believes in the brotherhood of all people. 他相信各民族間都應親如兄弟。"
+      ],
+      "related": [
+        "sibling 名 手足",
+        "fraternity 名 （美）大學的兄弟會"
+      ]
+    },
+    {
+      "id": 19,
+      "word": "cousin",
+      "ipa": "ˈkʌzn",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "堂／表兄弟姊妹"
+        }
+      ],
+      "examples": [
+        "He is a distant cousin of mine. 他是我的一位遠房表親。"
+      ],
+      "related": [
+        "relative 名 親戚",
+        "distant 形 遠房的",
+        "close 形 親近的"
+      ]
+    },
+    {
+      "id": 20,
+      "word": "clan",
+      "ipa": "klæn",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "家族；親族；宗族"
+        }
+      ],
+      "examples": [
+        "The Sampson clan gathered for the wedding. 辛普森家族因為婚禮而聚集在一起。"
+      ],
+      "related": [
+        "family 名 家族",
+        "ancestry 名 世系；血統"
+      ]
+    },
+    {
+      "id": 21,
+      "word": "descendant",
+      "ipa": "dɪˈsɛndənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "子孫；後裔"
+        }
+      ],
+      "examples": [
+        "He is a descendant of Queen Victoria. 他是維多利亞女王的後裔。"
+      ],
+      "related": [
+        "ancestor 名 祖先",
+        "offspring 名 後代；子孫"
+      ]
+    },
+    {
+      "id": 22,
+      "word": "domestic",
+      "ipa": "dəˈmɛstɪk",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "家庭的"
+        },
+        {
+          "pos": "形",
+          "zh": "國內的"
+        }
+      ],
+      "examples": [
+        "Domestic violence is a serious problem in this community. 家庭暴力是這個社區的嚴重問題。",
+        "Some people think we should put more emphasis on domestic issues. 有些人認為我們應該更注意內政。"
+      ],
+      "related": [
+        "domestic worker 名 家庭幫傭",
+        "domestic flight 名 國內航班"
+      ]
+    },
+    {
+      "id": 23,
+      "word": "fiance / fiancee",
+      "ipa": "ˌfiɑnˈse",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "未婚夫／未婚妻"
+        }
+      ],
+      "examples": [
+        "She loves her fiancé very much. 她非常愛她的未婚夫。",
+        "His fiancée is a lawyer. 他的未婚妻是個律師。"
+      ],
+      "related": [
+        "engagement 名 訂婚",
+        "engaged 形 已訂婚的"
+      ]
+    },
+    {
+      "id": 24,
+      "word": "foster",
+      "ipa": "ˈfɑstər",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "培養；促進"
+        },
+        {
+          "pos": "形",
+          "zh": "養育的；收養的"
+        }
+      ],
+      "examples": [
+        "The mother tried to foster her son's interest in music. 母親設法培養兒子對音樂的興趣。",
+        "He is very grateful to his foster parents. 他對他的養父母非常感激。"
+      ],
+      "related": [
+        "adopt 動 領養",
+        "foster parent 名 養父（母）"
+      ]
+    },
+    {
+      "id": 25,
+      "word": "grandchild",
+      "ipa": "ˈgrændˌtʃaɪld",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "孫子／女"
+        }
+      ],
+      "examples": [
+        "\"It's your grandchild?\" \"Oh, shut up, you put years on me.\" 「這是你的孫子嗎？」「啊，別說了！你把我說得那麼老了。」"
+      ],
+      "related": [
+        "generation 名 世代",
+        "gap 名 代溝"
+      ]
+    },
+    {
+      "id": 26,
+      "word": "granddaughter",
+      "ipa": "ˈgrænˌdɔtər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "孫女"
+        }
+      ],
+      "examples": [
+        "Susan gave her pearl necklace to her granddaughter as birthday gift. 蘇珊將珍珠項鏈作為生日禮物送給了孫女。"
+      ],
+      "related": [
+        "great-granddaughter 名 曾孫女"
+      ]
+    },
+    {
+      "id": 27,
+      "word": "grandfather",
+      "ipa": "ˈgrændˌfɑðər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "祖父"
+        }
+      ],
+      "examples": [
+        "Although his grandfather was a nobleman, he was very poor. 儘管他的祖父是貴族，他卻非常窮困。"
+      ],
+      "related": [
+        "senior citizen 名 老人（委婉語）",
+        "cane 名 手杖；拐杖"
+      ]
+    },
+    {
+      "id": 28,
+      "word": "grandma",
+      "ipa": "ˈgrændmɑ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（口）祖母"
+        }
+      ],
+      "examples": [
+        "Grandma could hardly believe it. 奶奶簡直不能相信這件事。"
+      ],
+      "related": [
+        "senile 形 老邁的",
+        "wrinkle 名 皺紋"
+      ]
+    },
+    {
+      "id": 29,
+      "word": "grandmother",
+      "ipa": "ˈgrændˌmʌðər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "祖母"
+        }
+      ],
+      "examples": [
+        "It's very noble of you to look after my old grandmother when I was out for business. 你心地真好，在我出差期間照顧我年邁的外婆。"
+      ],
+      "related": [
+        "great-grandmother 名 曾祖母",
+        "recipe 名 食譜；訣竅"
+      ]
+    },
+    {
+      "id": 30,
+      "word": "grandpa",
+      "ipa": "ˈgrændpɑ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（口）祖父"
+        }
+      ],
+      "examples": [
+        "I wish you would mention me to Mary, John, and especially, to grandpa. 我希望你代我問候瑪麗、約翰，尤其是爺爺。"
+      ],
+      "related": [
+        "great-grandfather 名 曾祖父",
+        "gray 形 灰白頭髮的"
+      ]
+    },
+    {
+      "id": 31,
+      "word": "grandson",
+      "ipa": "ˈgrændsʌn",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "孫子；外孫"
+        }
+      ],
+      "examples": [
+        "The old woman led her grandson by the arm. 那老婆婆牽著外孫的手。"
+      ],
+      "related": [
+        "childlike 形 天真的；孩子般的",
+        "childish 形 幼稚的"
+      ]
+    },
+    {
+      "id": 32,
+      "word": "husband",
+      "ipa": "ˈhʌzbənd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "丈夫"
+        }
+      ],
+      "examples": [
+        "She is an interesting person but her husband is a real nothing. 她是個很有趣的人，但是她的先生卻一無是處。"
+      ],
+      "related": [
+        "wife 名 妻子",
+        "affair 名 外遇"
+      ]
+    },
+    {
+      "id": 33,
+      "word": "kin",
+      "ipa": "kɪn",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "家族；親戚；同類"
+        },
+        {
+          "pos": "形",
+          "zh": "有親屬關係的；同類的"
+        }
+      ],
+      "examples": [
+        "All his kin were at the wedding. 他的家人和親戚都參加了婚禮。",
+        "He is kin to his brothers. 他和他的哥哥們很相似。"
+      ],
+      "related": [
+        "kinsman 名 男性親屬",
+        "kinswoman 名 女性親屬"
+      ]
+    },
+    {
+      "id": 34,
+      "word": "marry",
+      "ipa": "ˈmærɪ",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "主持婚禮；使……在婚姻中結合"
+        },
+        {
+          "pos": "動",
+          "zh": "嫁；娶"
+        },
+        {
+          "pos": "動",
+          "zh": "結合的"
+        }
+      ],
+      "examples": [
+        "The priest married Derek and Jane last month. 上個月牧師主持了德里克和珍的婚禮。",
+        "Paul asked her to marry him. 保羅請她嫁給他。",
+        "The performance marries poetry and music. 這個表演結合詩歌與音樂。"
+      ],
+      "related": [
+        "wedding 名 婚禮",
+        "marriage 名 婚姻",
+        "propose 動 求婚"
+      ]
+    },
+    {
+      "id": 35,
+      "word": "divorce",
+      "ipa": "dəˈvɔrs",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "離婚"
+        }
+      ],
+      "examples": [
+        "Their divorce has profoundly impacted their son. 他們倆人的離婚對兒子造成很大影響。"
+      ],
+      "related": [
+        "separation 名 分居",
+        "remarry 動 再婚"
+      ]
+    },
+    {
+      "id": 36,
+      "word": "married",
+      "ipa": "ˈmærɪd",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "已婚的"
+        }
+      ],
+      "examples": [
+        "Are you married? 你是已婚的嗎？"
+      ],
+      "related": [
+        "single 形 單身的；未婚的",
+        "single parent 名 單親爸爸（媽媽）"
+      ]
+    },
+    {
+      "id": 37,
+      "word": "mate",
+      "ipa": "met",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "同伴 **名** 配偶 **動** 配對"
+        }
+      ],
+      "examples": [
+        "I'm off for a drink with my mates. 我要和同事出去喝一杯。"
+      ],
+      "related": [
+        "roommate 名 室友",
+        "housemate 名 住在同一房屋之人"
+      ]
+    },
+    {
+      "id": 38,
+      "word": "nephew",
+      "ipa": "ˈnɛfju",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "姪子；外甥"
+        }
+      ],
+      "examples": [
+        "To my surprise, I found my nephew dressed in a girl's skirt. 令我驚奇的是，我姪子穿著女孩的裙子。"
+      ],
+      "related": [
+        "naughty 形 調皮的",
+        "nephew-in-law 名 姪女的老公"
+      ]
+    },
+    {
+      "id": 39,
+      "word": "niece",
+      "ipa": "nis",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "姪女"
+        }
+      ],
+      "examples": [
+        "You should take care of your niece for the sake of your sister. 看在姊妹的份上，你應該照顧你的姪女。"
+      ],
+      "related": [
+        "naughty 形 調皮的",
+        "nephew-in-law 名 姪女的老公"
+      ]
+    },
+    {
+      "id": 40,
+      "word": "stepchild",
+      "ipa": "ˈstɛpˌtʃaɪld",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "繼子"
+        }
+      ],
+      "examples": [
+        "She treats her stepchild so well that the kids regard her as their true mother. 她對她前夫的孩子如此之好以至於他們認為她是親生母親。"
+      ],
+      "related": [
+        "stepmother 名 繼母",
+        "abuse 動 虐待"
+      ]
+    },
+    {
+      "id": 41,
+      "word": "stepfather",
+      "ipa": "ˈstɛpˌfɑðər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "繼父"
+        }
+      ],
+      "examples": [
+        "It is complicated for stepfathers to deal with the relationship with the kids. 對繼父來說處理和孩子們的關係很複雜。"
+      ],
+      "related": [
+        "ex-wife 名 前妻"
+      ]
+    },
+    {
+      "id": 42,
+      "word": "spouse",
+      "ipa": "spaʊz",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "配偶"
+        }
+      ],
+      "examples": [
+        "Jobs are available for spouses of the staff members on campus and in the community. 校園和社區裡有員工配偶可做的工作。"
+      ],
+      "related": [
+        "male 形 男性的",
+        "female 形 女性的"
+      ]
+    },
+    {
+      "id": 43,
+      "word": "stepmother",
+      "ipa": "ˈstɛpˌmʌðər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "繼母；後母"
+        }
+      ],
+      "examples": [
+        "His stepmother is kind to him. 他的繼母對他很和善。"
+      ],
+      "related": [
+        "Snow White 名 白雪公主",
+        "dwarf 名 小矮人"
+      ]
+    },
+    {
+      "id": 44,
+      "word": "twin",
+      "ipa": "twɪn",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "雙胞胎之一"
+        }
+      ],
+      "examples": [
+        "She gave birth to twins. 她生了一對雙胞胎。"
+      ],
+      "related": [
+        "triplets 名 三胞胎",
+        "quadruplets 名 四胞胎",
+        "quintuplets 名 五胞胎"
+      ]
+    },
+    {
+      "id": 45,
+      "word": "wed",
+      "ipa": "wɛd",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "（與……）結婚"
+        }
+      ],
+      "examples": [
+        "He is wedded to a famous movie star. 他和一位著名的電影明星結婚。"
+      ],
+      "related": [
+        "marry 動 結婚",
+        "divorce 動 離婚"
+      ]
+    },
+    {
+      "id": 46,
+      "word": "association",
+      "ipa": "əˌsosiˈeʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "協會；公會；社團；聯盟 **名** 聯合"
+        }
+      ],
+      "examples": [
+        "He is a member of the Association of University Teachers. 他是大學教師聯合會的一名成員。"
+      ],
+      "related": [
+        "league 名 聯盟",
+        "committee 名 委員會",
+        "union 名 公會"
+      ]
+    },
+    {
+      "id": 47,
+      "word": "beggar",
+      "ipa": "ˈbɛgər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "乞丐"
+        }
+      ],
+      "examples": [
+        "The beggar dressed in rags. 這個乞丐衣衫襤褸。"
+      ],
+      "related": [
+        "beg 動 乞討",
+        "poor 形 貧窮的",
+        "impoverished 形 窮困的"
+      ]
+    },
+    {
+      "id": 48,
+      "word": "bondage",
+      "ipa": "ˈbɑndɪdʒ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "奴役；束縛"
+        }
+      ],
+      "examples": [
+        "Moses led the Israelites out of their bondage in Egypt. 摩西率領以色列人擺脫在埃及的奴隸生涯。"
+      ],
+      "related": [
+        "slave 名 奴隸",
+        "enslave 動 使奴隸於"
+      ]
+    },
+    {
+      "id": 49,
+      "word": "bully",
+      "ipa": "ˈbʊlɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "惡霸"
+        },
+        {
+          "pos": "動",
+          "zh": "脅迫；欺侮"
+        }
+      ],
+      "examples": [
+        "Leave that little girl alone, you big bully! 離那小女孩遠點，你這個大壞蛋！",
+        "The manager tried to bully his men into working harder by threatening them with dismissal. 經理企圖以解雇來威脅，迫使員工更賣力。"
+      ],
+      "related": [
+        "punch 動 用力擊",
+        "prevention 名 預防"
+      ]
+    },
+    {
+      "id": 50,
+      "word": "civil",
+      "ipa": "ˈsɪvəl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "公眾的；市民的 **形** 【法律】民事的"
+        },
+        {
+          "pos": "形",
+          "zh": "禮貌的；客氣的"
+        }
+      ],
+      "examples": [
+        "The American Civil War broke out during the presidency of Lincoln. 在林肯就職其間，美國爆發了內戰。",
+        "He is trying to be civil. 他試著表現禮貌。"
+      ],
+      "related": [
+        "civilian 名 平民",
+        "criminal 形 刑事上的",
+        "civilization 名 文明"
+      ]
+    },
+    {
+      "id": 51,
+      "word": "crowd",
+      "ipa": "kraʊd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "群眾"
+        },
+        {
+          "pos": "動",
+          "zh": "擠滿；壓迫"
+        }
+      ],
+      "examples": [
+        "A crowd gathered at the scene of the fire. 許多人聚集在火災現場。",
+        "Don't crowd me! Give me room to think! 不要逼我！給我空間讓我想想！"
+      ],
+      "related": [
+        "swarm 動 使擠滿"
+      ]
+    },
+    {
+      "id": 52,
+      "word": "custom",
+      "ipa": "ˈkʌstəm",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（社會；團體的）習俗"
+        },
+        {
+          "pos": "名",
+          "zh": "（個人的）習慣"
+        }
+      ],
+      "examples": [
+        "Social customs vary greatly from country to country. 國與國之間的社會習俗有很大差異。",
+        "It's my custom to take a nap for an hour after lunch. 我的習慣是午餐後會午睡一小時。"
+      ],
+      "related": [
+        "religion 名 宗教",
+        "habit 名 習慣",
+        "accustom (to) 動 使習慣於"
+      ]
+    },
+    {
+      "id": 53,
+      "word": "feminine",
+      "ipa": "ˈfɛmənɪn",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "女性的；陰柔的"
+        }
+      ],
+      "examples": [
+        "She is always dressed in a feminine style. 她的穿著總是非常女性化。"
+      ],
+      "related": [
+        "feminist 名 女性主義者",
+        "feminism 名 女性主義"
+      ]
+    },
+    {
+      "id": 54,
+      "word": "gay",
+      "ipa": "ge",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "（俚）男同性戀的 **名** （俚）同性戀"
+        },
+        {
+          "pos": "形",
+          "zh": "快樂的；輕快的"
+        }
+      ],
+      "examples": [
+        "They painted the room in gay colors. 他們用鮮艷的顏色粉刷房間。"
+      ],
+      "related": [
+        "lesbian 名 女同性戀",
+        "homosexual 形 同性戀的"
+      ]
+    },
+    {
+      "id": 55,
+      "word": "gypsy",
+      "ipa": "ˈdʒɪpsɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "吉普賽人"
+        }
+      ],
+      "examples": [
+        "I've never lived in one place for long. It must be the gypsy in me. 我從來沒有在一個地方長住過，一定是我性格中有吉普賽人的特性。"
+      ],
+      "related": [
+        "wandering 形 流浪的；徘徊的",
+        "traveler 名 旅行者"
+      ]
+    },
+    {
+      "id": 56,
+      "word": "honorary",
+      "ipa": "ˈɑnəˌrɛrɪ",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "（學位等）名譽上的；（官職等）名譽職位的"
+        }
+      ],
+      "examples": [
+        "Mr. Brown was appointed as an honorary head of this university last year. 布朗先生自從去年起擔任這個學校的名譽校長。"
+      ],
+      "related": [
+        "degree 名 學位",
+        "rank 名 階級"
+      ]
+    },
+    {
+      "id": 57,
+      "word": "host",
+      "ipa": "host",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "男主人"
+        }
+      ],
+      "examples": [
+        "Which country will be the host country for the next Olympic Games? 哪個國家將是下屆奧運會的主辦國？"
+      ],
+      "related": [
+        "hostess 名 女主人",
+        "party 名 派對",
+        "reunion 名 團聚"
+      ]
+    },
+    {
+      "id": 58,
+      "word": "individual",
+      "ipa": "ˌɪndəˈvɪdʒuəl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "個人的；個別的"
+        },
+        {
+          "pos": "名",
+          "zh": "個人；個體"
+        }
+      ],
+      "examples": [
+        "A teacher can't give individual attention to each pupil if the class is large. 如果班上的人數多，老師就不能給予個別輔導了。",
+        "Her teacher encouraged her to be an individual. 她的老師鼓勵她活出自己的特色。"
+      ],
+      "related": [
+        "collective 形 集體的",
+        "individualism 名 個人主義"
+      ]
+    },
+    {
+      "id": 59,
+      "word": "masculine",
+      "ipa": "ˈmæskjəlɪn",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "男性的"
+        },
+        {
+          "pos": "名",
+          "zh": "陽性詞"
+        }
+      ],
+      "examples": [
+        "This coat is masculine. 這件外衣是男式的。",
+        "\"Prince\" is the masculine form of \"princess\". 「prince」是「princess」的陽性詞。"
+      ],
+      "related": [
+        "manly 形 有男子氣概的",
+        "aggressive 形 好鬥的；侵略的"
+      ]
+    },
+    {
+      "id": 60,
+      "word": "millionaire",
+      "ipa": "ˌmɪljənˈɛr",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "百萬富翁"
+        }
+      ],
+      "examples": [
+        "He spends money as if he were a millionaire. 他花起錢來像個百萬富翁似的。"
+      ],
+      "related": [
+        "billionaire 名 億萬富翁",
+        "from rags to riches 名 由窮致富"
+      ]
+    },
+    {
+      "id": 61,
+      "word": "mob",
+      "ipa": "mɑb",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "暴民；烏合之眾"
+        },
+        {
+          "pos": "動",
+          "zh": "成群圍住"
+        }
+      ],
+      "examples": [
+        "The police arrived to control the football mob. 警察趕來以控制鬧事的足球迷。",
+        "The pop singer was mobbed by teenagers. 那個唱流行歌曲的歌手被一群青年團團圍住。"
+      ],
+      "related": [
+        "attack 動 攻擊",
+        "demonstration 名 示威"
+      ]
+    },
+    {
+      "id": 62,
+      "word": "neighborhood",
+      "ipa": "ˈnebərˌhʊd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "鄰近地區"
+        }
+      ],
+      "examples": [
+        "You'll find the hotel in the neighborhood. 你會在附近找到這家飯店。"
+      ],
+      "related": [
+        "neighbor 名 鄰居",
+        "neighboring 形 鄰近的"
+      ]
+    },
+    {
+      "id": 63,
+      "word": "participant",
+      "ipa": "pɑrˈtɪsəpənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "參與者"
+        }
+      ],
+      "examples": [
+        "All the participants in the debate have an opportunity to speak. 所有參加辯論的人都有機會發言。"
+      ],
+      "related": [
+        "attract 動 吸引",
+        "attend 動 參加"
+      ]
+    },
+    {
+      "id": 64,
+      "word": "personnel",
+      "ipa": "ˌpɜrsəˈnɛl",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（總稱）人員 **名** 人事部門"
+        }
+      ],
+      "examples": [
+        "The company's main problem is the shortage of skilled personnel. 這家公司的主要問題是缺少有技術的人員。"
+      ],
+      "related": [
+        "staff 名 （全體）職員",
+        "employer 名 僱主",
+        "employee 名 受僱者"
+      ]
+    },
+    {
+      "id": 65,
+      "word": "public",
+      "ipa": "ˈpʌblɪk",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "公共的"
+        },
+        {
+          "pos": "名",
+          "zh": "（總稱）大眾"
+        }
+      ],
+      "examples": [
+        "You mustn't do that in a public place. 你不應在公共場所（或大庭廣眾之中）做這種事。",
+        "This law has been passed for the public safety. 通過這條法律是為了保證公眾的安全。"
+      ],
+      "related": [
+        "private 形 私人的",
+        "publicity 名 宣傳；聲揚"
+      ]
+    },
+    {
+      "id": 66,
+      "word": "population",
+      "ipa": "ˌpɑpjəˈleʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "人口"
+        }
+      ],
+      "examples": [
+        "London has a population of ten million. 倫敦有一千萬人口。"
+      ],
+      "related": [
+        "demographic 形 人口統計學的",
+        "resident 名 居民"
+      ]
+    },
+    {
+      "id": 67,
+      "word": "prince",
+      "ipa": "prɪns",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "王子"
+        }
+      ],
+      "examples": [
+        "Prince Charles will be the next king of England. 查理斯王子將是英國的下一位國王。"
+      ],
+      "related": [
+        "Prince Charming 名 白馬王子",
+        "crown 名 王冠"
+      ]
+    },
+    {
+      "id": 68,
+      "word": "princess",
+      "ipa": "ˈprɪnsɪs",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "公主"
+        }
+      ],
+      "examples": [
+        "Princess Anne is the daughter of Queen Elizabeth. 安妮公主是伊莉莎白女王的女兒。"
+      ],
+      "related": [
+        "tiara 名 （尤指地位高的女性的）王冠；后冠"
+      ]
+    },
+    {
+      "id": 69,
+      "word": "racial",
+      "ipa": "ˈreʃəl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "種族的"
+        }
+      ],
+      "examples": [
+        "We should not have racial discrimination. 我們不該有種族歧視。"
+      ],
+      "related": [
+        "discrimination 名 歧視",
+        "bias 名 偏見",
+        "inequality 名 不平等"
+      ]
+    },
+    {
+      "id": 70,
+      "word": "rank",
+      "ipa": "højɾæŋk",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "等級；地位"
+        },
+        {
+          "pos": "名",
+          "zh": "社會階層"
+        },
+        {
+          "pos": "動",
+          "zh": "把……分等"
+        }
+      ],
+      "examples": [
+        "In the army, a general is of a higher rank than a captain. 在陸軍裡將軍的軍銜比上尉高。",
+        "She is from a family of rank. 她來自一個上流家庭。",
+        "Don't rank me among such people. 不要把我與這些人列在一起。"
+      ],
+      "related": [
+        "classify 動 分類",
+        "categorize 動 分類",
+        "ranking 名 等級"
+      ]
+    },
+    {
+      "id": 71,
+      "word": "rascal",
+      "ipa": "ˈræskəl",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（親暱的用法）淘氣的人"
+        }
+      ],
+      "examples": [
+        "The boy is nothing but a rascal. 這個男孩是個小淘氣。"
+      ],
+      "related": [
+        "naughty 形 頑皮的；淘氣的",
+        "brat 名 頑童；小搗蛋"
+      ]
+    },
+    {
+      "id": 72,
+      "word": "religion",
+      "ipa": "rɪˈlɪdʒən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "宗教"
+        }
+      ],
+      "examples": [
+        "Politics and religion are daily topics of conversation. 政治和宗教是人們平常交談的主要話題。"
+      ],
+      "related": [
+        "Buddhism 名 佛教",
+        "Catholicism 名 天主教",
+        "Islam 名 伊斯蘭教"
+      ]
+    },
+    {
+      "id": 73,
+      "word": "religious",
+      "ipa": "rɪˈlɪdʒəs",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "宗教的"
+        },
+        {
+          "pos": "形",
+          "zh": "虔誠的"
+        }
+      ],
+      "examples": [
+        "These two countries have had three religious wars in the past twenty years. 這兩個國家在 20 年裡發生過三次宗教上的衝突。",
+        "He is a religious person. 他是在個在宗教上很虔誠的人。"
+      ],
+      "related": [
+        "pious 形 虔誠的",
+        "devout 形 虔誠的"
+      ]
+    },
+    {
+      "id": 74,
+      "word": "resident",
+      "ipa": "ˈrɛzədənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "居民"
+        },
+        {
+          "pos": "形",
+          "zh": "居留的；常駐的"
+        }
+      ],
+      "examples": [
+        "The residents of the town are proud of its new library. 該鎮的居民都為鎮上新建的圖書館感到自豪。",
+        "This is your resident DJ signing off for another week with our signature tune. 這是本台流行音樂常駐唱片節目主持人，現在播放本臺臺歌來結束我們為您安排的這一星期的節目。"
+      ],
+      "related": [
+        "residential 形 住宅的",
+        "industrial 形 工業的",
+        "commercial 形 商業的"
+      ]
+    },
+    {
+      "id": 75,
+      "word": "rite",
+      "ipa": "raɪt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "儀式；典禮"
+        }
+      ],
+      "examples": [
+        "The marriage rites in India take three days to complete. 在印度的婚禮要花三天完成。"
+      ],
+      "related": [
+        "rite of passage 名 成年禮"
+      ]
+    },
+    {
+      "id": 76,
+      "word": "ritual",
+      "ipa": "ˈrɪtʃuəl",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "儀式；典禮"
+        },
+        {
+          "pos": "形",
+          "zh": "（宗教）儀式的；典禮的"
+        }
+      ],
+      "examples": [
+        "The site of this ancient ritual is a tourist site in this city. 這個古代儀式是這個城市的一個旅遊景點。",
+        "This film involved a ritual dance. 這部電影引入了一段祭神的舞蹈。"
+      ],
+      "related": [
+        "mysterious 形 神秘的",
+        "witch 名 （女）巫師；巫婆",
+        "wizard 名 （男）巫師"
+      ]
+    },
+    {
+      "id": 77,
+      "word": "solidarity",
+      "ipa": "ˌsɑləˈdærətɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "團結"
+        }
+      ],
+      "examples": [
+        "I come here today to express my solidarity with the people of New York. 我今天來表示我與紐約人民的團結一心。"
+      ],
+      "related": [
+        "loyalty 名 忠誠",
+        "union 名 一致"
+      ]
+    },
+    {
+      "id": 78,
+      "word": "throng",
+      "ipa": "θrɔŋ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "群眾"
+        },
+        {
+          "pos": "動",
+          "zh": "擠滿；湧入"
+        }
+      ],
+      "examples": [
+        "A patient throng was waiting in silence. 一大群人耐心地靜候著。",
+        "Crowds of people thronged to watch the game. 成群的人們蜂擁著去看那比賽。"
+      ],
+      "related": [
+        "pack 名 一堆；大量",
+        "multitude 名 群眾；大眾"
+      ]
+    },
+    {
+      "id": 79,
+      "word": "tradition",
+      "ipa": "trəˈdɪʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "傳統"
+        }
+      ],
+      "examples": [
+        "Chinese people have the tradition of strong family bonds. 中國人有很強烈的家族關係傳統。"
+      ],
+      "related": [
+        "folklore 名 民俗",
+        "custom 名 習俗"
+      ]
+    },
+    {
+      "id": 80,
+      "word": "traditional",
+      "ipa": "trəˈdɪʃənəl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "傳統的"
+        }
+      ],
+      "examples": [
+        "The traditional breakfast in this area includes bacon and eggs. 這個地區傳統的早餐包括火腿和雞蛋。"
+      ],
+      "related": [
+        "conservative 形 保守的",
+        "old-fashioned 形 過時的"
+      ]
+    },
+    {
+      "id": 81,
+      "word": "trend",
+      "ipa": "trɛnd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "趨勢；時尚"
+        }
+      ],
+      "examples": [
+        "The youth like to follow the trends in fashion. 年輕人喜好追求最新的流行款式。"
+      ],
+      "related": [
+        "tendency 名 傾向",
+        "fashion 名 時尚；風氣"
+      ]
+    },
+    {
+      "id": 82,
+      "word": "tribal",
+      "ipa": "ˈtraɪbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "種族的；部落的"
+        }
+      ],
+      "examples": [
+        "Tribal lore and customs have been passed down orally. 部落的知識和風俗口耳相傳保存下來。"
+      ],
+      "related": [
+        "aborigines 名 原住民",
+        "aboriginal 形 土著的；原始的"
+      ]
+    },
+    {
+      "id": 83,
+      "word": "tribe",
+      "ipa": "traɪb",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "種族；部落"
+        }
+      ],
+      "examples": [
+        "I hate the whole tribe of politicians. 我不喜歡全部的政客。"
+      ],
+      "related": [
+        "primitive 形 原始的；早期的",
+        "primal 形 原始的"
+      ]
+    },
+    {
+      "id": 84,
+      "word": "villain",
+      "ipa": "ˈvɪlən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "惡棍"
+        }
+      ],
+      "examples": [
+        "Get off my bike, you little villain! 別動我的腳踏車，你這個混蛋！"
+      ],
+      "related": [
+        "rogue 名 惡棍；流氓",
+        "bastard 名 壞蛋"
+      ]
+    },
+    {
+      "id": 85,
+      "word": "widow",
+      "ipa": "ˈwɪdo",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "寡婦"
+        }
+      ],
+      "examples": [
+        "That widow is a kind person. 那個寡婦是個善良的人。"
+      ],
+      "related": [
+        "bereavement 名 喪親",
+        "pension 名 撫恤金"
+      ]
+    },
+    {
+      "id": 86,
+      "word": "widower",
+      "ipa": "ˈwɪdoər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "鰥夫"
+        }
+      ],
+      "examples": [
+        "The widower has never married again. 那鰥夫未曾再娶。"
+      ],
+      "related": [
+        "single parent 名 單親家庭",
+        "grieve 動 使悲傷"
+      ]
+    },
+    {
+      "id": 87,
+      "word": "abandon",
+      "ipa": "əˈbændən",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "放棄"
+        }
+      ],
+      "examples": [
+        "The cruel man abandoned his wife and child. 那個狠心的男人拋棄了他的妻子。"
+      ],
+      "related": [
+        "hastily 副 倉促地",
+        "abandonment 名 放棄；遺棄"
+      ]
+    },
+    {
+      "id": 88,
+      "word": "acquaint",
+      "ipa": "əˈkwent",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "使認識；使瞭解"
+        }
+      ],
+      "examples": [
+        "I am not acquainted with her. 我和她不太熟。"
+      ],
+      "related": [
+        "introduce 動 介紹",
+        "friend 動 與……交朋友"
+      ]
+    },
+    {
+      "id": 89,
+      "word": "acquaintance",
+      "ipa": "əˈkwentəns",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "對某個學科的知識"
+        },
+        {
+          "pos": "名",
+          "zh": "認識但不熟的人"
+        }
+      ],
+      "examples": [
+        "I have a little acquaintance with Japanese. 我不太懂日文。",
+        "She is just a business acquaintance. I don't know her very well. 她只是和我在業務上有來往。我和她不太熟。"
+      ],
+      "related": [
+        "encounter 名 偶遇",
+        "nodding 形 點頭的"
+      ]
+    },
+    {
+      "id": 90,
+      "word": "admire",
+      "ipa": "ədˈmaɪr",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "欽佩；欣賞"
+        }
+      ],
+      "examples": [
+        "I admire your courage, but I don't think it's a good idea to take the risk. 我欣賞你的勇氣，但我並不覺得冒險是個好主意。"
+      ],
+      "related": [
+        "admirer 名 讚賞者；愛慕者",
+        "attractive 形 有吸引力的"
+      ]
+    },
+    {
+      "id": 91,
+      "word": "adopt",
+      "ipa": "əˈdɑpt",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "採取"
+        },
+        {
+          "pos": "動",
+          "zh": "收養"
+        }
+      ],
+      "examples": [
+        "I suggest you adopt a different strategy. 我建議你採取另外一種策略。",
+        "They have no children of their own, so they adopted a baby boy. 他們沒有親生兒女，就收養了一個小男孩。"
+      ],
+      "related": [
+        "foster family 名 領養家庭",
+        "adoptive 形 收養的",
+        "officially 副 正式地"
+      ]
+    },
+    {
+      "id": 92,
+      "word": "aid",
+      "ipa": "ed",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "幫助；救助"
+        }
+      ],
+      "examples": [
+        "They've made an urgent request for international aid. 他們緊急請求國際援助。",
+        "Aid to the Third World is a little more than a drop in the ocean. 對第三世界的援助不過是杯水車薪。"
+      ],
+      "related": [
+        "first aid kit 名 急救藥箱",
+        "emergency 名 緊急情況",
+        "rescue 名 救援"
+      ]
+    },
+    {
+      "id": 93,
+      "word": "amaze",
+      "ipa": "əˈmez",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "使……吃驚"
+        }
+      ],
+      "examples": [
+        "His audacity amazed me. 他的無禮讓我驚駭。"
+      ],
+      "related": [
+        "astonish 動 使驚奇",
+        "wonder 名 驚奇"
+      ]
+    },
+    {
+      "id": 94,
+      "word": "amazement",
+      "ipa": "əˈmezmənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "驚奇"
+        }
+      ],
+      "examples": [
+        "He looked at me in amazement. 他一臉訝異地看著我。"
+      ],
+      "related": [
+        "astonishment 名 驚奇",
+        "express 動 表達"
+      ]
+    },
+    {
+      "id": 95,
+      "word": "apologize",
+      "ipa": "əˈpɑləˌdʒaɪz",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "道歉；認錯"
+        }
+      ],
+      "examples": [
+        "I must apologize for not being able to meet you. 我因為沒能去見你而向你道歉。"
+      ],
+      "related": [
+        "forgive 動 原諒",
+        "accept 動 接受",
+        "reconcile 動 使和解"
+      ]
+    },
+    {
+      "id": 96,
+      "word": "apology",
+      "ipa": "əˈpɑlədʒɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "道歉"
+        }
+      ],
+      "examples": [
+        "Your allegations are completely untrue, and I demand an immediate apology. 你的說法完全不真實，我要求立即道歉。"
+      ],
+      "related": [
+        "genuinely 副 真心地",
+        "fault 名 錯誤；責任"
+      ]
+    },
+    {
+      "id": 97,
+      "word": "applaud",
+      "ipa": "əˈplɔd",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "向……鼓掌；喝采"
+        }
+      ],
+      "examples": [
+        "The audience applauded frantically. 聽眾瘋狂地鼓掌。"
+      ],
+      "related": [
+        "praise 動 讚揚",
+        "acclaim 動 向……歡呼"
+      ]
+    },
+    {
+      "id": 98,
+      "word": "astonishment",
+      "ipa": "əˈstɑnɪʃmənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "驚訝"
+        }
+      ],
+      "examples": [
+        "To our astonishment, they declined our proposal. 使我們驚訝的是，他們拒絕了我們的提議。"
+      ],
+      "related": [
+        "surprise 名 驚喜",
+        "astound 動 使震驚"
+      ]
+    },
+    {
+      "id": 99,
+      "word": "assistance",
+      "ipa": "əˈsɪstəns",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "幫助；援救"
+        }
+      ],
+      "examples": [
+        "Could you give us some assistance with this work? 你能就這項工作給我們一些幫助嗎？"
+      ],
+      "related": [
+        "assistant 名 助手",
+        "aid 名 援助"
+      ]
+    },
+    {
+      "id": 100,
+      "word": "attend",
+      "ipa": "əˈtɛnd",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "出席；參加"
+        }
+      ],
+      "examples": [
+        "Our teacher suggested he attend a technical school. 我們的老師建議他去上技職學校。"
+      ],
+      "related": [
+        "meeting 名 會議",
+        "conference 名 會議",
+        "absent 形 缺席的"
+      ]
+    },
+    {
+      "id": 101,
+      "word": "beckon",
+      "ipa": "ˈbɛkn",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "（招手或點頭）向……示意"
+        }
+      ],
+      "examples": [
+        "She beckoned me to follow her. 她招手要我跟過去。"
+      ],
+      "related": [
+        "gesture 動 用手示意",
+        "signal 動 向……示意"
+      ]
+    },
+    {
+      "id": 102,
+      "word": "behavior",
+      "ipa": "bɪˈhevjər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "舉止；行為；表現"
+        }
+      ],
+      "examples": [
+        "Their behavior toward me shows that they do not like me. 他們對我的舉止說明他們不喜歡我。"
+      ],
+      "related": [
+        "behavioral 形 行為的",
+        "behaviorism 名 行為主義"
+      ]
+    },
+    {
+      "id": 103,
+      "word": "bias",
+      "ipa": "ˈbaɪəs",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "偏心；偏見"
+        }
+      ],
+      "examples": [
+        "He has a strong bias against foreigners. 他對外國人有強烈的偏見。"
+      ],
+      "related": [
+        "eliminate 動 消除",
+        "correct 動 改正；糾正"
+      ]
+    },
+    {
+      "id": 104,
+      "word": "biased",
+      "ipa": "ˈbaɪəst",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "存有偏見的"
+        }
+      ],
+      "examples": [
+        "Mass media shouldn't hold biased views of politics. 大眾媒體不應該存有政治上的偏見。"
+      ],
+      "related": [
+        "racially 副 人種上地",
+        "inherently 副 固有地"
+      ]
+    },
+    {
+      "id": 105,
+      "word": "blessing",
+      "ipa": "ˈblɛsɪŋ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（上帝的）賜福；祝福"
+        }
+      ],
+      "examples": [
+        "Intelligence can be a blessing as well as a curse. 才智可能是祝福也可能是詛咒。"
+      ],
+      "related": [
+        "a blessing in disguise 名 禍中福",
+        "curse 名 詛咒；咒罵"
+      ]
+    },
+    {
+      "id": 106,
+      "word": "boast",
+      "ipa": "bost",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "自誇"
+        },
+        {
+          "pos": "名",
+          "zh": "自誇"
+        }
+      ],
+      "examples": [
+        "Don't believe him; he is just boasting. 別相信他，他只是在吹噓罷了。",
+        "What he said is not a boast. 他所說的並不是自誇。"
+      ],
+      "related": [
+        "exaggerate 動 誇大",
+        "conceited 形 自負的"
+      ]
+    },
+    {
+      "id": 107,
+      "word": "caress",
+      "ipa": "kəˈrɛs",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "愛撫；撫摸"
+        },
+        {
+          "pos": "名",
+          "zh": "愛撫；擁抱；親吻"
+        }
+      ],
+      "examples": [
+        "He caressed his wife lovingly. 他愛憐地撫摸著他的妻子。",
+        "The lonely child longs for his mother's caress. 這個孤獨的孩子渴望母親的愛撫。"
+      ],
+      "related": [
+        "gently 副 溫柔地",
+        "lightly 副 輕輕地"
+      ]
+    },
+    {
+      "id": 108,
+      "word": "chat",
+      "ipa": "tʃæt",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "聊天；閒談"
+        },
+        {
+          "pos": "名",
+          "zh": "聊天；閒談"
+        }
+      ],
+      "examples": [
+        "She chats to her sister on phone every day. 她每天都和她的姊姊打電話聊天。",
+        "You may drop in for a chat whenever you want to. 你隨時想要時都可以停留一下聊個天。"
+      ],
+      "related": [
+        "chitchat 名 閒談",
+        "amicably 副 友善地"
+      ]
+    },
+    {
+      "id": 109,
+      "word": "communicate",
+      "ipa": "kəˈmjunəˌket",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "溝通"
+        }
+      ],
+      "examples": [
+        "I can't communicate with them; the radio doesn't work. 我無法和他們聯繫，無線電壞了。"
+      ],
+      "related": [
+        "communication 名 溝通",
+        "communicative 形 溝通的",
+        "converse 動 交談"
+      ]
+    },
+    {
+      "id": 110,
+      "word": "companionship",
+      "ipa": "kəmˈpænjənˌʃɪp",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "友誼；交往"
+        }
+      ],
+      "examples": [
+        "I keep companionship with my old friends. 我與老朋友始終保持著友誼。"
+      ],
+      "related": [
+        "friendship 名 友誼",
+        "couple 名 （一）對"
+      ]
+    },
+    {
+      "id": 111,
+      "word": "compatible",
+      "ipa": "kəmˈpætəbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "能共處的；可並立的 **形** 兼用的；（電腦）相容的"
+        }
+      ],
+      "examples": [
+        "The couple separated because they were not compatible. 這對夫妻因不合而分居。"
+      ],
+      "related": [
+        "congruous 形 適合的；協調的",
+        "consistent 形 一致的"
+      ]
+    },
+    {
+      "id": 112,
+      "word": "complaint",
+      "ipa": "kəmˈplent",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "抱怨"
+        }
+      ],
+      "examples": [
+        "You have no cause for complaint. 你沒有理由抱怨。"
+      ],
+      "related": [
+        "bitter 形 苦的；不滿的",
+        "complain 動 抱怨"
+      ]
+    },
+    {
+      "id": 113,
+      "word": "concession",
+      "ipa": "kənˈsɛʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "讓步；妥協"
+        }
+      ],
+      "examples": [
+        "We will make some concessions in price. 我們將在價格上做些讓步。"
+      ],
+      "related": [
+        "compromise 名 妥協",
+        "give in 動 讓步；妥協"
+      ]
+    },
+    {
+      "id": 114,
+      "word": "condemn",
+      "ipa": "kənˈdɛm",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "譴責；非難"
+        },
+        {
+          "pos": "動",
+          "zh": "判決"
+        }
+      ],
+      "examples": [
+        "The president condemned the terrorists. 總統譴責恐怖主義者。",
+        "The criminal was condemned to death. 這個罪犯被判死刑。"
+      ],
+      "related": [
+        "vehemently 副 強烈地",
+        "unanimously 副 無異議地"
+      ]
+    },
+    {
+      "id": 115,
+      "word": "confidential",
+      "ipa": "ˌkɑnfəˈdɛnʃəl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "祕密的；機密的"
+        }
+      ],
+      "examples": [
+        "He told me the confidential information. 他向我透露了這個祕密的資訊。"
+      ],
+      "related": [
+        "keep 動 保持",
+        "off the record 副 私下地"
+      ]
+    },
+    {
+      "id": 116,
+      "word": "congratulation",
+      "ipa": "kənˌgrætʃəˈleʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "恭喜"
+        }
+      ],
+      "examples": [
+        "We must telephone our congratulations to the happy couple. 我們得打電話給那對幸福的夫婦表示祝賀。"
+      ],
+      "related": [
+        "congratulatory speech 名 祝賀詞"
+      ]
+    },
+    {
+      "id": 117,
+      "word": "conversation",
+      "ipa": "ˌkɑnvərˈseʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "交談；談話；會話"
+        }
+      ],
+      "examples": [
+        "The professor invited his students to his home for conversation. 教授邀請學生們到自己家裡聊天。"
+      ],
+      "related": [
+        "dialogue 名 對話；交談"
+      ]
+    },
+    {
+      "id": 118,
+      "word": "consent",
+      "ipa": "kənˈsɛnt",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "同意；應允"
+        },
+        {
+          "pos": "名",
+          "zh": "（不可數）贊同"
+        }
+      ],
+      "examples": [
+        "Her father reluctantly consented to the marriage. 她父親勉強答應了這樁婚姻。",
+        "My father will never give his consent to our marriage. 我父親決不會同意我們的婚姻的。"
+      ],
+      "related": [
+        "assent 動 同意",
+        "dissent 動 不同意"
+      ]
+    },
+    {
+      "id": 119,
+      "word": "considerate",
+      "ipa": "kənˈsɪdərɪt",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "體貼的"
+        }
+      ],
+      "examples": [
+        "You are so considerate. 你真體貼。"
+      ],
+      "related": [
+        "thoughtful 形 體貼的",
+        "sweet 形 貼心的"
+      ]
+    },
+    {
+      "id": 120,
+      "word": "consolation",
+      "ipa": "ˌkɑnsəˈleʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "安慰；慰藉"
+        }
+      ],
+      "examples": [
+        "Your company has been a great consolation to me. 你的陪伴對我是極大的安慰。"
+      ],
+      "related": [
+        "accident 名 意外",
+        "funeral 名 葬禮"
+      ]
+    },
+    {
+      "id": 121,
+      "word": "console",
+      "ipa": "kənˈsol",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "安慰；慰問"
+        },
+        {
+          "pos": "名",
+          "zh": "操縱台；（電腦的）操作桌；（管風琴的）演奏台"
+        }
+      ],
+      "examples": [
+        "Nothing could console him when his pet dog died. 他的愛犬死後，什麼事情也不能使他感到寬慰。",
+        "There are many lights and electrical instruments on the computer console. 電腦控制板上有許多小燈和電子設備。"
+      ],
+      "related": [
+        "soothe 動 安慰；撫慰",
+        "comfort 動 安慰；慰問"
+      ]
+    },
+    {
+      "id": 122,
+      "word": "contempt",
+      "ipa": "kənˈtɛmpt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "輕蔑；鄙視"
+        }
+      ],
+      "examples": [
+        "Such conduct is beneath contempt. 這種舉動為人所不齒。"
+      ],
+      "related": [
+        "despicable 形 卑鄙的",
+        "scorn 名 動 藐視"
+      ]
+    },
+    {
+      "id": 123,
+      "word": "contend",
+      "ipa": "kənˈtɛnd",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "爭奪；競爭"
+        }
+      ],
+      "examples": [
+        "Several teams are contending for the prize. 有幾個隊在爭奪錦標。"
+      ],
+      "related": [
+        "contest 名 比賽",
+        "competition 名 比賽"
+      ]
+    },
+    {
+      "id": 124,
+      "word": "contact",
+      "ipa": "ˈkɑntækt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（不可數）接觸；聯絡"
+        },
+        {
+          "pos": "動",
+          "zh": "與……接觸；聯絡"
+        }
+      ],
+      "examples": [
+        "I lost contact with most of my friends. 我和大多數的朋友都失去連絡。",
+        "I had been trying to contact you, but failed. 我之前試著要連絡你，但是沒有辦法。"
+      ],
+      "related": [
+        "liaison 名 聯絡",
+        "contact lens 名 隱形眼鏡"
+      ]
+    },
+    {
+      "id": 125,
+      "word": "counterpart",
+      "ipa": "ˈkaʊntərˌpɑrt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "相對應的職位或人 **名** （契約等的）副本"
+        }
+      ],
+      "examples": [
+        "The U.S President is to meet his European counterparts to discuss the global economic recession. 美國總統將與歐洲首長會面商議全球經濟衰退的議題。"
+      ],
+      "related": [
+        "male 形 男性的",
+        "female 形 女性的",
+        "domestic 形 國內的",
+        "foreign 形 國外的"
+      ]
+    },
+    {
+      "id": 126,
+      "word": "deceive",
+      "ipa": "dɪˈsiv",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "欺騙；詐騙"
+        }
+      ],
+      "examples": [
+        "You are deceiving yourself if you still believe that she loves you. 你如果還相信她愛你，就是在欺騙自己。"
+      ],
+      "related": [
+        "liar 名 騙子",
+        "beguile 動 欺騙"
+      ]
+    },
+    {
+      "id": 127,
+      "word": "despise",
+      "ipa": "dɪˈspaɪz",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "鄙視；輕視"
+        }
+      ],
+      "examples": [
+        "I despise his refusing to accept responsibility. 他拒不承擔責任，我鄙視他。"
+      ],
+      "related": [
+        "look down on 動 輕視"
+      ]
+    },
+    {
+      "id": 128,
+      "word": "dialog(ue)",
+      "ipa": "ˈdaɪəˌlɔg",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "對話"
+        }
+      ],
+      "examples": [
+        "Most plays are written in dialogue. 大多數戲劇都是用對話體寫的。"
+      ],
+      "related": [
+        "talk 名 對話；交談",
+        "gossip 名 閒話"
+      ]
+    },
+    {
+      "id": 129,
+      "word": "disappointment",
+      "ipa": "ˌdɪsəˈpɔɪntmənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "失望"
+        }
+      ],
+      "examples": [
+        "That defeat was a surprise and a disappointment. 那次失敗令人吃驚，令人失望。"
+      ],
+      "related": [
+        "thwart 動 使挫敗",
+        "upset 形 沮喪的"
+      ]
+    },
+    {
+      "id": 130,
+      "word": "discreet",
+      "ipa": "dɪˈskrit",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "謹慎的；慎重的"
+        }
+      ],
+      "examples": [
+        "I'll certainly be most discreet in my conversation. 我在談話中當然會十分小心。"
+      ],
+      "related": [
+        "prudent 形 審慎的；小心的",
+        "cautious 形 謹慎的"
+      ]
+    },
+    {
+      "id": 131,
+      "word": "discriminate",
+      "ipa": "dɪˈskrɪməˌnet",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "有差別地對待；歧視"
+        },
+        {
+          "pos": "動",
+          "zh": "分辨事物的不同之處"
+        }
+      ],
+      "examples": [
+        "People should not be discriminated against. 人們不應該被歧視對待。",
+        "Dogs are good at discriminating between different smells. 狗擅長分辨不同的氣味。"
+      ],
+      "related": [
+        "distinguish 形 分別的",
+        "tell...apart 動 分辨"
+      ]
+    },
+    {
+      "id": 132,
+      "word": "disgrace",
+      "ipa": "dɪsˈgres",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "不名譽"
+        },
+        {
+          "pos": "動",
+          "zh": "使蒙受恥辱"
+        }
+      ],
+      "examples": [
+        "He fell into disgrace with his companions. 他的朋友都看不起他。",
+        "After the defeat, the two generals were publicly disgraced. 那兩位將軍吃了敗仗之後，在公眾心目中威望掃地。"
+      ],
+      "related": [
+        "shame 名 羞恥；羞愧",
+        "humiliate 動 羞辱"
+      ]
+    },
+    {
+      "id": 133,
+      "word": "disgraceful",
+      "ipa": "dɪsˈgresfəl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "可恥的；不名譽的"
+        }
+      ],
+      "examples": [
+        "This newspaper article is a disgraceful intrusion into my private life. 報紙上的這篇文章是對我私生活的侵擾，這種做法很不光彩。"
+      ],
+      "related": [
+        "privacy 名 隱私",
+        "celebrity 名 名人"
+      ]
+    },
+    {
+      "id": 134,
+      "word": "distrust",
+      "ipa": "dɪsˈtrʌst",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "不信任"
+        },
+        {
+          "pos": "動",
+          "zh": "不信任"
+        }
+      ],
+      "examples": [
+        "He has a distrust of strangers. 他不信任陌生人。",
+        "He's so suspicious that he distrusts even his own mother. 他這人疑心太重，連自己的母親也不相信。"
+      ],
+      "related": [
+        "suspect 動 懷疑",
+        "doubt 動 懷疑"
+      ]
+    },
+    {
+      "id": 135,
+      "word": "dislike",
+      "ipa": "dɪsˈlaɪk",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "討厭；不喜歡"
+        },
+        {
+          "pos": "名",
+          "zh": "反感"
+        }
+      ],
+      "examples": [
+        "I don't feel sorry for the leave of someone who I've always disliked. 對一個我從來都不喜歡的人的離開，我並不感到遺憾。",
+        "She spoke of him with great dislike. 她非常厭煩地談到了他。"
+      ],
+      "related": [
+        "hate 動 討厭",
+        "relish 動 喜好；愛好"
+      ]
+    },
+    {
+      "id": 136,
+      "word": "embrace",
+      "ipa": "ɪmˈbres",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "擁抱 **名** 擁抱；懷抱"
+        },
+        {
+          "pos": "名",
+          "zh": "包括，接納"
+        }
+      ],
+      "examples": [
+        "The mother embraced her daughter emotionally. 母親激動地擁抱她的女兒。",
+        "She eagerly embraced the offer of a trip to Europe. 她熱情地接受了到歐洲旅行的建議。"
+      ],
+      "related": [
+        "passionate 形 熱情的",
+        "warm 形 溫暖的"
+      ]
+    },
+    {
+      "id": 137,
+      "word": "envy",
+      "ipa": "ˈɛnvɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "羨慕；嫉妒"
+        },
+        {
+          "pos": "動",
+          "zh": "羨慕；嫉妒"
+        }
+      ],
+      "examples": [
+        "Her talents were the envy of all her friends. 她多才多藝，所有的朋友都很羨慕她。",
+        "I have always envied your good luck. 我一直羨慕你運氣好。"
+      ],
+      "related": [
+        "jealous 形 嫉妒的",
+        "envious 形 嫉妒的"
+      ]
+    },
+    {
+      "id": 138,
+      "word": "esteem",
+      "ipa": "ɪsˈtim",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "尊重；尊敬"
+        },
+        {
+          "pos": "動",
+          "zh": "視為"
+        },
+        {
+          "pos": "名",
+          "zh": "尊重；尊敬"
+        }
+      ],
+      "examples": [
+        "He is highly esteemed in business circles. 他在商界極受人尊重。",
+        "Shakespeare is esteemed as one of the greatest playwrights in the world. 莎士比亞被視為世界上最偉大的劇作家之一。",
+        "They have great esteem for his learning. 他們非常敬重他的學識。"
+      ],
+      "related": [
+        "self-esteem 名 自尊"
+      ]
+    },
+    {
+      "id": 139,
+      "word": "ethical",
+      "ipa": "ˈɛθɪkl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "道德的"
+        }
+      ],
+      "examples": [
+        "You can't divorce science from ethical problems. 不能把科學與倫理問題截然分開。"
+      ],
+      "related": [
+        "ethics 名 倫理學"
+      ]
+    },
+    {
+      "id": 140,
+      "word": "ethnic",
+      "ipa": "ˈɛθnɪk",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "種族的 **名** 少數民族的一份子"
+        }
+      ],
+      "examples": [
+        "The students are from a variety of ethnic backgrounds. 這些學生來自不同的民族背景。"
+      ],
+      "related": [
+        "Asian 形 亞洲人（的）",
+        "Caucasian 形 白種人的"
+      ]
+    },
+    {
+      "id": 141,
+      "word": "expression",
+      "ipa": "ɪkˈsprɛʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "表達"
+        },
+        {
+          "pos": "名",
+          "zh": "表情"
+        }
+      ],
+      "examples": [
+        "The scenery was beautiful beyond expression. 那風景美麗得無法形容。",
+        "I can never tell from her expression what is in her mind. 我永遠無法從她的表情看出她心中到底在想什麼。"
+      ],
+      "related": [
+        "coherent 形 一致的",
+        "tangible 形 明確的"
+      ]
+    },
+    {
+      "id": 142,
+      "word": "familiar",
+      "ipa": "fəˈmɪljər",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "熟悉的"
+        },
+        {
+          "pos": "形",
+          "zh": "親密的"
+        }
+      ],
+      "examples": [
+        "I am not really familiar with the local laws. 實際上我對當地的法律並不熟。",
+        "She doesn't like to be too familiar with her students. 她不喜歡和她的學生過度親密。"
+      ],
+      "related": [
+        "well-known 形 眾所皆知的",
+        "close 形 親近的"
+      ]
+    },
+    {
+      "id": 143,
+      "word": "fraud",
+      "ipa": "frɔd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "欺騙；詐欺 **名** 騙子"
+        }
+      ],
+      "examples": [
+        "She went through the company's accounts, looking for evidence of fraud. 她仔細審核公司的帳目，查找詐欺的證據。"
+      ],
+      "related": [
+        "swindle 名 詐騙行為",
+        "court 名 法庭；法院"
+      ]
+    },
+    {
+      "id": 144,
+      "word": "greet",
+      "ipa": "grit",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "迎接；問候"
+        }
+      ],
+      "examples": [
+        "He greeted me in the street with a friendly wave of the hand. 他在街上向我親切地揮手致意。"
+      ],
+      "related": [
+        "hail 動 招呼",
+        "welcome 動 歡迎"
+      ]
+    },
+    {
+      "id": 145,
+      "word": "guest",
+      "ipa": "gɛst",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "客人 **動** 作客"
+        }
+      ],
+      "examples": [
+        "They are coming to the party as my guests. 他們作為我的客人出席晚會。"
+      ],
+      "related": [
+        "customer 名 顧客",
+        "client 名 客戶"
+      ]
+    },
+    {
+      "id": 146,
+      "word": "honor",
+      "ipa": "ˈɑnər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "榮耀 **動** 尊敬；使榮耀"
+        }
+      ],
+      "examples": [
+        "He won honor for his courage. 他以勇氣贏得大家的尊敬。"
+      ],
+      "related": [
+        "glory 名 榮譽",
+        "pride 名 驕傲"
+      ]
+    },
+    {
+      "id": 147,
+      "word": "humiliate",
+      "ipa": "hjuˈmɪliˌet",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "侮辱；羞辱"
+        }
+      ],
+      "examples": [
+        "She was humiliated because her children behaved so badly. 她為她的孩子表現不好而感到羞辱。"
+      ],
+      "related": [
+        "insult 動 侮辱",
+        "humiliation 名 羞辱"
+      ]
+    },
+    {
+      "id": 148,
+      "word": "induce",
+      "ipa": "ɪnˈdjus",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "引誘 **動** 引起；導致"
+        }
+      ],
+      "examples": [
+        "We couldn't induce the old lady to travel by air. 我們無法勸服那老太太乘飛機旅行。"
+      ],
+      "related": [
+        "seduce 動 色誘",
+        "deduce 動 演繹；推論"
+      ]
+    },
+    {
+      "id": 149,
+      "word": "jealous",
+      "ipa": "ˈdʒɛləs",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "嫉妒的"
+        }
+      ],
+      "examples": [
+        "They may feel jealous of his success. 他們也許妒嫉他的成功。"
+      ],
+      "related": [
+        "envious 形 嫉妒的"
+      ]
+    },
+    {
+      "id": 150,
+      "word": "mock",
+      "ipa": "mɑk",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "嘲弄"
+        },
+        {
+          "pos": "形",
+          "zh": "假裝的；模擬的"
+        },
+        {
+          "pos": "名",
+          "zh": "仿製品；模仿 **名** 模擬考試"
+        }
+      ],
+      "examples": [
+        "Her brother always mocks her whenever she makes a mistake. 她的哥哥總是在她犯錯時嘲笑她。",
+        "The army training exercises ended with a mock battle. 軍事訓練演習以一場模擬戰結束。",
+        "The teacher asked us to have a mock according to the actress's performance. 老師讓我們根據那個女演員的表演進行模仿。"
+      ],
+      "related": [
+        "ridicule 動 嘲笑；揶揄",
+        "ridiculous 形 荒謬的"
+      ]
+    },
+    {
+      "id": 151,
+      "word": "occasion",
+      "ipa": "əˈkeʒən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "場合；時刻"
+        },
+        {
+          "pos": "動",
+          "zh": "引起"
+        }
+      ],
+      "examples": [
+        "I only wear a tie on special occasions. 我只在特殊場合才打領帶。",
+        "Stephen's behavior occasioned his parents much anxiety. 史蒂芬的行為使其父母十分擔心。"
+      ],
+      "related": [
+        "formal 形 正式的",
+        "informal 形 非正式的"
+      ]
+    },
+    {
+      "id": 152,
+      "word": "opponent",
+      "ipa": "əˈponənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "對手；反對者"
+        }
+      ],
+      "examples": [
+        "He is not an opponent of my friend. 他不是我朋友的對手。"
+      ],
+      "related": [
+        "rival 名 對手",
+        "competitor 名 對手"
+      ]
+    },
+    {
+      "id": 153,
+      "word": "pardon",
+      "ipa": "ˈpɑrdn",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "原諒；寬恕"
+        },
+        {
+          "pos": "名",
+          "zh": "原諒；寬恕"
+        }
+      ],
+      "examples": [
+        "Pardon me for disturbing you. 請原諒我打擾你。",
+        "He knelt before the king and asked for pardon. 他跪在國王面前請求赦免。"
+      ],
+      "related": [
+        "forgive 動 原諒",
+        "spare 動 饒恕"
+      ]
+    },
+    {
+      "id": 154,
+      "word": "polite",
+      "ipa": "pəˈlaɪt",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "有禮貌的"
+        }
+      ],
+      "examples": [
+        "It is polite to say \"please\" when you are asking for something. 當你向別人要東西的時候，說聲「請」才有禮貌。"
+      ],
+      "related": [
+        "etiquette 名 禮節",
+        "courtesy 名 禮貌"
+      ]
+    },
+    {
+      "id": 155,
+      "word": "praise",
+      "ipa": "prez",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "稱讚"
+        },
+        {
+          "pos": "名",
+          "zh": "稱讚"
+        }
+      ],
+      "examples": [
+        "Everybody praises Hangzhou for its scenery. 人人都讚美杭州的風景。",
+        "He had a lot of praise for Tom's work. 他對湯姆的工作大加讚賞。"
+      ],
+      "related": [
+        "compliment 動 讚美",
+        "praiseworthy 形 值得稱讚的"
+      ]
+    },
+    {
+      "id": 156,
+      "word": "precaution",
+      "ipa": "prɪˈkɔʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "預防；警惕；謹慎"
+        }
+      ],
+      "examples": [
+        "You should take an umbrella as a precaution. 你該帶把傘，有備無患。"
+      ],
+      "related": [
+        "prevent 動 預防",
+        "warn 動 警告"
+      ]
+    },
+    {
+      "id": 157,
+      "word": "resist",
+      "ipa": "rɪˈzɪst",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "抵抗；抗拒"
+        }
+      ],
+      "examples": [
+        "I can never resist ice cream. 我對冰淇淋無法抗拒。"
+      ],
+      "related": [
+        "oppose 動 反對",
+        "resistant 形 抵抗的"
+      ]
+    },
+    {
+      "id": 158,
+      "word": "relationship",
+      "ipa": "rɪˈleʃənˌʃɪp",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "（人際）關係；關聯"
+        }
+      ],
+      "examples": [
+        "Their relationship has lasted many years. 他們的感情已經有很多年了。"
+      ],
+      "related": [
+        "relation 名 關係",
+        "intimate 形 親密的"
+      ]
+    },
+    {
+      "id": 159,
+      "word": "respect",
+      "ipa": "rɪˈspɛkt",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "尊敬；尊重"
+        },
+        {
+          "pos": "名",
+          "zh": "（不可數）尊敬；尊重"
+        },
+        {
+          "pos": "名",
+          "zh": "（複數）敬意；問候"
+        }
+      ],
+      "examples": [
+        "I deeply respect her courage. 我深深敬佩她的勇氣。",
+        "If they had any respect for human life, they wouldn't do such terrible things. 他們如果對人的生命還有任何尊重，就不會做出這樣可怕的事來。",
+        "Please give my respects to your parents. 請代我向你的父母問候。"
+      ],
+      "related": [
+        "revere 動 尊敬",
+        "respectful 形 尊敬的"
+      ]
+    },
+    {
+      "id": 160,
+      "word": "rumor",
+      "ipa": "ˈrumər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "謠言；傳聞"
+        },
+        {
+          "pos": "動",
+          "zh": "謠傳"
+        }
+      ],
+      "examples": [
+        "There is a rumor that there will be a general election in the autumn. 據傳聞今秋將舉行普選。",
+        "It is rumored that he has escaped to Dublin. 有謠言稱他逃到了都柏林。"
+      ],
+      "related": [
+        "spread 動 散播",
+        "circulate 動 散播"
+      ]
+    },
+    {
+      "id": 161,
+      "word": "salute",
+      "ipa": "səˈlut",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "致意；致敬"
+        },
+        {
+          "pos": "動",
+          "zh": "向……行禮；致敬"
+        }
+      ],
+      "examples": [
+        "They took off their hats by the grave in silent salute. 他們在墓旁脫帽默哀。",
+        "The soldier saluted the officer. 士兵向軍官敬禮。"
+      ],
+      "related": [
+        "bow 動 鞠躬"
+      ]
+    },
+    {
+      "id": 162,
+      "word": "scandal",
+      "ipa": "ˈskændl",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "醜聞"
+        }
+      ],
+      "examples": [
+        "The villagers knew about the scandal. 村子裡的居民知道這件醜事。"
+      ],
+      "related": [
+        "leak 動 洩漏",
+        "libel 動 （法）誹謗"
+      ]
+    },
+    {
+      "id": 163,
+      "word": "stammer",
+      "ipa": "ˈstæmər",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "結結巴巴地說"
+        },
+        {
+          "pos": "名",
+          "zh": "口吃；結巴"
+        }
+      ],
+      "examples": [
+        "He stammered his thanks. 他結結巴巴地道了謝。",
+        "The boy dare not answer the questions because of his stammer. 這個小男孩因為結巴不敢回答老師的問題。"
+      ],
+      "related": [
+        "stutter 動 口吃",
+        "stammerer 名 口吃的人"
+      ]
+    },
+    {
+      "id": 164,
+      "word": "tease",
+      "ipa": "tiz",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "欺負；戲弄"
+        },
+        {
+          "pos": "名",
+          "zh": "愛戲弄人的人"
+        }
+      ],
+      "examples": [
+        "She was just teasing. 她只是在開玩笑。",
+        "He is a terrible tease. 他是個愛戲弄人的人。"
+      ],
+      "related": [
+        "make fun of 動 取笑",
+        "bully 動 霸凌"
+      ]
+    },
+    {
+      "id": 165,
+      "word": "tempt",
+      "ipa": "tɛmpt",
+      "senses": [
+        {
+          "pos": "動",
+          "zh": "誘惑；慫恿"
+        }
+      ],
+      "examples": [
+        "He was tempted into making a false step. 他被引誘做了一件傻事。"
+      ],
+      "related": [
+        "talk into 動 說服",
+        "tempting 形 誘人的"
+      ]
+    },
+    {
+      "id": 166,
+      "word": "temptation",
+      "ipa": "tɛmpˈteʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "誘惑"
+        }
+      ],
+      "examples": [
+        "The bag of sweets on the table was too strong a temptation for the child to resist. 桌上那包糖果對那孩子是個難以抗拒的誘惑。"
+      ],
+      "related": [
+        "seduction 名 誘惑",
+        "tempter 名 誘惑者"
+      ]
+    },
+    {
+      "id": 167,
+      "word": "voluntary",
+      "ipa": "ˈvɑlənˌtɛrɪ",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "自願的"
+        }
+      ],
+      "examples": [
+        "He made a voluntary statement to the police. 他自願為警方作供詞。"
+      ],
+      "related": [
+        "force 動 強迫"
+      ]
+    },
+    {
+      "id": 168,
+      "word": "volunteer",
+      "ipa": "ˌvɑlənˈtɪr",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "自願者；義工"
+        },
+        {
+          "pos": "動",
+          "zh": "自願做"
+        }
+      ],
+      "examples": [
+        "Can I have a volunteer to wash the dishes? 誰自願來幫忙收拾一下這些盤子？",
+        "He volunteered a statement to the police. 他自動向警方供出情況。"
+      ],
+      "related": [
+        "enlist 動 徵募"
+      ]
+    },
+    {
+      "id": 169,
+      "word": "active",
+      "ipa": "ˈæktɪv",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "積極的；活躍的"
+        }
+      ],
+      "examples": [
+        "The union took an active part in the strike. 工會在這次罷工中發揮了積極的作用。"
+      ],
+      "related": [
+        "passive 形 被動的"
+      ]
+    },
+    {
+      "id": 170,
+      "word": "admirable",
+      "ipa": "ˈædmərəbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "令人欽佩的"
+        }
+      ],
+      "examples": [
+        "His bravery is admirable. 他的勇氣令人欽佩。"
+      ],
+      "related": [
+        "respectable 形 值得尊敬的"
+      ]
+    },
+    {
+      "id": 171,
+      "word": "admiration",
+      "ipa": "ˌædməˈreʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "欽佩；讚美；羨慕"
+        }
+      ],
+      "examples": [
+        "She speaks English so well that her friends are filled with admiration. 她的英語說得好極了，朋友們都讚歎不已。"
+      ],
+      "related": [
+        "adore 動 欣賞",
+        "appreciate 動 欣賞；感激"
+      ]
+    },
+    {
+      "id": 172,
+      "word": "ambition",
+      "ipa": "æmˈbɪʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "雄心；抱負"
+        }
+      ],
+      "examples": [
+        "He had the ambition of being a pianist when he was young. 他在年輕時曾經有過想當鋼琴家的雄心。"
+      ],
+      "related": [
+        "succeed 動 成功",
+        "successful 形 成功的"
+      ]
+    },
+    {
+      "id": 173,
+      "word": "amiable",
+      "ipa": "ˈemiəbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "友善的；可親的"
+        }
+      ],
+      "examples": [
+        "Do you really want to go, or are you just being amiable? 你是真想去呢，還是僅僅為了表示友好？"
+      ],
+      "related": [
+        "kind 形 友善的",
+        "easy-going 形 隨和的"
+      ]
+    },
+    {
+      "id": 174,
+      "word": "angel",
+      "ipa": "ˈendʒl",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "天使"
+        }
+      ],
+      "examples": [
+        "My little daughter is as lovely as an angel. 我的小女兒像天使一樣可愛。"
+      ],
+      "related": [
+        "devil 名 惡魔",
+        "heaven 名 天堂",
+        "Bible 名 聖經"
+      ]
+    },
+    {
+      "id": 175,
+      "word": "astonishment",
+      "ipa": "əˈstɑnɪʃmənt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "驚訝"
+        }
+      ],
+      "examples": [
+        "To our astonishment, they rejected our offer. 使我們驚訝的是，他們竟然拒絕了我們的提議。"
+      ],
+      "related": [
+        "astonishing 形 驚人的"
+      ]
+    },
+    {
+      "id": 176,
+      "word": "arrogant",
+      "ipa": "ˈærəgənt",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "自大的；傲慢的"
+        }
+      ],
+      "examples": [
+        "He often speaks in an arrogant tone. 他經常以一種傲慢的口氣說話。"
+      ],
+      "related": [
+        "self-centered 形 自我中心的",
+        "complacency 名 自滿"
+      ]
+    },
+    {
+      "id": 177,
+      "word": "attractive",
+      "ipa": "əˈtræktɪv",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "有吸引力的；嫵媚動人的"
+        }
+      ],
+      "examples": [
+        "Your proposal sounds very attractive. 你的提議聽起來很吸引人。"
+      ],
+      "related": [
+        "desirable 形 富有魅力的"
+      ]
+    },
+    {
+      "id": 178,
+      "word": "awesome",
+      "ipa": "ˈɔsəm",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "令人敬畏的；有威嚴的"
+        },
+        {
+          "pos": "形",
+          "zh": "非常地好"
+        }
+      ],
+      "examples": [
+        "He is an awesome challenger. 他是個可敬的對手。",
+        "Your performance was awesome! 你的表演真是太棒了！"
+      ],
+      "related": [
+        "great 形 極好的",
+        "bravo 名 好極了"
+      ]
+    },
+    {
+      "id": 179,
+      "word": "brave",
+      "ipa": "brev",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "勇敢的"
+        }
+      ],
+      "examples": [
+        "He is a brave young man. 他是一個勇敢的年輕人。"
+      ],
+      "related": [
+        "courageous 形 有勇氣的",
+        "gallant 形 英勇的"
+      ]
+    },
+    {
+      "id": 180,
+      "word": "bravery",
+      "ipa": "ˈbrevərɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "英勇；勇敢"
+        }
+      ],
+      "examples": [
+        "The soldier was rewarded for his bravery. 那位士兵因為他的勇敢而被表揚。"
+      ],
+      "related": [
+        "courage 名 勇氣",
+        "gallantry 名 勇敢"
+      ]
+    },
+    {
+      "id": 181,
+      "word": "brutal",
+      "ipa": "ˈbrutl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "野蠻的；殘暴的"
+        }
+      ],
+      "examples": [
+        "The brutal murder shocked everyone. 這件殘忍的謀殺案件震驚了每個人。"
+      ],
+      "related": [
+        "brutality 名 殘忍",
+        "cruel 形 殘酷的"
+      ]
+    },
+    {
+      "id": 182,
+      "word": "caution",
+      "ipa": "ˈkɔʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "謹慎；小心"
+        },
+        {
+          "pos": "動",
+          "zh": "警告；告誡"
+        }
+      ],
+      "examples": [
+        "He told us to proceed with caution. 他要我們謹慎行事。",
+        "I must caution you against the danger. 我必須告誡你應謹防危險。"
+      ],
+      "related": [
+        "careful 形 小心的",
+        "Watch out! 動 注意！"
+      ]
+    },
+    {
+      "id": 183,
+      "word": "cautious",
+      "ipa": "ˈkɔʃəs",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "謹慎的；十分小心的"
+        }
+      ],
+      "examples": [
+        "He is cautious in his choice of words. 他措辭很謹慎。"
+      ],
+      "related": [
+        "mindful 形 留心的",
+        "watchful 形 警惕的"
+      ]
+    },
+    {
+      "id": 184,
+      "word": "charm",
+      "ipa": "tʃɑrm",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "魅力 **名** 嫵媚"
+        },
+        {
+          "pos": "動",
+          "zh": "魅惑"
+        }
+      ],
+      "examples": [
+        "Her charm of manner made her very popular. 她風度優雅，備受歡迎。",
+        "He charms everyone he meets. 他使他遇見的每一個人都感到愉快。"
+      ],
+      "related": [
+        "charisma 名 魅力",
+        "charismatic 形 有魅力的"
+      ]
+    },
+    {
+      "id": 185,
+      "word": "character",
+      "ipa": "ˈkærɪktər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "個性；人格 **名** （小說；戲劇等的）人物；角色"
+        },
+        {
+          "pos": "名",
+          "zh": "字母"
+        }
+      ],
+      "examples": [
+        "A person with good character is not known for lying. 有好人格的人不會說謊。",
+        "I wish this book was written in bigger characters. 我希望這本書的字再大一點兒。"
+      ],
+      "related": [
+        "personality 名 個性",
+        "temperament 名 性格"
+      ]
+    },
+    {
+      "id": 186,
+      "word": "charitable",
+      "ipa": "ˈtʃærətəbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "溫和的；仁慈的"
+        }
+      ],
+      "examples": [
+        "You should be charitable with him; he is a child after all. 你應該對他寬容些，畢竟他還是個孩子。"
+      ],
+      "related": [
+        "deed 名 事蹟",
+        "philanthropist 名 慈善家"
+      ]
+    },
+    {
+      "id": 187,
+      "word": "communicative",
+      "ipa": "kəˈmjunəˌketɪv",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "愛說話的；暢談的；愛社交的"
+        }
+      ],
+      "examples": [
+        "I don't find Peter very communicative. 我覺得彼得很不愛說話。"
+      ],
+      "related": [
+        "talkative 形 健談的",
+        "socialize 動 交際"
+      ]
+    },
+    {
+      "id": 188,
+      "word": "compatible",
+      "ipa": "kəmˈpætəbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "能共處的；可並立的 **形** 兼用式的；（電腦）相容的"
+        }
+      ],
+      "examples": [
+        "The couple separated because they were not compatible. 這對夫妻因不合而分居。"
+      ],
+      "related": [
+        "separate 動 分開",
+        "quarrelsome 形 喜歡爭吵的"
+      ]
+    },
+    {
+      "id": 189,
+      "word": "conceit",
+      "ipa": "kənˈsit",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "自負；自大"
+        }
+      ],
+      "examples": [
+        "This young man is full of conceit. 這個年輕人非常自負。"
+      ],
+      "related": [
+        "conceited 形 自負的",
+        "complacent 形 自滿的"
+      ]
+    },
+    {
+      "id": 190,
+      "word": "conscientious",
+      "ipa": "ˌkɑnʃiˈɛnʃəs",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "本著良心的；誠實的"
+        }
+      ],
+      "examples": [
+        "We should be conscientious in our work. 我們應該對工作負責。"
+      ],
+      "related": [
+        "conscience 名 良心",
+        "honest 形 誠實的"
+      ]
+    },
+    {
+      "id": 191,
+      "word": "coward",
+      "ipa": "ˈkaʊərd",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "懦夫"
+        }
+      ],
+      "examples": [
+        "Cowards die many times before their death. 懦夫在死前已經死過很多次了。"
+      ],
+      "related": [
+        "cowardly 形 懦弱的",
+        "cowardice 名 膽小"
+      ]
+    },
+    {
+      "id": 192,
+      "word": "defect",
+      "ipa": "dɪˈfɛkt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "缺陷；缺點 **動** 脫逃；脫離"
+        }
+      ],
+      "examples": [
+        "His greed is his fatal defect. 貪婪便是他致命的弱點。"
+      ],
+      "related": [
+        "shortcoming 名 缺點",
+        "fatal 形 致命的"
+      ]
+    },
+    {
+      "id": 193,
+      "word": "ego",
+      "ipa": "ˈigo",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "自我"
+        }
+      ],
+      "examples": [
+        "He's got such an enormous ego. 他是個自我意識很強的人。"
+      ],
+      "related": [
+        "egoist 名 自我中心者",
+        "egoistic 形 自我本位的"
+      ]
+    },
+    {
+      "id": 194,
+      "word": "faith",
+      "ipa": "feθ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "信心；信用；信任"
+        },
+        {
+          "pos": "名",
+          "zh": "信仰"
+        }
+      ],
+      "examples": [
+        "Do you have faith in me? 你對我有信心嗎？",
+        "It's a multi-faith society; everyone should learn to respect different religions. 這是個多元信仰的社會，每個人都應該學習尊重不同的宗教。"
+      ],
+      "related": [
+        "faithful 形 忠誠的",
+        "confidence 名 信心"
+      ]
+    },
+    {
+      "id": 195,
+      "word": "fascinating",
+      "ipa": "ˈfæsn̩ˌetɪŋ",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "使人著迷的"
+        }
+      ],
+      "examples": [
+        "The novel displays a fascinating world constructed on wild imagination. 這本小說展示了一個建造在狂野想像上的迷人世界。"
+      ],
+      "related": [
+        "fascinate 動 使著迷",
+        "enthralling 形 迷人的"
+      ]
+    },
+    {
+      "id": 196,
+      "word": "fascination",
+      "ipa": "ˌfæsn̩ˈeʃən",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "迷戀；陶醉"
+        }
+      ],
+      "examples": [
+        "Stamp collecting holds a certain fascination for me. 我特別喜愛集郵。"
+      ],
+      "related": [
+        "attraction 名 吸引力",
+        "repulsion 名 嫌惡"
+      ]
+    },
+    {
+      "id": 197,
+      "word": "fanatic",
+      "ipa": "fəˈnætɪk",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "狂熱者；迷"
+        },
+        {
+          "pos": "形",
+          "zh": "狂熱的；入迷的"
+        }
+      ],
+      "examples": [
+        "He is a political fanatic. 他是一個政治狂。",
+        "She's fanatic about rock music. 她對搖滾樂很狂熱。"
+      ],
+      "related": [
+        "religious 形 宗教上的",
+        "Muslim 形 回教的"
+      ]
+    },
+    {
+      "id": 198,
+      "word": "glamour",
+      "ipa": "ˈglæmər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "魅力；魔力；誘惑力"
+        }
+      ],
+      "examples": [
+        "He's got undeniable glamour as a singer and an actor. 他作為歌手和演員的魅力是無可否認的。"
+      ],
+      "related": [
+        "glamorous 形 有魅力的",
+        "enchanting 形 迷人的"
+      ]
+    },
+    {
+      "id": 199,
+      "word": "fidelity",
+      "ipa": "fɪˈdɛlətɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "忠誠；忠貞"
+        }
+      ],
+      "examples": [
+        "Do you think sexual fidelity in marriage is important? 你覺得婚姻中的忠實重要嗎？"
+      ],
+      "related": [
+        "loyal 形 忠誠的",
+        "loyalty 名 忠誠"
+      ]
+    },
+    {
+      "id": 200,
+      "word": "handsome",
+      "ipa": "ˈhænsəm",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "（男子）英俊的"
+        },
+        {
+          "pos": "形",
+          "zh": "大筆金額的"
+        }
+      ],
+      "examples": [
+        "He is as handsome as (handsome) can be. 他瀟灑極了。",
+        "He made a handsome profit on his stocks. 他在股票上獲得很大一筆利益。"
+      ],
+      "related": [
+        "beautiful 形 美麗的",
+        "good-looking 形 好看的"
+      ]
+    },
+    {
+      "id": 201,
+      "word": "heroic",
+      "ipa": "hɪˈroɪk",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "英雄的；英勇的"
+        }
+      ],
+      "examples": [
+        "Ours is a heroic age. 我們的時代是一個英雄的時代。"
+      ],
+      "related": [
+        "hero 名 英雄",
+        "heroine 名 女英雄"
+      ]
+    },
+    {
+      "id": 202,
+      "word": "heterosexual",
+      "ipa": "ˌhɛtərəˈsɛkʃuəl",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "異性戀者 **形** 異性戀的"
+        }
+      ],
+      "examples": [
+        "All the handsome, nice and heterosexual men are married. 又帥又好又不是同性戀的男人都結婚了。"
+      ],
+      "related": [
+        "homosexual 名 同性戀",
+        "sexuality 名 性向"
+      ]
+    },
+    {
+      "id": 203,
+      "word": "honest",
+      "ipa": "ˈɑnɪst",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "誠實"
+        }
+      ],
+      "examples": [
+        "I am not honest with you. 我沒有對你誠實。"
+      ],
+      "related": [
+        "lie 名 謊",
+        "liar 名 騙子"
+      ]
+    },
+    {
+      "id": 204,
+      "word": "honesty",
+      "ipa": "ˈɑnɪstɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "誠實；率直"
+        }
+      ],
+      "examples": [
+        "Honesty is the best policy. 誠實是最佳上策。"
+      ],
+      "related": [
+        "integrity 名 正直"
+      ]
+    },
+    {
+      "id": 205,
+      "word": "hospitable",
+      "ipa": "ˈhɑspɪtəbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "好客的；招待周到的"
+        }
+      ],
+      "examples": [
+        "She is always hospitable to her guests. 她總是招待她的賓客。"
+      ],
+      "related": [
+        "generous 形 慷慨的",
+        "welcoming 形 歡迎的"
+      ]
+    },
+    {
+      "id": 206,
+      "word": "hospitality",
+      "ipa": "ˌhɑspɪˈtælətɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "好客；殷勤招待"
+        }
+      ],
+      "examples": [
+        "The host's hospitality left us a very good impression. 主人的好客給我們留下了非常好的印象。"
+      ],
+      "related": [
+        "generosity 名 慷慨",
+        "passionate 形 熱情的"
+      ]
+    },
+    {
+      "id": 207,
+      "word": "humble",
+      "ipa": "ˈhʌmbl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "謙卑的"
+        },
+        {
+          "pos": "形",
+          "zh": "（身份）卑微的"
+        },
+        {
+          "pos": "動",
+          "zh": "使謙卑"
+        }
+      ],
+      "examples": [
+        "The more noble, the more humble. 結實愈豐者，其穗愈低。",
+        "She came from a humble family. 她來自一個平凡的家庭。",
+        "It's not easy for him to humble himself to ask for help. 要他放低身段求助是很不容易的。"
+      ],
+      "related": [
+        "modest 形 謙虛的"
+      ]
+    },
+    {
+      "id": 208,
+      "word": "human",
+      "ipa": "ˈhjumən",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "人的；人類的"
+        },
+        {
+          "pos": "名",
+          "zh": "人；人類"
+        }
+      ],
+      "examples": [
+        "The accident was caused by human error. 這宗事故是人為過失造成的。",
+        "What is the difference between humans and animals? 人類和動物的差別在哪裡？"
+      ],
+      "related": [
+        "mammal 名 哺乳動物",
+        "human being 名 人"
+      ]
+    },
+    {
+      "id": 209,
+      "word": "humor",
+      "ipa": "ˈhjumər",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "幽默"
+        }
+      ],
+      "examples": [
+        "She has no sense of humor. 她毫無幽默感。"
+      ],
+      "related": [
+        "humorous 形 幽默的",
+        "amusing 形 有趣的"
+      ]
+    },
+    {
+      "id": 210,
+      "word": "hypocrisy",
+      "ipa": "hɪˈpɑkrəsɪ",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "偽善；虛偽"
+        }
+      ],
+      "examples": [
+        "His hypocrisy makes me sick. 我很討厭他那麼虛偽。"
+      ],
+      "related": [
+        "pretend 動 假裝"
+      ]
+    },
+    {
+      "id": 211,
+      "word": "hypocritical",
+      "ipa": "ˌhɪpəˈkrɪtɪkl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "偽善；虛偽的"
+        }
+      ],
+      "examples": [
+        "Many politicians are hypocritical. 很多的政治家都很虛偽。"
+      ],
+      "related": [
+        "artificial 形 矯揉造作的"
+      ]
+    },
+    {
+      "id": 212,
+      "word": "hypocrite",
+      "ipa": "ˈhɪpəkrɪt",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "偽善者；偽君子"
+        }
+      ],
+      "examples": [
+        "He is nothing but a hypocrite, pretending that he knows nothing about it. 他是一個虛偽的人，假裝對那件事一無所知。"
+      ],
+      "related": [
+        "pretender 名 冒牌者"
+      ]
+    },
+    {
+      "id": 213,
+      "word": "ideal",
+      "ipa": "aɪˈdiəl",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "理想的"
+        },
+        {
+          "pos": "名",
+          "zh": "理想"
+        }
+      ],
+      "examples": [
+        "We do not live in an ideal world. Be practical! 我們並不活在一個理想的世界。實際一點吧！",
+        "He finds it hard to live up to his ideals. 他發現很難活出自己的理想。"
+      ],
+      "related": [
+        "perfect 形 完美的"
+      ]
+    },
+    {
+      "id": 214,
+      "word": "idiot",
+      "ipa": "ˈɪdiət",
+      "senses": [
+        {
+          "pos": "名",
+          "zh": "傻瓜；笨蛋"
+        }
+      ],
+      "examples": [
+        "He is an idiot to agree such a thing. 他實在是個傻瓜，才會同意這樣的事。"
+      ],
+      "related": [
+        "dumbo 名 傻瓜"
+      ]
+    },
+    {
+      "id": 215,
+      "word": "mature",
+      "ipa": "məˈtjʊr",
+      "senses": [
+        {
+          "pos": "形",
+          "zh": "成熟的"
+        }
+      ],
+      "examples": [
+        "The peaches are not yet mature. 桃子還沒有成熟。"
+      ],
+      "related": [
+        "childish 形 幼稚的"
+      ]
+    }
+  ]
+}
