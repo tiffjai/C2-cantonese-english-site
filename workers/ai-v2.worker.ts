@@ -114,8 +114,9 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             return;
         } catch (err) {
             const salvaged = salvageFromRawText(rawText, word, distractors);
-            if (salvaged) {
-                send({ type: 'result', payload: salvaged });
+            const fallback = salvaged ?? buildFallbackOutput(word, distractors);
+            if (fallback) {
+                send({ type: 'result', payload: fallback });
                 return;
             }
             throw err;
@@ -270,6 +271,36 @@ function salvageFromRawText(rawText: string, targetWord: string, distractors: st
     }
 }
 
+function buildFallbackOutput(targetWord: string, distractors: string[]): AiOutput | null {
+    const examples = [
+        `The word ${targetWord} appears in this simple sentence.`,
+        `Here is another sentence that uses the word ${targetWord}.`,
+        `For emphasis, the word ${targetWord} appears again in this sentence.`,
+    ];
+
+    const clozeSentence = replaceWord(examples[1], targetWord, '____');
+    const pickedDistractors = pickDistractors(distractors, targetWord, 3, true);
+    if (!pickedDistractors) return null;
+
+    const options = shuffle([targetWord, ...pickedDistractors]);
+    const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
+    if (answerIndex === -1) return null;
+
+    return {
+        examples: [
+            { difficulty: 'easy', sentence: examples[0] },
+            { difficulty: 'normal', sentence: examples[1] },
+            { difficulty: 'advanced', sentence: examples[2] },
+        ],
+        cloze: {
+            sentence: clozeSentence,
+            options,
+            answer: ['A', 'B', 'C', 'D'][answerIndex],
+            explanation: 'Best fit for the blank is the target word.',
+        },
+    };
+}
+
 function extractLabeledExamples(text: string, targetWord: string): string[] | null {
     const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
     const pick = (label: string) => {
@@ -302,13 +333,33 @@ function extractSentencesWithWord(text: string, targetWord: string): string[] {
     return matches;
 }
 
-function pickDistractors(values: string[], targetWord: string, count: number): string[] | null {
+function pickDistractors(values: string[], targetWord: string, count: number, allowFallback = false): string[] | null {
     const normalizedTarget = targetWord.toLowerCase();
     const unique = Array.from(new Set(values.map((val) => val.trim()).filter(Boolean)));
     const pool = unique.filter((val) => val.toLowerCase() !== normalizedTarget);
+
+    if (pool.length < count && allowFallback) {
+        const extra = generateFallbackDistractors(targetWord, count - pool.length);
+        pool.push(...extra);
+    }
+
     if (pool.length < count) return null;
     shuffle(pool);
     return pool.slice(0, count);
+}
+
+function generateFallbackDistractors(targetWord: string, count: number): string[] {
+    const candidates = [
+        `${targetWord}ly`,
+        `${targetWord}ness`,
+        `${targetWord}ing`,
+        `${targetWord}ed`,
+        `${targetWord}s`,
+        `${targetWord}er`,
+    ];
+    const unique = Array.from(new Set(candidates.filter((item) => item.toLowerCase() !== targetWord.toLowerCase())));
+    shuffle(unique);
+    return unique.slice(0, count);
 }
 
 function replaceWord(sentence: string, targetWord: string, replacement: string): string {
