@@ -91,20 +91,39 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         send({ type: 'status', status: 'generating' });
 
-        const prompt = promptTemplate({ word, level, meaning });
-        const output = await generator(prompt, {
-            max_new_tokens: 220,
-            temperature: 0.7,
-            do_sample: true,
-            return_full_text: false,
-        });
+        const attempts = [
+            { temperature: 0.7, do_sample: true, extra: '' },
+            {
+                temperature: 0.2,
+                do_sample: false,
+                extra: '\nIMPORTANT: Output ONLY the JSON object, no markdown or prose.',
+            },
+        ];
 
-        const rawText = extractGeneratedText(output as any);
+        let lastError: Error | null = null;
 
-        const parsed = parseJsonOutput(rawText);
-        const validated = validatePayload(parsed, word);
+        for (const attempt of attempts) {
+            try {
+                const prompt = promptTemplate({ word, level, meaning }) + attempt.extra;
+                const output = await generator(prompt, {
+                    max_new_tokens: 220,
+                    temperature: attempt.temperature,
+                    do_sample: attempt.do_sample,
+                    return_full_text: false,
+                });
 
-        send({ type: 'result', payload: validated });
+                const rawText = extractGeneratedText(output as any);
+                const parsed = parseJsonOutput(rawText);
+                const validated = validatePayload(parsed, word);
+
+                send({ type: 'result', payload: validated });
+                return;
+            } catch (err: any) {
+                lastError = err instanceof Error ? err : new Error(String(err));
+            }
+        }
+
+        throw lastError ?? new Error('Failed to generate content.');
     } catch (error: any) {
         const message = error?.message || 'Failed to generate content.';
         send({ type: 'error', message });
