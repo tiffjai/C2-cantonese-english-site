@@ -69,15 +69,38 @@ export default function TTSFlashcards() {
     const [voiceSource, setVoiceSource] = useState<'coqui' | 'browser' | 'idle'>('idle')
 
     useEffect(() => {
-        fetch('/vocab.json', { cache: 'no-store' })
-            .then((r) => r.json())
-            .then((d) => {
-                const list = (d.items as Entry[]) || []
-                setItems(list)
-                setIdx(0)
-                setCurrent(list[0] ?? null)
-            })
-            .catch(console.error)
+        if (typeof window === 'undefined') return
+
+        // GH Pages 路徑可能為 /<repo>/tts-flashcards，需要嘗試多個相對/絕對路徑
+        const origin = window.location.origin
+        const firstSeg = window.location.pathname.split('/')[1] || ''
+        const base = firstSeg ? `/${firstSeg}` : ''
+        const candidates = [
+            `${origin}${base}/vocab.json`,
+            `${origin}/vocab.json`,
+            'vocab.json',
+            './vocab.json',
+        ]
+
+        const tryFetch = async () => {
+            for (const url of candidates) {
+                try {
+                    const r = await fetch(url, { cache: 'no-store' })
+                    if (!r.ok) continue
+                    const d = await r.json()
+                    const list = (d.items as Entry[]) || []
+                    setItems(list)
+                    setIdx(0)
+                    setCurrent(list[0] ?? null)
+                    return
+                } catch (_) {
+                    // try next candidate
+                }
+            }
+            console.error('vocab.json not found in tried paths', candidates)
+        }
+
+        void tryFetch()
     }, [])
 
     useEffect(() => {

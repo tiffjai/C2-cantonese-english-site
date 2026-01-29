@@ -19,9 +19,31 @@ type Vocab = {
 type Option = { label: string; isCorrect: boolean }
 
 async function fetchVocab(): Promise<Vocab[]> {
-    const res = await fetch('/vocab.json', { cache: 'no-store' })
-    const data = await res.json()
-    return (data.items as Vocab[]) ?? []
+    if (typeof window === 'undefined') {
+        const res = await fetch('/vocab.json', { cache: 'no-store' })
+        const data = await res.json()
+        return (data.items as Vocab[]) ?? []
+    }
+    const origin = window.location.origin
+    const firstSeg = window.location.pathname.split('/')[1] || ''
+    const base = firstSeg ? `/${firstSeg}` : ''
+    const candidates = [
+        `${origin}${base}/vocab.json`,
+        `${origin}/vocab.json`,
+        'vocab.json',
+        './vocab.json',
+    ]
+    for (const url of candidates) {
+        try {
+            const r = await fetch(url, { cache: 'no-store' })
+            if (!r.ok) continue
+            const data = await r.json()
+            return (data.items as Vocab[]) ?? []
+        } catch (_) {
+            continue
+        }
+    }
+    throw new Error('vocab.json not found in tried paths')
 }
 
 function makeTextTexture(text: string) {
