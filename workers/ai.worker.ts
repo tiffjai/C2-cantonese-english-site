@@ -280,15 +280,16 @@ function extractGeneratedText(output: any): string {
             // When using chat template, generated_text may be an array of messages
             if (Array.isArray(gt)) {
                 const last = gt.at(-1);
-                if (last?.content) return typeof last.content === 'string' ? last.content : JSON.stringify(last.content);
-                return JSON.stringify(gt);
+                if (last?.content) return coerceToText(last.content);
+                return coerceToText(gt);
             }
             if (gt?.content) {
-                return typeof gt.content === 'string' ? gt.content : JSON.stringify(gt.content);
+                return coerceToText(gt.content);
             }
             if (typeof gt === 'string') return gt;
-            return JSON.stringify(gt);
+            return coerceToText(gt);
         }
+        return coerceToText(first);
     }
 
     // Direct string
@@ -299,17 +300,31 @@ function extractGeneratedText(output: any): string {
         const gt = output.generated_text;
         if (Array.isArray(gt)) {
             const last = gt.at(-1);
-            if (last?.content) return typeof last.content === 'string' ? last.content : JSON.stringify(last.content);
-            return JSON.stringify(gt);
+            if (last?.content) return coerceToText(last.content);
+            return coerceToText(gt);
         }
         if (gt?.content) {
-            return typeof gt.content === 'string' ? gt.content : JSON.stringify(gt.content);
+            return coerceToText(gt.content);
         }
         if (typeof gt === 'string') return gt;
-        return JSON.stringify(gt);
+        return coerceToText(gt);
     }
 
     // Fallback
+    return coerceToText(output);
+}
+
+function coerceToText(value: any): string {
+    if (value == null) return '';
+    if (typeof value === 'string') return value;
+    if (Array.isArray(value)) {
+        return value.map(coerceToText).join('');
+    }
+    if (typeof value === 'object') {
+        if ('text' in value) return coerceToText(value.text);
+        if ('content' in value) return coerceToText(value.content);
+        if ('generated_text' in value) return coerceToText(value.generated_text);
+    }
     return '';
 }
 
