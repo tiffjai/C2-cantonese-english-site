@@ -256,8 +256,15 @@ function extractGeneratedText(output: any): string {
         const first = output[0];
         if (typeof first === 'string') return first;
         if (first?.generated_text) {
-            if (typeof first.generated_text === 'string') return first.generated_text;
-            return JSON.stringify(first.generated_text);
+            const gt = first.generated_text;
+            // When using chat template, generated_text may be an array of messages
+            if (Array.isArray(gt)) {
+                const last = gt.at(-1);
+                if (last?.content) return typeof last.content === 'string' ? last.content : JSON.stringify(last.content);
+                return JSON.stringify(gt);
+            }
+            if (typeof gt === 'string') return gt;
+            return JSON.stringify(gt);
         }
     }
 
@@ -266,8 +273,14 @@ function extractGeneratedText(output: any): string {
 
     // Object with generated_text
     if (output?.generated_text) {
-        if (typeof output.generated_text === 'string') return output.generated_text;
-        return JSON.stringify(output.generated_text);
+        const gt = output.generated_text;
+        if (Array.isArray(gt)) {
+            const last = gt.at(-1);
+            if (last?.content) return typeof last.content === 'string' ? last.content : JSON.stringify(last.content);
+            return JSON.stringify(gt);
+        }
+        if (typeof gt === 'string') return gt;
+        return JSON.stringify(gt);
     }
 
     // Fallback
