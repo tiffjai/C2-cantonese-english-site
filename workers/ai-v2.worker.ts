@@ -51,16 +51,22 @@ const promptTemplate = ({
     word: string;
     level: string;
     meaning?: string;
-}) => `OUTPUT ONLY JSON BETWEEN TAGS.
-Think silently before responding.
-<BEGIN_JSON>{"examples":[{"difficulty":"easy","sentence":""},{"difficulty":"normal","sentence":""},{"difficulty":"advanced","sentence":""}],"cloze":{"sentence":"","options":["","","",""],"answer":"","explanation":""}}</END_JSON>
+}) => `OUTPUT ONLY THESE 9 LINES (NO EXTRA TEXT):
+EASY: ...
+NORMAL: ...
+ADVANCED: ...
+CLOZE: ...
+A: ...
+B: ...
+C: ...
+D: ...
+ANSWER: A|B|C|D
 WORD="${word}"
 LEVEL="${level}"
 Rules:
-- Put WORD exactly in all 3 sentences.
-- Cloze replaces WORD with ____.
-- options must be 4 strings; answer must be "A"|"B"|"C"|"D".
-- explanation <= 20 words.
+- Put WORD exactly in EASY/NORMAL/ADVANCED.
+- CLOZE replaces WORD with ____.
+- A-D are 4 short options, only one correct.
 No other text.`;
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
@@ -83,12 +89,15 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         send({ type: 'status', status: 'generating' });
 
         let output: any;
+        const prompt = promptTemplate({ word, level, meaning });
         try {
-            const prompt = promptTemplate({ word, level, meaning });
             output = await generator(prompt, {
-                max_new_tokens: 420,
-                temperature: 0,
-                do_sample: false,
+                max_new_tokens: 220,
+                temperature: 0.7,
+                top_p: 0.9,
+                do_sample: true,
+                repetition_penalty: 1.15,
+                no_repeat_ngram_size: 3,
                 return_full_text: false,
             });
         } catch (genError) {
@@ -100,10 +109,33 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             throw genError;
         }
 
-        const rawText = truncateAtEndTag(extractGeneratedText(output as any));
+        let rawText = extractGeneratedText(output as any);
+        rawText = truncateAtEndTag(rawText);
         lastRawText = rawText;
+
+        if (isDegenerateOutput(rawText)) {
+            try {
+                const retry = await generator(prompt, {
+                    max_new_tokens: 160,
+                    temperature: 0.6,
+                    top_p: 0.85,
+                    do_sample: true,
+                    repetition_penalty: 1.25,
+                    no_repeat_ngram_size: 4,
+                    return_full_text: false,
+                });
+                const retryText = truncateAtEndTag(extractGeneratedText(retry as any));
+                if (!isDegenerateOutput(retryText)) {
+                    rawText = retryText;
+                    lastRawText = retryText;
+                }
+            } catch {
+                // keep original output if retry fails
+            }
+        }
+
         try {
-            const parsed = parseJsonOutput(rawText);
+            const parsed = parseLineOutput(rawText, word);
             const validated = validatePayload(parsed, word);
 
             send({ type: 'result', payload: validated, rawText: lastRawText });
@@ -134,53 +166,59 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     }
 };
 
-function parseJsonOutput(text: string): AiOutput {
-    const trimmed = text.trim();
+function parseLineOutput(text: string, targetWord: string): AiOutput {
+    const lines = text
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter(Boolean);
 
-    // Prefer explicit BEGIN/END tags
-    const tagged = extractBetweenTags(trimmed);
-    if (tagged) {
-        const parsedTag = tryParse(tagged) ?? tryParse(simpleRepair(tagged));
-        if (parsedTag) return parsedTag;
+    const getLine = (label: string) => {
+        const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
+        if (!match) return '';
+        return match.replace(new RegExp(`^${label}\\s*:\\s+`, 'i'), '').trim();
+    };
+
+    const easy = getLine('easy');
+    const normal = getLine('normal');
+    const advanced = getLine('advanced');
+    const cloze = getLine('cloze');
+    const optionA = getLine('a');
+    const optionB = getLine('b');
+    const optionC = getLine('c');
+    const optionD = getLine('d');
+    const answer = getLine('answer').toUpperCase();
+
+    if (!easy || !normal || !advanced || !cloze || !optionA || !optionB || !optionC || !optionD || !answer) {
+        throw new Error('Line output incomplete.');
     }
 
-    // 1) direct parse
-    const direct = tryParse(trimmed);
-    if (direct) return direct;
-
-    // 1b) fenced ```json blocks
-    const fenced = extractCodeFence(trimmed);
-    if (fenced) {
-        const parsedFence = tryParse(fenced);
-        if (parsedFence) return parsedFence;
-        const fixedFence = normalizeJsonish(fenced);
-        const parsedFixedFence = tryParse(fixedFence);
-        if (parsedFixedFence) return parsedFixedFence;
+    if (!containsWord(easy, targetWord) || !containsWord(normal, targetWord) || !containsWord(advanced, targetWord)) {
+        throw new Error('Example sentences must include the target word.');
     }
 
-    // 2) attempt to extract first balanced JSON object
-    const extracted = extractFirstJsonObject(trimmed);
-    if (extracted) {
-        const parsed = tryParse(extracted) ?? tryParse(simpleRepair(extracted));
-        if (parsed) return parsed;
+    if (!cloze.includes('____')) {
+        throw new Error('Cloze sentence must include "____".');
     }
 
-    // 3) fallback: slice from first { to last }
-    const sliced = sliceOuterBraces(trimmed);
-    if (sliced) {
-        const parsed = tryParse(sliced) || tryParse(simpleRepair(sliced));
-        if (parsed) return parsed;
+    const options = [optionA, optionB, optionC, optionD];
+    const answerIndex = parseAnswerIndex(answer, options);
+    if (answerIndex === -1) {
+        throw new Error('Answer must be A, B, C, or D.');
     }
 
-    throw new Error('Model did not return JSON.');
-}
-
-function tryParse<T = any>(text: string): T | null {
-    try {
-        return JSON.parse(text);
-    } catch {
-        return null;
-    }
+    return {
+        examples: [
+            { difficulty: 'easy', sentence: easy },
+            { difficulty: 'normal', sentence: normal },
+            { difficulty: 'advanced', sentence: advanced },
+        ],
+        cloze: {
+            sentence: cloze,
+            options,
+            answer: ['A', 'B', 'C', 'D'][answerIndex],
+            explanation: 'Best fit for the blank is the target word.',
+        },
+    };
 }
 
 function extractFirstJsonObject(text: string): string | null {
@@ -295,9 +333,12 @@ advanced: ...`;
 
     try {
         const output = await generator(prompt, {
-            max_new_tokens: 180,
-            temperature: 0,
-            do_sample: false,
+            max_new_tokens: 160,
+            temperature: 0.7,
+            top_p: 0.9,
+            do_sample: true,
+            repetition_penalty: 1.15,
+            no_repeat_ngram_size: 3,
             return_full_text: false,
         });
 
@@ -564,6 +605,26 @@ function normalizeErrorMessage(message: string | undefined): string {
         return 'AI response incomplete. Please retry.';
     }
     return message;
+}
+
+function isDegenerateOutput(text: string): boolean {
+    const cleaned = text.replace(/\s+/g, ' ').trim().toLowerCase();
+    if (!cleaned) return true;
+    const tokens = cleaned.split(' ');
+    if (tokens.length >= 30) {
+        const unique = new Set(tokens);
+        if (unique.size / tokens.length < 0.35) return true;
+    }
+
+    const trigramCounts = new Map<string, number>();
+    for (let i = 0; i < tokens.length - 2; i += 1) {
+        const gram = `${tokens[i]} ${tokens[i + 1]} ${tokens[i + 2]}`;
+        const count = (trigramCounts.get(gram) ?? 0) + 1;
+        if (count >= 5) return true;
+        trigramCounts.set(gram, count);
+    }
+
+    return false;
 }
 
 function normalizeJsonish(text: string): string {
