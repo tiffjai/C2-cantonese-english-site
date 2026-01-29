@@ -52,6 +52,7 @@ const promptTemplate = ({
     level: string;
     meaning?: string;
 }) => `OUTPUT ONLY JSON BETWEEN TAGS.
+Think silently before responding.
 <BEGIN_JSON>{"examples":[{"difficulty":"easy","sentence":""},{"difficulty":"normal","sentence":""},{"difficulty":"advanced","sentence":""}],"cloze":{"sentence":"","options":["","","",""],"answer":"","explanation":""}}</END_JSON>
 WORD="${word}"
 LEVEL="${level}"
@@ -282,6 +283,7 @@ async function generateSentenceOnlyFallback(
 ): Promise<AiOutput | null> {
     if (!generator) return null;
     const prompt = `Write 3 English example sentences using the exact word "${targetWord}".
+Think silently before responding.
 Target CEFR: ${level}.
 Return EXACTLY 3 lines (no extra text):
 easy: ...
