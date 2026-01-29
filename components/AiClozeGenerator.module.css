@@ -128,6 +128,28 @@
     color: var(--text-primary);
 }
 
+.error details {
+    margin-top: var(--spacing-sm);
+}
+
+.error summary {
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.error pre {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
 .results {
     margin-top: var(--spacing-md);
     display: grid;

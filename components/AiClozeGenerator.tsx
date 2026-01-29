@@ -16,6 +16,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
     const workerRef = useRef<Worker | null>(null);
     const [status, setStatus] = useState<Status>('idle');
     const [error, setError] = useState<string | null>(null);
+    const [debugText, setDebugText] = useState<string | null>(null);
     const [result, setResult] = useState<AiOutput | null>(null);
     const [modelReady, setModelReady] = useState(false);
     const [downloadProgress, setDownloadProgress] = useState<{ loaded: number; total: number } | null>(null);
@@ -51,11 +52,13 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
                 setResult(msg.payload);
                 setStatus('success');
                 setError(null);
+                setDebugText(null);
                 return;
             }
 
             if (msg.type === 'error') {
                 setError(msg.message || 'Something went wrong. Please try again.');
+                setDebugText(msg.rawText || null);
                 setStatus('error');
                 return;
             }
@@ -72,6 +75,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
         setStatus('idle');
         setError(null);
         setResult(null);
+        setDebugText(null);
     }, [word]);
 
     const handleGenerate = () => {
@@ -145,6 +149,12 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
                     <button className="btn-secondary" onClick={handleGenerate} disabled={isBusy}>
                         Retry
                     </button>
+                    {debugText && (
+                        <details>
+                            <summary>Debug output</summary>
+                            <pre>{debugText}</pre>
+                        </details>
+                    )}
                 </div>
             )}
 
