@@ -98,7 +98,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         const prompt = promptTemplate({ word, level, meaning });
         const output = await generator(prompt, {
-            max_new_tokens: 240,
+            max_new_tokens: 420,
             temperature: 0,
             do_sample: false,
             return_full_text: false,
