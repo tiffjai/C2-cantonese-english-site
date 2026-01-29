@@ -105,11 +105,20 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         const rawText = truncateAtEndTag(extractGeneratedText(output as any));
         lastRawText = rawText;
-        const parsed = parseJsonOutput(rawText);
-        const validated = validatePayload(parsed, word);
+        try {
+            const parsed = parseJsonOutput(rawText);
+            const validated = validatePayload(parsed, word);
 
-        send({ type: 'result', payload: validated });
-        return;
+            send({ type: 'result', payload: validated });
+            return;
+        } catch (err) {
+            const salvaged = await salvageFromRawText(rawText, word, level);
+            if (salvaged) {
+                send({ type: 'result', payload: salvaged });
+                return;
+            }
+            throw err;
+        }
     } catch (error: any) {
         const message = error?.message || 'Failed to generate content.';
         send({ type: 'error', message, rawText: lastRawText || error?.rawText });
@@ -222,6 +231,133 @@ function extractBetweenTags(text: string): string | null {
 function truncateAtEndTag(text: string): string {
     const end = text.indexOf('</END_JSON>');
     return end >= 0 ? text.slice(0, end + '</END_JSON>'.length) : text;
+}
+
+const levelWordCache = new Map<string, string[]>();
+
+async function salvageFromRawText(rawText: string, targetWord: string, level: string): Promise<AiOutput | null> {
+    try {
+        const labeled = extractLabeledExamples(rawText, targetWord);
+        const examples = labeled ?? extractSentencesWithWord(rawText, targetWord);
+        if (examples.length < 3) return null;
+
+        const normalSentence = examples[1];
+        const clozeSentence = replaceWord(normalSentence, targetWord, '____');
+        if (!clozeSentence.includes('____')) return null;
+
+        const distractors = await getRandomDistractors(level, targetWord, 3);
+        if (distractors.length < 3) return null;
+
+        const options = shuffle([targetWord, ...distractors]);
+        const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
+        if (answerIndex === -1) return null;
+
+        return {
+            examples: [
+                { difficulty: 'easy', sentence: examples[0] },
+                { difficulty: 'normal', sentence: examples[1] },
+                { difficulty: 'advanced', sentence: examples[2] },
+            ],
+            cloze: {
+                sentence: clozeSentence,
+                options,
+                answer: ['A', 'B', 'C', 'D'][answerIndex],
+                explanation: 'Best fit for the blank is the target word.',
+            },
+        };
+    } catch {
+        return null;
+    }
+}
+
+function extractLabeledExamples(text: string, targetWord: string): string[] | null {
+    const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const pick = (label: string) => {
+        const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
+        if (!match) return null;
+        const sentence = match.replace(new RegExp(`^${label}\\s*:\\s+`, 'i'), '').trim();
+        return containsWord(sentence, targetWord) ? sentence : null;
+    };
+
+    const easy = pick('easy');
+    const normal = pick('normal');
+    const advanced = pick('advanced');
+    if (easy && normal && advanced) return [easy, normal, advanced];
+    return null;
+}
+
+function extractSentencesWithWord(text: string, targetWord: string): string[] {
+    const cleaned = text.replace(/\r?\n/g, ' ').replace(/\s+/g, ' ').trim();
+    if (!cleaned) return [];
+    const parts = cleaned.split(/[.!?]\s+/);
+    const matches: string[] = [];
+    for (const part of parts) {
+        const sentence = part.trim();
+        if (!sentence) continue;
+        if (containsWord(sentence, targetWord)) {
+            matches.push(sentence.endsWith('.') ? sentence : `${sentence}.`);
+        }
+        if (matches.length >= 3) break;
+    }
+    return matches;
+}
+
+async function getRandomDistractors(level: string, targetWord: string, count: number): Promise<string[]> {
+    const words = await getLevelWords(level);
+    const pool = words.filter((word) => word && word.toLowerCase() !== targetWord.toLowerCase());
+    if (pool.length < count) return [];
+    shuffle(pool);
+    return pool.slice(0, count);
+}
+
+async function getLevelWords(level: string): Promise<string[]> {
+    const cached = levelWordCache.get(level);
+    if (cached) return cached;
+
+    const basePath = getBasePath();
+    const origin = (self as any).location?.origin ?? '';
+    const url = `${origin}${basePath}/levels/${level}.json`;
+    const res = await fetch(url);
+    if (!res.ok) {
+        throw new Error(`Failed to load level words (${level})`);
+    }
+    const data = await res.json();
+    const raw = Array.isArray(data) ? data : data.words || data.items || [];
+    const words = (raw as any[])
+        .map((item) => (typeof item === 'string' ? item : item?.headword ?? item?.word ?? ''))
+        .filter(Boolean);
+    const unique = Array.from(new Set(words));
+    levelWordCache.set(level, unique);
+    return unique;
+}
+
+function getBasePath(): string {
+    const path = (self as any).location?.pathname ?? '';
+    const idx = path.indexOf('/_next/');
+    if (idx > 0) return path.slice(0, idx);
+    return '';
+}
+
+function replaceWord(sentence: string, targetWord: string, replacement: string): string {
+    const regex = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
+    return sentence.replace(regex, replacement);
+}
+
+function containsWord(sentence: string, targetWord: string): boolean {
+    const regex = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
+    return regex.test(sentence);
+}
+
+function escapeRegExp(value: string): string {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function shuffle<T>(items: T[]): T[] {
+    for (let i = items.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+    }
+    return items;
 }
 
 function normalizeJsonish(text: string): string {
