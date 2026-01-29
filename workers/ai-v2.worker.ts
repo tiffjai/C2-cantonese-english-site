@@ -114,9 +114,13 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             return;
         } catch (err) {
             const salvaged = salvageFromRawText(rawText, word, distractors);
-            const fallback = salvaged ?? buildFallbackOutput(word, distractors);
-            if (fallback) {
-                send({ type: 'result', payload: fallback });
+            if (salvaged) {
+                send({ type: 'result', payload: salvaged });
+                return;
+            }
+            const retryPayload = await generateSentenceOnlyFallback(word, level, distractors);
+            if (retryPayload) {
+                send({ type: 'result', payload: retryPayload });
                 return;
             }
             throw err;
@@ -237,20 +241,36 @@ function truncateAtEndTag(text: string): string {
     return text.slice(0, match.index + match[0].length);
 }
 
-function salvageFromRawText(rawText: string, targetWord: string, distractors: string[]): AiOutput | null {
+async function generateSentenceOnlyFallback(
+    targetWord: string,
+    level: string,
+    distractors: string[]
+): Promise<AiOutput | null> {
+    if (!generator) return null;
+    const prompt = `Generate ONLY 3 lines. Each line must contain the exact word "${targetWord}".
+easy: ...
+normal: ...
+advanced: ...
+No JSON. No extra text.`;
+
     try {
-        const labeled = extractLabeledExamples(rawText, targetWord);
-        const examples = labeled ?? extractSentencesWithWord(rawText, targetWord);
-        if (examples.length < 3) return null;
+        const output = await generator(prompt, {
+            max_new_tokens: 180,
+            temperature: 0,
+            do_sample: false,
+            return_full_text: false,
+        });
 
-        const normalSentence = examples[1];
-        const clozeSentence = replaceWord(normalSentence, targetWord, '____');
-        if (!clozeSentence.includes('____')) return null;
+        const rawText = extractGeneratedText(output as any);
+        const examples = parseLabeledLines(rawText, targetWord);
+        if (!examples) return null;
 
-        const pickedDistractors = pickDistractors(distractors, targetWord, 3);
-        if (!pickedDistractors) return null;
+        const clozeCandidate = buildClozeFromExamples(examples, targetWord);
+        if (!clozeCandidate) return null;
 
-        const options = shuffle([targetWord, ...pickedDistractors]);
+        const { sentence: clozeSentence, sourceIndex } = clozeCandidate;
+        const options = buildOptions(targetWord, distractors);
+        if (!options) return null;
         const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
         if (answerIndex === -1) return null;
 
@@ -272,35 +292,37 @@ function salvageFromRawText(rawText: string, targetWord: string, distractors: st
     }
 }
 
-function buildFallbackOutput(targetWord: string, distractors: string[]): AiOutput | null {
-    const examples = [
-        `The word ${targetWord} appears in this simple sentence.`,
-        `Here is another sentence that uses the word ${targetWord}.`,
-        `For emphasis, the word ${targetWord} appears again in this sentence.`,
-    ];
+function salvageFromRawText(rawText: string, targetWord: string, distractors: string[]): AiOutput | null {
+    try {
+        const labeled = extractLabeledExamples(rawText, targetWord);
+        const examples = labeled ?? extractSentencesWithWord(rawText, targetWord);
+        if (examples.length < 3) return null;
 
-    const clozeSentence = replaceWord(examples[1], targetWord, '____');
-    const pickedDistractors =
-        pickDistractors(distractors, targetWord, 3, true) ?? generateFallbackDistractors(targetWord, 3);
-    if (!pickedDistractors || pickedDistractors.length < 3) return null;
+        const clozeCandidate = buildClozeFromExamples(examples, targetWord);
+        if (!clozeCandidate) return null;
+        const { sentence: clozeSentence } = clozeCandidate;
 
-    const options = shuffle([targetWord, ...pickedDistractors]);
-    const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
-    if (answerIndex === -1) return null;
+        const options = buildOptions(targetWord, distractors);
+        if (!options) return null;
+        const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
+        if (answerIndex === -1) return null;
 
-    return {
-        examples: [
-            { difficulty: 'easy', sentence: examples[0] },
-            { difficulty: 'normal', sentence: examples[1] },
-            { difficulty: 'advanced', sentence: examples[2] },
-        ],
-        cloze: {
-            sentence: clozeSentence,
-            options,
-            answer: ['A', 'B', 'C', 'D'][answerIndex],
-            explanation: 'Best fit for the blank is the target word.',
-        },
-    };
+        return {
+            examples: [
+                { difficulty: 'easy', sentence: examples[0] },
+                { difficulty: 'normal', sentence: examples[1] },
+                { difficulty: 'advanced', sentence: examples[2] },
+            ],
+            cloze: {
+                sentence: clozeSentence,
+                options,
+                answer: ['A', 'B', 'C', 'D'][answerIndex],
+                explanation: 'Best fit for the blank is the target word.',
+            },
+        };
+    } catch {
+        return null;
+    }
 }
 
 function extractLabeledExamples(text: string, targetWord: string): string[] | null {
@@ -335,40 +357,6 @@ function extractSentencesWithWord(text: string, targetWord: string): string[] {
     return matches;
 }
 
-function pickDistractors(values: string[], targetWord: string, count: number, allowFallback = false): string[] | null {
-    const normalizedTarget = targetWord.toLowerCase();
-    const unique = Array.from(new Set(values.map((val) => val.trim()).filter(Boolean)));
-    const pool = unique.filter((val) => val.toLowerCase() !== normalizedTarget);
-
-    if (pool.length < count && allowFallback) {
-        const extra = generateFallbackDistractors(targetWord, count - pool.length);
-        pool.push(...extra);
-    }
-
-    if (pool.length < count) return null;
-    shuffle(pool);
-    return pool.slice(0, count);
-}
-
-function generateFallbackDistractors(targetWord: string, count: number): string[] {
-    const candidates = [
-        `${targetWord}ly`,
-        `${targetWord}ness`,
-        `${targetWord}ing`,
-        `${targetWord}ed`,
-        `${targetWord}s`,
-        `${targetWord}er`,
-        'notion',
-        'instance',
-        'factor',
-        'context',
-        'element',
-    ];
-    const unique = Array.from(new Set(candidates.filter((item) => item.toLowerCase() !== targetWord.toLowerCase())));
-    shuffle(unique);
-    return unique.slice(0, count);
-}
-
 function replaceWord(sentence: string, targetWord: string, replacement: string): string {
     const strict = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
     if (strict.test(sentence)) {
@@ -383,6 +371,68 @@ function containsWord(sentence: string, targetWord: string): boolean {
     if (strict.test(sentence)) return true;
     const loose = new RegExp(`${escapeRegExp(targetWord)}`, 'i');
     return loose.test(sentence);
+}
+
+function buildOptions(targetWord: string, distractors: string[]): string[] | null {
+    const bucket = getPosBucket(targetWord);
+    const candidates = filterByBucket(distractors, bucket, targetWord);
+    const picked = pickUnique(candidates, targetWord, 3);
+    if (!picked) return null;
+    const options = shuffle([targetWord, ...picked]);
+    return options;
+}
+
+function getPosBucket(word: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown' {
+    const lower = word.toLowerCase();
+    if (/(ly)$/.test(lower)) return 'adv';
+    if (/(ing|ed|ify|ise|ize|en)$/.test(lower)) return 'verb';
+    if (/(ous|able|ible|al|ive|ic|ish|ful|less|ary|ory|y)$/.test(lower)) return 'adj';
+    if (/(tion|sion|ment|ness|ity|ance|ence|ship|ism|ist|age|ery|ry|hood|dom)$/.test(lower)) return 'noun';
+    return 'unknown';
+}
+
+function filterByBucket(values: string[], bucket: string, targetWord: string): string[] {
+    const normalizedTarget = targetWord.toLowerCase();
+    const unique = Array.from(new Set(values.map((val) => val.trim()).filter(Boolean)));
+    const filtered = unique.filter((val) => val.toLowerCase() !== normalizedTarget);
+    if (bucket === 'unknown') return filtered;
+    const bucketed = filtered.filter((val) => getPosBucket(val) === bucket);
+    return bucketed.length >= 3 ? bucketed : filtered;
+}
+
+function pickUnique(values: string[], targetWord: string, count: number): string[] | null {
+    const normalizedTarget = targetWord.toLowerCase();
+    const pool = values.filter((val) => val.toLowerCase() !== normalizedTarget);
+    if (pool.length < count) return null;
+    shuffle(pool);
+    return pool.slice(0, count);
+}
+
+function parseLabeledLines(text: string, targetWord: string): string[] | null {
+    const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const pick = (label: string) => {
+        const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
+        if (!match) return null;
+        const sentence = match.replace(new RegExp(`^${label}\\s*:\\s+`, 'i'), '').trim();
+        return containsWord(sentence, targetWord) ? sentence : null;
+    };
+
+    const easy = pick('easy');
+    const normal = pick('normal');
+    const advanced = pick('advanced');
+    if (easy && normal && advanced) return [easy, normal, advanced];
+    return null;
+}
+
+function buildClozeFromExamples(examples: string[], targetWord: string): { sentence: string; sourceIndex: number } | null {
+    for (let idx = 0; idx < examples.length; idx += 1) {
+        const sentence = examples[idx];
+        const replaced = replaceWord(sentence, targetWord, '____');
+        if (replaced.includes('____')) {
+            return { sentence: replaced, sourceIndex: idx };
+        }
+    }
+    return null;
 }
 
 function escapeRegExp(value: string): string {
