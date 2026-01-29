@@ -121,6 +121,16 @@ function parseJsonOutput(text: string): AiOutput {
     const direct = tryParse(trimmed);
     if (direct) return direct;
 
+    // 1b) fenced ```json blocks
+    const fenced = extractCodeFence(trimmed);
+    if (fenced) {
+        const parsedFence = tryParse(fenced);
+        if (parsedFence) return parsedFence;
+        const fixedFence = normalizeJsonish(fenced);
+        const parsedFixedFence = tryParse(fixedFence);
+        if (parsedFixedFence) return parsedFixedFence;
+    }
+
     // 2) attempt to extract first balanced JSON object
     const extracted = extractFirstJsonObject(trimmed);
     if (extracted) {
@@ -132,6 +142,13 @@ function parseJsonOutput(text: string): AiOutput {
     if (extracted) {
         const fixed = normalizeJsonish(extracted);
         const parsed = tryParse(fixed);
+        if (parsed) return parsed;
+    }
+
+    // 4) fallback: slice from first { to last }
+    const sliced = sliceOuterBraces(trimmed);
+    if (sliced) {
+        const parsed = tryParse(sliced) || tryParse(normalizeJsonish(sliced));
         if (parsed) return parsed;
     }
 
@@ -181,6 +198,18 @@ function extractFirstJsonObject(text: string): string | null {
         }
     }
     return null;
+}
+
+function sliceOuterBraces(text: string): string | null {
+    const start = text.indexOf('{');
+    const end = text.lastIndexOf('}');
+    if (start === -1 || end === -1 || end <= start) return null;
+    return text.slice(start, end + 1);
+}
+
+function extractCodeFence(text: string): string | null {
+    const match = text.match(/```(?:json)?\\s*([\\s\\S]*?)```/i);
+    return match?.[1]?.trim() || null;
 }
 
 function normalizeJsonish(text: string): string {
