@@ -116,20 +116,82 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
 function parseJsonOutput(text: string): AiOutput {
     const trimmed = text.trim();
+
+    // 1) direct parse
+    const direct = tryParse(trimmed);
+    if (direct) return direct;
+
+    // 2) attempt to extract first balanced JSON object
+    const extracted = extractFirstJsonObject(trimmed);
+    if (extracted) {
+        const parsed = tryParse(extracted);
+        if (parsed) return parsed;
+    }
+
+    // 3) attempt lenient fixes (quote keys/single quotes)
+    if (extracted) {
+        const fixed = normalizeJsonish(extracted);
+        const parsed = tryParse(fixed);
+        if (parsed) return parsed;
+    }
+
+    throw new Error('Model did not return JSON.');
+}
+
+function tryParse<T = any>(text: string): T | null {
     try {
-        return JSON.parse(trimmed);
+        return JSON.parse(text);
     } catch {
-        // Try to extract the first JSON object
-        const match = trimmed.match(/\{[\s\S]*\}/);
-        if (!match) {
-            throw new Error('Model did not return JSON.');
+        return null;
+    }
+}
+
+function extractFirstJsonObject(text: string): string | null {
+    let depth = 0;
+    let start = -1;
+    let inString: '"' | "'" | null = null;
+    let escaped = false;
+
+    for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (escaped) {
+            escaped = false;
+            continue;
         }
-        try {
-            return JSON.parse(match[0]);
-        } catch {
-            throw new Error('Model returned invalid JSON.');
+        if (ch === '\\') {
+            escaped = true;
+            continue;
+        }
+        if (inString) {
+            if (ch === inString) inString = null;
+            continue;
+        }
+        if (ch === '"' || ch === "'") {
+            inString = ch;
+            continue;
+        }
+        if (ch === '{') {
+            if (depth === 0) start = i;
+            depth++;
+        } else if (ch === '}') {
+            depth--;
+            if (depth === 0 && start !== -1) {
+                return text.slice(start, i + 1);
+            }
         }
     }
+    return null;
+}
+
+function normalizeJsonish(text: string): string {
+    let fixed = text;
+    // Quote bare keys: {foo: "bar"} -> {"foo": "bar"}
+    fixed = fixed.replace(/([{,]\s*)([A-Za-z0-9_]+)\s*:/g, '$1"$2":');
+    // Convert single-quoted strings to double
+    fixed = fixed.replace(/'([^']*)'/g, (_m, p1) => `"${p1.replace(/"/g, '\\"')}"`);
+    // Remove trailing commas
+    fixed = fixed.replace(/,\s*([}\]])/g, '$1');
+    return fixed;
 }
 
 function validatePayload(payload: any, targetWord: string): AiOutput {
