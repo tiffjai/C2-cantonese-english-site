@@ -319,8 +319,10 @@ function normalizeCloze(raw: any, targetWord: string): AiCloze {
         sentence = raw.prompt.trim();
     }
 
+    const fallbackSentence = () => `Complete the blank with the word "${targetWord}": ____`;
+
     if (!sentence) {
-        sentence = `The ${targetWord} drifted silently across the frozen bay.`;
+        sentence = fallbackSentence();
     }
 
     if (!sentence.includes('____')) {
@@ -329,7 +331,7 @@ function normalizeCloze(raw: any, targetWord: string): AiCloze {
         if (regex.test(sentence)) {
             sentence = sentence.replace(regex, '____');
         } else {
-            sentence = sentence + ' ____';
+            sentence = fallbackSentence();
         }
     }
 
