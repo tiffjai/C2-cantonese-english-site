@@ -13,6 +13,12 @@ An interactive English vocabulary learning app with Cantonese as the primary int
 - 🌙 **深色模式** - 支持深色/淺色主題切換
 - 💾 **本地儲存** - 自動保存學習進度
 
+## 🤖 AI (Browser-only)
+- 「閃卡」頁新增 **✨ AI Generate** 面板，可即時生成 3 條英語例句（easy/normal/advanced）與 1 題 cloze 小測。
+- 使用 HuggingFaceTB/SmolLM2-135M-Instruct 透過 Transformers.js 在瀏覽器內推論；無需伺服器或 API 金鑰。
+- 首次使用會下載並快取小型模型，之後重複使用會直接讀取瀏覽器快取，避免再次下載。
+- 所有運算與資料留在本地裝置，適用 GitHub Pages 靜態部署。
+
 ## 🚀 技術棧 | Tech Stack
 
 - **框架**: Next.js 14+ (App Router)
