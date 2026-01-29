@@ -18,6 +18,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
     const [error, setError] = useState<string | null>(null);
     const [result, setResult] = useState<AiOutput | null>(null);
     const [modelReady, setModelReady] = useState(false);
+    const [downloadProgress, setDownloadProgress] = useState<{ loaded: number; total: number } | null>(null);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
@@ -31,11 +32,18 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
             if (msg.type === 'status') {
                 if (msg.status === 'loading-model') {
                     setStatus('downloading');
+                    setDownloadProgress(null);
                 } else if (msg.status === 'model-ready') {
                     setModelReady(true);
                 } else if (msg.status === 'generating') {
                     setStatus('generating');
                 }
+                return;
+            }
+
+            if (msg.type === 'progress') {
+                setDownloadProgress({ loaded: msg.loaded, total: msg.total });
+                setStatus('downloading');
                 return;
             }
 
@@ -71,6 +79,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
         setError(null);
         setResult(null);
         setStatus(modelReady ? 'generating' : 'downloading');
+        setDownloadProgress(null);
 
         workerRef.current.postMessage({
             type: 'generate',
@@ -138,6 +147,15 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
                     </button>
                 </div>
             )}
+
+            {status === 'downloading' && downloadProgress?.total ? (
+                <div className={styles.progressBar} aria-label="Model download progress">
+                    <div
+                        className={styles.progressFill}
+                        style={{ width: `${Math.min(100, (downloadProgress.loaded / downloadProgress.total) * 100)}%` }}
+                    />
+                </div>
+            ) : null}
 
             {result && status === 'success' && (
                 <div className={styles.results}>

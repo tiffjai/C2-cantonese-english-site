@@ -15,6 +15,7 @@ type GenerateMessage = {
 
 type WorkerResponse =
     | { type: 'status'; status: 'loading-model' | 'model-ready' | 'generating' }
+    | { type: 'progress'; loaded: number; total: number }
     | { type: 'result'; payload: AiOutput }
     | { type: 'error'; message: string };
 
@@ -82,7 +83,15 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     try {
         if (!generator) {
             send({ type: 'status', status: 'loading-model' });
-            const loaded = await pipeline('text-generation', MODEL_ID);
+            const loaded = await pipeline('text-generation', MODEL_ID, {
+                progress_callback: (data: any) => {
+                    const loaded = Number(data?.loaded ?? 0);
+                    const total = Number(data?.total ?? 0);
+                    if (total > 0) {
+                        send({ type: 'progress', loaded, total });
+                    }
+                },
+            });
             generator = loaded as TextGenerationPipelineType;
             send({ type: 'status', status: 'model-ready' });
         } else {
