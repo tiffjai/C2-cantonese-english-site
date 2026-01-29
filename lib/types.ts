@@ -6,6 +6,7 @@ export interface VocabularyWord {
     id: string;
     headword: string;
     level: CEFRLevel;
+    pos?: string; // Optional part of speech
     cantonese?: string; // Optional Cantonese translation
     examples?: string[]; // Optional example sentences
 }

@@ -101,6 +101,7 @@ const mapPayloadToWords = (payload: any, level: CEFRLevel): VocabularyWord[] => 
             id: item.id ?? `${level}-${item.headword ?? item.word ?? 'item'}-${index}`,
             headword: item.headword ?? item.word ?? '',
             level: (item.level as CEFRLevel) ?? level,
+            pos: item.pos,
             cantonese: item.cantonese,
             examples: item.examples,
         }))

@@ -10,6 +10,7 @@ type GenerateMessage = {
     type: 'generate';
     word: string;
     level: string;
+    pos?: string;
     meaning?: string;
     distractors?: string[];
 };
@@ -47,11 +48,14 @@ const send = (message: WorkerResponse) => {
 const promptTemplate = ({
     word,
     level,
+    pos,
+    meaning,
 }: {
     word: string;
     level: string;
+    pos?: string;
     meaning?: string;
-}) => `OUTPUT ONLY THESE 9 LINES (NO EXTRA TEXT):
+}) => `OUTPUT ONLY THESE 10 LINES (NO EXTRA TEXT):
 EASY: ...
 NORMAL: ...
 ADVANCED: ...
@@ -61,19 +65,26 @@ B: ...
 C: ...
 D: ...
 ANSWER: A|B|C|D
+EXPLAIN: ...
 WORD="${word}"
 LEVEL="${level}"
+POS="${pos || 'unknown'}"
+MEANING="${meaning || ''}"
 Rules:
+- Use WORD as the POS specified (if POS is "unknown", use the most natural POS).
 - Put WORD exactly in EASY/NORMAL/ADVANCED.
+- Each sentence must be 6–14 words and sound natural.
+- No meta language: word, sentence, example, noted, considered important.
 - CLOZE replaces WORD with ____.
-- A-D are 4 short options, only one correct.
+- A-D are 4 short single-word options, only one correct.
+- EXPLAIN <= 12 words.
 No other text.`;
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
     if (!data || data.type !== 'generate') return;
 
-    const { word, level, meaning, distractors = [] } = data;
+    const { word, level, pos, meaning, distractors = [] } = data;
 
     let lastRawText = '';
 
@@ -89,7 +100,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         send({ type: 'status', status: 'generating' });
 
         let output: any;
-        const prompt = promptTemplate({ word, level, meaning });
+        const prompt = promptTemplate({ word, level, pos, meaning });
         try {
             output = await generator(prompt, {
                 max_new_tokens: 220,
@@ -101,7 +112,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
                 return_full_text: false,
             });
         } catch (genError) {
-            const fallback = buildPosFallbackOutput(word, distractors);
+            const fallback = buildPosFallbackOutput(word, distractors, pos);
             if (fallback) {
                 send({ type: 'result', payload: fallback });
                 return;
@@ -141,18 +152,18 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             send({ type: 'result', payload: validated, rawText: lastRawText });
             return;
         } catch (err) {
-            const salvaged = salvageFromRawText(rawText, word, distractors);
+            const salvaged = salvageFromRawText(rawText, word, distractors, pos);
             if (salvaged) {
                 send({ type: 'result', payload: salvaged, rawText: lastRawText });
                 return;
             }
-            const retryResult = await generateSentenceOnlyFallback(word, level, distractors);
+            const retryResult = await generateSentenceOnlyFallback(word, level, distractors, pos, meaning);
             if (retryResult) {
                 lastRawText = retryResult.rawText;
                 send({ type: 'result', payload: retryResult.payload, rawText: retryResult.rawText });
                 return;
             }
-            const fallback = buildPosFallbackOutput(word, distractors);
+            const fallback = buildPosFallbackOutput(word, distractors, pos);
             if (fallback) {
                 send({ type: 'result', payload: fallback, rawText: lastRawText });
                 return;
@@ -167,10 +178,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 };
 
 function parseLineOutput(text: string, targetWord: string): AiOutput {
-    const lines = text
-        .split(/\r?\n/)
-        .map((line) => line.trim())
-        .filter(Boolean);
+    const lines = stripPreamble(text, ['easy', 'normal', 'advanced', 'cloze', 'a', 'b', 'c', 'd', 'answer', 'explain']);
 
     const getLine = (label: string) => {
         const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
@@ -187,8 +195,9 @@ function parseLineOutput(text: string, targetWord: string): AiOutput {
     const optionC = getLine('c');
     const optionD = getLine('d');
     const answer = getLine('answer').toUpperCase();
+    const explanation = getLine('explain');
 
-    if (!easy || !normal || !advanced || !cloze || !optionA || !optionB || !optionC || !optionD || !answer) {
+    if (!easy || !normal || !advanced || !cloze || !optionA || !optionB || !optionC || !optionD || !answer || !explanation) {
         throw new Error('Line output incomplete.');
     }
 
@@ -201,9 +210,22 @@ function parseLineOutput(text: string, targetWord: string): AiOutput {
     }
 
     const options = [optionA, optionB, optionC, optionD];
+    if (!options.every((opt) => isSingleWord(opt))) {
+        throw new Error('Options must be single words.');
+    }
     const answerIndex = parseAnswerIndex(answer, options);
     if (answerIndex === -1) {
         throw new Error('Answer must be A, B, C, or D.');
+    }
+
+    for (const sentence of [easy, normal, advanced, cloze]) {
+        if (!isValidSentence(sentence)) {
+            throw new Error('Sentence constraints not met.');
+        }
+    }
+
+    if (hasMetaLanguage(easy) || hasMetaLanguage(normal) || hasMetaLanguage(advanced) || hasMetaLanguage(cloze)) {
+        throw new Error('Meta language detected.');
     }
 
     return {
@@ -216,63 +238,9 @@ function parseLineOutput(text: string, targetWord: string): AiOutput {
             sentence: cloze,
             options,
             answer: ['A', 'B', 'C', 'D'][answerIndex],
-            explanation: 'Best fit for the blank is the target word.',
+            explanation: trimToWords(explanation, 12),
         },
     };
-}
-
-function extractFirstJsonObject(text: string): string | null {
-    let depth = 0;
-    let start = -1;
-    let inString: '"' | "'" | null = null;
-    let escaped = false;
-
-    for (let i = 0; i < text.length; i++) {
-        const ch = text[i];
-        if (escaped) {
-            escaped = false;
-            continue;
-        }
-        if (ch === '\\') {
-            escaped = true;
-            continue;
-        }
-        if (inString) {
-            if (ch === inString) inString = null;
-            continue;
-        }
-        if (ch === '"' || ch === "'") {
-            inString = ch;
-            continue;
-        }
-        if (ch === '{') {
-            if (depth === 0) start = i;
-            depth++;
-        } else if (ch === '}') {
-            depth--;
-            if (depth === 0 && start !== -1) {
-                return text.slice(start, i + 1);
-            }
-        }
-    }
-    return null;
-}
-
-function sliceOuterBraces(text: string): string | null {
-    const start = text.indexOf('{');
-    const end = text.lastIndexOf('}');
-    if (start === -1 || end === -1 || end <= start) return null;
-    return text.slice(start, end + 1);
-}
-
-function extractCodeFence(text: string): string | null {
-    const match = text.match(/```(?:json)?\\s*([\\s\\S]*?)```/i);
-    return match?.[1]?.trim() || null;
-}
-
-function extractBetweenTags(text: string): string | null {
-    const match = text.match(/<BEGIN_JSON>\s*([\s\S]*?)\s*(?:<\/END_JSON>|<END_JSON>)/i);
-    return match?.[1]?.trim() || null;
 }
 
 function truncateAtEndTag(text: string): string {
@@ -320,12 +288,17 @@ type SentenceFallbackResult = { payload: AiOutput; rawText: string };
 async function generateSentenceOnlyFallback(
     targetWord: string,
     level: string,
-    distractors: string[]
+    distractors: string[],
+    pos?: string,
+    meaning?: string
 ): Promise<SentenceFallbackResult | null> {
     if (!generator) return null;
     const prompt = `Write 3 English example sentences using the exact word "${targetWord}".
 Think silently before responding.
 Target CEFR: ${level}.
+POS: ${pos || 'unknown'} (use WORD as that POS if provided).
+MEANING: ${meaning || ''}
+Constraints: 6-14 words, natural context, no meta language.
 Return EXACTLY 3 lines (no extra text):
 easy: ...
 normal: ...
@@ -349,8 +322,8 @@ advanced: ...`;
         const clozeCandidate = buildClozeFromExamples(examples, targetWord);
         if (!clozeCandidate) return null;
 
-        const { sentence: clozeSentence, sourceIndex } = clozeCandidate;
-        const options = buildOptions(targetWord, distractors);
+        const { sentence: clozeSentence } = clozeCandidate;
+        const options = buildOptions(targetWord, distractors, pos);
         if (!options) return null;
         const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
         if (answerIndex === -1) return null;
@@ -376,7 +349,7 @@ advanced: ...`;
     }
 }
 
-function salvageFromRawText(rawText: string, targetWord: string, distractors: string[]): AiOutput | null {
+function salvageFromRawText(rawText: string, targetWord: string, distractors: string[], pos?: string): AiOutput | null {
     try {
         const labeled = extractLabeledExamples(rawText, targetWord);
         const examples = labeled ?? extractSentencesWithWord(rawText, targetWord);
@@ -386,7 +359,7 @@ function salvageFromRawText(rawText: string, targetWord: string, distractors: st
         if (!clozeCandidate) return null;
         const { sentence: clozeSentence } = clozeCandidate;
 
-        const options = buildOptions(targetWord, distractors);
+        const options = buildOptions(targetWord, distractors, pos);
         if (!options) return null;
         const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
         if (answerIndex === -1) return null;
@@ -425,15 +398,15 @@ function extractLabeledExamples(text: string, targetWord: string): string[] | nu
     return null;
 }
 
-function buildPosFallbackOutput(targetWord: string, distractors: string[]): AiOutput | null {
-    const bucket = getPosBucket(targetWord);
+function buildPosFallbackOutput(targetWord: string, distractors: string[], pos?: string): AiOutput | null {
+    const bucket = getPosBucket(targetWord, pos);
     const examples = buildPosSentences(targetWord, bucket);
     if (examples.length < 3) return null;
 
     const clozeCandidate = buildClozeFromExamples(examples, targetWord);
     if (!clozeCandidate) return null;
 
-    const options = buildOptions(targetWord, distractors);
+    const options = buildOptions(targetWord, distractors, pos);
     if (!options) return null;
     const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
     if (answerIndex === -1) return null;
@@ -457,33 +430,33 @@ function buildPosSentences(targetWord: string, bucket: ReturnType<typeof getPosB
     switch (bucket) {
         case 'adv':
             return [
-                `She spoke ${targetWord} during the meeting.`,
-                `They worked ${targetWord} to finish on time.`,
-                `He reacted ${targetWord} to the news.`,
+                `She answered ${targetWord} and stayed calm.`,
+                `They worked ${targetWord} to meet the deadline.`,
+                `He reacted ${targetWord} when the plan changed.`,
             ];
         case 'adj':
             return [
-                `The explanation was ${targetWord}.`,
-                `It was a ${targetWord} solution to a hard problem.`,
-                `She gave a ${targetWord} response.`,
+                `The solution was ${targetWord} and easy to apply.`,
+                `She gave a ${targetWord} response to the feedback.`,
+                `It was a ${targetWord} choice for the team.`,
             ];
         case 'noun':
             return [
-                `The ${targetWord} was difficult to ignore.`,
-                `We discussed the ${targetWord} at length.`,
-                `Her ${targetWord} shaped the decision.`,
+                `The ${targetWord} affected their final decision.`,
+                `We discussed the ${targetWord} for several minutes.`,
+                `Her ${targetWord} influenced the entire project.`,
             ];
         case 'verb':
             return [
                 `They ${targetWord} the proposal before voting.`,
-                `We must ${targetWord} the details carefully.`,
+                `We must ${targetWord} the details before noon.`,
                 `She will ${targetWord} the results tomorrow.`,
             ];
         default:
             return [
-                `The ${targetWord} was noted by the team.`,
-                `They considered the ${targetWord} important.`,
-                `We returned to the ${targetWord} later.`,
+                `The ${targetWord} changed how we planned the trip.`,
+                `They explored the ${targetWord} in the afternoon.`,
+                `We returned to the ${targetWord} after lunch.`,
             ];
     }
 }
@@ -495,7 +468,7 @@ function extractSentencesWithWord(text: string, targetWord: string): string[] {
     for (const part of parts) {
         const sentence = part.trim();
         if (!sentence) continue;
-        if (containsWord(sentence, targetWord)) {
+        if (containsWord(sentence, targetWord) && isValidSentence(sentence) && !hasMetaLanguage(sentence)) {
             matches.push(sentence.endsWith('.') ? sentence : `${sentence}.`);
         }
         if (matches.length >= 3) break;
@@ -519,8 +492,8 @@ function containsWord(sentence: string, targetWord: string): boolean {
     return loose.test(sentence);
 }
 
-function buildOptions(targetWord: string, distractors: string[]): string[] | null {
-    const bucket = getPosBucket(targetWord);
+function buildOptions(targetWord: string, distractors: string[], pos?: string): string[] | null {
+    const bucket = getPosBucket(targetWord, pos);
     const candidates = filterByBucket(distractors, bucket, targetWord);
     const picked = pickUnique(candidates, targetWord, 3);
     if (!picked) return null;
@@ -528,7 +501,9 @@ function buildOptions(targetWord: string, distractors: string[]): string[] | nul
     return options;
 }
 
-function getPosBucket(word: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown' {
+function getPosBucket(word: string, pos?: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown' {
+    const posBucket = normalizePosBucket(pos);
+    if (posBucket !== 'unknown') return posBucket;
     const lower = word.toLowerCase();
     if (/(ly)$/.test(lower)) return 'adv';
     if (/(tion|ment|ness|ity|ship|ism)$/.test(lower)) return 'noun';
@@ -537,10 +512,22 @@ function getPosBucket(word: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown'
     return 'unknown';
 }
 
+function normalizePosBucket(pos?: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown' {
+    if (!pos) return 'unknown';
+    const lower = pos.trim().toLowerCase();
+    if (['n', 'noun'].includes(lower)) return 'noun';
+    if (['v', 'verb'].includes(lower)) return 'verb';
+    if (['adj', 'adjective'].includes(lower)) return 'adj';
+    if (['adv', 'adverb'].includes(lower)) return 'adv';
+    return 'unknown';
+}
+
 function filterByBucket(values: string[], bucket: string, targetWord: string): string[] {
     const normalizedTarget = targetWord.toLowerCase();
     const unique = Array.from(new Set(values.map((val) => val.trim()).filter(Boolean)));
-    const filtered = unique.filter((val) => val.toLowerCase() !== normalizedTarget);
+    const filtered = unique
+        .filter((val) => val.toLowerCase() !== normalizedTarget)
+        .filter((val) => isSingleWord(val));
     if (bucket === 'unknown') return filtered;
     const bucketed = filtered.filter((val) => getPosBucket(val) === bucket);
     return bucketed.length >= 3 ? bucketed : filtered;
@@ -555,12 +542,14 @@ function pickUnique(values: string[], targetWord: string, count: number): string
 }
 
 function parseLabeledLines(text: string, targetWord: string): string[] | null {
-    const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const lines = stripPreamble(text, ['easy', 'normal', 'advanced']);
     const pick = (label: string) => {
         const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
         if (!match) return null;
         const sentence = match.replace(new RegExp(`^${label}\\s*:\\s+`, 'i'), '').trim();
-        return containsWord(sentence, targetWord) ? sentence : null;
+        if (!containsWord(sentence, targetWord)) return null;
+        if (!isValidSentence(sentence) || hasMetaLanguage(sentence)) return null;
+        return sentence;
     };
 
     const easy = pick('easy');
@@ -588,7 +577,7 @@ function escapeRegExp(value: string): string {
 }
 
 function isMetaSentence(sentence: string): boolean {
-    return /use(?:s|d)? the word/i.test(sentence);
+    return /use(?:s|d)? the word/i.test(sentence) || hasMetaLanguage(sentence);
 }
 
 function shuffle<T>(items: T[]): T[] {
@@ -605,6 +594,33 @@ function normalizeErrorMessage(message: string | undefined): string {
         return 'AI response incomplete. Please retry.';
     }
     return message;
+}
+
+function stripPreamble(text: string, labels: string[]): string[] {
+    const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    if (!lines.length) return [];
+    const labelRegex = new RegExp(`^(${labels.join('|')})\\s*:`, 'i');
+    const startIndex = lines.findIndex((line) => labelRegex.test(line));
+    if (startIndex === -1) return lines;
+    return lines.slice(startIndex);
+}
+
+function isValidSentence(sentence: string): boolean {
+    const words = sentence.split(/\s+/).filter(Boolean);
+    if (words.length < 6 || words.length > 14) return false;
+    return true;
+}
+
+function hasMetaLanguage(sentence: string): boolean {
+    const lowered = sentence.toLowerCase();
+    if (/\b(word|sentence|example)\b/.test(lowered)) return true;
+    if (/considered important/.test(lowered)) return true;
+    if (/\bnoted\b/.test(lowered)) return true;
+    return false;
+}
+
+function isSingleWord(value: string): boolean {
+    return !/\s/.test(value.trim());
 }
 
 function isDegenerateOutput(text: string): boolean {
@@ -625,24 +641,6 @@ function isDegenerateOutput(text: string): boolean {
     }
 
     return false;
-}
-
-function normalizeJsonish(text: string): string {
-    let fixed = text;
-    // Quote bare keys: {foo: "bar"} -> {"foo": "bar"}
-    fixed = fixed.replace(/([{,]\s*)([A-Za-z0-9_]+)\s*:/g, '$1"$2":');
-    // Convert single-quoted strings to double
-    fixed = fixed.replace(/'([^']*)'/g, (_m, p1) => `"${p1.replace(/"/g, '\\"')}"`);
-    // Remove trailing commas
-    fixed = fixed.replace(/,\s*([}\]])/g, '$1');
-    return fixed;
-}
-
-function simpleRepair(text: string): string {
-    // lighter repair: single quotes to double, remove trailing commas
-    let fixed = text.replace(/'([^']*)'/g, (_m, p1) => `"${p1.replace(/"/g, '\\"')}"`);
-    fixed = fixed.replace(/,\s*([}\]])/g, '$1');
-    return fixed;
 }
 
 function extractGeneratedText(output: any): string {

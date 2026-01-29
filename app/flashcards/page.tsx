@@ -314,6 +314,7 @@ function FlashcardsPageContent() {
                     <AiClozeGenerator
                         word={currentWord.headword}
                         level={selectedLevel}
+                        pos={currentWord.pos}
                         meaning={currentWord.cantonese}
                         distractors={currentWords
                             .map((word) => word.headword)

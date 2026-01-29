@@ -9,11 +9,12 @@ type Status = 'idle' | 'downloading' | 'generating' | 'success' | 'error';
 interface AiClozeGeneratorProps {
     word: string;
     level: string;
+    pos?: string;
     meaning?: string;
     distractors?: string[];
 }
 
-export default function AiClozeGenerator({ word, level, meaning, distractors }: AiClozeGeneratorProps) {
+export default function AiClozeGenerator({ word, level, pos, meaning, distractors }: AiClozeGeneratorProps) {
     const workerRef = useRef<Worker | null>(null);
     const [status, setStatus] = useState<Status>('idle');
     const [error, setError] = useState<string | null>(null);
@@ -92,6 +93,7 @@ export default function AiClozeGenerator({ word, level, meaning, distractors }: 
             type: 'generate',
             word,
             level,
+            pos,
             meaning,
             distractors: distractors ?? [],
         });
