@@ -101,9 +101,9 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         send({ type: 'status', status: 'generating' });
 
         const attempts = [
-            { temperature: 0.7, do_sample: true, extra: '' },
+            { temperature: 0.3, do_sample: true, extra: '' },
             {
-                temperature: 0.2,
+                temperature: 0.1,
                 do_sample: false,
                 extra: '\nIMPORTANT: Output ONLY the JSON object, no markdown or prose.',
             },
@@ -115,7 +115,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             try {
                 const prompt = promptTemplate({ word, level, meaning }) + attempt.extra;
                 const output = await generator(prompt, {
-                    max_new_tokens: 220,
+                    max_new_tokens: 260,
                     temperature: attempt.temperature,
                     do_sample: attempt.do_sample,
                     return_full_text: false,
