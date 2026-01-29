@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { AiOutput } from '@/workers/ai.worker';
+import type { AiOutput } from '@/workers/ai-v2.worker';
 import styles from './AiClozeGenerator.module.css';
 
 type Status = 'idle' | 'downloading' | 'generating' | 'success' | 'error';
@@ -23,7 +23,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
-        const worker = new Worker(new URL('../workers/ai.worker.ts', import.meta.url), { type: 'module' });
+        const worker = new Worker(new URL('../workers/ai-v2.worker.ts', import.meta.url), { type: 'module' });
         workerRef.current = worker;
 
         worker.onmessage = (event: MessageEvent<any>) => {

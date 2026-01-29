@@ -73,9 +73,12 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         if (!generator) {
             send({ type: 'status', status: 'loading-model' });
             const hasWebGPU = typeof (self as any).navigator?.gpu !== 'undefined';
+            const device = hasWebGPU ? 'webgpu' : 'wasm';
+            const dtype = hasWebGPU ? 'q4f16' : 'q4';
+            console.info(`[AI Worker] Loading ${MODEL_ID} (device=${device}, dtype=${dtype})`);
             const loaded = await pipeline('text-generation', MODEL_ID, {
-                device: hasWebGPU ? 'webgpu' : 'wasm',
-                dtype: hasWebGPU ? 'q4f16' : 'q4',
+                device,
+                dtype,
                 progress_callback: (data: any) => {
                     const loaded = Number(data?.loaded ?? 0);
                     const total = Number(data?.total ?? 0);
