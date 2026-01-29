@@ -4,6 +4,7 @@ import { loadLevelWords } from './vocabClient';
 /**
  * Parse CSV content and convert to VocabularyWord array
  * Format: headword,CEFR,cantonese,example1|example2|example3
+ * If POS is provided, format can be: headword,CEFR,POS,cantonese,example1|example2|example3
  */
 export async function parseVocabularyCSV(csvContent: string): Promise<VocabularyWord[]> {
     const lines = csvContent.trim().split('\n');
@@ -27,11 +28,20 @@ export async function parseVocabularyCSV(csvContent: string): Promise<Vocabulary
             continue;
         }
 
-        // Parse optional cantonese translation (3rd column)
-        const cantonese = parts.length > 2 && parts[2] ? parts[2] : undefined;
+        const posCandidates = ['n', 'v', 'adj', 'adv', 'noun', 'verb', 'adjective', 'adverb'];
+        const posCandidate = parts[2]?.toLowerCase?.() ?? '';
+        const hasPos = posCandidates.includes(posCandidate);
 
-        // Parse optional examples (4th column, pipe-separated)
-        const examplesStr = parts.length > 3 && parts[3] ? parts[3] : '';
+        // Parse optional POS (3rd column if present)
+        const pos = hasPos ? parts[2] : undefined;
+
+        // Parse optional cantonese translation
+        const cantoneseIndex = hasPos ? 3 : 2;
+        const cantonese = parts.length > cantoneseIndex && parts[cantoneseIndex] ? parts[cantoneseIndex] : undefined;
+
+        // Parse optional examples (next column, pipe-separated)
+        const examplesIndex = hasPos ? 4 : 3;
+        const examplesStr = parts.length > examplesIndex && parts[examplesIndex] ? parts[examplesIndex] : '';
         const examples = examplesStr
             ? examplesStr.split('|').map(ex => ex.trim()).filter(ex => ex.length > 0)
             : undefined;
@@ -40,6 +50,7 @@ export async function parseVocabularyCSV(csvContent: string): Promise<Vocabulary
             id: `${level}-${headword}-${i}`,
             headword,
             level,
+            pos,
             cantonese,
             examples,
         });
