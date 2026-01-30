@@ -1,81 +1,139 @@
 .shell {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: var(--spacing-xl) var(--spacing-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
 .row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: var(--spacing-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--spacing-md);
 }
 
 .block {
-    height: 18px;
-    border-radius: var(--radius-sm);
-    background: linear-gradient(90deg, var(--bg-tertiary), var(--bg-secondary), var(--bg-tertiary));
-    background-size: 200% 100%;
-    animation: shimmer 1.2s ease-in-out infinite;
+  height: 18px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, 
+    rgba(255, 107, 157, 0.1) 0%, 
+    rgba(185, 103, 255, 0.15) 50%, 
+    rgba(255, 107, 157, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
 }
 
 .card {
-    border-radius: var(--radius-lg);
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-xl);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 107, 157, 0.3) 50%, 
+    transparent 100%
+  );
 }
 
 .ctaRow {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .buttonGhost {
-    min-width: 160px;
-    height: 48px;
-    border-radius: var(--radius-md);
-    background: var(--bg-tertiary);
-    border: 1px dashed var(--border);
-    color: var(--text-secondary);
+  min-width: 160px;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px dashed rgba(255, 107, 157, 0.3);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: not-allowed;
+  transition: all var(--transition-fast);
 }
 
 .error {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--error);
-    background: rgba(255, 77, 109, 0.08);
-    color: var(--text-primary);
-    text-align: center;
-    box-shadow: var(--shadow-sm);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  background: rgba(248, 113, 113, 0.08);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.error::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--error) 50%, 
+    transparent 100%
+  );
+}
+
+.error h3 {
+  color: var(--error);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.error h3::before {
+  content: '⚠️';
 }
 
 .error p {
-    margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
 }
 
 .errorActions {
-    margin-top: var(--spacing-md);
-    display: flex;
-    gap: var(--spacing-sm);
-    justify-content: center;
-    flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @keyframes shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .block {
-        animation: none;
-    }
+  .block {
+    animation: none;
+  }
 }

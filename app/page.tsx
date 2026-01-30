@@ -41,15 +41,15 @@ export default function Home() {
                 </p>
 
                 <div className={styles.features}>
-                    <div className="card">
+                    <div className="card card-holographic">
                         <h3>📚 閃卡模式</h3>
                         <p>翻轉卡片學習單詞</p>
                     </div>
-                    <div className="card">
+                    <div className="card card-holographic">
                         <h3>✅ 測驗模式</h3>
                         <p>多項選擇題測試</p>
                     </div>
-                    <div className="card">
+                    <div className="card card-holographic">
                         <h3>📊 進度追蹤</h3>
                         <p>記錄學習統計</p>
                     </div>
@@ -78,9 +78,9 @@ export default function Home() {
             <section className={styles.levels}>
                 <h2>選擇您的級別</h2>
                 <div className={styles.levelGrid}>
-                    {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map((level) => (
+                    {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map((level, index) => (
                         <Link key={level} href={`/flashcards?level=${level}`}>
-                            <div className={`card ${styles.levelCard}`}>
+                            <div className={`card ${styles.levelCard}`} style={{ animationDelay: `${index * 0.1}s` }}>
                                 <h3>{level}</h3>
                                 <p className={styles.levelLabel}>
                                     {level.startsWith('A') && '初級'}

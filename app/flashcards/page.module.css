@@ -1,161 +1,263 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-xl) var(--spacing-md);
-    min-height: calc(100vh - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  min-height: calc(100vh - 140px);
 }
 
 .header {
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.header::before {
+  content: '🎴';
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  opacity: 0.6;
+  animation: float 3s ease-in-out infinite;
 }
 
 .header h1 {
-    margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-md);
 }
 
 .subtitle {
-    color: var(--text-secondary);
-    font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
+/* Level Selector - K-Pop Pills */
 .levelSelector {
-    display: flex;
-    gap: var(--spacing-sm);
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .levelButton {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: var(--radius-md);
-    background: var(--bg-tertiary);
-    border: 2px solid var(--border);
-    color: var(--text-secondary);
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all var(--transition-base);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  border: 2px solid transparent;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition-spring);
+  min-width: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.levelButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(185, 103, 255, 0.1));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  border-radius: inherit;
 }
 
 .levelButton:hover {
-    border-color: var(--primary);
-    color: var(--text-primary);
-    transform: translateY(-2px);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  border-color: rgba(255, 107, 157, 0.3);
+}
+
+.levelButton:hover::before {
+  opacity: 1;
 }
 
 .levelButton.active {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border-color: var(--primary);
-    color: white;
-    box-shadow: var(--shadow-md), 0 0 20px var(--primary);
+  background: linear-gradient(135deg, var(--neon-pink), var(--electric-purple));
+  border-color: transparent;
+  color: white;
+  box-shadow: 
+    0 4px 20px rgba(255, 107, 157, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transform: translateY(-2px);
 }
 
+.levelButton.active:hover {
+  box-shadow: 
+    0 6px 30px rgba(255, 107, 157, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  transform: translateY(-3px);
+}
+
+/* Progress Bar */
 .progress {
-    max-width: 600px;
-    margin: 0 auto var(--spacing-lg);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .progressBar {
-    width: 100%;
-    height: 8px;
-    background: var(--bg-tertiary);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    margin-bottom: var(--spacing-sm);
+  width: 100%;
+  height: 10px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
 }
 
 .progressFill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    transition: width var(--transition-base);
-    border-radius: var(--radius-sm);
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon-pink), var(--electric-purple), var(--electric-cyan));
+  transition: width var(--transition-base);
+  border-radius: var(--radius-pill);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+}
+
+.progressFill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
 }
 
 .progressText {
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 600;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
+/* Navigation Buttons */
 .navigation {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-xl);
 }
 
 .navigation button {
-    font-size: 1rem;
-    padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1.05rem;
+  padding: var(--spacing-md) var(--spacing-lg);
 }
 
+/* Loading State */
 .loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-    gap: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: var(--spacing-md);
 }
 
 .spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid var(--border);
-    border-top-color: var(--primary);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+  width: 60px;
+  height: 60px;
+  border: 4px solid transparent;
+  border-top-color: var(--neon-pink);
+  border-right-color: var(--electric-purple);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 
+    0 0 20px rgba(255, 107, 157, 0.3),
+    0 0 40px rgba(185, 103, 255, 0.2);
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loading p {
-    color: var(--text-secondary);
-    font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
+/* Helper Text */
 .helperText {
-    margin-top: var(--spacing-sm);
-    color: var(--text-secondary);
-    text-align: center;
+  margin-top: var(--spacing-md);
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 0.95rem;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-md);
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Empty State */
 .empty {
-    text-align: center;
-    padding: var(--spacing-xl);
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .empty p {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
 }
 
+.empty .helperText {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .navigation {
-        flex-direction: column;
-        align-items: center;
-    }
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .navigation button {
-        width: 100%;
-        max-width: 300px;
-    }
+  .navigation button {
+    width: 100%;
+    max-width: 300px;
+  }
 
-    .levelSelector {
-        gap: var(--spacing-xs);
-    }
+  .levelSelector {
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs);
+  }
 
-    .levelButton {
-        padding: var(--spacing-xs) var(--spacing-md);
-        font-size: 0.95rem;
-    }
+  .levelButton {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 1rem;
+    min-width: 50px;
+  }
 }
