@@ -100,6 +100,9 @@ CRITICAL RULES:
 - DO NOT mention labels, formatting, or instructions in your response
 - DO NOT use bullet points, numbering, or markdown
 - Return ONLY the 10 lines specified above
+- DO NOT generate repetitive text, lists, or technical terms
+- DO NOT output partial sentences or incomplete thoughts
+- DO NOT include any text before "EASY:" or after "EXPLAIN:"
 
 If you cannot follow these rules exactly, respond with: "ERROR: Cannot generate response."`;
 };
@@ -558,6 +561,30 @@ function isDegenerateOutput(text: string): boolean {
         const count = (trigramCounts.get(gram) ?? 0) + 1;
         if (count >= 5) return true;
         trigramCounts.set(gram, count);
+    }
+
+    // Check for specific degenerate patterns from the error logs
+    if (/\brespond to if not limited\b/.test(lowered)) return true;
+    if (/\blimit.*limited.*lingsum\b/.test(lowered)) return true;
+    if (/\bsumsumsumsum\b/.test(lowered)) return true;
+    if (/\benseense\b/.test(lowered)) return true;
+    if (/\buneder\b/.test(lowered)) return true;
+    if (/\bsizelimitation\b/.test(lowered)) return true;
+    if (/\bmentionin\b/.test(lowered)) return true;
+    if (/\benterementuration\b/.test(lowered)) return true;
+    if (/\bintermax\b/.test(lowered)) return true;
+    if (/\bnumberoforderless\b/.test(lowered)) return true;
+    if (/\bincremention\b/.test(lowered)) return true;
+    if (/\bramingformating\b/.test(lowered)) return true;
+    if (/\bsomernination\b/.test(lowered)) return true;
+    if (/\boffonfrender\b/.test(lowered)) return true;
+
+    // Check for excessive repetition of common words
+    const commonWords = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'should', 'could', 'can', 'may', 'might', 'must', 'shall'];
+    for (const word of commonWords) {
+        const regex = new RegExp(`\\b${word}\\b`, 'gi');
+        const matches = cleaned.match(regex);
+        if (matches && matches.length > 10) return true;
     }
 
     return false;
