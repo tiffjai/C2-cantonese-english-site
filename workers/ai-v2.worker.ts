@@ -94,6 +94,7 @@ Rules:
 - CLOZE must equal NORMAL with the target word replaced by ____.
 - A-D are single-word options, same POS as the target word, only one correct.
 - EXPLAIN is 20 words or fewer.
+- Output exactly three paragraphs of sentences (EASY, NORMAL, ADVANCED). Do not output a fourth paragraph.
 No other text.`;
 };
 
