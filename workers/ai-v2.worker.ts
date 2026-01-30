@@ -133,21 +133,20 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         const prompt = promptTemplate({ word, level, pos, meaning });
         const retryPrompt = retryPromptTemplate({ word, level, pos, meaning });
         const baseParams = {
-            max_new_tokens: 180,
-            temperature: 0.7,
-            top_p: 0.9,
-            top_k: 50,
+            max_new_tokens: 170,
+            temperature: 0.6,
+            top_p: 0.85,
+            top_k: 40,
             do_sample: true,
-            repetition_penalty: 1.2,
+            repetition_penalty: 1.25,
             return_full_text: false,
         };
         const retryParams = {
-            max_new_tokens: 160,
-            temperature: 0.65,
-            top_p: 0.9,
-            top_k: 60,
-            do_sample: true,
-            repetition_penalty: 1.28,
+            max_new_tokens: 170,
+            temperature: 0.0,
+            top_p: 1.0,
+            do_sample: false,
+            repetition_penalty: 1.2,
             return_full_text: false,
         };
 
@@ -161,13 +160,14 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             const rawText = await runGeneration(attemptPrompt, params);
             lastRawText = rawText;
 
-            if (isDegenerateOutput(rawText) || !hasMinimumLabels(rawText)) {
+            const normalizedText = normalizeLabelFormatting(rawText);
+            if (isDegenerateOutput(normalizedText) || !hasMinimumLabels(normalizedText)) {
                 lastError = new Error('Degenerate output detected.');
                 continue;
             }
 
             try {
-                const parsed = parseLineOutput(rawText, word, pos);
+                const parsed = parseLineOutput(normalizedText, word, pos);
                 const validated = validatePayload(parsed, word);
                 send({ type: 'result', payload: validated, rawText });
                 return;
@@ -188,7 +188,8 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 };
 
 function parseLineOutput(text: string, targetWord: string, pos?: string): AiOutput {
-    const lines = stripPreamble(text, [
+    const normalizedText = normalizeLabelFormatting(text);
+    const lines = stripPreamble(normalizedText, [
         'easy',
         'normal',
         'advanced',
@@ -412,6 +413,15 @@ function stripPreamble(text: string, labels: string[]): string[] {
     return lines.slice(startIndex);
 }
 
+function normalizeLabelFormatting(text: string): string {
+    if (!text) return '';
+    const labelPattern = /\b(EASY|NORMAL|ADVANCED|CLOZE|ANSWER|EXPLAIN|A|B|C|D)\b\s*(?:[:\)\.\-])/gi;
+    return text
+        .replace(/\r/g, '')
+        .replace(labelPattern, (match, label) => `\n${label}${match.slice(label.length)}`)
+        .trim();
+}
+
 function hasMinimumLabels(text: string): boolean {
     const lines = text
         .split(/\r?\n/)
@@ -478,14 +488,15 @@ function isDegenerateOutput(text: string): boolean {
 
     if (/\b([a-z]{1,3})\b(?:[\.!?;,:]\s*\1\b){2,}/i.test(cleaned)) return true;
 
+    const tokens = cleaned.split(' ');
+    if (tokens.some((token) => token.length > 40)) return true;
+
     const symbolsOnly = cleaned.replace(/[a-z0-9]/gi, '').replace(/\s+/g, '');
     const totalChars = cleaned.replace(/\s+/g, '').length;
     if (totalChars > 0 && symbolsOnly.length / totalChars > 0.45) return true;
 
     const letters = cleaned.replace(/[^a-z]/gi, '').length;
     if (cleaned.length > 0 && letters / cleaned.length < 0.55) return true;
-
-    const tokens = cleaned.split(' ');
     if (tokens.length >= 30) {
         const unique = new Set(tokens);
         if (unique.size / tokens.length < 0.35) return true;
