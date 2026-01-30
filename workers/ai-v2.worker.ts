@@ -86,6 +86,7 @@ ANSWER: A|B|C|D
 EXPLAIN: ...
 
 Rules:
+- Start your response with "EASY:" and end with "EXPLAIN:".
 - Use the target word exactly once in EASY/NORMAL/ADVANCED.
 - ${posRule}
 - Each sentence must be 6–14 words of natural English.
@@ -95,6 +96,20 @@ Rules:
 - EXPLAIN is 20 words or fewer.
 No other text.`;
 };
+
+const retryPromptTemplate = ({
+    word,
+    level,
+    pos,
+    meaning,
+}: {
+    word: string;
+    level: string;
+    pos?: string;
+    meaning?: string;
+}) => `${promptTemplate({ word, level, pos, meaning })}
+
+Reminder: Output exactly 10 lines. No bullets, no numbering beyond the labels, no markdown.`;
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
@@ -116,31 +131,37 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
         send({ type: 'status', status: 'generating' });
 
         const prompt = promptTemplate({ word, level, pos, meaning });
+        const retryPrompt = retryPromptTemplate({ word, level, pos, meaning });
         const baseParams = {
             max_new_tokens: 180,
-            temperature: 0.8,
+            temperature: 0.7,
             top_p: 0.9,
+            top_k: 50,
             do_sample: true,
-            repetition_penalty: 1.22,
+            repetition_penalty: 1.2,
             return_full_text: false,
         };
         const retryParams = {
             max_new_tokens: 160,
-            temperature: 0.9,
+            temperature: 0.65,
             top_p: 0.9,
+            top_k: 60,
             do_sample: true,
-            repetition_penalty: 1.3,
+            repetition_penalty: 1.28,
             return_full_text: false,
         };
 
-        const attempts = [baseParams, retryParams];
+        const attempts = [
+            { prompt, params: baseParams },
+            { prompt: retryPrompt, params: retryParams },
+        ];
         let lastError: Error | null = null;
 
-        for (const params of attempts) {
-            const rawText = await runGeneration(prompt, params);
+        for (const { prompt: attemptPrompt, params } of attempts) {
+            const rawText = await runGeneration(attemptPrompt, params);
             lastRawText = rawText;
 
-            if (isDegenerateOutput(rawText)) {
+            if (isDegenerateOutput(rawText) || !hasMinimumLabels(rawText)) {
                 lastError = new Error('Degenerate output detected.');
                 continue;
             }
@@ -274,6 +295,7 @@ type GenerationParams = {
     max_new_tokens: number;
     temperature: number;
     top_p: number;
+    top_k?: number;
     do_sample: boolean;
     repetition_penalty: number;
     no_repeat_ngram_size?: number;
@@ -378,13 +400,34 @@ function normalizeErrorMessage(message: string | undefined): string {
 }
 
 function stripPreamble(text: string, labels: string[]): string[] {
-    const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const lines = text
+        .split(/\r?\n/)
+        .map((line) => line.replace(/^[-*]\s+/, '').trim())
+        .filter(Boolean);
     if (!lines.length) return [];
     const labelPattern = labels.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
     const labelRegex = new RegExp(`^(${labelPattern})\\s*(?:[:\\)\\.]|\\-)?`, 'i');
     const startIndex = lines.findIndex((line) => labelRegex.test(line));
     if (startIndex === -1) return lines;
     return lines.slice(startIndex);
+}
+
+function hasMinimumLabels(text: string): boolean {
+    const lines = text
+        .split(/\r?\n/)
+        .map((line) => line.replace(/^[-*]\s+/, '').trim())
+        .filter(Boolean);
+    if (!lines.length) return false;
+    const labels = ['easy', 'normal', 'advanced', 'cloze', 'a', 'b', 'c', 'd', 'answer', 'explain'];
+    const labelRegex = new RegExp(`^(${labels.join('|')})\\s*(?:[:\\)\\.]|\\-)?\\s+`, 'i');
+    const found = new Set<string>();
+    for (const line of lines) {
+        const match = line.match(labelRegex);
+        if (match?.[1]) {
+            found.add(match[1].toLowerCase());
+        }
+    }
+    return found.size >= 6;
 }
 
 function isValidSentence(sentence: string): boolean {
