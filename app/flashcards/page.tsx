@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, Suspense } from 'react';
+import { useState, useEffect, useCallback, Suspense, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Flashcard from '@/components/Flashcard';
 import { VocabularyWord, CEFRLevel, CEFR_LEVELS } from '@/lib/types';
@@ -13,6 +13,38 @@ import { FlashcardSkeleton, ErrorState } from '@/components/AsyncState';
 import { saveLastSession, loadLastSession, LastSession } from '@/lib/clientStorage';
 import styles from './page.module.css';
 import AiClozeGenerator from '@/components/AiClozeGenerator';
+
+type PosBucket = 'noun' | 'verb' | 'adj' | 'adv' | 'unknown';
+
+const normalizePosBucket = (pos?: string): PosBucket => {
+    if (!pos) return 'unknown';
+    const lower = pos.trim().toLowerCase();
+    if (['n', 'noun'].includes(lower)) return 'noun';
+    if (['v', 'verb'].includes(lower)) return 'verb';
+    if (['adj', 'adjective'].includes(lower)) return 'adj';
+    if (['adv', 'adverb'].includes(lower)) return 'adv';
+    return 'unknown';
+};
+
+const derivePosBucket = (word: VocabularyWord): PosBucket => {
+    const normalized = normalizePosBucket(word.pos);
+    if (normalized !== 'unknown') return normalized;
+    const lower = word.headword.toLowerCase();
+    if (lower.endsWith('ly')) return 'adv';
+    if (/(tion|ment|ness|ity|ship|ism|ence|ance)$/.test(lower)) return 'noun';
+    if (/(ous|ive|al|ic|ful|less|able|ible|ent|ant)$/.test(lower)) return 'adj';
+    if (/(ate|ify|ise|ize|en)$/.test(lower)) return 'verb';
+    return 'unknown';
+};
+
+const shuffle = <T,>(items: T[]): T[] => {
+    const copy = [...items];
+    for (let i = copy.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+};
 
 function FlashcardsPageContent() {
     const searchParams = useSearchParams();
@@ -261,6 +293,30 @@ function FlashcardsPageContent() {
 
     const currentWord = currentWords[currentIndex];
 
+    const targetPos = useMemo<PosBucket>(() => {
+        if (!currentWord) return 'unknown';
+        return derivePosBucket(currentWord);
+    }, [currentWord]);
+
+    const distractors = useMemo<string[]>(() => {
+        if (!currentWord) return [];
+        const levelPool = allWords.filter((word) => word.level === selectedLevel);
+        const normalizedTarget = currentWord.headword.toLowerCase();
+        const candidates = levelPool
+            .filter((word) => word.headword && word.headword.toLowerCase() !== normalizedTarget)
+            .map((word) => ({
+                headword: word.headword,
+                bucket: derivePosBucket(word),
+            }));
+
+        const filtered = targetPos === 'unknown'
+            ? candidates
+            : candidates.filter((item) => item.bucket === targetPos);
+
+        const unique = Array.from(new Set(filtered.map((item) => item.headword)));
+        return shuffle(unique).slice(0, 30);
+    }, [allWords, currentWord, selectedLevel, targetPos]);
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -314,11 +370,9 @@ function FlashcardsPageContent() {
                     <AiClozeGenerator
                         word={currentWord.headword}
                         level={selectedLevel}
-                        pos={currentWord.pos}
-                        meaning={currentWord.cantonese}
-                        distractors={currentWords
-                            .map((word) => word.headword)
-                            .filter((headword) => headword && headword !== currentWord.headword)}
+                        pos={targetPos === 'unknown' ? undefined : targetPos}
+                        meaning={undefined}
+                        distractors={distractors}
                     />
 
                     <div className={styles.navigation}>

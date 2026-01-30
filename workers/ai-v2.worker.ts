@@ -40,6 +40,7 @@ env.allowLocalModels = false;
 
 const MODEL_ID = 'onnx-community/Qwen2.5-0.5B-Instruct';
 let generator: TextGenerationPipelineType | null = null;
+let generatorDevice: 'webgpu' | 'wasm' | null = null;
 
 const send = (message: WorkerResponse) => {
     self.postMessage(message);
@@ -55,36 +56,51 @@ const promptTemplate = ({
     level: string;
     pos?: string;
     meaning?: string;
-}) => `OUTPUT ONLY THESE 10 LINES (NO EXTRA TEXT):
+}) => {
+    const posBucket = normalizePosBucket(pos);
+    const posRule =
+        posBucket === 'adj'
+            ? `Use the target word ONLY as an adjective; do not write "the ${word}".`
+            : posBucket === 'noun'
+                ? 'Use the target word ONLY as a noun.'
+                : posBucket === 'verb'
+                    ? 'Use the target word ONLY as a verb.'
+                    : posBucket === 'adv'
+                        ? 'Use the target word ONLY as an adverb.'
+                        : 'Use the target word in its most natural part of speech.';
+
+    return `Target word: "${word}"
+Level: ${level}
+Meaning (if provided): ${meaning || 'N/A'}
+
+Output ONLY these 10 lines, in this exact order, with no extra text:
 EASY: ...
 NORMAL: ...
 ADVANCED: ...
 CLOZE: ...
-A: ...
-B: ...
-C: ...
-D: ...
+A) ...
+B) ...
+C) ...
+D) ...
 ANSWER: A|B|C|D
 EXPLAIN: ...
-WORD="${word}"
-LEVEL="${level}"
-POS="${pos || 'unknown'}"
-MEANING="${meaning || ''}"
+
 Rules:
-- Use WORD as the POS specified (if POS is "unknown", use the most natural POS).
-- Put WORD exactly in EASY/NORMAL/ADVANCED.
-- Each sentence must be 6–14 words and sound natural.
-- No meta language: word, sentence, example, noted, considered important.
-- CLOZE replaces WORD with ____.
-- A-D are 4 short single-word options, only one correct.
-- EXPLAIN <= 12 words.
+- Use the target word exactly once in EASY/NORMAL/ADVANCED.
+- ${posRule}
+- Each sentence must be 6–14 words of natural English.
+- No meta language (word, sentence, example, noted, considered important).
+- CLOZE must equal NORMAL with the target word replaced by ____.
+- A-D are single-word options, same POS as the target word, only one correct.
+- EXPLAIN is 20 words or fewer.
 No other text.`;
+};
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
     if (!data || data.type !== 'generate') return;
 
-    const { word, level, pos, meaning, distractors = [] } = data;
+    const { word, level, pos, meaning } = data;
 
     let lastRawText = '';
 
@@ -99,77 +115,50 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         send({ type: 'status', status: 'generating' });
 
-        let output: any;
         const prompt = promptTemplate({ word, level, pos, meaning });
-        try {
-            output = await generator(prompt, {
-                max_new_tokens: 220,
-                temperature: 0.7,
-                top_p: 0.9,
-                do_sample: true,
-                repetition_penalty: 1.15,
-                no_repeat_ngram_size: 3,
-                return_full_text: false,
-            });
-        } catch (genError) {
-            const fallback = buildPosFallbackOutput(word, distractors, pos);
-            if (fallback) {
-                send({ type: 'result', payload: fallback });
-                return;
+        const baseParams = {
+            max_new_tokens: 180,
+            temperature: 0.8,
+            top_p: 0.9,
+            do_sample: true,
+            repetition_penalty: 1.22,
+            return_full_text: false,
+        };
+        const retryParams = {
+            max_new_tokens: 160,
+            temperature: 0.9,
+            top_p: 0.9,
+            do_sample: true,
+            repetition_penalty: 1.3,
+            return_full_text: false,
+        };
+
+        const attempts = [baseParams, retryParams];
+        let lastError: Error | null = null;
+
+        for (const params of attempts) {
+            const rawText = await runGeneration(prompt, params);
+            lastRawText = rawText;
+
+            if (isDegenerateOutput(rawText)) {
+                lastError = new Error('Degenerate output detected.');
+                continue;
             }
-            throw genError;
-        }
 
-        let rawText = extractGeneratedText(output as any);
-        rawText = truncateAtEndTag(rawText);
-        lastRawText = rawText;
-
-        if (isDegenerateOutput(rawText)) {
             try {
-                const retry = await generator(prompt, {
-                    max_new_tokens: 160,
-                    temperature: 0.6,
-                    top_p: 0.85,
-                    do_sample: true,
-                    repetition_penalty: 1.25,
-                    no_repeat_ngram_size: 4,
-                    return_full_text: false,
-                });
-                const retryText = truncateAtEndTag(extractGeneratedText(retry as any));
-                if (!isDegenerateOutput(retryText)) {
-                    rawText = retryText;
-                    lastRawText = retryText;
-                }
-            } catch {
-                // keep original output if retry fails
+                const parsed = parseLineOutput(rawText, word, pos);
+                const validated = validatePayload(parsed, word);
+                send({ type: 'result', payload: validated, rawText });
+                return;
+            } catch (err: any) {
+                lastError = err;
+                continue;
             }
         }
 
-        try {
-            const parsed = parseLineOutput(rawText, word);
-            const validated = validatePayload(parsed, word);
-
-            send({ type: 'result', payload: validated, rawText: lastRawText });
-            return;
-        } catch (err) {
-            const salvaged = salvageFromRawText(rawText, word, distractors, pos);
-            if (salvaged) {
-                send({ type: 'result', payload: salvaged, rawText: lastRawText });
-                return;
-            }
-            const retryResult = await generateSentenceOnlyFallback(word, level, distractors, pos, meaning);
-            if (retryResult) {
-                lastRawText = retryResult.rawText;
-                send({ type: 'result', payload: retryResult.payload, rawText: retryResult.rawText });
-                return;
-            }
-            const fallback = buildPosFallbackOutput(word, distractors, pos);
-            if (fallback) {
-                send({ type: 'result', payload: fallback, rawText: lastRawText });
-                return;
-            }
-            throw err;
-        }
+        const fallbackMessage = 'AI response incomplete. Please retry.';
+        send({ type: 'error', message: fallbackMessage, rawText: lastRawText });
+        return;
     } catch (error: any) {
         const rawText = lastRawText || error?.rawText;
         const message = normalizeErrorMessage(error?.message);
@@ -177,23 +166,38 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     }
 };
 
-function parseLineOutput(text: string, targetWord: string): AiOutput {
-    const lines = stripPreamble(text, ['easy', 'normal', 'advanced', 'cloze', 'a', 'b', 'c', 'd', 'answer', 'explain']);
+function parseLineOutput(text: string, targetWord: string, pos?: string): AiOutput {
+    const lines = stripPreamble(text, [
+        'easy',
+        'normal',
+        'advanced',
+        'cloze',
+        'a',
+        'b',
+        'c',
+        'd',
+        'answer',
+        'explain',
+    ]);
 
-    const getLine = (label: string) => {
-        const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
+    const labelRegex = (label: string) =>
+        new RegExp(`^${label}\\s*(?:[:\\)\\.]|\\-)?\\s+`, 'i');
+
+    const getLine = (label: string, pattern?: RegExp) => {
+        const regex = pattern ?? labelRegex(label);
+        const match = lines.find((line) => regex.test(line));
         if (!match) return '';
-        return match.replace(new RegExp(`^${label}\\s*:\\s+`, 'i'), '').trim();
+        return match.replace(regex, '').trim();
     };
 
     const easy = getLine('easy');
     const normal = getLine('normal');
     const advanced = getLine('advanced');
     const cloze = getLine('cloze');
-    const optionA = getLine('a');
-    const optionB = getLine('b');
-    const optionC = getLine('c');
-    const optionD = getLine('d');
+    const optionA = getLine('a', /^a\s*(?:[\):\.\-]|-)\s+/i);
+    const optionB = getLine('b', /^b\s*(?:[\):\.\-]|-)\s+/i);
+    const optionC = getLine('c', /^c\s*(?:[\):\.\-]|-)\s+/i);
+    const optionD = getLine('d', /^d\s*(?:[\):\.\-]|-)\s+/i);
     const answer = getLine('answer').toUpperCase();
     const explanation = getLine('explain');
 
@@ -201,12 +205,19 @@ function parseLineOutput(text: string, targetWord: string): AiOutput {
         throw new Error('Line output incomplete.');
     }
 
-    if (!containsWord(easy, targetWord) || !containsWord(normal, targetWord) || !containsWord(advanced, targetWord)) {
-        throw new Error('Example sentences must include the target word.');
+    for (const sentence of [easy, normal, advanced]) {
+        if (countWordOccurrences(sentence, targetWord) !== 1) {
+            throw new Error('WORD must appear exactly once in each sentence.');
+        }
     }
 
     if (!cloze.includes('____')) {
         throw new Error('Cloze sentence must include "____".');
+    }
+
+    const expectedCloze = normalizeSpacing(replaceWord(normal, targetWord, '____'));
+    if (normalizeSpacing(cloze) !== expectedCloze) {
+        throw new Error('Cloze must match NORMAL with WORD replaced.');
     }
 
     const options = [optionA, optionB, optionC, optionD];
@@ -228,6 +239,22 @@ function parseLineOutput(text: string, targetWord: string): AiOutput {
         throw new Error('Meta language detected.');
     }
 
+    const posBucket = normalizePosBucket(pos);
+    if (posBucket === 'adj') {
+        if (violatesAdjConstraint(easy, targetWord) || violatesAdjConstraint(normal, targetWord) || violatesAdjConstraint(advanced, targetWord)) {
+            throw new Error('Adjective used as a noun.');
+        }
+    }
+
+    if (posBucket !== 'unknown') {
+        for (const option of options) {
+            if (option.toLowerCase() === targetWord.toLowerCase()) continue;
+            if (getPosBucket(option) !== posBucket) {
+                throw new Error('Option POS mismatch.');
+            }
+        }
+    }
+
     return {
         examples: [
             { difficulty: 'easy', sentence: easy },
@@ -238,242 +265,67 @@ function parseLineOutput(text: string, targetWord: string): AiOutput {
             sentence: cloze,
             options,
             answer: ['A', 'B', 'C', 'D'][answerIndex],
-            explanation: trimToWords(explanation, 12),
+            explanation: trimToWords(explanation, 20),
         },
     };
 }
 
-function truncateAtEndTag(text: string): string {
-    const match = text.match(/<\/END_JSON>|<END_JSON>/i);
-    if (!match || match.index === undefined) return text;
-    return text.slice(0, match.index + match[0].length);
+type GenerationParams = {
+    max_new_tokens: number;
+    temperature: number;
+    top_p: number;
+    do_sample: boolean;
+    repetition_penalty: number;
+    no_repeat_ngram_size?: number;
+    return_full_text: boolean;
+};
+
+async function loadGenerator(device: 'webgpu' | 'wasm'): Promise<TextGenerationPipelineType> {
+    const dtype = device == 'webgpu' ? 'q4f16' : 'q4';
+    console.info(`[AI Worker] Loading ${MODEL_ID} (device=${device}, dtype=${dtype})`);
+    const loaded = await pipeline('text-generation', MODEL_ID, {
+        device,
+        dtype,
+        progress_callback: (data: any) => {
+            const loaded = Number(data?.loaded ?? 0);
+            const total = Number(data?.total ?? 0);
+            if (total > 0) {
+                send({ type: 'progress', loaded, total });
+            }
+        },
+    });
+    generatorDevice = device;
+    return loaded as TextGenerationPipelineType;
 }
 
 async function loadGeneratorWithFallback(): Promise<TextGenerationPipelineType> {
     const hasWebGPU = typeof (self as any).navigator?.gpu !== 'undefined';
-    const attempts: Array<{ device: 'webgpu' | 'wasm'; dtype: 'q4f16' | 'q4' }> = hasWebGPU
-        ? [
-            { device: 'webgpu', dtype: 'q4f16' },
-            { device: 'wasm', dtype: 'q4' },
-        ]
-        : [{ device: 'wasm', dtype: 'q4' }];
-
-    let lastError: unknown = null;
-
-    for (const attempt of attempts) {
+    if (hasWebGPU) {
         try {
-            console.info(`[AI Worker] Loading ${MODEL_ID} (device=${attempt.device}, dtype=${attempt.dtype})`);
-            const loaded = await pipeline('text-generation', MODEL_ID, {
-                device: attempt.device,
-                dtype: attempt.dtype,
-                progress_callback: (data: any) => {
-                    const loaded = Number(data?.loaded ?? 0);
-                    const total = Number(data?.total ?? 0);
-                    if (total > 0) {
-                        send({ type: 'progress', loaded, total });
-                    }
-                },
-            });
-            return loaded as TextGenerationPipelineType;
-        } catch (error) {
-            lastError = error;
+            return await loadGenerator('webgpu');
+        } catch {
+            return await loadGenerator('wasm');
         }
     }
-
-    throw lastError ?? new Error('Failed to load AI model.');
+    return await loadGenerator('wasm');
 }
 
-type SentenceFallbackResult = { payload: AiOutput; rawText: string };
-
-async function generateSentenceOnlyFallback(
-    targetWord: string,
-    level: string,
-    distractors: string[],
-    pos?: string,
-    meaning?: string
-): Promise<SentenceFallbackResult | null> {
-    if (!generator) return null;
-    const prompt = `Write 3 English example sentences using the exact word "${targetWord}".
-Think silently before responding.
-Target CEFR: ${level}.
-POS: ${pos || 'unknown'} (use WORD as that POS if provided).
-MEANING: ${meaning || ''}
-Constraints: 6-14 words, natural context, no meta language.
-Return EXACTLY 3 lines (no extra text):
-easy: ...
-normal: ...
-advanced: ...`;
+async function runGeneration(prompt: string, params: GenerationParams): Promise<string> {
+    if (!generator) {
+        throw new Error('Model not loaded.');
+    }
 
     try {
-        const output = await generator(prompt, {
-            max_new_tokens: 160,
-            temperature: 0.7,
-            top_p: 0.9,
-            do_sample: true,
-            repetition_penalty: 1.15,
-            no_repeat_ngram_size: 3,
-            return_full_text: false,
-        });
-
-        const rawText = extractGeneratedText(output as any);
-        const examples = parseLabeledLines(rawText, targetWord);
-        if (!examples) return null;
-
-        const clozeCandidate = buildClozeFromExamples(examples, targetWord);
-        if (!clozeCandidate) return null;
-
-        const { sentence: clozeSentence } = clozeCandidate;
-        const options = buildOptions(targetWord, distractors, pos);
-        if (!options) return null;
-        const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
-        if (answerIndex === -1) return null;
-
-        return {
-            payload: {
-                examples: [
-                    { difficulty: 'easy', sentence: examples[0] },
-                    { difficulty: 'normal', sentence: examples[1] },
-                    { difficulty: 'advanced', sentence: examples[2] },
-                ],
-                cloze: {
-                    sentence: clozeSentence,
-                    options,
-                    answer: ['A', 'B', 'C', 'D'][answerIndex],
-                    explanation: 'Best fit for the blank is the target word.',
-                },
-            },
-            rawText,
-        };
-    } catch {
-        return null;
-    }
-}
-
-function salvageFromRawText(rawText: string, targetWord: string, distractors: string[], pos?: string): AiOutput | null {
-    try {
-        const labeled = extractLabeledExamples(rawText, targetWord);
-        const examples = labeled ?? extractSentencesWithWord(rawText, targetWord);
-        if (examples.length < 3) return null;
-
-        const clozeCandidate = buildClozeFromExamples(examples, targetWord);
-        if (!clozeCandidate) return null;
-        const { sentence: clozeSentence } = clozeCandidate;
-
-        const options = buildOptions(targetWord, distractors, pos);
-        if (!options) return null;
-        const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
-        if (answerIndex === -1) return null;
-
-        return {
-            examples: [
-                { difficulty: 'easy', sentence: examples[0] },
-                { difficulty: 'normal', sentence: examples[1] },
-                { difficulty: 'advanced', sentence: examples[2] },
-            ],
-            cloze: {
-                sentence: clozeSentence,
-                options,
-                answer: ['A', 'B', 'C', 'D'][answerIndex],
-                explanation: 'Best fit for the blank is the target word.',
-            },
-        };
-    } catch {
-        return null;
-    }
-}
-
-function extractLabeledExamples(text: string, targetWord: string): string[] | null {
-    const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
-    const pick = (label: string) => {
-        const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
-        if (!match) return null;
-        const sentence = match.replace(new RegExp(`^${label}\\s*:\\s+`, 'i'), '').trim();
-        return containsWord(sentence, targetWord) ? sentence : null;
-    };
-
-    const easy = pick('easy');
-    const normal = pick('normal');
-    const advanced = pick('advanced');
-    if (easy && normal && advanced) return [easy, normal, advanced];
-    return null;
-}
-
-function buildPosFallbackOutput(targetWord: string, distractors: string[], pos?: string): AiOutput | null {
-    const bucket = getPosBucket(targetWord, pos);
-    const examples = buildPosSentences(targetWord, bucket);
-    if (examples.length < 3) return null;
-
-    const clozeCandidate = buildClozeFromExamples(examples, targetWord);
-    if (!clozeCandidate) return null;
-
-    const options = buildOptions(targetWord, distractors, pos);
-    if (!options) return null;
-    const answerIndex = options.findIndex((opt) => opt.toLowerCase() === targetWord.toLowerCase());
-    if (answerIndex === -1) return null;
-
-    return {
-        examples: [
-            { difficulty: 'easy', sentence: examples[0] },
-            { difficulty: 'normal', sentence: examples[1] },
-            { difficulty: 'advanced', sentence: examples[2] },
-        ],
-        cloze: {
-            sentence: clozeCandidate.sentence,
-            options,
-            answer: ['A', 'B', 'C', 'D'][answerIndex],
-            explanation: 'Best fit for the blank is the target word.',
-        },
-    };
-}
-
-function buildPosSentences(targetWord: string, bucket: ReturnType<typeof getPosBucket>): string[] {
-    switch (bucket) {
-        case 'adv':
-            return [
-                `She answered ${targetWord} and stayed calm.`,
-                `They worked ${targetWord} to meet the deadline.`,
-                `He reacted ${targetWord} when the plan changed.`,
-            ];
-        case 'adj':
-            return [
-                `The solution was ${targetWord} and easy to apply.`,
-                `She gave a ${targetWord} response to the feedback.`,
-                `It was a ${targetWord} choice for the team.`,
-            ];
-        case 'noun':
-            return [
-                `The ${targetWord} affected their final decision.`,
-                `We discussed the ${targetWord} for several minutes.`,
-                `Her ${targetWord} influenced the entire project.`,
-            ];
-        case 'verb':
-            return [
-                `They ${targetWord} the proposal before voting.`,
-                `We must ${targetWord} the details before noon.`,
-                `She will ${targetWord} the results tomorrow.`,
-            ];
-        default:
-            return [
-                `The ${targetWord} changed how we planned the trip.`,
-                `They explored the ${targetWord} in the afternoon.`,
-                `We returned to the ${targetWord} after lunch.`,
-            ];
-    }
-}
-function extractSentencesWithWord(text: string, targetWord: string): string[] {
-    const cleaned = text.replace(/\r?\n/g, ' ').replace(/\s+/g, ' ').trim();
-    if (!cleaned) return [];
-    const parts = cleaned.split(/[.!?]\s+/);
-    const matches: string[] = [];
-    for (const part of parts) {
-        const sentence = part.trim();
-        if (!sentence) continue;
-        if (containsWord(sentence, targetWord) && isValidSentence(sentence) && !hasMetaLanguage(sentence)) {
-            matches.push(sentence.endsWith('.') ? sentence : `${sentence}.`);
+        const output = await generator(prompt, params);
+        return extractGeneratedText(output as any);
+    } catch (error) {
+        if (generatorDevice == 'webgpu') {
+            generator = await loadGenerator('wasm');
+            const output = await generator(prompt, params);
+            return extractGeneratedText(output as any);
         }
-        if (matches.length >= 3) break;
+        throw error;
     }
-    return matches;
 }
 
 function replaceWord(sentence: string, targetWord: string, replacement: string): string {
@@ -492,23 +344,14 @@ function containsWord(sentence: string, targetWord: string): boolean {
     return loose.test(sentence);
 }
 
-function buildOptions(targetWord: string, distractors: string[], pos?: string): string[] | null {
-    const bucket = getPosBucket(targetWord, pos);
-    const candidates = filterByBucket(distractors, bucket, targetWord);
-    const picked = pickUnique(candidates, targetWord, 3);
-    if (!picked) return null;
-    const options = shuffle([targetWord, ...picked]);
-    return options;
-}
-
 function getPosBucket(word: string, pos?: string): 'noun' | 'verb' | 'adj' | 'adv' | 'unknown' {
     const posBucket = normalizePosBucket(pos);
     if (posBucket !== 'unknown') return posBucket;
     const lower = word.toLowerCase();
     if (/(ly)$/.test(lower)) return 'adv';
-    if (/(tion|ment|ness|ity|ship|ism)$/.test(lower)) return 'noun';
-    if (/(able|ible|ous|ive|al|ic|ful|less)$/.test(lower)) return 'adj';
-    if (/(ing|ed|ify|ise|ize|en)$/.test(lower)) return 'verb';
+    if (/(tion|ment|ness|ity|ship|ism|ence|ance)$/.test(lower)) return 'noun';
+    if (/(ous|ive|al|ic|ful|less|able|ible|ent|ant)$/.test(lower)) return 'adj';
+    if (/(ate|ify|ise|ize|en)$/.test(lower)) return 'verb';
     return 'unknown';
 }
 
@@ -522,70 +365,8 @@ function normalizePosBucket(pos?: string): 'noun' | 'verb' | 'adj' | 'adv' | 'un
     return 'unknown';
 }
 
-function filterByBucket(values: string[], bucket: string, targetWord: string): string[] {
-    const normalizedTarget = targetWord.toLowerCase();
-    const unique = Array.from(new Set(values.map((val) => val.trim()).filter(Boolean)));
-    const filtered = unique
-        .filter((val) => val.toLowerCase() !== normalizedTarget)
-        .filter((val) => isSingleWord(val));
-    if (bucket === 'unknown') return filtered;
-    const bucketed = filtered.filter((val) => getPosBucket(val) === bucket);
-    return bucketed.length >= 3 ? bucketed : filtered;
-}
-
-function pickUnique(values: string[], targetWord: string, count: number): string[] | null {
-    const normalizedTarget = targetWord.toLowerCase();
-    const pool = values.filter((val) => val.toLowerCase() !== normalizedTarget);
-    if (pool.length < count) return null;
-    shuffle(pool);
-    return pool.slice(0, count);
-}
-
-function parseLabeledLines(text: string, targetWord: string): string[] | null {
-    const lines = stripPreamble(text, ['easy', 'normal', 'advanced']);
-    const pick = (label: string) => {
-        const match = lines.find((line) => new RegExp(`^${label}\\s*:\\s+`, 'i').test(line));
-        if (!match) return null;
-        const sentence = match.replace(new RegExp(`^${label}\\s*:\\s+`, 'i'), '').trim();
-        if (!containsWord(sentence, targetWord)) return null;
-        if (!isValidSentence(sentence) || hasMetaLanguage(sentence)) return null;
-        return sentence;
-    };
-
-    const easy = pick('easy');
-    const normal = pick('normal');
-    const advanced = pick('advanced');
-    if (easy && normal && advanced) return [easy, normal, advanced];
-    return null;
-}
-
-function buildClozeFromExamples(examples: string[], targetWord: string): { sentence: string; sourceIndex: number } | null {
-    const order = [1, 0, 2];
-    for (const idx of order) {
-        const sentence = examples[idx];
-        if (!sentence || isMetaSentence(sentence)) continue;
-        const replaced = replaceWord(sentence, targetWord, '____');
-        if (replaced.includes('____')) {
-            return { sentence: replaced, sourceIndex: idx };
-        }
-    }
-    return null;
-}
-
 function escapeRegExp(value: string): string {
     return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function isMetaSentence(sentence: string): boolean {
-    return /use(?:s|d)? the word/i.test(sentence) || hasMetaLanguage(sentence);
-}
-
-function shuffle<T>(items: T[]): T[] {
-    for (let i = items.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [items[i], items[j]] = [items[j], items[i]];
-    }
-    return items;
 }
 
 function normalizeErrorMessage(message: string | undefined): string {
@@ -599,7 +380,8 @@ function normalizeErrorMessage(message: string | undefined): string {
 function stripPreamble(text: string, labels: string[]): string[] {
     const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
     if (!lines.length) return [];
-    const labelRegex = new RegExp(`^(${labels.join('|')})\\s*:`, 'i');
+    const labelPattern = labels.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+    const labelRegex = new RegExp(`^(${labelPattern})\\s*(?:[:\\)\\.]|\\-)?`, 'i');
     const startIndex = lines.findIndex((line) => labelRegex.test(line));
     if (startIndex === -1) return lines;
     return lines.slice(startIndex);
@@ -620,12 +402,46 @@ function hasMetaLanguage(sentence: string): boolean {
 }
 
 function isSingleWord(value: string): boolean {
-    return !/\s/.test(value.trim());
+    const trimmed = value.trim();
+    if (!trimmed || /\s/.test(trimmed)) return false;
+    return /^[A-Za-z'-]+$/.test(trimmed);
+}
+
+function countWordOccurrences(sentence: string, targetWord: string): number {
+    const regex = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'gi');
+    const matches = sentence.match(regex);
+    return matches ? matches.length : 0;
+}
+
+function normalizeSpacing(text: string): string {
+    return text.replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+function violatesAdjConstraint(sentence: string, targetWord: string): boolean {
+    const regex = new RegExp(`\\bthe\\s+${escapeRegExp(targetWord)}\\b`, 'i');
+    return regex.test(sentence);
 }
 
 function isDegenerateOutput(text: string): boolean {
-    const cleaned = text.replace(/\s+/g, ' ').trim().toLowerCase();
+    const cleaned = text.replace(/\s+/g, ' ').trim();
     if (!cleaned) return true;
+    const lowered = cleaned.toLowerCase();
+
+    if (/\b(usage|tag|schema|rules)\b/.test(lowered)) return true;
+    if (/\b(word=|level=|pos=|meaning=)\b/.test(lowered)) return true;
+
+    if (/([a-z0-9])\1{7,}/i.test(cleaned)) return true;
+    if (/([^\s])\1{9,}/.test(cleaned)) return true;
+
+    if (/\b([a-z]{1,3})\b(?:[\.!?;,:]\s*\1\b){2,}/i.test(cleaned)) return true;
+
+    const symbolsOnly = cleaned.replace(/[a-z0-9]/gi, '').replace(/\s+/g, '');
+    const totalChars = cleaned.replace(/\s+/g, '').length;
+    if (totalChars > 0 && symbolsOnly.length / totalChars > 0.45) return true;
+
+    const letters = cleaned.replace(/[^a-z]/gi, '').length;
+    if (cleaned.length > 0 && letters / cleaned.length < 0.55) return true;
+
     const tokens = cleaned.split(' ');
     if (tokens.length >= 30) {
         const unique = new Set(tokens);

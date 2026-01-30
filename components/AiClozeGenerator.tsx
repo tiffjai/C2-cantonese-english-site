@@ -6,15 +6,18 @@ import styles from './AiClozeGenerator.module.css';
 
 type Status = 'idle' | 'downloading' | 'generating' | 'success' | 'error';
 
+type PosBucket = 'noun' | 'verb' | 'adj' | 'adv' | 'unknown';
+
 interface AiClozeGeneratorProps {
     word: string;
     level: string;
     pos?: string;
     meaning?: string;
+    pos?: PosBucket;
     distractors?: string[];
 }
 
-export default function AiClozeGenerator({ word, level, pos, meaning, distractors }: AiClozeGeneratorProps) {
+export default function AiClozeGenerator({ word, level, meaning, pos, distractors }: AiClozeGeneratorProps) {
     const workerRef = useRef<Worker | null>(null);
     const [status, setStatus] = useState<Status>('idle');
     const [error, setError] = useState<string | null>(null);
@@ -54,8 +57,7 @@ export default function AiClozeGenerator({ word, level, pos, meaning, distractor
                 setResult(msg.payload);
                 setStatus('success');
                 setError(null);
-                const raw = typeof msg.rawText === 'string' ? msg.rawText.trim() : '';
-                setDebugText(raw || '(no raw output received)');
+                setDebugText(msg.rawText || null);
                 return;
             }
 
@@ -80,6 +82,7 @@ export default function AiClozeGenerator({ word, level, pos, meaning, distractor
         setError(null);
         setResult(null);
         setDebugText(null);
+        setDownloadProgress(null);
     }, [word]);
 
     const handleGenerate = () => {
@@ -95,7 +98,7 @@ export default function AiClozeGenerator({ word, level, pos, meaning, distractor
             level,
             pos,
             meaning,
-            distractors: distractors ?? [],
+            distractors,
         });
     };
 
@@ -202,6 +205,12 @@ export default function AiClozeGenerator({ word, level, pos, meaning, distractor
                         </p>
                         <p>{result.cloze.explanation}</p>
                     </div>
+                    {debugText && (
+                        <details>
+                            <summary>Debug output</summary>
+                            <pre>{debugText}</pre>
+                        </details>
+                    )}
                 </div>
             )}
         </div>
