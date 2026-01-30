@@ -12,7 +12,7 @@ import RequireAuth from '@/components/RequireAuth';
 import { FlashcardSkeleton, ErrorState } from '@/components/AsyncState';
 import { saveLastSession, loadLastSession, LastSession } from '@/lib/clientStorage';
 import styles from './page.module.css';
-import AiClozeGenerator from '@/components/AiClozeGenerator';
+import AiChatbot from '@/components/AiChatbot';
 
 type PosBucket = 'noun' | 'verb' | 'adj' | 'adv' | 'unknown';
 
@@ -367,7 +367,7 @@ function FlashcardsPageContent() {
                         <div className={styles.helperText}>{notice}</div>
                     )}
 
-                    <AiClozeGenerator
+                    <AiChatbot
                         word={currentWord.headword}
                         level={selectedLevel}
                         pos={targetPos === 'unknown' ? undefined : targetPos}
