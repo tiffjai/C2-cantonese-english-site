@@ -6,13 +6,17 @@ import styles from './AiClozeGenerator.module.css';
 
 type Status = 'idle' | 'downloading' | 'generating' | 'success' | 'error';
 
+type PosBucket = 'noun' | 'verb' | 'adj' | 'adv' | 'unknown';
+
 interface AiClozeGeneratorProps {
     word: string;
     level: string;
     meaning?: string;
+    pos?: PosBucket;
+    distractors?: string[];
 }
 
-export default function AiClozeGenerator({ word, level, meaning }: AiClozeGeneratorProps) {
+export default function AiClozeGenerator({ word, level, meaning, pos, distractors }: AiClozeGeneratorProps) {
     const workerRef = useRef<Worker | null>(null);
     const [status, setStatus] = useState<Status>('idle');
     const [error, setError] = useState<string | null>(null);
@@ -52,7 +56,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
                 setResult(msg.payload);
                 setStatus('success');
                 setError(null);
-                setDebugText(null);
+                setDebugText(msg.rawText || null);
                 return;
             }
 
@@ -76,6 +80,7 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
         setError(null);
         setResult(null);
         setDebugText(null);
+        setDownloadProgress(null);
     }, [word]);
 
     const handleGenerate = () => {
@@ -89,7 +94,9 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
             type: 'generate',
             word,
             level,
+            pos,
             meaning,
+            distractors,
         });
     };
 
@@ -195,6 +202,12 @@ export default function AiClozeGenerator({ word, level, meaning }: AiClozeGenera
                         </p>
                         <p>{result.cloze.explanation}</p>
                     </div>
+                    {debugText && (
+                        <details>
+                            <summary>Debug output</summary>
+                            <pre>{debugText}</pre>
+                        </details>
+                    )}
                 </div>
             )}
         </div>

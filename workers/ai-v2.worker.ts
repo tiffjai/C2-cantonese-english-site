@@ -56,7 +56,24 @@ const promptTemplate = ({
     level: string;
     pos?: string;
     meaning?: string;
-}) => `OUTPUT ONLY THESE 10 LINES (NO EXTRA TEXT):
+}) => {
+    const posBucket = normalizePosBucket(pos);
+    const posRule =
+        posBucket === 'adj'
+            ? `Use the target word ONLY as an adjective; do not write "the ${word}".`
+            : posBucket === 'noun'
+                ? 'Use the target word ONLY as a noun.'
+                : posBucket === 'verb'
+                    ? 'Use the target word ONLY as a verb.'
+                    : posBucket === 'adv'
+                        ? 'Use the target word ONLY as an adverb.'
+                        : 'Use the target word in its most natural part of speech.';
+
+    return `Target word: "${word}"
+Level: ${level}
+Meaning (if provided): ${meaning || 'N/A'}
+
+Output ONLY these 10 lines, in this exact order, with no extra text:
 EASY: ...
 NORMAL: ...
 ADVANCED: ...
@@ -67,19 +84,17 @@ C) ...
 D) ...
 ANSWER: A|B|C|D
 EXPLAIN: ...
-WORD="${word}"
-LEVEL="${level}"
-POS="${pos || 'unknown'}"
-MEANING="${meaning || ''}"
+
 Rules:
-- Use WORD exactly once in EASY/NORMAL/ADVANCED.
-- Use WORD as the POS specified; for ADJ, do NOT use "the WORD".
-- Each sentence must be 6–14 words, natural English.
-- No meta language: word, sentence, example, noted, considered important.
-- CLOZE must be NORMAL with WORD replaced by ____.
-- A-D are single-word options, same POS as WORD, only one correct.
-- EXPLAIN <= 20 words.
+- Use the target word exactly once in EASY/NORMAL/ADVANCED.
+- ${posRule}
+- Each sentence must be 6–14 words of natural English.
+- No meta language (word, sentence, example, noted, considered important).
+- CLOZE must equal NORMAL with the target word replaced by ____.
+- A-D are single-word options, same POS as the target word, only one correct.
+- EXPLAIN is 20 words or fewer.
 No other text.`;
+};
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
@@ -102,49 +117,48 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         const prompt = promptTemplate({ word, level, pos, meaning });
         const baseParams = {
-            max_new_tokens: 200,
-            temperature: 0.7,
+            max_new_tokens: 180,
+            temperature: 0.8,
             top_p: 0.9,
             do_sample: true,
-            repetition_penalty: 1.15,
-            no_repeat_ngram_size: 3,
+            repetition_penalty: 1.22,
             return_full_text: false,
         };
         const retryParams = {
             max_new_tokens: 160,
-            temperature: 0.7,
+            temperature: 0.9,
             top_p: 0.9,
             do_sample: true,
-            repetition_penalty: 1.25,
-            no_repeat_ngram_size: 4,
+            repetition_penalty: 1.3,
             return_full_text: false,
         };
 
-        let rawText = await runGeneration(prompt, baseParams);
-        lastRawText = rawText;
+        const attempts = [baseParams, retryParams];
+        let lastError: Error | null = null;
 
-        if (isGibberishOutput(rawText)) {
-            rawText = await runGeneration(prompt, retryParams);
+        for (const params of attempts) {
+            const rawText = await runGeneration(prompt, params);
             lastRawText = rawText;
-        }
 
-        try {
-            const parsed = parseLineOutput(rawText, word, pos);
-            const validated = validatePayload(parsed, word);
-
-            send({ type: 'result', payload: validated, rawText: lastRawText });
-            return;
-        } catch (err) {
-            const retryText = await runGeneration(prompt, retryParams);
-            lastRawText = retryText;
-            if (isGibberishOutput(retryText)) {
-                throw err;
+            if (isDegenerateOutput(rawText)) {
+                lastError = new Error('Degenerate output detected.');
+                continue;
             }
-            const parsed = parseLineOutput(retryText, word, pos);
-            const validated = validatePayload(parsed, word);
-            send({ type: 'result', payload: validated, rawText: lastRawText });
-            return;
+
+            try {
+                const parsed = parseLineOutput(rawText, word, pos);
+                const validated = validatePayload(parsed, word);
+                send({ type: 'result', payload: validated, rawText });
+                return;
+            } catch (err: any) {
+                lastError = err;
+                continue;
+            }
         }
+
+        const fallbackMessage = 'AI response incomplete. Please retry.';
+        send({ type: 'error', message: fallbackMessage, rawText: lastRawText });
+        return;
     } catch (error: any) {
         const rawText = lastRawText || error?.rawText;
         const message = normalizeErrorMessage(error?.message);
@@ -166,23 +180,26 @@ function parseLineOutput(text: string, targetWord: string, pos?: string): AiOutp
         'explain',
     ]);
 
+    const labelRegex = (label: string) =>
+        new RegExp(`^${label}\\s*(?:[:\\)\\.]|\\-)?\\s+`, 'i');
+
     const getLine = (label: string, pattern?: RegExp) => {
-        const regex = pattern ?? new RegExp(`^${label}\\s*[:\\)]\\s+`, 'i');
+        const regex = pattern ?? labelRegex(label);
         const match = lines.find((line) => regex.test(line));
         if (!match) return '';
         return match.replace(regex, '').trim();
     };
 
-    const easy = getLine('easy', /^easy\s*:\s+/i);
-    const normal = getLine('normal', /^normal\s*:\s+/i);
-    const advanced = getLine('advanced', /^advanced\s*:\s+/i);
-    const cloze = getLine('cloze', /^cloze\s*:\s+/i);
-    const optionA = getLine('a', /^a\s*[\):]\s+/i);
-    const optionB = getLine('b', /^b\s*[\):]\s+/i);
-    const optionC = getLine('c', /^c\s*[\):]\s+/i);
-    const optionD = getLine('d', /^d\s*[\):]\s+/i);
-    const answer = getLine('answer', /^answer\s*:\s+/i).toUpperCase();
-    const explanation = getLine('explain', /^explain\s*:\s+/i);
+    const easy = getLine('easy');
+    const normal = getLine('normal');
+    const advanced = getLine('advanced');
+    const cloze = getLine('cloze');
+    const optionA = getLine('a', /^a\s*(?:[\):\.\-]|-)\s+/i);
+    const optionB = getLine('b', /^b\s*(?:[\):\.\-]|-)\s+/i);
+    const optionC = getLine('c', /^c\s*(?:[\):\.\-]|-)\s+/i);
+    const optionD = getLine('d', /^d\s*(?:[\):\.\-]|-)\s+/i);
+    const answer = getLine('answer').toUpperCase();
+    const explanation = getLine('explain');
 
     if (!easy || !normal || !advanced || !cloze || !optionA || !optionB || !optionC || !optionD || !answer || !explanation) {
         throw new Error('Line output incomplete.');
@@ -364,7 +381,7 @@ function stripPreamble(text: string, labels: string[]): string[] {
     const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
     if (!lines.length) return [];
     const labelPattern = labels.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
-    const labelRegex = new RegExp(`^(${labelPattern})\\s*[:\\)]`, 'i');
+    const labelRegex = new RegExp(`^(${labelPattern})\\s*(?:[:\\)\\.]|\\-)?`, 'i');
     const startIndex = lines.findIndex((line) => labelRegex.test(line));
     if (startIndex === -1) return lines;
     return lines.slice(startIndex);
@@ -405,15 +422,25 @@ function violatesAdjConstraint(sentence: string, targetWord: string): boolean {
     return regex.test(sentence);
 }
 
-function isGibberishOutput(text: string): boolean {
-    const cleaned = text.replace(/\s+/g, ' ').trim().toLowerCase();
+function isDegenerateOutput(text: string): boolean {
+    const cleaned = text.replace(/\s+/g, ' ').trim();
     if (!cleaned) return true;
+    const lowered = cleaned.toLowerCase();
 
-    const letters = cleaned.replace(/[^a-z]/g, '').length;
-    if (cleaned.length > 0 && letters / cleaned.length < 0.6) return true;
+    if (/\b(usage|tag|schema|rules)\b/.test(lowered)) return true;
+    if (/\b(word=|level=|pos=|meaning=)\b/.test(lowered)) return true;
 
-    if (/([a-z])\1{5,}/i.test(cleaned)) return true;
-    if (/([^a-z\s])\1{4,}/i.test(cleaned)) return true;
+    if (/([a-z0-9])\1{7,}/i.test(cleaned)) return true;
+    if (/([^\s])\1{9,}/.test(cleaned)) return true;
+
+    if (/\b([a-z]{1,3})\b(?:[\.!?;,:]\s*\1\b){2,}/i.test(cleaned)) return true;
+
+    const symbolsOnly = cleaned.replace(/[a-z0-9]/gi, '').replace(/\s+/g, '');
+    const totalChars = cleaned.replace(/\s+/g, '').length;
+    if (totalChars > 0 && symbolsOnly.length / totalChars > 0.45) return true;
+
+    const letters = cleaned.replace(/[^a-z]/gi, '').length;
+    if (cleaned.length > 0 && letters / cleaned.length < 0.55) return true;
 
     const tokens = cleaned.split(' ');
     if (tokens.length >= 30) {
