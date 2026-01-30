@@ -1,10 +1,9 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
-import type { AiOutput } from '@/workers/ai-v2.worker';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import styles from './AiChatbot.module.css';
 
-type Status = 'idle' | 'downloading' | 'generating' | 'success' | 'error';
+type Status = 'idle' | 'generating' | 'success' | 'error';
 
 type PosBucket = 'noun' | 'verb' | 'adj' | 'adv' | 'unknown';
 
@@ -15,6 +14,16 @@ interface Message {
     timestamp: Date;
 }
 
+interface AiOutput {
+    examples: Array<{ difficulty: string; sentence: string }>;
+    cloze: {
+        sentence: string;
+        options: string[];
+        answer: string;
+        explanation: string;
+    };
+}
+
 interface AiChatbotProps {
     word: string;
     level: string;
@@ -23,112 +32,19 @@ interface AiChatbotProps {
     distractors?: string[];
 }
 
-// Helper function to detect likely gibberish/corrupted output
-function isLikelyGibberish(text: string): boolean {
-    if (!text || text.length < 10) return false;
-    
-    const cleaned = text.replace(/\s+/g, ' ').trim();
-    
-    // Check for very long words without spaces (concatenated nonsense)
-    const words = cleaned.split(/\s+/);
-    if (words.some(w => w.length > 40)) return true;
-    
-    // Check for spaced-out single characters
-    if (/(?:[A-Za-z]\s){5,}/.test(cleaned)) return true;
-    
-    // Check for excessive repetition
-    if (/([a-z]{2,})\1{4,}/i.test(cleaned)) return true;
-    
-    // Check for low letter ratio (lots of symbols/numbers)
-    const letters = cleaned.replace(/[^a-z]/gi, '').length;
-    if (cleaned.length > 20 && letters / cleaned.length < 0.5) return true;
-    
-    // Check for too many consonants in a row
-    if (/[bcdfghjklmnpqrstvwxyz]{6,}/i.test(cleaned)) return true;
-    
-    return false;
-}
-
 export default function AiChatbot({ word, level, meaning, pos, distractors }: AiChatbotProps) {
-    const workerRef = useRef<Worker | null>(null);
     const [status, setStatus] = useState<Status>('idle');
     const [error, setError] = useState<string | null>(null);
-    const [debugText, setDebugText] = useState<string | null>(null);
     const [result, setResult] = useState<AiOutput | null>(null);
-    const [modelReady, setModelReady] = useState(false);
-    const [downloadProgress, setDownloadProgress] = useState<{ loaded: number; total: number } | null>(null);
     const [messages, setMessages] = useState<Message[]>([]);
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-        const worker = new Worker(new URL('../workers/ai-v2.worker.ts', import.meta.url), { type: 'module' });
-        workerRef.current = worker;
-
-        worker.onmessage = (event: MessageEvent<any>) => {
-            const msg = event.data;
-            if (!msg || !msg.type) return;
-
-            if (msg.type === 'status') {
-                if (msg.status === 'loading-model') {
-                    setStatus('downloading');
-                    setDownloadProgress(null);
-                } else if (msg.status === 'model-ready') {
-                    setModelReady(true);
-                } else if (msg.status === 'generating') {
-                    setStatus('generating');
-                }
-                return;
-            }
-
-            if (msg.type === 'progress') {
-                setDownloadProgress({ loaded: msg.loaded, total: msg.total });
-                setStatus('downloading');
-                return;
-            }
-
-            if (msg.type === 'result') {
-                setResult(msg.payload);
-                setStatus('success');
-                setError(null);
-                setDebugText(msg.rawText || null);
-                
-                // Add bot response to chat
-                const botResponse = generateBotResponse(msg.payload, word);
-                addMessage('bot', botResponse);
-                setIsTyping(false);
-                return;
-            }
-
-            if (msg.type === 'error') {
-                setError(msg.message || 'Something went wrong. Please try again.');
-                // Only show debug text if it's not corrupted/gibberish
-                const raw = typeof msg.rawText === 'string' ? msg.rawText.trim() : '';
-                const isCorrupted = raw === '(output was corrupted)' || raw.length === 0 || isLikelyGibberish(raw);
-                setDebugText(isCorrupted ? null : raw);
-                setStatus('error');
-                setIsTyping(false);
-                
-                // Add user-friendly error message to chat
-                addMessage('bot', msg.message || `I'm having trouble generating examples for "${word}" right now. This might be due to the complexity of the word or a temporary issue. Please try again or choose a different word!`);
-                return;
-            }
-        };
-
-        return () => {
-            worker.terminate();
-            workerRef.current = null;
-        };
-    }, []);
 
     // Reset UI when switching words
     useEffect(() => {
         setStatus('idle');
         setError(null);
         setResult(null);
-        setDebugText(null);
-        setDownloadProgress(null);
         setMessages([]);
     }, [word]);
 
@@ -176,38 +92,61 @@ D) ${aiOutput.cloze.options[3]}
 **Explanation:** ${aiOutput.cloze.explanation}`;
     };
 
-    const handleGenerate = () => {
-        if (!workerRef.current || !word) return;
+    const handleGenerate = async () => {
+        if (!word) return;
         
         // Add user message
         addMessage('user', `Please generate examples and a quiz for the word "${word}".`);
         
         setError(null);
         setResult(null);
-        setStatus(modelReady ? 'generating' : 'downloading');
-        setDownloadProgress(null);
+        setStatus('generating');
         setIsTyping(true);
 
-        workerRef.current.postMessage({
-            type: 'generate',
-            word,
-            level,
-            pos,
-            meaning,
-            distractors,
-        });
+        try {
+            const response = await fetch('/api/ai-generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    word,
+                    level,
+                    pos,
+                    meaning,
+                }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.error || 'Failed to generate content');
+            }
+
+            setResult(data.data);
+            setStatus('success');
+            
+            // Add bot response to chat
+            const botResponse = generateBotResponse(data.data, word);
+            addMessage('bot', botResponse);
+        } catch (err: any) {
+            console.error('[AiChatbot] Error:', err);
+            setError(err.message || 'Something went wrong. Please try again.');
+            setStatus('error');
+            addMessage('bot', `I'm having trouble generating examples for "${word}" right now. Please try again!`);
+        } finally {
+            setIsTyping(false);
+        }
     };
 
-    const isBusy = status === 'downloading' || status === 'generating';
+    const isBusy = status === 'generating';
 
     const statusLine = useMemo(() => {
-        if (status === 'downloading') return 'Downloading the small on-device model (cached for future runs)…';
-        if (status === 'generating') return 'Generating examples and a cloze quiz in your browser…';
-        if (status === 'success') return 'Generated locally. You can regenerate for a new variant.';
+        if (status === 'generating') return 'Generating examples using Groq AI...';
+        if (status === 'success') return 'Generated successfully! Click to regenerate.';
         if (status === 'error') return 'Generation failed. Please retry.';
-        if (modelReady) return 'Model cached. Ready to generate instantly.';
-        return 'Runs fully in-browser. First run may take a few seconds to load.';
-    }, [status, modelReady]);
+        return 'Click below to generate AI-powered examples and quiz.';
+    }, [status]);
 
     return (
         <div className={styles.chatbot}>
@@ -255,7 +194,7 @@ D) ${aiOutput.cloze.options[3]}
                     <div className={styles.status}>
                         <span className={styles.pulse} />
                         <span>{statusLine}</span>
-                        {modelReady && <span className={styles.badge}>Model cached</span>}
+                        <span className={styles.badge}>Groq AI</span>
                     </div>
 
                     {error && (
@@ -267,29 +206,13 @@ D) ${aiOutput.cloze.options[3]}
                         </div>
                     )}
 
-                    {debugText !== null && (
-                        <div className={styles.debug}>
-                            <div className={styles.debugTitle}>Model output</div>
-                            <pre>{debugText}</pre>
-                        </div>
-                    )}
-
-                    {status === 'downloading' && downloadProgress?.total ? (
-                        <div className={styles.progressBar} aria-label="Model download progress">
-                            <div
-                                className={styles.progressFill}
-                                style={{ width: `${Math.min(100, (downloadProgress.loaded / downloadProgress.total) * 100)}%` }}
-                            />
-                        </div>
-                    ) : null}
-
                     <div className={styles.controls}>
                         <button
                             className="btn-primary"
                             onClick={handleGenerate}
                             disabled={isBusy || !word}
                         >
-                            🚀 Generate Examples for "{word}"
+                            {isBusy ? '⏳ Generating...' : `🚀 Generate Examples for "${word}"`}
                         </button>
                     </div>
                 </div>
