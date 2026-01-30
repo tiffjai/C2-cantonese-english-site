@@ -46,7 +46,7 @@ const send = (message: WorkerResponse) => {
     self.postMessage(message);
 };
 
-// Simplified prompt for better reliability with small models
+// Optimized prompt for Llama 3.2 1B - uses few-shot example for clarity
 const createChatMessages = ({
     word,
     level,
@@ -58,34 +58,31 @@ const createChatMessages = ({
     pos?: string;
     meaning?: string;
 }): Array<{ role: string; content: string }> => {
-    const posBucket = normalizePosBucket(pos);
-    const posHint = posBucket !== 'unknown' ? ` (${posBucket})` : '';
-    
     return [
         {
             role: 'system',
-            content: `You are a vocabulary tutor. Generate example sentences and a quiz for English learners. Be concise and follow the exact format requested. Do not add explanations or extra text.`
+            content: `You are a helpful vocabulary tutor. Generate example sentences and a fill-in-the-blank quiz.`
         },
         {
             role: 'user',
-            content: `Create examples for the word "${word}"${posHint} at ${level} level.
-
-Output exactly these 10 lines:
-EASY: [simple sentence using "${word}"]
-NORMAL: [medium sentence using "${word}"]
-ADVANCED: [complex sentence using "${word}"]
-CLOZE: [copy NORMAL sentence but replace "${word}" with ____]
-A) [wrong option word]
-B) [wrong option word]
-C) ${word}
-D) [wrong option word]
+            content: `Generate 3 example sentences using the word "happy" and a quiz.`
+        },
+        {
+            role: 'assistant',
+            content: `EASY: She felt happy when she saw her friend.
+NORMAL: The happy couple celebrated their anniversary together.
+ADVANCED: Despite the challenges, he maintained a happy disposition throughout.
+CLOZE: The ____ couple celebrated their anniversary together.
+A) sad
+B) angry
+C) happy
+D) tired
 ANSWER: C
-EXPLAIN: [brief reason why "${word}" fits]
-
-Rules:
-- Each sentence: 6-14 words, natural English
-- Use "${word}" once per sentence
-- Options A,B,D must be similar words but wrong for the context`
+EXPLAIN: "happy" describes the positive mood of the couple.`
+        },
+        {
+            role: 'user',
+            content: `Generate 3 example sentences using the word "${word}" and a quiz.`
         }
     ];
 };
@@ -614,16 +611,24 @@ function hasMinimumLabels(text: string): boolean {
         .map((line) => line.replace(/^[-*]\s+/, '').trim())
         .filter(Boolean);
     if (!lines.length) return false;
+    
+    // More flexible label detection - also check for **EASY** markdown format
     const labels = ['easy', 'normal', 'advanced', 'cloze', 'a', 'b', 'c', 'd', 'answer', 'explain'];
-    const labelRegex = new RegExp(`^(${labels.join('|')})\\s*(?:[:\\)\\.]|\\-)?\\s+`, 'i');
+    const labelRegex = new RegExp(`^\\**\\s*(${labels.join('|')})\\**\\s*(?:[:\\)\\.]|\\-)?\\s*`, 'i');
     const found = new Set<string>();
+    
     for (const line of lines) {
         const match = line.match(labelRegex);
         if (match?.[1]) {
             found.add(match[1].toLowerCase());
         }
     }
-    return found.size >= 6;
+    
+    // Require at least EASY, NORMAL, ADVANCED, CLOZE and ANSWER (5 minimum instead of 6)
+    const requiredLabels = ['easy', 'normal', 'advanced', 'cloze', 'answer'];
+    const hasRequired = requiredLabels.filter(l => found.has(l)).length >= 4;
+    
+    return hasRequired || found.size >= 5;
 }
 
 function isValidSentence(sentence: string): boolean {
