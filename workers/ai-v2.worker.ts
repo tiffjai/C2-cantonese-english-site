@@ -99,7 +99,9 @@ CRITICAL RULES:
 - NO extra text, explanations, or formatting beyond the 10 required lines
 - DO NOT mention labels, formatting, or instructions in your response
 - DO NOT use bullet points, numbering, or markdown
-- Return ONLY the 10 lines specified above`;
+- Return ONLY the 10 lines specified above
+
+If you cannot follow these rules exactly, respond with: "ERROR: Cannot generate response."`;
 };
 
 const retryPromptTemplate = ({
@@ -165,6 +167,14 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             const rawText = await runGeneration(attemptPrompt, params);
             lastRawText = rawText;
 
+            // Check for explicit error message
+            const cleanedText = rawText.trim().toLowerCase();
+            if (cleanedText.includes('error: cannot generate response')) {
+                const errorMessage = `I'm unable to generate examples for "${word}" at this time. This might be due to the complexity of the word or a temporary issue with the AI model. Please try a different word or try again later.`;
+                send({ type: 'error', message: errorMessage, rawText });
+                return;
+            }
+
             const normalizedText = normalizeLabelFormatting(rawText);
             if (isDegenerateOutput(normalizedText) || !hasMinimumLabels(normalizedText)) {
                 lastError = new Error('Degenerate output detected.');
@@ -195,6 +205,14 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             const strictRawText = await runGeneration(prompt, strictParams);
             lastRawText = strictRawText;
 
+            // Check for explicit error message in strict attempt
+            const strictCleanedText = strictRawText.trim().toLowerCase();
+            if (strictCleanedText.includes('error: cannot generate response')) {
+                const errorMessage = `I'm unable to generate examples for "${word}" at this time. This might be due to the complexity of the word or a temporary issue with the AI model. Please try a different word or try again later.`;
+                send({ type: 'error', message: errorMessage, rawText: strictRawText });
+                return;
+            }
+
             const strictNormalizedText = normalizeLabelFormatting(strictRawText);
             if (!isDegenerateOutput(strictNormalizedText) && hasMinimumLabels(strictNormalizedText)) {
                 const strictParsed = parseLineOutput(strictNormalizedText, word, pos);
@@ -206,7 +224,7 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
             lastError = strictError;
         }
 
-        const fallbackMessage = 'AI response incomplete. Please retry.';
+        const fallbackMessage = `I'm having trouble generating examples for "${word}" right now. This might be due to the complexity of the word or a temporary issue. Please try again or choose a different word!`;
         send({ type: 'error', message: fallbackMessage, rawText: lastRawText });
         return;
     } catch (error: any) {
