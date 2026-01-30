@@ -103,6 +103,7 @@
     background: white;
     border-radius: 18px 18px 18px 4px;
     border: 1px solid var(--border-color, #e5e7eb);
+    color: #1f2937;
 }
 
 .avatar {
