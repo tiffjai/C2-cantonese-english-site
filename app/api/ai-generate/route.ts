@@ -111,9 +111,11 @@ function parseGroqResponse(content: string, targetWord: string): {
     const lines = content.split('\n').map(l => l.trim()).filter(Boolean);
     
     const getValue = (prefix: string): string => {
+        // Escape special regex characters in prefix
+        const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         const line = lines.find(l => l.toUpperCase().startsWith(prefix.toUpperCase()));
         if (!line) return '';
-        return line.replace(new RegExp(`^${prefix}[:\\s]*`, 'i'), '').trim();
+        return line.replace(new RegExp(`^${escapedPrefix}[:\\s]*`, 'i'), '').trim();
     };
 
     const easy = getValue('EASY');
