@@ -11,6 +11,7 @@ type PosBucket = 'noun' | 'verb' | 'adj' | 'adv' | 'unknown';
 interface AiClozeGeneratorProps {
     word: string;
     level: string;
+    pos?: string;
     meaning?: string;
     pos?: PosBucket;
     distractors?: string[];
@@ -62,7 +63,8 @@ export default function AiClozeGenerator({ word, level, meaning, pos, distractor
 
             if (msg.type === 'error') {
                 setError(msg.message || 'Something went wrong. Please try again.');
-                setDebugText(msg.rawText || null);
+                const raw = typeof msg.rawText === 'string' ? msg.rawText.trim() : '';
+                setDebugText(raw || '(no raw output received)');
                 setStatus('error');
                 return;
             }
@@ -156,12 +158,13 @@ export default function AiClozeGenerator({ word, level, meaning, pos, distractor
                     <button className="btn-secondary" onClick={handleGenerate} disabled={isBusy}>
                         Retry
                     </button>
-                    {debugText && (
-                        <details>
-                            <summary>Debug output</summary>
-                            <pre>{debugText}</pre>
-                        </details>
-                    )}
+                </div>
+            )}
+
+            {debugText !== null && (
+                <div className={styles.debug}>
+                    <div className={styles.debugTitle}>Model output</div>
+                    <pre>{debugText}</pre>
                 </div>
             )}
 
