@@ -11,7 +11,6 @@ type PosBucket = 'noun' | 'verb' | 'adj' | 'adv' | 'unknown';
 interface AiClozeGeneratorProps {
     word: string;
     level: string;
-    pos?: string;
     meaning?: string;
     pos?: PosBucket;
     distractors?: string[];
