@@ -23,6 +23,32 @@ interface AiChatbotProps {
     distractors?: string[];
 }
 
+// Helper function to detect likely gibberish/corrupted output
+function isLikelyGibberish(text: string): boolean {
+    if (!text || text.length < 10) return false;
+    
+    const cleaned = text.replace(/\s+/g, ' ').trim();
+    
+    // Check for very long words without spaces (concatenated nonsense)
+    const words = cleaned.split(/\s+/);
+    if (words.some(w => w.length > 40)) return true;
+    
+    // Check for spaced-out single characters
+    if (/(?:[A-Za-z]\s){5,}/.test(cleaned)) return true;
+    
+    // Check for excessive repetition
+    if (/([a-z]{2,})\1{4,}/i.test(cleaned)) return true;
+    
+    // Check for low letter ratio (lots of symbols/numbers)
+    const letters = cleaned.replace(/[^a-z]/gi, '').length;
+    if (cleaned.length > 20 && letters / cleaned.length < 0.5) return true;
+    
+    // Check for too many consonants in a row
+    if (/[bcdfghjklmnpqrstvwxyz]{6,}/i.test(cleaned)) return true;
+    
+    return false;
+}
+
 export default function AiChatbot({ word, level, meaning, pos, distractors }: AiChatbotProps) {
     const workerRef = useRef<Worker | null>(null);
     const [status, setStatus] = useState<Status>('idle');
@@ -77,13 +103,15 @@ export default function AiChatbot({ word, level, meaning, pos, distractors }: Ai
 
             if (msg.type === 'error') {
                 setError(msg.message || 'Something went wrong. Please try again.');
+                // Only show debug text if it's not corrupted/gibberish
                 const raw = typeof msg.rawText === 'string' ? msg.rawText.trim() : '';
-                setDebugText(raw || '(no raw output received)');
+                const isCorrupted = raw === '(output was corrupted)' || raw.length === 0 || isLikelyGibberish(raw);
+                setDebugText(isCorrupted ? null : raw);
                 setStatus('error');
                 setIsTyping(false);
                 
-                // Add error message to chat
-                addMessage('bot', `I'm having trouble generating examples for "${word}" right now. This might be due to the complexity of the word or a temporary issue. Please try again or choose a different word!`);
+                // Add user-friendly error message to chat
+                addMessage('bot', msg.message || `I'm having trouble generating examples for "${word}" right now. This might be due to the complexity of the word or a temporary issue. Please try again or choose a different word!`);
                 return;
             }
         };

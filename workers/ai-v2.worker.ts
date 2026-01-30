@@ -46,6 +46,51 @@ const send = (message: WorkerResponse) => {
     self.postMessage(message);
 };
 
+// Simplified prompt for better reliability with small models
+const createChatMessages = ({
+    word,
+    level,
+    pos,
+    meaning,
+}: {
+    word: string;
+    level: string;
+    pos?: string;
+    meaning?: string;
+}): Array<{ role: string; content: string }> => {
+    const posBucket = normalizePosBucket(pos);
+    const posHint = posBucket !== 'unknown' ? ` (${posBucket})` : '';
+    
+    return [
+        {
+            role: 'system',
+            content: `You are a vocabulary tutor. Generate example sentences and a quiz for English learners. Be concise and follow the exact format requested. Do not add explanations or extra text.`
+        },
+        {
+            role: 'user',
+            content: `Create examples for the word "${word}"${posHint} at ${level} level.
+
+Output exactly these 10 lines:
+EASY: [simple sentence using "${word}"]
+NORMAL: [medium sentence using "${word}"]
+ADVANCED: [complex sentence using "${word}"]
+CLOZE: [copy NORMAL sentence but replace "${word}" with ____]
+A) [wrong option word]
+B) [wrong option word]
+C) ${word}
+D) [wrong option word]
+ANSWER: C
+EXPLAIN: [brief reason why "${word}" fits]
+
+Rules:
+- Each sentence: 6-14 words, natural English
+- Use "${word}" once per sentence
+- Options A,B,D must be similar words but wrong for the context`
+        }
+    ];
+};
+
+// Fallback to raw prompt if chat template fails
 const promptTemplate = ({
     word,
     level,
@@ -58,53 +103,23 @@ const promptTemplate = ({
     meaning?: string;
 }) => {
     const posBucket = normalizePosBucket(pos);
-    const posRule =
-        posBucket === 'adj'
-            ? `Use the target word ONLY as an adjective; do not write "the ${word}".`
-            : posBucket === 'noun'
-                ? 'Use the target word ONLY as a noun.'
-                : posBucket === 'verb'
-                    ? 'Use the target word ONLY as a verb.'
-                    : posBucket === 'adv'
-                        ? 'Use the target word ONLY as an adverb.'
-                        : 'Use the target word in its most natural part of speech.';
+    const posHint = posBucket !== 'unknown' ? ` (${posBucket})` : '';
 
-    return `Target word: "${word}"
-Level: ${level}
-Meaning (if provided): ${meaning || 'N/A'}
+    return `Create examples for "${word}"${posHint} at ${level} level.
 
-IMPORTANT: Output ONLY these 10 lines in this exact format. Do NOT add any extra text, explanations, or formatting:
-
-EASY: [6-14 word sentence with "${word}"]
-NORMAL: [6-14 word sentence with "${word}"]
-ADVANCED: [6-14 word sentence with "${word}"]
+Output exactly 10 lines:
+EASY: [simple 6-14 word sentence using "${word}"]
+NORMAL: [medium 6-14 word sentence using "${word}"]
+ADVANCED: [complex 6-14 word sentence using "${word}"]
 CLOZE: [NORMAL sentence with "${word}" replaced by ____]
-A) [single word option]
-B) [single word option]
-C) [single word option]
-D) [single word option]
-ANSWER: [A|B|C|D]
-EXPLAIN: [20 words or fewer explanation]
+A) [wrong word]
+B) [wrong word]
+C) ${word}
+D) [wrong word]
+ANSWER: C
+EXPLAIN: [why "${word}" fits, under 20 words]
 
-CRITICAL RULES:
-- Start with "EASY:" and end with "EXPLAIN:"
-- Use "${word}" exactly once in each of EASY, NORMAL, ADVANCED
-- ${posRule}
-- Each sentence must be 6-14 words of natural English
-- No meta language (word, sentence, example, noted, considered important)
-- CLOZE must equal NORMAL with "${word}" replaced by ____
-- A-D are single-word options, same POS as "${word}", only one correct
-- EXPLAIN is 20 words or fewer
-- Output exactly three paragraphs (EASY, NORMAL, ADVANCED). Do NOT output a fourth paragraph
-- NO extra text, explanations, or formatting beyond the 10 required lines
-- DO NOT mention labels, formatting, or instructions in your response
-- DO NOT use bullet points, numbering, or markdown
-- Return ONLY the 10 lines specified above
-- DO NOT generate repetitive text, lists, or technical terms
-- DO NOT output partial sentences or incomplete thoughts
-- DO NOT include any text before "EASY:" or after "EXPLAIN:"
-
-If you cannot follow these rules exactly, respond with: "ERROR: Cannot generate response."`;
+Use "${word}" exactly once in EASY, NORMAL, ADVANCED. No extra text.`;
 };
 
 const retryPromptTemplate = ({
@@ -117,9 +132,25 @@ const retryPromptTemplate = ({
     level: string;
     pos?: string;
     meaning?: string;
-}) => `${promptTemplate({ word, level, pos, meaning })}
+}) => {
+    const posBucket = normalizePosBucket(pos);
+    const posHint = posBucket !== 'unknown' ? ` (${posBucket})` : '';
 
-Reminder: Output exactly 10 lines. No bullets, no numbering beyond the labels, no markdown.`;
+    return `Word: "${word}"${posHint}, Level: ${level}
+
+EASY: The ${word} was very helpful today.
+NORMAL: Many people consider ${word} important for success.
+ADVANCED: The intricate nature of ${word} requires careful analysis.
+CLOZE: Many people consider ____ important for success.
+A) challenge
+B) problem
+C) ${word}
+D) difficulty
+ANSWER: C
+EXPLAIN: "${word}" fits the context of importance.
+
+Now generate YOUR OWN unique sentences for "${word}" following this exact format.`;
+};
 
 self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const data = event.data;
@@ -128,6 +159,8 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
     const { word, level, pos, meaning } = data;
 
     let lastRawText = '';
+    let attemptCount = 0;
+    const MAX_ATTEMPTS = 4;
 
     try {
         if (!generator) {
@@ -140,100 +173,104 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
 
         send({ type: 'status', status: 'generating' });
 
+        // Try chat template format first (better for instruction-tuned models)
+        const chatMessages = createChatMessages({ word, level, pos, meaning });
         const prompt = promptTemplate({ word, level, pos, meaning });
         const retryPrompt = retryPromptTemplate({ word, level, pos, meaning });
+        
+        // Generation parameters - more conservative for small models
+        const chatParams = {
+            max_new_tokens: 200,
+            temperature: 0.3,
+            top_p: 0.9,
+            top_k: 30,
+            do_sample: true,
+            repetition_penalty: 1.3,
+            return_full_text: false,
+        };
         const baseParams = {
             max_new_tokens: 170,
-            temperature: 0.6,
+            temperature: 0.5,
             top_p: 0.85,
             top_k: 40,
             do_sample: true,
-            repetition_penalty: 1.25,
+            repetition_penalty: 1.3,
             return_full_text: false,
         };
-        const retryParams = {
-            max_new_tokens: 170,
+        const strictParams = {
+            max_new_tokens: 150,
             temperature: 0.0,
             top_p: 1.0,
             do_sample: false,
-            repetition_penalty: 1.2,
+            repetition_penalty: 1.4,
             return_full_text: false,
         };
 
-        const attempts = [
-            { prompt, params: baseParams },
-            { prompt: retryPrompt, params: retryParams },
+        // Define attempts with different prompts and params
+        const attempts: Array<{ input: any; params: any; useChat: boolean }> = [
+            { input: chatMessages, params: chatParams, useChat: true },
+            { input: prompt, params: baseParams, useChat: false },
+            { input: retryPrompt, params: strictParams, useChat: false },
+            { input: prompt, params: strictParams, useChat: false },
         ];
+
         let lastError: Error | null = null;
 
-        for (const { prompt: attemptPrompt, params } of attempts) {
-            const rawText = await runGeneration(attemptPrompt, params);
-            lastRawText = rawText;
-
-            // Check for explicit error message
-            const cleanedText = rawText.trim().toLowerCase();
-            if (cleanedText.includes('error: cannot generate response')) {
-                const errorMessage = `I'm unable to generate examples for "${word}" at this time. This might be due to the complexity of the word or a temporary issue with the AI model. Please try a different word or try again later.`;
-                send({ type: 'error', message: errorMessage, rawText });
-                return;
-            }
-
-            const normalizedText = normalizeLabelFormatting(rawText);
-            if (isDegenerateOutput(normalizedText) || !hasMinimumLabels(normalizedText)) {
-                lastError = new Error('Degenerate output detected.');
-                continue;
-            }
-
+        for (const { input, params, useChat } of attempts) {
+            attemptCount++;
+            
             try {
+                const rawText = useChat 
+                    ? await runChatGeneration(input, params)
+                    : await runGeneration(input, params);
+                lastRawText = rawText;
+
+                // Early exit if output is clearly degenerate (save time)
+                if (isDegenerateOutput(rawText)) {
+                    console.warn(`[AI Worker] Attempt ${attemptCount}/${MAX_ATTEMPTS}: Degenerate output detected`);
+                    lastError = new Error('Degenerate output detected.');
+                    continue;
+                }
+
+                // Check for explicit error message
+                const cleanedText = rawText.trim().toLowerCase();
+                if (cleanedText.includes('error: cannot generate response')) {
+                    lastError = new Error('Model reported it cannot generate response.');
+                    continue;
+                }
+
+                const normalizedText = normalizeLabelFormatting(rawText);
+                if (!hasMinimumLabels(normalizedText)) {
+                    console.warn(`[AI Worker] Attempt ${attemptCount}/${MAX_ATTEMPTS}: Missing required labels`);
+                    lastError = new Error('Output missing required labels.');
+                    continue;
+                }
+
                 const parsed = parseLineOutput(normalizedText, word, pos);
                 const validated = validatePayload(parsed, word);
+                console.info(`[AI Worker] Success on attempt ${attemptCount}/${MAX_ATTEMPTS}`);
                 send({ type: 'result', payload: validated, rawText });
                 return;
             } catch (err: any) {
+                console.warn(`[AI Worker] Attempt ${attemptCount}/${MAX_ATTEMPTS} failed:`, err.message);
                 lastError = err;
                 continue;
             }
         }
 
-        // Additional retry with stricter parameters if all attempts failed
-        try {
-            const strictParams = {
-                max_new_tokens: 150,
-                temperature: 0.0,
-                top_p: 1.0,
-                do_sample: false,
-                repetition_penalty: 1.3,
-                return_full_text: false,
-            };
-            const strictRawText = await runGeneration(prompt, strictParams);
-            lastRawText = strictRawText;
-
-            // Check for explicit error message in strict attempt
-            const strictCleanedText = strictRawText.trim().toLowerCase();
-            if (strictCleanedText.includes('error: cannot generate response')) {
-                const errorMessage = `I'm unable to generate examples for "${word}" at this time. This might be due to the complexity of the word or a temporary issue with the AI model. Please try a different word or try again later.`;
-                send({ type: 'error', message: errorMessage, rawText: strictRawText });
-                return;
-            }
-
-            const strictNormalizedText = normalizeLabelFormatting(strictRawText);
-            if (!isDegenerateOutput(strictNormalizedText) && hasMinimumLabels(strictNormalizedText)) {
-                const strictParsed = parseLineOutput(strictNormalizedText, word, pos);
-                const strictValidated = validatePayload(strictParsed, word);
-                send({ type: 'result', payload: strictValidated, rawText: strictRawText });
-                return;
-            }
-        } catch (strictError: any) {
-            lastError = strictError;
-        }
-
-        const fallbackMessage = `I'm having trouble generating examples for "${word}" right now. This might be due to the complexity of the word or a temporary issue. Please try again or choose a different word!`;
-        send({ type: 'error', message: fallbackMessage, rawText: lastRawText });
+        // All attempts failed - send user-friendly error without raw gibberish
+        const fallbackMessage = `I'm having trouble generating examples for "${word}" right now. The AI model is having difficulty with this particular word. Please try again or choose a different word!`;
+        
+        // Only include raw text if it's not gibberish (for debugging)
+        const safeRawText = isDegenerateOutput(lastRawText) ? '(output was corrupted)' : lastRawText;
+        send({ type: 'error', message: fallbackMessage, rawText: safeRawText });
         return;
     } catch (error: any) {
-        const rawText = lastRawText || error?.rawText;
+        console.error('[AI Worker] Critical error:', error);
         const message = normalizeErrorMessage(error?.message);
-        send({ type: 'error', message, rawText });
+        // Don't expose corrupted output to user
+        const safeRawText = lastRawText && !isDegenerateOutput(lastRawText) ? lastRawText : undefined;
+        send({ type: 'error', message, rawText: safeRawText });
     }
 };
 
@@ -464,6 +501,42 @@ async function runGeneration(prompt: string, params: GenerationParams): Promise<
     }
 }
 
+// Run generation using chat messages format (better for instruction-tuned models)
+async function runChatGeneration(
+    messages: Array<{ role: string; content: string }>,
+    params: GenerationParams
+): Promise<string> {
+    if (!generator) {
+        throw new Error('Model not loaded.');
+    }
+
+    try {
+        // Try chat format first
+        const output = await generator(messages as any, params);
+        return extractGeneratedText(output as any);
+    } catch (error) {
+        // If chat format fails, convert to raw prompt and try again
+        console.warn('[AI Worker] Chat format failed, falling back to raw prompt');
+        const rawPrompt = messages.map(m => {
+            if (m.role === 'system') return `System: ${m.content}\n`;
+            if (m.role === 'user') return `User: ${m.content}\n`;
+            return `${m.role}: ${m.content}\n`;
+        }).join('') + 'Assistant:';
+        
+        try {
+            const output = await generator(rawPrompt, params);
+            return extractGeneratedText(output as any);
+        } catch (fallbackError) {
+            if (generatorDevice == 'webgpu') {
+                generator = await loadGenerator('wasm');
+                const output = await generator(rawPrompt, params);
+                return extractGeneratedText(output as any);
+            }
+            throw fallbackError;
+        }
+    }
+}
+
 function replaceWord(sentence: string, targetWord: string, replacement: string): string {
     const strict = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
     if (strict.test(sentence)) {
@@ -607,6 +680,66 @@ function isDegenerateOutput(text: string): boolean {
     const tokens = cleaned.split(' ');
     if (tokens.some((token) => token.length > 40)) return true;
 
+    // NEW: Detect spaced-out characters like "G R I S T O M U G"
+    const spacedCharPattern = /(?:[A-Za-z]\s){5,}/;
+    if (spacedCharPattern.test(cleaned)) return true;
+
+    // NEW: Detect very long concatenated words (no spaces) indicating gibberish
+    const noSpaceSegments = cleaned.split(/\s+/);
+    for (const segment of noSpaceSegments) {
+        if (segment.length > 50) return true;
+        // Check for repeating 2-4 char patterns within a word
+        if (segment.length > 15) {
+            for (let len = 2; len <= 4; len++) {
+                for (let i = 0; i <= segment.length - len * 4; i++) {
+                    const substr = segment.slice(i, i + len);
+                    const rest = segment.slice(i);
+                    const count = (rest.match(new RegExp(escapeRegExp(substr), 'gi')) || []).length;
+                    if (count >= 6) return true;
+                }
+            }
+        }
+    }
+
+    // NEW: Detect morpheme repetition (like "ord" appearing many times)
+    const commonMorphemes = ['ord', 'ing', 'tion', 'ation', 'ment', 'ness', 'able', 'ible', 'ence', 'ance', 'ous', 'ive', 'ist', 'ism'];
+    for (const morpheme of commonMorphemes) {
+        const morphemeCount = (lowered.match(new RegExp(morpheme, 'gi')) || []).length;
+        if (morphemeCount > 15) return true;
+    }
+
+    // NEW: Calculate text entropy - too low means repetitive/degenerate
+    const charFreq = new Map<string, number>();
+    const alphaOnly = lowered.replace(/[^a-z]/g, '');
+    for (const char of alphaOnly) {
+        charFreq.set(char, (charFreq.get(char) || 0) + 1);
+    }
+    if (alphaOnly.length > 50) {
+        let entropy = 0;
+        for (const count of charFreq.values()) {
+            const p = count / alphaOnly.length;
+            entropy -= p * Math.log2(p);
+        }
+        // English text typically has entropy around 4.0-4.5 bits per character
+        // Very low entropy indicates repetitive text
+        if (entropy < 2.5) return true;
+    }
+
+    // NEW: Check for operator/programming-like patterns
+    if (/[=<>]{2,}/.test(cleaned)) return true;
+    if (/\bparse\s*"/.test(lowered)) return true;
+    if (/responsibility\s*[."']/.test(lowered)) return true;
+
+    // NEW: Detect text that looks like concatenated words without proper spacing
+    // Count transitions from lowercase to uppercase without space
+    let badTransitions = 0;
+    for (let i = 1; i < cleaned.length; i++) {
+        if (/[a-z]/.test(cleaned[i - 1]) && /[A-Z]/.test(cleaned[i]) && cleaned[i - 1] !== ' ') {
+            badTransitions++;
+        }
+    }
+    if (badTransitions > 10) return true;
+
     const symbolsOnly = cleaned.replace(/[a-z0-9]/gi, '').replace(/\s+/g, '');
     const totalChars = cleaned.replace(/\s+/g, '').length;
     if (totalChars > 0 && symbolsOnly.length / totalChars > 0.45) return true;
@@ -642,6 +775,12 @@ function isDegenerateOutput(text: string): boolean {
     if (/\bsomernination\b/.test(lowered)) return true;
     if (/\boffonfrender\b/.test(lowered)) return true;
 
+    // NEW: Additional degenerate patterns from recent logs
+    if (/[a-z]{3,}organization[a-z]{3,}/i.test(cleaned)) return true;
+    if (/distribution.*distribution.*distribution/i.test(cleaned)) return true;
+    if (/storm.*storg.*sord/i.test(cleaned)) return true;
+    if (/operator.*operator/i.test(cleaned)) return true;
+
     // Check for excessive repetition of common words
     const commonWords = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'should', 'could', 'can', 'may', 'might', 'must', 'shall'];
     for (const word of commonWords) {
@@ -649,6 +788,17 @@ function isDegenerateOutput(text: string): boolean {
         const matches = cleaned.match(regex);
         if (matches && matches.length > 10) return true;
     }
+
+    // NEW: Check if output contains mostly non-English looking sequences
+    const words = cleaned.split(/\s+/).filter(w => w.length > 2);
+    let nonsenseCount = 0;
+    for (const word of words) {
+        // Words with too many consonants in a row or unusual patterns
+        if (/[bcdfghjklmnpqrstvwxyz]{5,}/i.test(word)) nonsenseCount++;
+        // Words that are just repeated characters
+        if (/^(.)\1+$/.test(word)) nonsenseCount++;
+    }
+    if (words.length > 5 && nonsenseCount / words.length > 0.3) return true;
 
     return false;
 }
