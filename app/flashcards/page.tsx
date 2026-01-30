@@ -276,21 +276,6 @@ function FlashcardsPageContent() {
         }
     };
 
-    if (loading && allWords.length === 0) {
-        return <FlashcardSkeleton ctaLabel="載入詞彙中" />;
-    }
-
-    if (loadError && allWords.length === 0) {
-        return (
-            <ErrorState
-                message={loadError}
-                onRetry={handleRetry}
-                onUseOffline={handleUseOffline}
-                showOffline={hasOfflineCache}
-            />
-        );
-    }
-
     const currentWord = currentWords[currentIndex];
 
     const targetPos = useMemo<PosBucket>(() => {
@@ -316,6 +301,21 @@ function FlashcardsPageContent() {
         const unique = Array.from(new Set(filtered.map((item) => item.headword)));
         return shuffle(unique).slice(0, 30);
     }, [allWords, currentWord, selectedLevel, targetPos]);
+
+    if (loading && allWords.length === 0) {
+        return <FlashcardSkeleton ctaLabel="載入詞彙中" />;
+    }
+
+    if (loadError && allWords.length === 0) {
+        return (
+            <ErrorState
+                message={loadError}
+                onRetry={handleRetry}
+                onUseOffline={handleUseOffline}
+                showOffline={hasOfflineCache}
+            />
+        );
+    }
 
     return (
         <div className={styles.container}>
