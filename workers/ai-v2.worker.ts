@@ -38,7 +38,7 @@ export type AiOutput = {
 env.allowRemoteModels = true;
 env.allowLocalModels = false;
 
-const MODEL_ID = 'onnx-community/Qwen2.5-0.5B-Instruct';
+const MODEL_ID = 'onnx-community/Llama-3.2-1B-Instruct-ONNX';
 let generator: TextGenerationPipelineType | null = null;
 let generatorDevice: 'webgpu' | 'wasm' | null = null;
 
