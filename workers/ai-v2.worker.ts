@@ -277,9 +277,20 @@ function parseLineOutput(text: string, targetWord: string, pos?: string): AiOutp
         throw new Error('Line output incomplete.');
     }
 
+    // Enhanced validation for sentence quality
     for (const sentence of [easy, normal, advanced]) {
         if (countWordOccurrences(sentence, targetWord) !== 1) {
             throw new Error('WORD must appear exactly once in each sentence.');
+        }
+        
+        // Check for proper sentence structure
+        if (!isValidSentenceStructure(sentence)) {
+            throw new Error('Sentence structure invalid.');
+        }
+        
+        // Check for proper word usage
+        if (!isValidWordUsage(sentence, targetWord, pos)) {
+            throw new Error('Word usage invalid.');
         }
     }
 
@@ -340,6 +351,58 @@ function parseLineOutput(text: string, targetWord: string, pos?: string): AiOutp
             explanation: trimToWords(explanation, 20),
         },
     };
+}
+
+function isValidSentenceStructure(sentence: string): boolean {
+    // Check for proper capitalization
+    if (!/^[A-Z]/.test(sentence)) return false;
+    
+    // Check for proper ending punctuation
+    if (!/[.!?]$/.test(sentence)) return false;
+    
+    // Check for reasonable length (not too short or too long)
+    const words = sentence.split(/\s+/).filter(Boolean);
+    if (words.length < 3 || words.length > 20) return false;
+    
+    // Check for basic grammar patterns
+    if (/\b(is|are|was|were|be|been|being)\s+(to\s+)?\b/.test(sentence)) return true;
+    if (/\b(have|has|had|do|does|did|will|would|should|could|can|may|might|must|shall)\b/.test(sentence)) return true;
+    if (/\b(the|a|an|this|that|these|those)\b/.test(sentence)) return true;
+    
+    return true;
+}
+
+function isValidWordUsage(sentence: string, targetWord: string, pos?: string): boolean {
+    const posBucket = normalizePosBucket(pos);
+    
+    // Check for proper word context
+    const lowerSentence = sentence.toLowerCase();
+    const lowerWord = targetWord.toLowerCase();
+    
+    // For adjectives, ensure they're not used as nouns
+    if (posBucket === 'adj') {
+        if (/\bthe\s+/.test(lowerSentence) && lowerSentence.includes(lowerWord)) {
+            return !/\bthe\s+/.test(lowerSentence.replace(new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'gi'), ''));
+        }
+    }
+    
+    // Check for proper word boundaries
+    const wordRegex = new RegExp(`\\b${escapeRegExp(targetWord)}\\b`, 'i');
+    if (!wordRegex.test(sentence)) return false;
+    
+    // Check for reasonable context (not just the word by itself)
+    const beforeMatch = sentence.match(new RegExp(`(.{0,20})\\b${escapeRegExp(targetWord)}\\b`, 'i'));
+    const afterMatch = sentence.match(new RegExp(`\\b${escapeRegExp(targetWord)}\\b(.{0,20})`, 'i'));
+    
+    if (!beforeMatch || !afterMatch) return false;
+    
+    const beforeContext = beforeMatch[1];
+    const afterContext = afterMatch[1];
+    
+    // Ensure there's meaningful context before and after the word
+    if (beforeContext.length < 2 && afterContext.length < 2) return false;
+    
+    return true;
 }
 
 type GenerationParams = {
