@@ -18,6 +18,7 @@ export default function Navigation() {
         { href: '/progress', label: '進度', icon: '📊' },
         { href: '/vocab-game', label: '3D 單字遊戲', icon: '🕹️' },
         { href: '/tts-flashcards', label: '發音閃卡', icon: '🔊' },
+        { href: '/simplify', label: '簡化文章', icon: '📖' },
     ];
 
     return (

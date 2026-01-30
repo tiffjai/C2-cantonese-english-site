@@ -1,0 +1,382 @@
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--neon-pink) 0%, var(--electric-purple) 50%, var(--electric-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 0.75rem 0;
+    filter: drop-shadow(0 0 20px var(--neon-pink-glow));
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Input Section - K-Pop Glassmorphism */
+.inputSection {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--glass-border);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.textareaWrapper {
+    position: relative;
+}
+
+.textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    resize: vertical;
+    font-family: inherit;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: var(--neon-pink);
+    box-shadow: 
+        0 0 0 3px rgba(255, 107, 157, 0.1),
+        0 0 20px rgba(255, 107, 157, 0.1);
+    background: var(--bg-secondary);
+}
+
+.textarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.charCount {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.optionGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.select {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    cursor: pointer;
+    min-width: 160px;
+    transition: all var(--transition-fast);
+}
+
+.select:focus {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+.select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.sampleBtn,
+.clearBtn,
+.simplifyBtn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-spring);
+    font-weight: 600;
+    border: none;
+}
+
+.sampleBtn {
+    background: var(--glass-bg);
+    color: var(--success);
+    border: 2px solid var(--success);
+    backdrop-filter: blur(10px);
+}
+
+.sampleBtn:hover:not(:disabled) {
+    background: rgba(74, 222, 128, 0.15);
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+    transform: translateY(-2px);
+}
+
+.clearBtn {
+    background: var(--glass-bg);
+    color: var(--error);
+    border: 2px solid var(--error);
+    backdrop-filter: blur(10px);
+}
+
+.clearBtn:hover:not(:disabled) {
+    background: rgba(248, 113, 113, 0.15);
+    box-shadow: 0 0 20px rgba(248, 113, 113, 0.3);
+    transform: translateY(-2px);
+}
+
+.simplifyBtn {
+    background: linear-gradient(135deg, var(--neon-pink) 0%, var(--hot-pink) 50%, var(--electric-purple) 100%);
+    color: white;
+    padding: 0.6rem 2rem;
+    box-shadow: 
+        0 4px 20px rgba(255, 107, 157, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.simplifyBtn:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        0 8px 30px rgba(255, 107, 157, 0.5),
+        0 0 40px rgba(255, 107, 157, 0.3);
+}
+
+.sampleBtn:disabled,
+.clearBtn:disabled,
+.simplifyBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Error Message */
+.error {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(248, 113, 113, 0.1);
+    border: 1px solid var(--error);
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    color: var(--error);
+}
+
+.errorIcon {
+    font-size: 1.25rem;
+}
+
+.retryBtn {
+    margin-left: auto;
+    padding: 0.4rem 1rem;
+    background: var(--error);
+    color: white;
+    border: none;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.retryBtn:hover:not(:disabled) {
+    box-shadow: 0 0 20px var(--error-glow);
+    transform: translateY(-1px);
+}
+
+.retryBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+    margin-bottom: 2rem;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--border);
+    border-top-color: var(--neon-pink);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading p {
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.loadingHint {
+    color: var(--text-muted) !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    margin-top: 0.5rem !important;
+}
+
+/* Results Section */
+.resultsSection {
+    margin-bottom: 2rem;
+}
+
+.notes {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: rgba(0, 245, 255, 0.1);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--electric-cyan);
+}
+
+.notes h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--electric-cyan);
+    font-weight: 700;
+}
+
+.notes ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.notes li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Instructions */
+.instructions {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--glass-border);
+}
+
+.instructions h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.instructions ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.instructions li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.instructions li:last-child {
+    margin-bottom: 0;
+}
+
+.instructions strong {
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .options {
+        flex-direction: column;
+    }
+
+    .buttons {
+        justify-content: stretch;
+    }
+
+    .sampleBtn,
+    .clearBtn,
+    .simplifyBtn {
+        flex: 1;
+    }
+}

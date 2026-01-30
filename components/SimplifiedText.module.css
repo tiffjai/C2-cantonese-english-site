@@ -1,0 +1,282 @@
+.container {
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.termCount {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.toggleButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.toggleBtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(10px);
+}
+
+.toggleBtn:hover {
+    background: rgba(255, 107, 157, 0.1);
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.2);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.column {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+}
+
+.columnTitle {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.column:first-child .columnTitle {
+    border-bottom-color: var(--success);
+    color: var(--success);
+}
+
+.column:last-child .columnTitle {
+    border-bottom-color: var(--warning);
+    color: var(--warning);
+}
+
+.textContent {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.chunk {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border);
+}
+
+.chunk:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Toggleable term styling - K-Pop Style */
+.term {
+    display: inline;
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(74, 222, 128, 0.1));
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+    border-bottom: 2px solid var(--success);
+    color: var(--text-primary);
+}
+
+.term:hover {
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.3), rgba(74, 222, 128, 0.2));
+    transform: translateY(-1px);
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
+}
+
+.term:focus {
+    outline: 2px solid var(--neon-cyan);
+    outline-offset: 2px;
+}
+
+.termToggled {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 191, 36, 0.1));
+    border-bottom-color: var(--warning);
+}
+
+.termToggled:hover {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(251, 191, 36, 0.2));
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+}
+
+/* Tooltip - K-Pop Glassmorphism */
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    backdrop-filter: blur(20px);
+    color: var(--text-primary);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    z-index: 100;
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(255, 107, 157, 0.1);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    max-width: 280px;
+    white-space: normal;
+    text-align: center;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: var(--bg-secondary);
+}
+
+.tooltipMeaning {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.tooltipPos {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.tooltipHint {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    padding-top: 0.25rem;
+    border-top: 1px solid var(--border);
+}
+
+/* Vocabulary Reference - K-Pop Style */
+.vocabReference {
+    margin-top: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+}
+
+.vocabReference summary {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--text-primary);
+    user-select: none;
+    transition: all var(--transition-fast);
+}
+
+.vocabReference summary:hover {
+    background: rgba(255, 107, 157, 0.05);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.vocabReference[open] summary {
+    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.vocabGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.vocabItem {
+    padding: 0.75rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    transition: all var(--transition-fast);
+}
+
+.vocabItem:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.1);
+}
+
+.vocabTerms {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.simpleTerm {
+    padding: 0.2em 0.5em;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(74, 222, 128, 0.1));
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    color: var(--success);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.arrow {
+    color: var(--text-muted);
+}
+
+.difficultTerm {
+    padding: 0.2em 0.5em;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 191, 36, 0.1));
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    color: var(--warning);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.vocabMeaning {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.vocabPos {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.25rem;
+}

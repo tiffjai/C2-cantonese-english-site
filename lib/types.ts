@@ -65,6 +65,34 @@ export interface LevelInfo {
     color: string; // Theme color for the level
 }
 
+// Simplify Feature Types
+export interface SimplifyChunk {
+    id: number;
+    original: string;
+    simple: string;
+    vocab_ids: string[];
+}
+
+export interface VocabTerm {
+    simple_surface: string;
+    difficult_surface: string;
+    meaning_plain: string;
+    pos?: string;
+}
+
+export interface SimplifyResponse {
+    level: string;
+    chunks: SimplifyChunk[];
+    vocab_map: Record<string, VocabTerm>;
+    overall_notes: string[];
+}
+
+export interface SimplifyRequest {
+    passage: string;
+    target_level?: 'A2' | 'B1' | 'B2';
+    strength?: 'light' | 'medium' | 'strong';
+}
+
 // Constants
 export const CEFR_LEVELS: CEFRLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
