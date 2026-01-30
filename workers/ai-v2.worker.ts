@@ -73,29 +73,33 @@ const promptTemplate = ({
 Level: ${level}
 Meaning (if provided): ${meaning || 'N/A'}
 
-Output ONLY these 10 lines, in this exact order, with no extra text:
-EASY: ...
-NORMAL: ...
-ADVANCED: ...
-CLOZE: ...
-A) ...
-B) ...
-C) ...
-D) ...
-ANSWER: A|B|C|D
-EXPLAIN: ...
+IMPORTANT: Output ONLY these 10 lines in this exact format. Do NOT add any extra text, explanations, or formatting:
 
-Rules:
-- Start your response with "EASY:" and end with "EXPLAIN:".
-- Use the target word exactly once in EASY/NORMAL/ADVANCED.
+EASY: [6-14 word sentence with "${word}"]
+NORMAL: [6-14 word sentence with "${word}"]
+ADVANCED: [6-14 word sentence with "${word}"]
+CLOZE: [NORMAL sentence with "${word}" replaced by ____]
+A) [single word option]
+B) [single word option]
+C) [single word option]
+D) [single word option]
+ANSWER: [A|B|C|D]
+EXPLAIN: [20 words or fewer explanation]
+
+CRITICAL RULES:
+- Start with "EASY:" and end with "EXPLAIN:"
+- Use "${word}" exactly once in each of EASY, NORMAL, ADVANCED
 - ${posRule}
-- Each sentence must be 6–14 words of natural English.
-- No meta language (word, sentence, example, noted, considered important).
-- CLOZE must equal NORMAL with the target word replaced by ____.
-- A-D are single-word options, same POS as the target word, only one correct.
-- EXPLAIN is 20 words or fewer.
-- Output exactly three paragraphs of sentences (EASY, NORMAL, ADVANCED). Do not output a fourth paragraph.
-No other text.`;
+- Each sentence must be 6-14 words of natural English
+- No meta language (word, sentence, example, noted, considered important)
+- CLOZE must equal NORMAL with "${word}" replaced by ____
+- A-D are single-word options, same POS as "${word}", only one correct
+- EXPLAIN is 20 words or fewer
+- Output exactly three paragraphs (EASY, NORMAL, ADVANCED). Do NOT output a fourth paragraph
+- NO extra text, explanations, or formatting beyond the 10 required lines
+- DO NOT mention labels, formatting, or instructions in your response
+- DO NOT use bullet points, numbering, or markdown
+- Return ONLY the 10 lines specified above`;
 };
 
 const retryPromptTemplate = ({
@@ -176,6 +180,30 @@ self.onmessage = async (event: MessageEvent<GenerateMessage>) => {
                 lastError = err;
                 continue;
             }
+        }
+
+        // Additional retry with stricter parameters if all attempts failed
+        try {
+            const strictParams = {
+                max_new_tokens: 150,
+                temperature: 0.0,
+                top_p: 1.0,
+                do_sample: false,
+                repetition_penalty: 1.3,
+                return_full_text: false,
+            };
+            const strictRawText = await runGeneration(prompt, strictParams);
+            lastRawText = strictRawText;
+
+            const strictNormalizedText = normalizeLabelFormatting(strictRawText);
+            if (!isDegenerateOutput(strictNormalizedText) && hasMinimumLabels(strictNormalizedText)) {
+                const strictParsed = parseLineOutput(strictNormalizedText, word, pos);
+                const strictValidated = validatePayload(strictParsed, word);
+                send({ type: 'result', payload: strictValidated, rawText: strictRawText });
+                return;
+            }
+        } catch (strictError: any) {
+            lastError = strictError;
         }
 
         const fallbackMessage = 'AI response incomplete. Please retry.';
@@ -481,9 +509,12 @@ function isDegenerateOutput(text: string): boolean {
     if (!cleaned) return true;
     const lowered = cleaned.toLowerCase();
 
+    // Check for label-related degenerate patterns
+    if (/\b(labels?|mention|enclosed|specific|quotes|encapsulate|referencing|reference|define|defined|refer|referring|referscribing|refferending|referrence|referredence|referendration)\b/.test(lowered)) return true;
     if (/\b(usage|tag|schema|rules)\b/.test(lowered)) return true;
     if (/\b(word=|level=|pos=|meaning=)\b/.test(lowered)) return true;
 
+    // Check for repetitive patterns
     if (/([a-z0-9])\1{7,}/i.test(cleaned)) return true;
     if (/([^\s])\1{9,}/.test(cleaned)) return true;
 
