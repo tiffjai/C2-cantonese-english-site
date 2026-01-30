@@ -204,12 +204,6 @@ export default function AiClozeGenerator({ word, level, meaning, pos, distractor
                         </p>
                         <p>{result.cloze.explanation}</p>
                     </div>
-                    {debugText && (
-                        <details>
-                            <summary>Debug output</summary>
-                            <pre>{debugText}</pre>
-                        </details>
-                    )}
                 </div>
             )}
         </div>
